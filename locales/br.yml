@@ -1,0 +1,12 @@
+br:
+  hello_iam: Olá, eu sou
+  like_coffee: e gosto muito de café
+  front_dev: desenvolvedor front-end
+  experiments: Experimentos
+  about_me: Sobre mim
+  blog: Meu blog
+  about: Sobre
+  en: Inglês
+  br: Português
+  paths:
+    about: sobre

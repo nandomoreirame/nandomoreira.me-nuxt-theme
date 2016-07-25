@@ -1,0 +1,12 @@
+en:
+  hello_iam: Hello, I'm
+  like_coffee: and I really like coffee
+  front_dev: front-end developer
+  experiments: Experiments
+  about_me: About me
+  blog: My blog
+  about: About
+  en: English
+  br: Portuguese
+  paths:
+    about: about

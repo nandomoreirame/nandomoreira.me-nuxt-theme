@@ -1,0 +1,70 @@
+
+.article
+  padding: 0 0 get-spacing(medium)
+  margin-bottom: get-spacing(medium)
+
+  &-header
+    text-align: center
+    padding: get-spacing(medium) 0 get-spacing(base)
+
+  &-title
+    font-size: get-font-size(30px)
+    color: get-color(primary, dark)
+    line-height: 1.2
+
+    +media($screen-tablet)
+      font-size: get-font-size(38px)
+
+    +media($screen-large-tablet)
+      font-size: get-font-size(42px)
+
+  &-meta,
+  &-meta a
+    font-size: get-font-size(16px)
+    color: rgba(get-color(secondary, light), .7)
+
+  &-content
+    img
+      display: block
+      width: 100%
+      max-width: 100%
+      height: auto
+      border-radius: $base-border-radius
+
+    p
+      margin: 0 0 get-spacing(base) 0
+
+.single
+  .article
+    &-title
+      margin: 0
+
+    &-header
+      &::after
+        content: ""
+        display: block
+        width: 60px
+        height: 4px
+        background-color: get-color(border)
+        margin: get-spacing(medium) auto 0
+
+.blog-list
+  .article
+    border-bottom: 1px solid get-color(border)
+
+    &:last-child
+      border-bottom: none
+
+    &-header
+      text-align: left
+      padding-bottom: 0
+
+    &-title
+      font-size: get-font-size(30px)
+
+      a
+        color: get-color(secondary, light)
+
+      a:hover,
+      a:focus
+        color: get-color(primary, dark)

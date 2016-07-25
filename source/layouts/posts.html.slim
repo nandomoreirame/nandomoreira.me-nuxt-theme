@@ -1,0 +1,67 @@
+doctype html
+html.no-js
+  head
+    = partial "partials/head"
+    - if current_article.data.description
+      meta content="#{current_article.data.description}" name="description"
+    - elsif current_article.data.link
+      meta content=("#{page_title + "→"}") name="description"
+    - else
+      meta content=site_description name="description"
+    - if current_article.data.keywords
+      meta content="#{current_article.data.keywords}" name="keywords"
+    - else
+      meta content=site_keywords name="keywords"
+
+    meta rel="canonical" href="#{site_url}#{current_page.url}"
+
+    = partial "partials/social-opengraph"
+    - if build?
+      - page_articles.index do |article, i|
+        - if current_article.data.summary
+          meta content="#{current_article.data.summary}" property="og:description"
+        - elsif current_article.data.link
+          meta content=("#{page_title + "→"}") property="og:description"
+        - else
+          meta content=site_description property="og:description"
+        - if current_article.data.link
+          meta content="link" property="og:type"
+        - else
+          meta content="article" property="og:type"
+        - if current_article.data.image
+          meta content="#{current_article.data.image}" property="og:image"
+        - else
+          meta content="#{site_url}#{image_path('social.png')}" property="og:image"
+        meta content=("#{site_url + current_article.url}") property="og:url"
+      - if current_article.data.summary
+        meta content="#{current_article.data.summary}" property="twitter:description"
+      - elsif current_article.data.link
+        meta content=("#{page_title + "→"}") property="twitter:description"
+      - else
+        meta content=site_description property="twitter:description"
+      - if current_article.data.image
+        meta content="#{current_article.data.image}" property="twitter:image"
+      - else
+        meta content="#{site_url}#{image_path('social.png')}" property="twitter:image"
+    - body_class = page_classes
+    - if current_page.data.body_class
+      body_class += current_page.data.body_class
+    - body_class = body_class.sub(/[_]/, '-')
+  body class="#{body_class} single"
+    = partial "partials/nav"
+    main.site-main role="main"
+      = partial "partials/header"
+      article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
+        .container-inn
+          header.article-header
+            meta content="#{current_page.date.strftime('%Y-%m-%d')}" itemprop="datePublished"
+            span.article-meta
+              | Posted on the #{current_page.date.strftime('%d')} of #{current_page.date.strftime('%b')} #{current_page.date.strftime('%Y')}
+            h1.article-title itemprop="headline" = current_page.data.title
+          .article-content itemprop="articleBody"
+            = yield
+
+      - unless current_article.nil?
+        = partial "partials/comments"
+
+      = partial "partials/footer"

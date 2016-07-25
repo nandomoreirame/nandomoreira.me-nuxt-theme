@@ -1,0 +1,112 @@
+
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,300,700")
+// @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,600")
+@import url("//fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,700")
+
+html
+  font-size: $font-size-inuit
+
+body
+  color: get-color(text)
+  font-family: $font-family-base
+  font-weight: $font-weight-light
+  line-height: $line-height-base
+  font-size: get-font-size(18px)
+  letter-spacing: .018rem
+
+  +media($screen-large-tablet)
+    font-size: get-font-size()
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: get-color(secondary, light)
+  font-family: $font-family-heading
+  line-height: $line-height-heading
+  font-weight: $font-weight-bold
+  margin: get-spacing(base) 0 get-spacing(medium)
+
+p
+  margin: 0 0 get-spacing(medium) 0
+
+h1
+  font-size: get-font-size(32px)
+  letter-spacing: -0.035em
+
+  +media($screen-large-tablet)
+    font-size: get-font-size(38px)
+
+h2
+  font-size: get-font-size(28px)
+
+  +media($screen-large-tablet)
+    font-size: get-font-size(30px)
+
+h3
+  font-size: get-font-size(22px)
+
+  +media($screen-large-tablet)
+    font-size: get-font-size(28px)
+
+h4
+  font-size: get-font-size(20px)
+
+  +media($screen-large-tablet)
+    font-size: get-font-size(24px)
+
+h5,
+h6
+  font-size: get-font-size(18px)
+
+  +media($screen-large-tablet)
+    font-size: get-font-size(22px)
+
+a
+  text-decoration: none
+  color: get-color(primary, light)
+  +transition(color $base-duration $base-timing)
+
+  +hover-focus()
+    color: get-color(primary, dark)
+    text-decoration: underline
+
+em
+  font-style: italic
+
+strong
+  font-weight: $font-weight-semi-bold
+
+pre,
+code
+  background-color: get-color(code)
+  font-family: $font-family-monospace
+  line-height: 1.3
+
+blockquote
+  position: relative
+  transition: border-color .2s linear
+  margin: get-spacing(base) 0 get-spacing(medium)
+  padding: get-spacing(small)
+  font-size: get-font-size(22px)
+
+  &:before
+    content: ""
+    display: block
+    background: url("/assets/images/quote.svg") no-repeat
+    background-size: 80px
+    opacity: .07
+    z-index: 1
+    +position(absolute, 0 null null 0)
+    +size(80px)
+
+  &:hover,
+  &:focus
+    border-left-color: get-color(primary, light)
+
+  p:last-child
+    position: relative
+    z-index: 2
+    margin-bottom: 0

@@ -1,0 +1,89 @@
+
+html,
+body
+  width: 100%
+  height: 100%
+
+body
+  background-color: get-color(background)
+
+  &.home--hero
+    background-color: get-color(primary, base)
+    padding: get-spacing(mini)
+
+    +media($screen-tablet)
+      padding: get-spacing(small)
+
+    +media($screen-large-tablet)
+      overflow: hidden
+      padding: get-spacing(medium)
+
+  &.about
+    .container-inn
+      padding-bottom: 100px
+      text-align: center
+
+      h3
+        margin-bottom: 50px
+
+  &.search-opened
+    overflow: hidden
+
+    .search
+      display: block
+
+  &.nav-opened
+    overflow: hidden
+
+    .nav
+      transform: translateX(0)
+      visibility: visible
+
+    .nav-close
+      opacity: 1
+
+      svg
+        +size(24px)
+
+    .site-main
+      cursor: pointer
+      opacity: .75
+
+.site-main
+  transition: opacity .2s $base-timing, transform .2s $base-timing
+  opacity: 1
+
+hr
+  border: none
+  border-bottom: 1px solid get-color(border)
+  margin-top: get-spacing(base)
+  margin-bottom: get-spacing(base)
+
+.comments
+  padding: get-spacing(base) 0
+  background: darken(get-color(background), 3%)
+
+canvas
+  display: block
+  vertical-align: bottom
+
+iframe
+  border: none
+  margin: 0
+  padding: 0
+
+.responsive-video
+  position: relative
+  margin-bottom: 30px
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+
+  object,
+  embed,
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%

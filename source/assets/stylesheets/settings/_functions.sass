@@ -1,0 +1,33 @@
+
+@function get-color($color-name, $color-variant: null)
+  @if ($color-variant != null)
+    @return map-get(map-get($palette, $color-name), $color-variant)
+  @else
+    @return map-get($palette, $color-name)
+
+
+@function strip-unit($number)
+  @if type-of($number) == "number" and not unitless($number)
+    @return $number / ($number * 0 + 1)
+  @else
+    @return $number
+
+
+@function get-spacing($spacing-name)
+  @return map-get($spacings, $spacing-name)
+
+
+@function px-to-em($pxval, $base: $font-size-inuit)
+  @return #{strip-unit($pxval) / strip-unit($base)}em
+
+
+@function px-to-rem($px: $font-size-inuit)
+  $px-value: strip-unit($px)
+  $unit-size: strip-unit($font-size-inuit)
+  $rem-value: $px-value / $unit-size
+  @return $rem-value * 1rem
+
+
+@function get-font-size($px: $font-size-inuit)
+  @return px-to-rem($px)
+

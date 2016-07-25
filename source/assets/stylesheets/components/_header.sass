@@ -1,0 +1,99 @@
+
+.header
+  padding: 0
+  background: get-color(primary, base)
+  background-size: cover
+  margin-bottom: get-spacing(big)
+  +clearfix()
+
+  .js-text-parallax,
+  &__logo,
+  &__avatar,
+  &__social-nav
+    position: relative
+    z-index: 10
+
+  &__avatar
+    @extend .avatar
+    +size(100px)
+    +position(absolute, null null -50px 50%)
+    margin-left: -50px
+    animation-fill-mode: forwards
+    animation-timing-function: cubic-bezier(.25, .1, .25, 1)
+    +backface-visibility(hidden)
+    +transform(scale(0))
+    opacity: 0
+    animation-name: avatarScale
+    animation-duration: .3s
+
+  &__inn
+    position: relative
+    padding: get-spacing(base) 0 get-spacing(big)
+
+    +media($screen-large-phone)
+      padding: get-spacing(large) 0
+
+  &__logo
+    font-family: $font-family-base
+    text-align: center
+    border-bottom: 0
+    font-size: get-font-size(34)
+    text-transform: uppercase
+    margin: 0
+
+    a
+      color: get-color(white)
+      margin-bottom: 5px
+      display: inline-block
+
+      +hover-focus()
+        text-decoration: none
+
+      &::before,
+      &::after
+        content: ""
+        height: 1px
+        width: 100%
+        display: block
+        background: get-color(white)
+
+    span
+      letter-spacing: $heading-letter-spacing
+      line-height: 1.6
+
+    small
+      display: block
+      color: rgba(get-color(white), .7)
+      font-weight: $font-weight-light
+      letter-spacing: $medium-letter-spacing
+      font-size: get-font-size(18px)
+      text-transform: none
+
+    span,
+    small
+      display: block
+      +media(max-width $screen-large-phone)
+        display: none
+
+  &__social-nav
+    padding: 5px 0 0
+    text-align: center
+    +clearfix()
+
+    li:last-child
+      display: none
+
+    svg
+      +size(38px)
+
+    a
+      color: get-color(white)
+
+    +media($screen-large-phone)
+      padding: get-spacing(base) 0 0
+
+      li:last-child
+        display: inline-block
+
+      svg
+        +size(26px)

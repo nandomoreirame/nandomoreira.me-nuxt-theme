@@ -1,0 +1,35 @@
+
+.translate
+  display: block
+  margin-top: get-spacing(mini)
+
+  a
+    color: get-color(white)
+    display: inline-block
+    padding: 0 10px
+    position: relative
+
+    &::before,
+    &::after
+      position: absolute
+      transition: margin .2s ease-in-out
+      margin: 0
+
+    &::before
+      content: "["
+      margin-left: 0
+      left: 0
+
+    &::after
+      content: "]"
+      margin-right: 0
+      right: 0
+
+    +hover-focus()
+      text-decoration: none
+
+      &::before
+        margin-left: -7px
+
+      &::after
+        margin-right: -7px

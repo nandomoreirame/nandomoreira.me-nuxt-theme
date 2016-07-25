@@ -1,0 +1,19 @@
+doctype html
+html.no-js
+  head
+    = partial "partials/head"
+    meta content="#{t(:hello_iam)} #{site_author}, #{t(:front_dev)} #{t(:like_coffee)}" name="description"
+    meta content=site_keywords name="keywords"
+    meta rel="canonical" href="#{site_url}#{current_page.url}"
+    = partial "partials/social-opengraph"
+    - body_class = page_classes
+    - if current_page.data.body_class
+      body_class += current_page.data.body_class
+    - body_class = body_class.sub(/[_]/, '-')
+  body class="#{body_class}"
+    = partial "partials/nav"
+    main.site-main role="main"
+      = partial "partials/header"
+      section.container-inn
+        = yield
+      = partial "partials/footer"

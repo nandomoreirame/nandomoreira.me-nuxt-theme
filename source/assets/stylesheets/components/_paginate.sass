@@ -1,0 +1,38 @@
+
+.paginate
+  +clearfix()
+  padding: 0
+  margin: get-spacing(medium) 0
+  position: relative
+
+  p
+    margin: 0
+    display: block
+    line-height: 1.8em
+    text-align: center
+    color: rgba(get-color(text), .8)
+
+  a
+    +hover-focus()
+      text-decoration: none
+
+  +media(max-width $screen-large-phone)
+    p
+      margin: 15px 0
+
+    .previous-page,
+    .next-page
+      display: block
+      width: 100%
+
+  +media($screen-large-phone)
+    .previous-page,
+    .next-page
+      position: absolute
+      top: 0
+
+    .previous-page
+      left: 0
+
+    .next-page
+      right: 0

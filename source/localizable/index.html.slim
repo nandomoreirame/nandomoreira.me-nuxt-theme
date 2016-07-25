@@ -1,0 +1,31 @@
+---
+body_class: home--hero
+layout: layout
+---
+
+section.hero
+  .hero__inner itemscope='' itemtype="http://schema.org/Person"
+    = link_to local_path('') do
+      img.hero__avatar src="#{image_path('avatar.png')}" srcset="#{image_path('avatar@2x.png')} 2x" width="250px" height="250px" alt="#{site_author}"
+
+    h2.hero__desc
+      = t(:hello_iam) + '...'
+    h1.hero__name itemprop='name'
+      = site_author
+    h2.hero__desc
+      span itemprop="jobTitle"
+        = t(:front_dev) + ' '
+      = t(:like_coffee) + "."
+
+    nav.hero__actions
+      = link_to t(:blog), '/blog', :class => 'hero__button'
+      = link_to t(:about_me), local_path(t('paths.about')), :class => 'hero__button'
+
+    = partial 'partials/social'
+    - other_langs.each do |lang|
+      small.translate
+        = link_to t(lang.to_s), local_path('', { :language => lang.to_s })
+
+#particles-js.hero-particles-js
+= javascript_include_tag 'vendor/particles.min.js'
+= javascript_include_tag 'particles.js'

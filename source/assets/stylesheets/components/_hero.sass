@@ -1,0 +1,182 @@
+.hero
+  width: 100%
+  text-align: center
+  margin-bottom: get-spacing(mini)
+  +clearfix
+
+  +media($screen-tablet)
+    margin-bottom: get-spacing(small)
+
+  +media($screen-large-tablet)
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: get-spacing(base)
+
+  &__name,
+  &__desc,
+  &__name::before,
+  &__name::after,
+  &__actions,
+  &__avatar,
+  .social,
+  .translate
+    animation-fill-mode: forwards
+    animation-timing-function: cubic-bezier(.25, .1, .25, 1)
+    +transform(translateZ(0))
+    +backface-visibility(hidden)
+    position: relative
+    z-index: 10
+
+  &__inner
+    margin-left: auto
+    margin-right: auto
+    max-width: 90%
+    padding: get-spacing(small)
+
+    +media($screen-large-tablet)
+      max-width: $screen-large-tablet
+
+    +media($screen-desktop)
+      max-width: $screen-desktop
+
+  &__avatar
+    @extend .avatar
+    +size(120px)
+    opacity: 0
+    transform: translateY(-100%) rotate(-15deg)
+    animation-name: translateTopInRotate
+    animation-duration: .8s
+
+  &__actions,
+  &__avatar
+    margin: get-spacing(small) 0
+
+  a
+    color: rgba(get-color(white), .75)
+    transition: color .2s ease-in-out
+
+    +attention(false)
+      color: get-color(white)
+
+  &__actions
+    opacity: 0
+    transform: translateY(100%)
+    animation-name: translateBottomIn
+    animation-duration: .6s
+    animation-delay: .8s
+    margin-top: get-spacing(base)
+
+  &__button
+    @extend .button-ghost
+    text-transform: lowercase
+    margin: 0 0 get-spacing(mini)
+    display: block
+    border: 1px solid get-color(white)
+    border-radius: 150px
+
+    +hover-focus()
+      text-decoration: none
+      background-color: rgba(get-color(white), .2)
+
+    +media($screen-large-phone)
+      display: inline-block
+      margin: 0 (get-spacing(mini) / 2)
+
+  &__name,
+  &__desc,
+  .social,
+  .translate
+    opacity: 0
+    transform: translateY(10%)
+    animation-name: animateFadeIn
+
+  .social,
+  .translate
+    animation-duration: .8s
+    animation-delay: 1.2s
+
+  &__name,
+  &__desc
+    font-family: $font-family-base
+    animation-duration: .8s
+    animation-delay: .4s
+    padding: 0
+    margin: 0
+
+  &__desc
+    opacity: 0
+    display: block
+    letter-spacing: .035rem
+    font-family: $font-family-base
+    font-weight: 200
+    font-size: get-font-size(20px)
+    color: rgba(get-color(white), .7)
+    line-height: 1.5
+
+    +media($screen-tablet)
+      font-size: get-font-size(24px)
+
+    +media($screen-large-tablet)
+      font-size: get-font-size(28px)
+
+  &__name
+    display: block
+    color: get-color(white)
+    margin: get-spacing(small) 0
+    text-transform: uppercase
+    letter-spacing: .1em
+    font-size: get-font-size(30px)
+    padding: 15px 0
+    line-height: 1
+
+    +media($screen-large-phone)
+      letter-spacing: .2em
+      font-size: get-font-size(54px)
+
+    +media($screen-tablet)
+      font-size: get-font-size(60px)
+
+    +media($screen-desktop)
+      font-size: get-font-size(80px)
+      padding: 10px 0
+
+    +media($screen-large-desktop)
+      font-size: get-font-size(90px)
+
+    &::before
+      left: 0
+      top: 0
+
+    &::after
+      right: 0
+      bottom: 0
+
+    &::before,
+    &::after
+      opacity: .7
+      content: ""
+      display: block
+      border: none
+      position: absolute
+      background-color: get-color(white)
+      width: 0
+      height: 2px
+      +transition(opacity .2s ease-in-out)
+      animation-name: translateWidthIn
+      animation-duration: .4s
+      animation-delay: 1s
+
+    &:hover,
+    &:focus
+      &::before,
+      &::after
+        opacity: .75
+
+  .social
+    margin: get-spacing(base) 0 0
+
+    li
+      padding-top: 0
+      padding-bottom: 0

@@ -1,0 +1,10 @@
+article.article
+  header.article-header
+    span.article-meta
+      = 'Posted on the ' + article.date.strftime('%d') + ' of ' + article.date.strftime('%B') + ' of ' + article.date.strftime('%Y')
+      span.divider
+      = link_to '0 comments', article.url + '#comments', class: 'disqus-comment-count', :'data-disqus-url' => "#{site_url}#{article.url}"
+    h1.article-title
+      = link_to article.title, article
+  p.article-summary
+    = strip_tags(article.summary(200))

@@ -1,0 +1,34 @@
+---
+title: About me
+layout: pages
+---
+
+h3 Who am I?
+div itemscope="" itemtype="http://schema.org/Person"
+  p
+    = "Hi! I'm "
+    strong itemprop="name"  Fernando Moreira (as you can see the name of my site).
+    span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
+      = " I live in "
+      = succeed "/" do
+        span itemprop="addressLocality"
+          = "Curitiba"
+      span itemprop="addressRegion"
+      = "Paraná "
+      = "I'm"
+      span itemprop="jobTitle"
+        = ' Front-end developer '
+      = 'at '
+      = link_to "@pipefy", "http://pipefy.com"
+      = " and love everything related to web, I'm obsessed with "
+      em= "performance "
+      = "and agile development, I like readable coding, semantic and reusable."
+  p
+    = "Today I'm specializing in web development using "
+    = link_to "Wordpress", "http://br.wordpress.org/"
+    = " with focus in front-end I always take care of usability and performance of a website."
+  p
+    = 'For contact me, please send an email to '
+    em itemprop="email"
+      = link_to "nandomoreira.me[at]gmail.com", "mailto:nandomoreira.me@gmail.com"
+    = ' or search me in my social networks.'
