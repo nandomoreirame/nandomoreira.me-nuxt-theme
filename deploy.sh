@@ -12,6 +12,6 @@ git config --global user.name "${GH_USER}"
 
 # deploy
 git init
-git add --all
-git commit -m "Deploy to GitHub Pages"
-git push --force --quiet "https://${GH_TOKEN}@github.com/${GH_REF}" origin master
+git add -A .
+git commit -am 'Deploy to GitHub Pages'
+git push "https://${GH_TOKEN}@github.com/${GH_REF}" origin master -u -q -f
