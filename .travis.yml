@@ -4,6 +4,7 @@ rvm:
 branches:
   only:
   - source
+  - master
 cache:
 - bundler
 gemfile: travisGemfile
