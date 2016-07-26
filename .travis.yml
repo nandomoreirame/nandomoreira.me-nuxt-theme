@@ -3,17 +3,16 @@ rvm:
 - 2.1
 branches:
   only:
-  - source
-  - master
+    - source
 cache:
-- bundler
+  - bundler
 gemfile: travisGemfile
 install:
-- bundle install
+  - bundle install
 before_script:
-- chmod +x deploy.sh
-- git config credential.helper "store --file=.git/credentials"
-- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - chmod +x deploy.sh
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 script: "./deploy.sh"
 env:
   global:
@@ -24,4 +23,4 @@ env:
   - HTML_FOLDER="./build/"
   - secure: hc1RVMkk/DOZYCMFhPF5tyhy1QMqY/F6potG0mchWmhS+h1DcgXoFR9Rzb0Vx0ITXNcsftqwzKbr2G2BT0KfDCH0P4tahRNXiibMniUS0cVJXkGNP9belE35YqoMSMmP4e9MPOttNyYwOmwQvbvcR1NZUBM4aMZoxQ4ULKYRXhrZm+/IE10riOQMnrd81tRXxEOwgprDITS6TMahVZIh72eBtfMDpMuDJt2nI4Cjk+tzSRgxp0bZXdlxuOABGrgHIL/YLkZ1ucrDMHITNwudN7qpNT7fpORT6eNvKhv+qiQzYOT2S0C4+AmvRtU/+LAQmAr2D9/gYj5At9Us7bMzbnAy10YBTjN0PhthxprV+CIWHO2dKzGxCQRElznMSJxF2t42bWxx6ZU0Mn1Gh2zV4siutA8P3RoeiGiilhU3MZWxLofWN8LEOZEHf1FRmqVhzNd2ITYa8kP5a68E54QiE78FjTaGsb7vPIVQpY6vcAdOW+VGWMqy2NTpwLghcmxd9KatiL8R35lGXplpSiz7774dcU4leD4hY8P1WI89lt2KB/RpAeLkPjDB+uNoPi3sD7fGIaIyD8Dn61+ybQLz6CfmtGvMjOagsPFyG06N7f9l8SpFfWYRp5aivvBRl+qa3v1PEviuKFN/MUvPKvD7kAjSFMQ/wGROnV55Lzo1XoM=
 notifications:
-  email: false
+  email: true
