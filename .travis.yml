@@ -1,36 +1,27 @@
 language: ruby
-
 rvm:
-  - 2.1
-
+- 2.1
 branches:
   only:
-    - source
-    - master
-
+  - source
+  - master
 cache:
-  - bundler
-
+- bundler
 gemfile: travisGemfile
-
 install:
-  - bundle install
-
+- bundle install
 before_script:
-  - chmod +x deploy.sh
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-
+- chmod +x deploy.sh
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 script: "./deploy.sh"
-
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - GH_USER="Fernando Moreira"
-    - GH_EMAIL="nandomoreira.me@gmail.com"
-    - GH_REF="nandomoreirame/nandomoreirame.github.io"
-    - HTML_FOLDER="./build/"
-    - secure: AQp5VWX7PYbj3x/VZqmllsZ7G16W5jh2qqC2wHfKMWEd7c1cQKIVuGrplQ/OzAafE+89+gLBFPamAyedbcWhI+HOjo6zpJ5c4MOdv7AARd9i58Th9iJJNVWMlqHz6Iva898IhfknbWYuQ3nXK28zyXTQn7mGIPzdHiUJaOnY6jTjh5yRRWCIcBOzfKHwGXvzzWuoSn1DjyjMRjQDnoRGz0q0qn2MD6qHo9rBNPpToSuQSay+Hq5hxkuu1Oi42BqxMDPL/EC8JCyfoKmmY4SSgIgWK8pXCGJZfFPLEDzGvSN9XT/hmvRQIfc3y+ao6sCxWMc58V8itLEuAkSNm0hofadmK8S3x896ukEmoMl0ZCR6ijfqoF+o14/8XdhY4evlrC4oQoXtR/Jg5sin5tXACFKSoUsIlywO7r50ZrdCxkZiJkS7DVsfNYQ30DQ8RiOdECsyBCZZI0RIOcUb/51J4RG37dfJibnk3NIuaowFjoQIo8mtWNyJTCzQo11sE/geeDCa4g+YmrQMih3eLYOr9Xxna9Lj8INtp3QjEdYgDTkw/bqf3XFa4Gs6GEtigFxlCQKucNKGoIslY7uRvDGrAw0SvYctqDX2XBApiXj9mkyi5/Xl6fQS0idHYJPEZBK/WBzEHAwHloO1DVV5R58SDWn42FneyP0LA1aq5n0AZwQ=
-
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_USER="Fernando Moreira"
+  - GH_EMAIL="nandomoreira.me@gmail.com"
+  - GH_REF="nandomoreirame/nandomoreirame.github.io"
+  - HTML_FOLDER="./build/"
+  - secure: hc1RVMkk/DOZYCMFhPF5tyhy1QMqY/F6potG0mchWmhS+h1DcgXoFR9Rzb0Vx0ITXNcsftqwzKbr2G2BT0KfDCH0P4tahRNXiibMniUS0cVJXkGNP9belE35YqoMSMmP4e9MPOttNyYwOmwQvbvcR1NZUBM4aMZoxQ4ULKYRXhrZm+/IE10riOQMnrd81tRXxEOwgprDITS6TMahVZIh72eBtfMDpMuDJt2nI4Cjk+tzSRgxp0bZXdlxuOABGrgHIL/YLkZ1ucrDMHITNwudN7qpNT7fpORT6eNvKhv+qiQzYOT2S0C4+AmvRtU/+LAQmAr2D9/gYj5At9Us7bMzbnAy10YBTjN0PhthxprV+CIWHO2dKzGxCQRElznMSJxF2t42bWxx6ZU0Mn1Gh2zV4siutA8P3RoeiGiilhU3MZWxLofWN8LEOZEHf1FRmqVhzNd2ITYa8kP5a68E54QiE78FjTaGsb7vPIVQpY6vcAdOW+VGWMqy2NTpwLghcmxd9KatiL8R35lGXplpSiz7774dcU4leD4hY8P1WI89lt2KB/RpAeLkPjDB+uNoPi3sD7fGIaIyD8Dn61+ybQLz6CfmtGvMjOagsPFyG06N7f9l8SpFfWYRp5aivvBRl+qa3v1PEviuKFN/MUvPKvD7kAjSFMQ/wGROnV55Lzo1XoM=
 notifications:
   email: false
