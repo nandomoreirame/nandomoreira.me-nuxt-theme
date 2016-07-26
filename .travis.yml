@@ -3,16 +3,16 @@ rvm:
 - 2.1
 branches:
   only:
-    - source
+  - source
 cache:
-  - bundler
+- bundler
 gemfile: travisGemfile
 install:
-  - bundle install
+- bundle install
 before_script:
-  - chmod +x deploy.sh
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- chmod +x deploy.sh
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 script: "./deploy.sh"
 env:
   global:
@@ -22,5 +22,6 @@ env:
   - GH_REF="nandomoreirame/nandomoreirame.github.io"
   - HTML_FOLDER="./build/"
   - secure: hc1RVMkk/DOZYCMFhPF5tyhy1QMqY/F6potG0mchWmhS+h1DcgXoFR9Rzb0Vx0ITXNcsftqwzKbr2G2BT0KfDCH0P4tahRNXiibMniUS0cVJXkGNP9belE35YqoMSMmP4e9MPOttNyYwOmwQvbvcR1NZUBM4aMZoxQ4ULKYRXhrZm+/IE10riOQMnrd81tRXxEOwgprDITS6TMahVZIh72eBtfMDpMuDJt2nI4Cjk+tzSRgxp0bZXdlxuOABGrgHIL/YLkZ1ucrDMHITNwudN7qpNT7fpORT6eNvKhv+qiQzYOT2S0C4+AmvRtU/+LAQmAr2D9/gYj5At9Us7bMzbnAy10YBTjN0PhthxprV+CIWHO2dKzGxCQRElznMSJxF2t42bWxx6ZU0Mn1Gh2zV4siutA8P3RoeiGiilhU3MZWxLofWN8LEOZEHf1FRmqVhzNd2ITYa8kP5a68E54QiE78FjTaGsb7vPIVQpY6vcAdOW+VGWMqy2NTpwLghcmxd9KatiL8R35lGXplpSiz7774dcU4leD4hY8P1WI89lt2KB/RpAeLkPjDB+uNoPi3sD7fGIaIyD8Dn61+ybQLz6CfmtGvMjOagsPFyG06N7f9l8SpFfWYRp5aivvBRl+qa3v1PEviuKFN/MUvPKvD7kAjSFMQ/wGROnV55Lzo1XoM=
+  - secure: rdbulJynmtM//JJ49LeOB2rHY8GNhjvry0fKnFxiWdsvBpJc8c5Q0UQiyAcnGqPsKiqPxK7nNJoJiddGR5m7Ql9SvMuZJWCf/yXkxGwNDfW3K58SQvFQvGiiAvbQTa9zrGzNEBt3PETSmbUQDzLNRqtdLRv8WTe7T3eYS4YQ3dkB4XR9PDGiZM8raLFA8fWz2tgWKvW5AiZZRMJV0fdAz/EfUtwEulGSrAJqkR0kuB8bpiwrVPBVNmcIPNc1rNzQOM+lYP9jTY7GusCsKHDq6ev3DY3pVmx+SfLHM/6Iyli28/Joq+Cl0Lm3TKnz9wckVHfun0NLquwrHls723pd81gERJUGAl0Ln7HDd09Qqb32BzSqJLDdt4+Qz1mqsbcincBdGOgej70w4V5pNTe8tDaBH11PQghoBClfbJfJjSUjM62p8X6sTKwVsf4pkQ+vhQkUFC7dFe2HmJQTmrKKJu2yjniluMQm7h1S2AO0kB5TAvxDlL1WK5fz0AJZNeWb0olWeBQXHHuiTAYuk18hbwVy4p9Qqm5DKQuHH5gOTo+9sBu5KO2CAloRVIm8fh5hm6yU+XG6S8+nQiV+bwWeczjhisv/G81jLYjEwVE6wdI5tCkh0lQHux+aQhbo6CDeC/g7tlt8QSDHj3y6C3XssNPTKFEO3l5MgwHDHbCzvqw=
 notifications:
   email: true
