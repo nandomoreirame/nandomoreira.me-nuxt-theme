@@ -1,4 +1,4 @@
-# [nandomoreira.me](http://nandomoreira.me/) #
+# [nandomoreira.me](http://nandomoreira.me/) [![Code Climate](https://codeclimate.com/github/nandomoreirame/nandomoreirame.github.io/badges/gpa.svg)](https://codeclimate.com/github/nandomoreirame/nandomoreirame.github.io) [![Issue Count](https://codeclimate.com/github/nandomoreirame/nandomoreirame.github.io/badges/issue_count.svg)](https://codeclimate.com/github/nandomoreirame/nandomoreirame.github.io)
 
 > :gem: My personal website and blog >> http://nandomoreira.me/
 
