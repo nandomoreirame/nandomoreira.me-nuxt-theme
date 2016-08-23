@@ -1,23 +1,50 @@
-
 .social
-  list-style: none
-  padding: 0
-  margin: 0
+  margin: $spacing-base 0
+  opacity: 0
+  animation-name: fadeIn
+  animation-fill-mode: forwards
+  animation-duration: .8s
 
   li
-    display: inline-block
-    margin: 0 5px
+    margin: 0 $spacing-mini
 
-  a
-    opacity: .7
-    transition: opacity .2s linear
+  svg
+    width: 26px
+    transition: transform .2s ease-in-out
 
+  a:hover,
+  a:focus
     svg
-      transition: transform .2s linear
+      transform: scale(1.1) rotate(8deg)
 
-    &:hover,
-    &:focus
-      opacity: 1
+.link-translate
+  color: #fff
+  display: inline-block
+  transition: opacity .2s ease-in-out
 
-      svg
-        transform: scale(1.1)
+  &::before,
+  &::after
+    display: inline-block
+    transition: margin .2s ease-in-out
+    color: #fff
+
+  &::before
+    content: "["
+    margin-right: 5px
+
+  &::after
+    content: "]"
+    margin-left: 5px
+
+  &:hover,
+  &:focus
+    text-decoration: none
+    opacity: .7
+    color: #fff
+
+    &::before
+      margin-right: 10px
+
+    &::after
+      margin-left: 10px
+

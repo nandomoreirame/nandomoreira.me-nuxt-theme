@@ -1,0 +1,65 @@
+body:not(.index)::before
+  content: ""
+  display: block
+  width: 100%
+  height: 500px
+  z-index: 1
+  +position(absolute, 0 0 null 0)
+  background-color: $color-primary
+
+body
+  .card--about
+    .link-translate,
+    .link-translate::before,
+    .link-translate::after, a
+      color: $color-primary
+
+    .social
+      path
+        fill: $color-primary
+
+  &.theme-secondary
+    &::before
+      background-color: $color-secondary
+
+    .card--about
+      .link-translate,
+      .link-translate::before,
+      .link-translate::after, a
+        color: $color-secondary
+
+      .social
+        path
+          fill: $color-secondary
+
+  &.theme-tertiary
+    &::before
+      background-color: $color-tertiary
+
+    .card--about
+      .link-translate,
+      .link-translate::before,
+      .link-translate::after, a
+        color: $color-tertiary
+
+      .social
+        path
+          fill: $color-tertiary
+
+  &.theme-quaternary
+    &::before
+      background-color: $color-quaternary
+
+    .card--about
+      .link-translate,
+      .link-translate::before,
+      .link-translate::after, a
+        color: $color-quaternary
+
+      .social
+        path
+          fill: $color-quaternary
+
+.main
+  position: relative
+  z-index: 5

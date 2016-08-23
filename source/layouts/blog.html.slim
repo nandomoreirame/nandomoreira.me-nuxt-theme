@@ -8,12 +8,11 @@ html.no-js
     = partial "partials/social-opengraph"
     - body_class = page_classes
     - if current_page.data.body_class
-      body_class += current_page.data.body_class
+      - body_class += ' ' + current_page.data.body_class
     - body_class = body_class.sub(/[_]/, '-')
-  body class="#{body_class}"
-    = partial "partials/nav"
-    main.site-main role="main"
-      = partial "partials/header"
-      section.container-inn
+  body class="#{body_class} theme-secondary"
+    = partial "partials/header"
+    main.main role="main"
+      .container
         = yield
-      = partial "partials/footer"
+    = partial "partials/footer"

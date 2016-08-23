@@ -1,73 +1,44 @@
 (function($) {
   'use strict';
 
-  var $body = $('body'),
-      $doc  = $(document);
+  var $doc = $(document),
+      $body = $('body'),
+      $navbar = $('#navbar');
 
-  $doc.on('click', '[data-toggle="nav"], .nav-opened .site-main', function(e) {
-    e.preventDefault();
-    $body.toggleClass('nav-opened');
+  $(function() {
+    $doc.on('click', '.js-navbar-toggle', function(e) {
+      e.preventDefault();
+      $body.toggleClass('navbar-open');
+    });
   });
 
-  $doc.on('click', '[data-toggle="search"]', function(e) {
-    e.preventDefault();
-    $body.toggleClass('search-opened');
-  });
+  // var titleParallax = {
+  //   textParallax : document.querySelector('.js-text-parallax'),
 
-  var titleParallax = {
-    textParallax : document.querySelector('.js-text-parallax'),
+  //   init: function() {
+  //     window.addEventListener("scroll", function(event) {
+  //       titleParallax.update(this.scrollY);
+  //     }, false);
+  //   },
+  //   update: function(scroll) {
+  //     this.textParallax.style['-webkit-transform'] = 'translateY('+ (scroll * .5) +'px)';
+  //     this.textParallax.style['-moz-transform'] = 'translateY('+ (scroll * .5) +'px)';
+  //     this.textParallax.style['transform'] = 'translateY('+ (scroll * .5) +'px)';
+  //     this.textParallax.style['opacity'] = (1 - ( scroll * .005 ));
+  //   }
+  // };
 
-    init: function() {
-      window.addEventListener("scroll", function(event) {
-        titleParallax.update(this.scrollY);
-      }, false);
-    },
-    update: function(scroll) {
-      this.textParallax.style['-webkit-transform'] = 'translateY('+ (scroll * .5) +'px)';
-      this.textParallax.style['-moz-transform'] = 'translateY('+ (scroll * .5) +'px)';
-      this.textParallax.style['transform'] = 'translateY('+ (scroll * .5) +'px)';
-      this.textParallax.style['opacity'] = (1 - ( scroll * .005 ));
-    }
-  };
-
-  titleParallax.init();
+  // titleParallax.init();
 
 })(jQuery);
 
-$(function() {
-  var $results = $('.search__results'),
-      $input = $('.search__input'),
-      search_term;
 
-  $input.on('keypress', function() {
-    search_term = $(this).val().toLowerCase();
-    return $.getJSON('/search.json', function(data) {
-      var i, j, k, len, len1, result, results, results1, value;
-      results = [];
-      $results.html('');
-
-      for (j = 0, len = data.length; j < len; j++) {
-        i = data[j];
-        value = 0;
-        if (i.title.toLowerCase().split(search_term).length - 1 !== 0) {
-          value = 10;
-        }
-        if (value !== 0) {
-          i.value = value;
-          results.push(i);
-        }
-      }
-
-      if (results.length > 0) {
-        results1 = [];
-        for (k = 0, len1 = results.length; k < len1; k++) {
-          result = results[k];
-          results1.push($results.append('<li><a href="' + result.url + '" title="' + result.title + '">' + result.title + '</a></li>'));
-        }
-        return results1;
-      } else {
-        $results.append('<li>No results found. Sorry.</li>');
-      }
-    });
-  });
+var feed = new Instafeed({
+  get: 'user',
+  userId: '304341723',
+  accessToken: '304341723.1677ed0.f0b18c8c229540d59454f6afd802c25d',
+  resolution: 'low_resolution',
+  template: '<a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" width="{{width}}px" height="{{height}}px"></a>',
+  limit: 30
 });
+// feed.run();

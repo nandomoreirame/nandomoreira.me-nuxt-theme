@@ -15,6 +15,7 @@ set :site_author_image, 'avatar.png'
 set :social_twitter, 'https://twitter.com/Pia_Frontend'
 set :social_github, 'https://github.com/nandomoreirame'
 set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
+set :social_instagram, 'https://instagram.com/nandomoreira.me'
 set :disqus_shortname, 'fernandomoreira'
 
 activate :blog do |blog|

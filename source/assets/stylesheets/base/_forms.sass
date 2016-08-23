@@ -1,0 +1,56 @@
+
+// Forms
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+#{$all-text-inputs}, // all text inputs by Bourbon -> http://bourbon.io/docs/#text-inputs
+select
+  appearance: none
+  background-color: $input-background
+  border: $border-base
+  border-radius: $border-radius-base
+  font-weight: $font-weight-normal
+  box-shadow: none
+  height: 3.8rem
+  padding: $spacing-mini $spacing-small
+  width: 100%
+
+  &:focus
+    outline: 0
+    border-color: $color-primary
+
+select
+  background: $input-background url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjZDFkMWQxIiBkPSJNOS40IDMuNmw1IDcgNS4yLTciLz48L3N2Zz4=) center right no-repeat
+
+  &:focus
+    background-image: $input-background url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjOWI0ZGNmIiBkPSJNMTkuNiAzLjZIOS40bDUgNyIvPjwvc3ZnPg==)
+
+  &[multiple]
+    padding: $spacing-small
+
+
+textarea,
+select[multiple]
+  background-image: none
+  min-height: 6.5rem
+
+textarea
+  padding: $spacing-mini $spacing-small
+  overflow-y: auto
+
+label,
+legend
+  font-size: $font-size-base
+  font-weight: $font-weight-bold
+  margin-bottom: $spacing-mini
+  display: block
+
+fieldset
+  border-width: 0
+  padding: 0
+
+input[type="checkbox"],
+input[type="radio"]
+  display: inline
+
+.form-group
+  margin-bottom: $spacing-small
