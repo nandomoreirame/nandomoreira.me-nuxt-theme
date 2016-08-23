@@ -6,7 +6,7 @@ ruby "2.2.4"
 
 gem 'middleman', '~> 3.3.12'
 gem 'middleman-blog', '~> 3.5.3'
-gem 'middleman-gh-pages'
+# gem 'middleman-gh-pages'
 gem 'middleman-syntax'
 gem 'middleman-slim'
 gem 'middleman-deploy'

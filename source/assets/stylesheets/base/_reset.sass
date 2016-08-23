@@ -153,8 +153,9 @@ button:-moz-focusring,
 [type="submit"]::-moz-focus-inner
   outline: 1px dotted ButtonText
 
+// Prevent a WebKit bug where (2) destroys native `audio` and `video`controls in Android 4
 button,
-html [type="button"], // Prevent a WebKit bug where (2) destroys native `audio` and `video`controls in Android 4
+html [type="button"],
 [type="reset"],
 [type="submit"]
   -webkit-appearance: button // Correct the inability to style clickable types in iOS

@@ -11,6 +11,7 @@ git config --global user.email "${GH_EMAIL}"
 git config --global user.name "${GH_USER}"
 
 # deploy
+git checkout --orphan master
 git init
 git add -A .
 git commit -am 'Deploy to GitHub Pages'

@@ -146,3 +146,17 @@ configure :build do
   activate :automatic_image_sizes
   activate :automatic_alt_tags
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # remote is optional (default is "origin")
+  # run `git remote -v` to see a list of possible remotes
+  deploy.remote = "origin"
+
+  # branch is optional (default is "gh-pages")
+  # run `git branch -a` to see a list of possible branches
+  deploy.branch = "master"
+
+  # strategy is optional (default is :force_push)
+  # deploy.strategy = :submodule
+end
