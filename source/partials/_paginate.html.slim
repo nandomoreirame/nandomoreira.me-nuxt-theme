@@ -1,16 +1,3 @@
----
-title: Blog
-pageable: true
-per_page: 6
----
-
-header.page-title
-  h1 Blog
-
-.blog-list
-  - page_articles.each_with_index do |article, i|
-    = partial "partials/article", locals: { :article => article }
-
 - if paginate && num_pages > 1
   nav.paginate
     - if prev_page
