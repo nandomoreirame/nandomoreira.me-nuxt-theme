@@ -1,2 +1,0 @@
-web: middleman server -p 3030
-browsersync: browser-sync start --proxy localhost:3030 --files "source/assets/**/* , source/**/*.html.*" --no-open
