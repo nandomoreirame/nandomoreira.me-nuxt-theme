@@ -7,7 +7,7 @@ end
 
 desc "Middleman build"
 task :build do
-  sh "middleman build"
+  sh "middleman build --verbose"
 end
 
 desc "Middleman deploy"

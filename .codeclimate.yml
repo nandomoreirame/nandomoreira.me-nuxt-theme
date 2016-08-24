@@ -1,0 +1,2 @@
+exclude_paths:
+  - "source/assets/javascripts/vendor/"
