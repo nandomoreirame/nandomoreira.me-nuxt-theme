@@ -78,6 +78,11 @@ compass_config do |config|
 end
 
 ###
+# Redirects
+###
+redirect '/sass-atomic-design/', to: '/sass-e-atomic-design/'
+
+###
 # Helpers
 ###
 
