@@ -37,6 +37,7 @@ gem 'sass', '~> 3.4', :require => false
 # Development environment
 ###
 group :development do
+  gem 'rake'
   gem 'foreman'
 end
 
