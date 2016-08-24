@@ -10,9 +10,12 @@ html
 body
   color: $color-base
   font-family: $font-family-base
-  font-weight: $font-weight-normal
-  font-size: $font-size-base
+  font-size: 1.1rem
+  font-weight: $font-weight-light
   letter-spacing: $letter-spacing-base
+
+  +media($desktop)
+    font-size: 1.3rem
 
 a
   color: darken($color-primary, 10%)
@@ -23,13 +26,6 @@ a
     color: lighten($color-primary, 10%)
     text-decoration: underline
     outline: none
-
-p
-  font-size: 1.1rem
-  font-weight: $font-weight-light
-
-  +media($desktop)
-    font-size: 1.3rem
 
 em
   font-style: italic
@@ -99,9 +95,10 @@ sup
 blockquote
   border-left: .3rem solid $color-quaternary
   padding: $spacing-mini $spacing-small
+  color: lighten($color-base, 15%)
 
   p
-    font-size: 2rem
+    font-size: 1.6rem
 
   & *:last-child
     margin: 0
