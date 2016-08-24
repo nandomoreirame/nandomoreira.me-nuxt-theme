@@ -31,7 +31,7 @@ html.no-js
         - if current_article.data.image
           meta content="#{current_article.data.image}" property="og:image"
         - else
-          meta content="#{site_url}#{image_path('social.png')}" property="og:image"
+          meta content="#{site_url}#{image_path('social.jpg')}" property="og:image"
         meta content=("#{site_url + current_article.url}") property="og:url"
       - if current_article.data.summary
         meta content="#{current_article.data.summary}" property="twitter:description"
@@ -42,7 +42,7 @@ html.no-js
       - if current_article.data.image
         meta content="#{current_article.data.image}" property="twitter:image"
       - else
-        meta content="#{site_url}#{image_path('social.png')}" property="twitter:image"
+        meta content="#{site_url}#{image_path('social.jpg')}" property="twitter:image"
     - body_class = page_classes
     - if current_page.data.body_class
       - body_class += ' ' + current_page.data.body_class
