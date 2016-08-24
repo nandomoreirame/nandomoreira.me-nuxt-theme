@@ -1,0 +1,87 @@
+.clearfix
+  +clearfix
+
+.pull-right
+  float: right !important
+
+.pull-left
+  float: left !important
+
+
+//
+// Texts
+//
+
+.label-inline
+  font-weight: normal
+  display: inline-block
+  margin-left: .5rem
+
+.text-truncate
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.break-word
+  word-wrap: break-word !important
+
+.no-wrap
+  white-space: nowrap !important
+
+.text-left
+  text-align: left !important
+
+.text-right
+  text-align: right !important
+
+.text-center
+  text-align: center !important
+
+.text-just
+  text-align: justify !important
+
+//
+// Borders
+//
+
+.no-border
+  border: none !important
+
+.border-all
+  border: $border-base
+
+.border-top
+  border-top: $border-base
+
+.border-bottom
+  border-bottom: $border-base
+
+.border-right
+  border-right: $border-base
+
+.border-left
+  border-left: $border-base
+
+.rounded
+  border-radius: 30px
+
+.round
+  border-radius: 50%
+
+//
+// Lists
+//
+
+.no-bullets
+  list-style: none
+
+.list-unstyled
+  padding-left: 0
+  list-style: none
+
+.list-inline
+  @extend .list-unstyled
+  margin-left: -5px
+
+  li
+    display: inline-block

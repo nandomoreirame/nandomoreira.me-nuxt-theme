@@ -15,6 +15,7 @@ set :site_author_image, 'avatar.png'
 set :social_twitter, 'https://twitter.com/Pia_Frontend'
 set :social_github, 'https://github.com/nandomoreirame'
 set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
+set :social_instagram, 'https://instagram.com/nandomoreira.me'
 set :disqus_shortname, 'fernandomoreira'
 
 activate :blog do |blog|
@@ -144,4 +145,18 @@ configure :build do
   # Automatic image dimensions on image_tag helper
   activate :automatic_image_sizes
   activate :automatic_alt_tags
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # remote is optional (default is "origin")
+  # run `git remote -v` to see a list of possible remotes
+  deploy.remote = "origin"
+
+  # branch is optional (default is "gh-pages")
+  # run `git branch -a` to see a list of possible branches
+  deploy.branch = "master"
+
+  # strategy is optional (default is :force_push)
+  # deploy.strategy = :submodule
 end

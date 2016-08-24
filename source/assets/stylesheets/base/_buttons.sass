@@ -1,0 +1,99 @@
+
+// Buttons
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+=button-variant( $bg-color: $color-white, $border-color: $color-white )
+  background-color: $bg-color
+  border-color: darken($border-color, 5%)
+
+  &:focus,
+  &:active
+    background-color: darken($bg-color, 8%)
+    border-color: darken($border-color, 8%)
+
+  &:hover
+    background-color: darken($bg-color, 3%)
+    border-color: darken($border-color, 15%)
+
+%buttons
+  border: .1rem solid transparent
+  border-radius: $border-radius-base
+  cursor: pointer
+  display: inline-block
+  font-size: $font-size-base
+  font-weight: $font-weight-light
+  letter-spacing: $letter-spacing-base
+  transition: .1s background-color linear, .1s border-color linear
+  line-height: 3rem
+  padding: 0 $spacing-small
+  text-align: center
+  text-decoration: none
+  white-space: nowrap
+
+  &,
+  &:focus,
+  &:active,
+  &:hover
+    text-decoration: none
+    color: $color-white
+
+  &,
+  &:focus
+    outline: none
+
+  &.is-small
+    padding: 0 $spacing-mini
+    font-size: $font-size-small
+    line-height: 2rem
+
+  &.is-big
+    padding: 0 $spacing-base
+    font-size: $font-size-big
+    line-height: 4rem
+
+  &.is-block
+    display: block
+    margin-bottom: $spacing-mini
+    width: 100%
+
+  &.is-rounded
+    border-radius: 100px
+
+.button,
+.button-primary,
+#{$all-buttons}
+  @extend %buttons
+  +button-variant($color-primary, $color-primary)
+
+.button-secondary
+  @extend %buttons
+  +button-variant($color-secondary, $color-secondary)
+
+.button-tertiary
+  @extend %buttons
+  +button-variant($color-tertiary, $color-tertiary)
+
+.button-quaternary
+  @extend %buttons
+  +button-variant($color-quaternary, $color-quaternary)
+
+.button-ghost
+  @extend %buttons
+  background-color: transparent
+  border-color: rgba($color-white, .4)
+
+  &:focus,
+  &:active,
+  &:hover
+    background-color: rgba($color-white, .1)
+    border-color: rgba($color-white, .6)
+
+.button-white
+  @extend %buttons
+  +button-variant($color-white, $color-silver)
+
+  &,
+  &:focus,
+  &:active,
+  &:hover
+    color: $color-base

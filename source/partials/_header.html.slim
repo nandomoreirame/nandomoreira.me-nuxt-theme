@@ -1,13 +1,5 @@
 header.header
-  #particles-js.hero-particles-js
-  .header__inn
-    .js-text-parallax
-      h1.header__logo
-        span
-          = link_to 'Fernando Moreira', local_path('')
-          small= t(:front_dev)
-      nav.header__social-nav
-        = partial "partials/social"
-
-    = link_to local_path('') do
-      img.header__avatar height="250px" src="#{image_path('avatar.png')}" srcset=("#{image_path('avatar@2x.png')} 2x") width="250px" /
+  =link_to '/', class: 'logo' do
+    svg height="63" viewbox=("0 0 63 63") width="63" xmlns="http://www.w3.org/2000/svg"
+      path d=("M31.5 63C48.897 63 63 48.897 63 31.5S48.897 0 31.5 0 0 14.103 0 31.5 14.103 63 31.5 63zM17.77 16.406c1.576-.457 3.61-.882 6.1-1.276 2.49-.394 5.104-.592 7.843-.592 2.78 0 5.094.364 6.94 1.09 1.848.726 3.31 1.753 4.39 3.08 1.08 1.33 1.846 2.906 2.303 4.732.456 1.826.685 3.86.685 6.1v18.49h-9.274V30.66c0-2.987-.394-5.103-1.182-6.348-.79-1.245-2.262-1.868-4.42-1.868-.664 0-1.37.03-2.117.094-.747.062-1.41.134-1.992.217V48.03H17.77V16.405z") fill="#FDFFFC" fill-rule="evenodd"
+  = partial "partials/nav"

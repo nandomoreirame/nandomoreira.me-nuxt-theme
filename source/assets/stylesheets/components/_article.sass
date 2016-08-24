@@ -1,70 +1,77 @@
-
 .article
-  padding: 0 0 get-spacing(medium)
-  margin-bottom: get-spacing(medium)
+  @extend .card
+  margin-top: $spacing-base
+  margin-bottom: $spacing-base
 
-  &-header
-    text-align: center
-    padding: get-spacing(medium) 0 get-spacing(base)
+  img
+    width: 100%
+    height: auto
 
-  &-title
-    font-size: get-font-size(30px)
-    color: get-color(primary, dark)
-    line-height: 1.2
 
-    +media($screen-tablet)
-      font-size: get-font-size(38px)
+.article-meta
+  margin-bottom: $spacing-mini
 
-    +media($screen-large-tablet)
-      font-size: get-font-size(42px)
+  a
+    padding: 0 5px
 
-  &-meta,
-  &-meta a
-    font-size: get-font-size(16px)
-    color: rgba(get-color(secondary, light), .7)
+  &, a
+    font-size: .9rem
+    display: inline-block
+    color: rgba(66,68,57,0.7)
 
-  &-content
-    img
-      display: block
-      width: 100%
-      max-width: 100%
-      height: auto
-      border-radius: $base-border-radius
+.article-title
+  font-size: 1.8rem
 
-    p
-      margin: 0 0 get-spacing(base) 0
+  +media($desktop)
+    font-size: 3.2rem
 
 .single
-  .article
-    &-title
-      margin: 0
+  .article-header
+    text-align: center
+    border-bottom: $border-base
+    margin-bottom: $spacing-base
 
-    &-header
-      &::after
-        content: ""
-        display: block
-        width: 60px
-        height: 4px
-        background-color: get-color(border)
-        margin: get-spacing(medium) auto 0
+  .article-title
+    font-size: 2.2rem
+    margin: $spacing-mini 0 $spacing-base
 
-.blog-list
-  .article
-    border-bottom: 1px solid get-color(border)
+    +media($desktop)
+      font-size: 3.2rem
 
-    &:last-child
-      border-bottom: none
+.comments
+  padding: $spacing-big 0
+  @extend .clearfix
 
-    &-header
-      text-align: left
-      padding-bottom: 0
+iframe
+  border: none
+  margin: 0
+  padding: 0
 
-    &-title
-      font-size: get-font-size(30px)
+.responsive-video
+  position: relative
+  margin-bottom: 30px
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
 
-      a
-        color: get-color(secondary, light)
+  object,
+  embed,
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
-      a:hover,
-      a:focus
-        color: get-color(primary, dark)
+.share-icons
+  ul
+    margin: 0
+    padding: 0
+
+  li
+    font-weight: $font-weight-light
+    padding: 0 10px
+    vertical-align: middle
+
+    svg
+      display: block

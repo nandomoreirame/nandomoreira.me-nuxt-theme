@@ -1,23 +1,7 @@
-
 .footer
-  padding: get-spacing(big) 0
-  background-color: get-color(primary, dark)
   text-align: center
-  +clearfix()
-
-  .social-nav,
-  small
-    position: relative
-    z-index: 10
+  padding: $spacing-base 0
 
   small
-    color: get-color(white)
-    font-size: get-font-size(14px)
-
-    a
-      color: rgba(get-color(white), .7)
-
-      &:hover,
-      &:focus
-        text-decoration: underline
-        color: get-color(white)
+    color: darken($color-silver, 20%)
+    font-weight: $font-weight-light

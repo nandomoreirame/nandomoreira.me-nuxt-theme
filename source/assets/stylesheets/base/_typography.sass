@@ -1,112 +1,131 @@
 
-@import url("//fonts.googleapis.com/css?family=Merriweather:400,300,700")
-// @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,600")
-@import url("//fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,700")
+// Typography
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import '//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700'
 
 html
-  font-size: $font-size-inuit
+  font-size: $font-size-unit
 
 body
-  color: get-color(text)
+  color: $color-base
   font-family: $font-family-base
-  font-weight: $font-weight-light
-  line-height: $line-height-base
-  font-size: get-font-size(18px)
-  letter-spacing: .018rem
-
-  +media($screen-large-tablet)
-    font-size: get-font-size()
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-  color: get-color(secondary, light)
-  font-family: $font-family-heading
-  line-height: $line-height-heading
-  font-weight: $font-weight-bold
-  margin: get-spacing(base) 0 get-spacing(medium)
-
-p
-  margin: 0 0 get-spacing(medium) 0
-
-h1
-  font-size: get-font-size(32px)
-  letter-spacing: -0.035em
-
-  +media($screen-large-tablet)
-    font-size: get-font-size(38px)
-
-h2
-  font-size: get-font-size(28px)
-
-  +media($screen-large-tablet)
-    font-size: get-font-size(30px)
-
-h3
-  font-size: get-font-size(22px)
-
-  +media($screen-large-tablet)
-    font-size: get-font-size(28px)
-
-h4
-  font-size: get-font-size(20px)
-
-  +media($screen-large-tablet)
-    font-size: get-font-size(24px)
-
-h5,
-h6
-  font-size: get-font-size(18px)
-
-  +media($screen-large-tablet)
-    font-size: get-font-size(22px)
+  font-weight: $font-weight-normal
+  font-size: $font-size-base
+  letter-spacing: $letter-spacing-base
 
 a
+  color: darken($color-primary, 10%)
   text-decoration: none
-  color: get-color(primary, light)
-  +transition(color $base-duration $base-timing)
+  border: 0
 
-  +hover-focus()
-    color: get-color(primary, dark)
+  &:hover
+    color: lighten($color-primary, 10%)
     text-decoration: underline
+    outline: none
+
+p
+  font-size: 1.1rem
+  font-weight: $font-weight-light
+
+  +media($desktop)
+    font-size: 1.3rem
 
 em
   font-style: italic
 
-strong
-  font-weight: $font-weight-semi-bold
+strong, b
+  font-weight: $font-weight-bold
+
+small
+  font-size: 80%
+
+big
+  font-size: 150%
+
+p, dl, table, blockquote
+  margin: 0 0 $spacing-small 0
+
+h1, h2, h3, h4, h5, h6
+  color: inherit
+  font-weight: $font-weight-bold
+  margin: 0 0 $spacing-base
+
+  a
+    color: inherit
+    text-decoration: none
+    border: 0
+
+h1
+  font-size: 2.5rem
+  letter-spacing: -.1rem
+  line-height: 1.2
+
+h2
+  font-size: 2rem
+  letter-spacing: -.1rem
+  line-height: 1.25
+
+h3
+  font-size: 1.7rem
+  letter-spacing: -.1rem
+  line-height: 1.3
+
+h4
+  font-size: 1.5rem
+  letter-spacing: -.08rem
+  line-height: 1.35
+
+h5
+  font-size: 1.2rem
+  letter-spacing: -.05rem
+  line-height: 1.5
+
+h6
+  font-size: 1rem
+  letter-spacing: 0
+  line-height: 1.4
+
+sub
+  font-size: .8em
+  position: relative
+  top: .5em
+
+sup
+  font-size: .8em
+  position: relative
+  top: -.5em
+
+blockquote
+  border-left: .3rem solid $color-quaternary
+  padding: $spacing-mini $spacing-small
+
+  p
+    font-size: 2rem
+
+  & *:last-child
+    margin: 0
 
 pre,
 code
-  background-color: get-color(code)
   font-family: $font-family-monospace
-  line-height: 1.3
 
-blockquote
-  position: relative
-  transition: border-color .2s linear
-  margin: get-spacing(base) 0 get-spacing(medium)
-  padding: get-spacing(small)
-  font-size: get-font-size(22px)
+code
+  background: lighten($color-silver, 6%)
+  border-radius: $border-radius-base
+  font-size: .8rem
+  padding: .2rem .5rem
+  margin: 0 .2rem
+  white-space: nowrap
 
-  &:before
-    content: ""
+pre
+  background: lighten($color-silver, 6%)
+  border-left: .3rem solid $color-gray
+  padding: 0 ($spacing-mini / 2)
+
+  & > code
+    background: transparent
+    border-radius: 0
     display: block
-    background: url("/assets/images/quote.svg") no-repeat
-    background-size: 80px
-    opacity: .07
-    z-index: 1
-    +position(absolute, 0 null null 0)
-    +size(80px)
-
-  &:hover,
-  &:focus
-    border-left-color: get-color(primary, light)
-
-  p:last-child
-    position: relative
-    z-index: 2
-    margin-bottom: 0
+    padding: $spacing-mini $spacing-small
+    white-space: pre

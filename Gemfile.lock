@@ -87,8 +87,6 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
-    middleman-gh-pages (0.3.1)
-      rake (> 0.9.3)
     middleman-meta-tags (0.2.0)
       middleman-core (>= 3.0.0)
     middleman-minify-html (3.4.1)
@@ -136,7 +134,6 @@ GEM
     rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -182,7 +179,6 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-blog (~> 3.5.3)
   middleman-deploy
-  middleman-gh-pages
   middleman-meta-tags
   middleman-minify-html
   middleman-search_engine_sitemap

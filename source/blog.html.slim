@@ -4,19 +4,21 @@ pageable: true
 per_page: 6
 ---
 
+header.page-title
+  h1 Blog
+
 .blog-list
   - page_articles.each_with_index do |article, i|
     = partial "partials/article", locals: { :article => article }
 - if paginate && num_pages > 1
   nav.paginate
     - if prev_page
-      = link_to 'Previous page', prev_page, class: 'previous-page button-white button--small'
+      = link_to 'Previous page', prev_page, class: 'previous-page button-white'
     - else
-      = link_to 'Previous page', '#', class: 'previous-page button-white button--small disabled'
-    p
-      small
-        | Page #{page_number} of #{num_pages}
+      = link_to 'Previous page', '#', class: 'previous-page button-white disabled'
+    span
+      | Page #{page_number} of #{num_pages}
     - if next_page
-      = link_to 'Next page', next_page, class: 'next-page button-white button--small'
+      = link_to 'Next page', next_page, class: 'next-page button-white'
     - else
-      = link_to 'Next page', '#', class: 'next-page button-white button--small disabled'
+      = link_to 'Next page', '#', class: 'next-page button-white disabled'
