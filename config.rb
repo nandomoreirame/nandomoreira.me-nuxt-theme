@@ -120,6 +120,7 @@ set :markdown, :fenced_code_blocks => true,
 # Reload the browser automatically whenever files change
 configure :development do
   set :debug_assets, true
+  activate :livereload
 end
 
 require 'sass-media_query_combiner'

@@ -14,6 +14,7 @@ gem 'middleman-title'
 gem 'middleman-meta-tags'
 gem 'middleman-search_engine_sitemap' # for sitemap
 gem 'middleman-minify-html'
+gem 'middleman-livereload', '~> 3.4.3'
 
 gem 'rack-contrib'
 gem 'rack-rewrite'

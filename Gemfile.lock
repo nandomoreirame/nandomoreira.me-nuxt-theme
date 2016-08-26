@@ -33,7 +33,11 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
+    eventmachine (1.2.0.1)
     execjs (2.7.0)
     ffi (1.9.10)
     foreman (0.82.0)
@@ -46,6 +50,7 @@ GEM
     hooks (0.4.1)
       uber (~> 0.0.14)
     htmlcompressor (0.2.0)
+    http_parser.rb (0.6.0)
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.11.1)
@@ -87,6 +92,10 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
+    middleman-livereload (3.4.6)
+      em-websocket (~> 0.5.1)
+      middleman-core (>= 3.3)
+      rack-livereload (~> 0.3.15)
     middleman-meta-tags (0.2.0)
       middleman-core (>= 3.0.0)
     middleman-minify-html (3.4.1)
@@ -131,6 +140,8 @@ GEM
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
       rack (~> 1.4)
+    rack-livereload (0.3.16)
+      rack
     rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -180,6 +191,7 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-blog (~> 3.5.3)
   middleman-deploy
+  middleman-livereload (~> 3.4.3)
   middleman-meta-tags
   middleman-minify-html
   middleman-search_engine_sitemap
