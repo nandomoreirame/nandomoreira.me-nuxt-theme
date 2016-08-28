@@ -8,10 +8,6 @@ html.no-js
       meta content=("#{page_title + "→"}") name="description"
     - else
       meta content=site_description name="description"
-    - if current_article.data.keywords
-      meta content="#{current_article.data.keywords}" name="keywords"
-    - else
-      meta content=site_keywords name="keywords"
 
     meta rel="canonical" href="#{site_url}#{current_page.url}"
 
