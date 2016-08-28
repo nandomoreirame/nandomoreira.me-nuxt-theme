@@ -12,23 +12,23 @@
     });
   });
 
-  // var titleParallax = {
-  //   textParallax : document.querySelector('.js-text-parallax'),
+  var titleParallax = {
+    textParallax : document.querySelector('.js-text-parallax'),
 
-  //   init: function() {
-  //     window.addEventListener("scroll", function(event) {
-  //       titleParallax.update(this.scrollY);
-  //     }, false);
-  //   },
-  //   update: function(scroll) {
-  //     this.textParallax.style['-webkit-transform'] = 'translateY('+ (scroll * .5) +'px)';
-  //     this.textParallax.style['-moz-transform'] = 'translateY('+ (scroll * .5) +'px)';
-  //     this.textParallax.style['transform'] = 'translateY('+ (scroll * .5) +'px)';
-  //     this.textParallax.style['opacity'] = (1 - ( scroll * .005 ));
-  //   }
-  // };
+    init: function() {
+      window.addEventListener("scroll", function(event) {
+        titleParallax.update(this.scrollY);
+      }, false);
+    },
+    update: function(scroll) {
+      this.textParallax.style['-webkit-transform'] = 'translateY('+ (scroll * .5) +'px)';
+      this.textParallax.style['-moz-transform'] = 'translateY('+ (scroll * .5) +'px)';
+      this.textParallax.style['transform'] = 'translateY('+ (scroll * .5) +'px)';
+      this.textParallax.style['opacity'] = (1 - ( scroll * .005 ));
+    }
+  };
 
-  // titleParallax.init();
+  titleParallax.init();
 
 })(jQuery);
 

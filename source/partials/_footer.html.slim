@@ -8,7 +8,9 @@ footer.footer
     = " by #{link_to(site_author, site_url)} "
     = "using #{link_to "middlemanapp.com", "http://middlemanapp.com" , :target => :blank }"
 
-script#dsq-count-scr async="" data-cfasync="false" src="//#{disqus_shortname}.disqus.com/count.js"
 = javascript_include_tag "main"
 
-= partial "partials/zopim"
+script#dsq-count-scr async="" data-cfasync="false" src="//#{disqus_shortname}.disqus.com/count.js"
+
+- if enable_zopim
+  = partial "partials/zopim"

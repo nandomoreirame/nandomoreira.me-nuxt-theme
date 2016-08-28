@@ -9,14 +9,14 @@ set :site_url, 'https://nandomoreira.me'
 set :site_title, 'Fernando Moreira | Front-end developer'
 set :site_author, 'Fernando Moreira'
 set :site_description, 'Front-end developer'
-set :site_keywords, 'front-end, web, developer, middleman, jekyll, wordpress, php, ruby'
-set :twitter, '@Pia_Frontend'
 set :site_author_image, 'avatar.png'
+set :twitter, '@Pia_Frontend'
 set :social_twitter, 'https://twitter.com/Pia_Frontend'
 set :social_github, 'https://github.com/nandomoreirame'
 set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
 set :social_instagram, 'https://instagram.com/nandomoreira.me'
 set :disqus_shortname, 'fernandomoreira'
+set :enable_zopim, false
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
@@ -117,12 +117,6 @@ set :markdown, :fenced_code_blocks => true,
                :autolink => true,
                :smartypants => true
 
-# Reload the browser automatically whenever files change
-configure :development do
-  set :debug_assets, true
-  activate :livereload
-end
-
 require 'sass-media_query_combiner'
 
 activate :autoprefixer do |config|
@@ -140,6 +134,7 @@ configure :build do
   activate :cache_buster
   activate :asset_host, :host => '//d2pcfnwkh4jlye.cloudfront.net'
   set :google_analytics_account, 'UA-52446115-1'
+  set :enable_zopim, true
 
   # Automatic image dimensions on image_tag helper
   activate :automatic_image_sizes
@@ -158,4 +153,10 @@ activate :deploy do |deploy|
 
   # strategy is optional (default is :force_push)
   # deploy.strategy = :submodule
+end
+
+# Reload the browser automatically whenever files change
+configure :development do
+  set :debug_assets, true
+  activate :livereload
 end

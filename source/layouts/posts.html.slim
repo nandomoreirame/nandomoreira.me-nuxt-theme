@@ -2,6 +2,7 @@ doctype html
 html.no-js
   head
     = partial "partials/head"
+
     - if current_article.data.description
       meta content="#{current_article.data.description}" name="description"
     - elsif current_article.data.link
@@ -14,7 +15,7 @@ html.no-js
     - if build?
       meta content="#{site_author}" property="og:site_name"
       meta content="#{site_url}" property="twitter:site"
-      meta content="@Pia_Frontend" property="twitter:creator"
+      meta content="#{twitter}" property="twitter:creator"
       meta content="#{site_title}" property="twitter:title"
 
       - page_articles.index do |article, i|
@@ -24,25 +25,31 @@ html.no-js
           meta content=("#{page_title + "→"}") property="og:description"
         - else
           meta content=site_description property="og:description"
+
         - if current_article.data.link
           meta content="link" property="og:type"
         - else
           meta content="article" property="og:type"
+
         - if current_article.data.image
           meta content="#{current_article.data.image}" property="og:image"
         - else
           meta content="#{site_url}#{image_path('social.jpg')}" property="og:image"
+
         meta content=("#{site_url + current_article.url}") property="og:url"
+
       - if current_article.data.summary
         meta content="#{current_article.data.summary}" property="twitter:description"
       - elsif current_article.data.link
         meta content=("#{page_title + "→"}") property="twitter:description"
       - else
         meta content=site_description property="twitter:description"
+
       - if current_article.data.image
         meta content="#{current_article.data.image}" property="twitter:image"
       - else
         meta content="#{site_url}#{image_path('social.jpg')}" property="twitter:image"
+
     - body_class = page_classes
     - if current_page.data.body_class
       - body_class += ' ' + current_page.data.body_class
