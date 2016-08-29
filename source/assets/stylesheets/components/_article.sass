@@ -7,6 +7,19 @@
     width: 100%
     height: auto
 
+body.single
+  .main > .container,
+  .article, blockquote
+    padding-left: 0
+    padding-right: 0
+
+  .article
+    p, h1, h2,
+    h3, h4, h5,
+    .share-icons,
+    .article-title
+      padding-left: $spacing-base
+      padding-right: $spacing-base
 
 .article-meta
   margin-bottom: $spacing-mini
@@ -41,10 +54,12 @@
     +media($desktop)
       font-size: 3.2rem
 
-.article-content
-  img
-    border-radius: 3px
-    box-shadow: 0 2px 2px rgba($color-black, .1)
+.image img
+  box-shadow: 0 2px 2px rgba($color-black, .1)
+
+.image,
+iframe
+  margin-bottom: $spacing-small
 
 .comments
   padding: $spacing-big 0

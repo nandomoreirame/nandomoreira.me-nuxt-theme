@@ -1,8 +1,8 @@
-aside#comments.comments
-  .container__inn
-    #disqus_thread
-
 - if build?
+  aside#comments.comments
+    .container__inn
+      #disqus_thread
+
   javascript:
     var disqus_shortname = "#{disqus_shortname}";
     var disqus_identifier = "#{current_article.url}";

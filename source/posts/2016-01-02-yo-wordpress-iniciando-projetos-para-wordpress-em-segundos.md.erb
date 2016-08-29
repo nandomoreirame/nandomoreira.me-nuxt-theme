@@ -27,7 +27,9 @@ A instalação de um generator yo é bem simples, basta que você encontra o gen
 
 Nós vamos procurar por **yo-wordpress** no campo de busca e clicar no link.
 
-<%= image_tag '/assets/images/posts/2016/01/find-yo-wordpress.png' %>
+<div class="image">
+  <%= image_tag '/assets/images/posts/2016/01/find-yo-wordpress.png' %>
+</div>
 
 Clicando no link você será direcionado para o [repositório do generator](https://github.com/romainberger/yeoman-wordpress), lá teremos o passo-a-passo de como instalar e usar.
 
@@ -39,7 +41,9 @@ sudo npm install -g yo generator-yo-wordpress
 
 Com o comando acima instalamos o **Yeoman** e o **yo-wordpress**
 
-<%= image_tag '/assets/images/posts/2016/01/instalando-yo-wordpress.png' %>
+<div class="image">
+  <%= image_tag '/assets/images/posts/2016/01/instalando-yo-wordpress.png' %>
+</div>
 
 ## Gerando seu primeiro projeto com yo-wordpress
 
@@ -49,7 +53,9 @@ Após a instalação o seu generator poderá ser executado normalmente de qualqu
 yo wordpress
 ```
 
-<%= image_tag '/assets/images/posts/2016/01/yo-wordpress-command.png' %>
+<div class="image">
+  <%= image_tag '/assets/images/posts/2016/01/yo-wordpress-command.png' %>
+</div>
 
 Logo em seguida o generator irá pedir que você preencha alguns campos para que sua instalação sai bem. São elas:
 
@@ -72,13 +78,17 @@ Logo em seguida o generator irá pedir que você preencha alguns campos para que
   * `Repository branch`: Deixe como `template`;
 * `Does this all look correct? (Y/n)`: Responda `Y` e seja feliz :D
 
-<%= image_tag '/assets/images/posts/2016/01/executando-yo-wordpress.png' %>
+<div class="image">
+  <%= image_tag '/assets/images/posts/2016/01/executando-yo-wordpress.png' %>
+</div>
 
 O Generator vai gerar todos os arquivos para o seu novo projeto, e também um arquivo `.json` chamado `.yeopress`, ele usa esse arquivo para armazenar as configurações que você preencheu ao rodar o comando no terminal, pra mim ficou assim:
 
-<a href="<%= image_path('posts/2016/01/generator-files-and-yopress-file.png') %>" class="lightbox" rel="gallery" title="generator files">
-  <%= image_tag 'posts/2016/01/generator-files-and-yopress-file.png' %>
-</a>
+<div class="image">
+  <a href="<%= image_path('posts/2016/01/generator-files-and-yopress-file.png') %>" class="lightbox" rel="gallery" title="generator files">
+    <%= image_tag 'posts/2016/01/generator-files-and-yopress-file.png' %>
+  </a>
+</div>
 
 ## Conclusão
 
