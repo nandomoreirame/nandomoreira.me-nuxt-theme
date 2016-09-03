@@ -62,8 +62,11 @@ iframe
   margin-bottom: $spacing-small
 
 .comments
-  padding: $spacing-big 0
+  padding: $spacing-base
   @extend .clearfix
+
+  +media($desktop)
+    padding: $spacing-big $spacing-small
 
 iframe
   border: none
