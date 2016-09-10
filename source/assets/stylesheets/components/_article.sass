@@ -1,25 +1,12 @@
 .article
   @extend .card
-  margin-top: $spacing-base
+  margin-top: 0
   margin-bottom: $spacing-base
+  overflow: hidden
 
   img
     width: 100%
     height: auto
-
-body.single
-  .main > .container,
-  .article, blockquote
-    padding-left: 0
-    padding-right: 0
-
-  .article
-    p, h1, h2,
-    h3, h4, h5,
-    .share-icons,
-    .article-title
-      padding-left: $spacing-base
-      padding-right: $spacing-base
 
 .article-meta
   margin-bottom: $spacing-mini
@@ -34,12 +21,13 @@ body.single
 
 .article-title
   font-size: 1.8rem
+  margin-bottom: $spacing-mini
 
   &, a
     color: $color-secondary
 
   +media($desktop)
-    font-size: 2.8rem
+    font-size: 2.2rem
 
 .single
   .article-header
@@ -52,10 +40,11 @@ body.single
     margin: $spacing-mini 0 $spacing-base
 
     +media($desktop)
-      font-size: 3.2rem
+      font-size: 3rem
 
-.image img
-  box-shadow: 0 2px 2px rgba($color-black, .1)
+.image
+  margin-left: -($spacing-base)
+  margin-right: -($spacing-base)
 
 .image,
 iframe
@@ -101,3 +90,23 @@ iframe
 
     svg
       display: block
+
+
++media(max-width $tablet)
+  body.single
+    .image
+      margin-left: 0
+      margin-right: 0
+
+    .main > .container,
+    .article, blockquote
+      padding-left: 0
+      padding-right: 0
+
+    .article
+      p, h1, h2,
+      h3, h4, h5,
+      .share-icons,
+      .article-title
+        padding-left: $spacing-base
+        padding-right: $spacing-base
