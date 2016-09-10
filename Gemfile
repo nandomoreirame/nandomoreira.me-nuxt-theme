@@ -6,9 +6,7 @@ ruby "2.2.4"
 
 gem 'middleman', '~> 3.3.12'
 gem 'middleman-blog', '~> 3.5.3'
-# gem 'middleman-gh-pages'
 gem 'middleman-syntax'
-gem 'middleman-slim'
 gem 'middleman-deploy'
 gem 'middleman-title'
 gem 'middleman-meta-tags'
@@ -19,6 +17,8 @@ gem 'middleman-livereload', '~> 3.4.3'
 gem 'rack-contrib'
 gem 'rack-rewrite'
 gem 'puma'
+
+gem 'slim'
 
 gem 'nokogiri' # for article.summary
 

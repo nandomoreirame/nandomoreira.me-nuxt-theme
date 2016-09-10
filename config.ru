@@ -2,8 +2,8 @@ require 'rubygems'
 require 'middleman/rack'
 require "rack/contrib/try_static"
 require 'rack/rewrite'
-require 'slim'
 
+require 'slim'
 Slim::Engine.disable_option_validator!
 
 # Build the static site when the app boots
