@@ -7,5 +7,5 @@ article.article
     h1.article-title
       = link_to article.title, article
   p.article-summary
-    = strip_tags(article.summary(200)) + ' '
+    = strip_tags(article.summary(320)) + ' '
     =link_to '[' + t(:read_more) + ']', article.url

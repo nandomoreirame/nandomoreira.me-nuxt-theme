@@ -1,5 +1,18 @@
-$default-feature: min-width
+=button-variant( $bg-color: $color-white, $border-color: $color-white )
+  background-color: $bg-color
+  border-color: darken($border-color, 5%)
 
+  &:focus,
+  &:active
+    background-color: darken($bg-color, 8%)
+    border-color: darken($border-color, 8%)
+
+  &:hover
+    background-color: darken($bg-color, 3%)
+    border-color: darken($border-color, 15%)
+
+
+$default-feature: min-width
 =media($query: $feature $value)
   @if length($query) == 1
     @media screen and ($default-feature: nth($query, 1))
