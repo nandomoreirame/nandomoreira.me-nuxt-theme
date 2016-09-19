@@ -72,14 +72,15 @@ html.no-js
   body class="#{body_class} single"
     = partial "partials/header"
     main.main role="main"
+      header.page-title.js-text-parallax
+        .container
+          meta content="#{current_page.date.strftime('%Y-%m-%d')}" itemprop="datePublished"
+          span.article-meta
+            | Posted on the #{current_page.date.strftime('%d')} of #{current_page.date.strftime('%b')} #{current_page.date.strftime('%Y')}
+          h1.article-title itemprop="headline" = current_page.data.title
       .container
         article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
           .container-inn
-            header.article-header
-              meta content="#{current_page.date.strftime('%Y-%m-%d')}" itemprop="datePublished"
-              span.article-meta
-                | Posted on the #{current_page.date.strftime('%d')} of #{current_page.date.strftime('%b')} #{current_page.date.strftime('%Y')}
-              h1.article-title itemprop="headline" = current_page.data.title
             .article-content itemprop="articleBody"
               = yield
               = partial "partials/share"
