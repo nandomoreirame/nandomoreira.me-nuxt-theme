@@ -1,8 +1,6 @@
 // Base css
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import url("//fonts.googleapis.com/css?family=Roboto:300,400,700")
-
 html,
 body
   +size(100%) // include Bourbon size mixin -> http://bourbon.io/docs/#size
@@ -15,6 +13,19 @@ body
 
 hr
   border: 0
-  border-top: .1rem solid $border-color-base
+  display: block
+  text-align: center
   margin-bottom: $spacing-base
   margin-top: $spacing-base
+
+  &:before
+    font-family: $font-family-base
+    font-weight: 400
+    font-style: italic
+    font-size: 2rem
+    letter-spacing: .5em
+    content: '...'
+    display: inline-block
+    margin-left: -.5em
+    color: rgba($color-base, .5)
+    position: relative

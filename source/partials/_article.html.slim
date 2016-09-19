@@ -7,5 +7,5 @@ article.article
       span.divider
       = link_to '0 comments', article.url + '#comments', class: 'disqus-comment-count', :'data-disqus-url' => "#{site_url}#{article.url}"
   p.article-summary
-    = strip_tags(article.summary(320)) + ' '
+    = strip_tags(article.summary(160)) + ' '
     =link_to '[' + t(:read_more) + ']', article.url

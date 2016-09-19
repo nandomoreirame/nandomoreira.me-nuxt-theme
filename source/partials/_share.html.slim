@@ -1,13 +1,27 @@
-hr/
-aside.share-icons.clearfix
-  ul.list-inline.pull-right
-    li Share:
-    li
+hr.clearfix
+aside.share-icons
+  ul.list-inline
+    li.twitter
       = link_to '#', onclick: "var twitter_url = 'https://twitter.com/share?url=#{site_url}#{current_page.url}&amp;text='+ encodeURI('#{page_title}'); PopupCenter(twitter_url,'xtf','500','500')", :target => :blank do
-        svg height="22" viewbox=("1072 201 26 22") width="26" xmlns="http://www.w3.org/2000/svg"
-          path d=("M1094.936 204.332c1.102-.65 1.947-1.69 2.345-2.942-1.03.618-2.17 1.057-3.386 1.3-.973-1.04-2.36-1.69-3.894-1.69-2.948 0-5.337 2.39-5.337 5.33 0 .424.047.83.138 1.22-4.432-.227-8.364-2.34-10.995-5.575-.46.78-.722 1.707-.722 2.682 0 1.853 1.233 3.478 2.665 4.437-.875-.032-2.126-.26-2.126-.666v.065c0 2.584 1.55 4.746 3.99 5.234-.45.13-1.064.195-1.552.195-.345 0-.75-.05-1.078-.098.68 2.113 2.61 3.657 4.947 3.706-1.826 1.43-4.146 2.276-6.647 2.276-.43 0-.863-.033-1.28-.065 2.363 1.514 5.16 2.39 8.175 2.39 9.814 0 15.178-8.125 15.178-15.18 0-.23-.005-.454-.016-.682 1.043-.764 1.945-1.706 2.66-2.763-.954.423-1.98.7-3.06.83z") fill="#00ACED" fill-rule="evenodd"
-    li
+        svg height="44" viewbox=("100 40 44 44") width="44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          defs
+            circle#a cx="22" cy="22" r="22"
+            mask#b fill="#fff" height="44" width="44" x="0" y="0"
+              use xlink:href="#a"
+          g fill="none" fill-rule="evenodd" transform=("translate(100 40)")
+            path d=("M0 0h44v44H0z")
+            use mask="url(#b)" stroke="#1da1f2" stroke-width="4" xlink:href="#a"
+            path d=("M30.526 16.846c.89-.562 1.573-1.452 1.893-2.513-.84.52-1.76.898-2.74 1.102C28.9 14.55 27.78 14 26.54 14c-2.38 0-4.308 2.035-4.308 4.544 0 .356.036.703.11 1.034-3.58-.19-6.754-1.996-8.88-4.747-.37.68-.583 1.46-.583 2.29 0 1.58.76 2.97 1.91 3.79-.71-.023-1.37-.23-1.958-.57v.058c0 2.203 1.484 4.04 3.46 4.456-.364.107-.74.16-1.138.16-.278 0-.55-.027-.81-.08.547 1.804 2.14 3.12 4.024 3.155-1.478 1.22-3.335 1.944-5.353 1.944-.348 0-.69-.02-1.028-.06C13.902 31.25 16.167 32 18.6 32c7.925 0 12.256-6.924 12.256-12.93 0-.196 0-.393-.01-.586.84-.64 1.57-1.442 2.15-2.353-.778.367-1.61.61-2.48.72z") fill="#1da1f2"
+
+    li.facebook
       = link_to '#', onclick: "PopupCenter('http://www.facebook.com/sharer.php?u=#{site_url}#{current_page.url}','xtf','500','500')", :target => :blank do
-        svg height="26" viewbox=("1111 198 16 26") width="15" xmlns="http://www.w3.org/2000/svg"
-          path d=("M1120.625 198c-2.76 0-4.75 2.243-4.75 5.005v4.745H1111v4.875h4.875V224h4.875v-11.375h5l1-4.875h-6v-3.12c0-.553.947-1.755 1.5-1.755h3.375V198h-5z") fill="#4867AA" fill-rule="evenodd"
+        svg height="44" viewbox=("40 40 44 44") width="44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          defs
+            circle#a cx="22" cy="22" r="22"
+            mask#b fill="#fff" height="44" width="44" x="0" y="0"
+              use xlink:href="#a"
+          g fill="none" fill-rule="evenodd" transform=("translate(40 40)")
+            path d=("M0 0h44v44H0z")
+            use mask="url(#b)" stroke="#3b5998" stroke-width="4" xlink:href="#a"
+            path d=("M23.315 35h-4.878V23.5H16v-3.964h2.437v-2.38c0-3.233 1.376-5.156 5.286-5.156h3.255v3.964h-2.034c-1.523 0-1.623.554-1.623 1.588l-.005 1.984H27l-.43 3.963h-3.256V35z") fill="#3b5998"
 

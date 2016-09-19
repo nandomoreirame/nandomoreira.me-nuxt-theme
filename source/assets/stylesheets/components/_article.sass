@@ -34,7 +34,14 @@
   +media($desktop)
     font-size: 2.2rem
 
+.blog-list
+  .article p
+    margin-bottom: 0
+
 .single
+  .article
+    padding-bottom: 0
+
   .article-header
     text-align: center
     border-bottom: $border-base
@@ -87,14 +94,46 @@ iframe
   ul
     margin: 0
     padding: 0
+    text-align: center
 
-  li
+  svg
+    display: block
+
+  li.facebook
+    a:after
+      content: 'Facebook'
+      color: #3b5998
+
+  li.twitter
+    a:after
+      content: 'Twitter'
+      color: #1da1f2
+
+  a
     font-weight: $font-weight-light
-    padding: 0 10px
     vertical-align: middle
+    display: block
+    opacity: .2
+    transition: opacity .2s ease-in-out
+    color: $color-base
+    text-decoration: none
 
-    svg
+    &:after
+      opacity: 0
       display: block
+      text-align: center
+      transform: translateY(-40%)
+      transition: opacity .2s ease-in-out, transform .2s ease-in-out
+      position: relative
+      left: -15%
+      font-size: 1rem
+
+    &:hover
+      opacity: .75
+
+      &:after
+        opacity: 1
+        transform: translateY(0)
 
 
 +media(max-width $tablet)
