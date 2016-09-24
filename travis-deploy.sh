@@ -7,7 +7,17 @@ fi
 
 echo -e "\nRunning Travis Deployment"
 echo "Setting up Git Access"
-openssl aes-256-cbc -K $encrypted... etc. # Copy and paste the command we noted before here!
+openssl aes-256-cbc -K $encrypted_0a6cc1a5146a_key -iv $encrypted_0a6cc1a5146a_iv -in deploy_key.enc -out deploy_key -d
+chmod 600 deploy_key
+
+if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
+    echo "Not deploying pull request."
+    exit
+fi
+
+echo -e "\nRunning Travis Deployment"
+echo "Setting up Git Access"
+openssl aes-256-cbc -K $encrypted_8dc7b52b04c0_key -iv $encrypted_8dc7b52b04c0_iv -in deploy_key.enc -out deploy_key -d
 chmod 600 deploy_key
 
 # Add the SSH key so it's used on git commands
