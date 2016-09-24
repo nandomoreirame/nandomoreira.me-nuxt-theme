@@ -1,27 +1,35 @@
-= link_to '#', class: 'navbar-toggle js-navbar-toggle', role: :button, :data => { :toggle => 'nav' } do
-  svg.rect-top height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
-    rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
-  svg.rect-middle height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
-    rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
-  svg.rect-bottom height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
-    rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
+#navbar
+  = link_to '#navbar', class: 'navbar-toggle navbar-toggle__open', role: :button, :data => { :toggle => 'nav' } do
+    svg.rect-top height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
+      rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
+    svg.rect-middle height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
+      rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
+    svg.rect-bottom height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
+      rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
+  = link_to '#', class: 'navbar-toggle navbar-toggle__close', role: :button, :data => { :toggle => 'nav' } do
+    svg.rect-top height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
+      rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
+    svg.rect-middle height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
+      rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
+    svg.rect-bottom height="4" viewbox=("0 9 40 4") width="40" xmlns="http://www.w3.org/2000/svg"
+      rect fill="#fdfffc" fill-rule="evenodd" height="3.223" rx="1.611" width="39.012" y="9.425"
 
-nav#navbar.navbar.text-center
-  .navbar__inner
-    ul.nav
-      li
-        = link_to t(:writing), '/blog', title: t(:writing)
-      li
-        = link_to t(:about_me), local_path(t('paths.about')), title: t(:about_me)
-      li
-        = link_to t(:experiments), 'https://codepen.io/nandomoreirame/', :target => :blank, title: t(:experiments)
-      / li
-        / a href="#"  Projects
-      li
-        = link_to 'Feed', '/feed.xml', :target => :blank
+  nav.navbar.text-center
+    .navbar__inner
+      ul.nav
+        li
+          = link_to t(:writing), '/blog', title: t(:writing)
+        li
+          = link_to t(:about_me), local_path(t('paths.about')), title: t(:about_me)
+        li
+          = link_to t(:experiments), 'https://codepen.io/nandomoreirame/', :target => :blank, title: t(:experiments)
+        / li
+          / a href="#"  Projects
+        li
+          = link_to 'Feed', '/feed.xml', :target => :blank
 
 
-    = partial 'partials/social'
-    / - other_langs.each do |lang|
-    /   small.translate
-    /     = link_to t(lang.to_s), local_path('', { :language => lang.to_s })
+      = partial 'partials/social'
+      / - other_langs.each do |lang|
+      /   small.translate
+      /     = link_to t(lang.to_s), local_path('', { :language => lang.to_s })

@@ -3,6 +3,12 @@
   z-index: 10000
   padding: 20px 10px
 
+  &__open
+    display: block
+
+  &__close
+    display: none
+
   svg
     margin: 0 0 6px
     transition: all .2s ease-in-out
@@ -72,9 +78,7 @@
       &::after
         width: 100%
 
-body.navbar-open
-  overflow: hidden
-
+#navbar:target
   .navbar
     display: table
 
@@ -93,6 +97,12 @@ body.navbar-open
       animation-delay: .3s
 
   .navbar-toggle
+    &__open
+      display: none
+
+    &__close
+      display: block
+
     svg
       &.rect-middle
         display: none
