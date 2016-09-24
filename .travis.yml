@@ -1,15 +1,15 @@
 language: ruby
 rvm:
-- 2.2.4
+  - 2.2.4
 branches:
   only:
-  - master
-  - source
+    - master
+    - source
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GH_USER="Fernando Moreira"
-  - GH_EMAIL="nandomoreira.me@gmail.com"
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - GH_USER="Fernando Moreira"
+    - GH_EMAIL="nandomoreira.me@gmail.com"
 cache: bundler
 gemfile: travisGemfile
 install: bundle install
