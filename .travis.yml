@@ -5,6 +5,7 @@ rvm:
 branches:
   only:
   - master
+  - source
 cache:
 - bundler
 gemfile: travisGemfile
@@ -19,6 +20,5 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_USER="Fernando Moreira"
   - GH_EMAIL="nandomoreira.me@gmail.com"
-  - secure: P3f8Pdx8pdaGRrOcYyQXfxoBJGFLIniis6ZjFrHK6Lzqu/6jpkODfJivUYzULWChVCp2D9JLLaM4bsdU2HcwJHW/ASxMa3SmXOAqEtoiiFNmSAt85GW/1O+O8V62DNFwbqnGaqrL/o4ytwq7oHDJk/kMU04AzpQgXXhCTEiFyadDAu2/LDe4cPrhwl+QEzlNWsnVx/LXIiksD9BLbKCKtlK96xDlNdF+b84kNOzilzDUsof5XG70TX9Rr149F8WTBclTZIIrzgFy8EfugQS/qRtOwu7YbSpMq/YaeDZZozoZ8wkvopLX2poNYoMGLkjF+xgQR5c5tBTIqk5gjv55lB6uOuohuhM/y+wTg8h6tZz3YZSJB+GsPskRuso+L7w+uPRXpL8MmjOmjIvf01zDmJ981K3txZIgOBUKKImnR6o3guLsMEQsqmgcXHidsqEvyM4h/bERZVOpfDTk766g8UO4pFHuxFwg6gbBdthcdSCFuNWJ3Fs16InQ1mNW+6nJ/xsFU357RjsbaSambxDGkWxKiwoJFXmeF6LIeIR81mUK+765kulYbqZqZKo2jOMq0u+3R+iu6I8cPKsh3g2iSOvP8AK8pHXU7xscK/67li/GU5p85ijsoCZ24hpDbdSk2PNSDfp+rZXntwAXkjVKM7YcXKgHMuTE2O/sEELyELw=
 notifications:
   email: true
