@@ -32,9 +32,9 @@ html.no-js
 
     - if current_article
       - if current_article.data.image
-        meta content="#{current_article.data.image}" property="og:image"
+        meta content="#{site_url}#{current_article.data.image}" property="og:image"
       - else
-        meta content="#{image_path('social.jpg')}" property="og:image"
+        meta content="#{site_url}#{image_path('social.jpg')}" property="og:image"
     - else
       meta content="#{site_url}#{image_path('social.jpg')}" property="og:image"
 
