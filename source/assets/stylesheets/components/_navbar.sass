@@ -1,7 +1,11 @@
 .navbar-toggle
-  +position(fixed, 40px 40px null null)
+  +position(fixed, 15px 15px null null)
   z-index: 10000
   padding: 20px 10px
+
+  +media($mobile-large)
+    top: 40px
+    right: 40px
 
   &__open
     display: block
