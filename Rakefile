@@ -1,21 +1,14 @@
 # encoding: UTF-8
 require 'rubygems'
 
-task default: %w[deploy]
-
-desc "Remove folder /build"
-task :clean do
-  try "rm -rf build/"
-end
-
 desc "Middleman build"
 task :build do
   puts "\nBuilding project"
-  try "middleman build --verbose"
+  try "middleman build"
 end
 
 desc "Middleman deploy"
-task :deploy => [:clean, :build] do
+task :deploy do
   puts "\nDeploying to GitHub"
   try "middleman deploy"
 end
