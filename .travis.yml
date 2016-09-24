@@ -1,24 +1,19 @@
 language: ruby
-cache: bundler
 rvm:
 - 2.2.4
 branches:
   only:
   - master
   - source
-cache:
-- bundler
-gemfile: travisGemfile
-install:
-- bundle install
-script:
-- bundle exec rake travis:script
-after_success:
-- bundle exec rake travis:after_success
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_USER="Fernando Moreira"
   - GH_EMAIL="nandomoreira.me@gmail.com"
+cache: bundler
+gemfile: travisGemfile
+install: bundle install
+script: bundle exec rake travis:script
+after_success: bundle exec rake travis:after_success
 notifications:
-  email: true
+  email: false
