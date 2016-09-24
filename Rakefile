@@ -5,17 +5,37 @@ task default: %w[deploy]
 
 desc "Remove folder /build"
 task :clean do
-  sh "rm -rf build/"
+  try "rm -rf build/"
 end
 
 desc "Middleman build"
 task :build do
-  sh "middleman build --verbose"
+  puts "\nBuilding project"
+  try "middleman build --verbose"
 end
 
 desc "Middleman deploy"
 task :deploy => [:clean, :build] do
-  sh "middleman deploy"
+  puts "\nDeploying to GitHub"
+  try "middleman deploy"
+end
+
+namespace :travis do
+  task :script do
+    Rake::Task["build"].invoke
+  end
+
+  task :after_success do
+    try "./travis-deploy.sh"
+  end
+end
+
+## Helper so we fail as soon as a command fails.
+def try(command)
+  system command
+  if $? != 0 then
+    raise "Command: `#{command}` exited with code #{$?.exitstatus}"
+  end
 end
 
 SOURCE = "source/"

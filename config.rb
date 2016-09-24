@@ -147,9 +147,18 @@ activate :deploy do |deploy|
   # run `git remote -v` to see a list of possible remotes
   deploy.remote = "origin"
 
+  committer_app = "#{Middleman::Deploy::PACKAGE} v#{Middleman::Deploy::VERSION}"
+  commit_message = "Deployed using #{committer_app}"
+
   # branch is optional (default is "gh-pages")
   # run `git branch -a` to see a list of possible branches
   deploy.branch = "master"
+
+  if ENV["TRAVIS_BUILD_NUMBER"] then
+    commit_message += " (Travis Build \##{ENV["TRAVIS_BUILD_NUMBER"]})"
+  end
+
+  deploy.commit_message = commit_message
 
   # strategy is optional (default is :force_push)
   # deploy.strategy = :submodule
