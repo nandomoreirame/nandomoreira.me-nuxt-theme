@@ -19,10 +19,15 @@
     border: $border-base
     margin: 0 $spacing-mini
 
+  .tags
+    a
+      display: inline-block
+      margin-right: 8px
+
   &, a
     font-size: .9rem
     display: inline-block
-    color: rgba(66,68,57,0.7)
+    color: rgba(#222, .5)
 
 .article-title
   font-size: 1.8rem
@@ -41,6 +46,9 @@
 .single
   .article
     padding-bottom: 0
+
+  .tags a
+    color: rgba(#fff, .7)
 
   .article-header
     text-align: center
