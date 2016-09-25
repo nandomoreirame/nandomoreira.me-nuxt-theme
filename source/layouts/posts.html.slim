@@ -11,11 +11,10 @@ html.no-js
       meta content=site_description name="description"
 
     meta rel="canonical" href="#{site_url}#{current_page.url}"
-
-    meta content="#{site_author}" property="og:site_name"
-    meta content="#{site_url}" property="twitter:site"
-    meta content="#{twitter}" property="twitter:creator"
-    meta content="#{site_title}" property="twitter:title"
+    meta content="summary_large_image" name="twitter:card"
+    meta content="#{site_url}" name="twitter:site"
+    meta content="#{twitter}" name="twitter:creator"
+    meta content="#{site_title}" name="twitter:title"
 
     - page_articles.index do |article, i|
       - if current_article.data.summary
@@ -41,16 +40,16 @@ html.no-js
       meta content=("#{site_url}#{current_article.url}") property="og:url"
 
     - if current_article.data.summary
-      meta content="#{current_article.data.summary}" property="twitter:description"
+      meta content="#{current_article.data.summary}" name="twitter:description"
     - elsif current_article.data.link
-      meta content=("#{page_title + "→"}") property="twitter:description"
+      meta content=("#{page_title + "→"}") name="twitter:description"
     - else
-      meta content=site_description property="twitter:description"
+      meta content=site_description name="twitter:description"
 
     - if current_article.data.image
-      meta content="#{current_article.data.image}" property="twitter:image"
+      meta content="#{current_article.data.image}" name="twitter:image"
     - else
-      meta content="#{site_url}#{image_path('social.jpg')}" property="twitter:image"
+      meta content="#{site_url}#{image_path('social.jpg')}" name="twitter:image"
 
     - body_class = page_classes
     - if current_page.data.body_class

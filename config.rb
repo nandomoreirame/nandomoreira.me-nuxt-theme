@@ -19,6 +19,9 @@ set :social_instagram, 'https://instagram.com/nandomoreira.me'
 set :disqus_shortname, 'fernandomoreira'
 set :enable_zopim, false
 
+require "helpers/custom_helpers"
+helpers CustomHelpers
+
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
@@ -67,39 +70,10 @@ set :url_root, 'https://nandomoreira.me/'
 activate :search_engine_sitemap, default_priority: 0.5,
                                  default_change_frequency: "always"
 
-###
-# Compass
-###
-
 # Change Compass configuration
 compass_config do |config|
   config.output_style = :expanded
   config.line_comments = false
-end
-
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-helpers do
-  def local_path(path, options={})
-    lang = options[:language] ? options[:language] : I18n.locale.to_s
-
-    if lang != "en"
-      "/#{lang}/#{path}"
-    else
-      "/#{path}"
-    end
-  end
-
-  def other_langs
-    langs - [I18n.locale]
-  end
-
-  def youtube(video_id, video_width= 560, video_height=420)
-    video = "<div class=\"responsive-video\"><iframe width=\"#{video_width}\" height=\"#{video_height}\" src=\"//www.youtube.com/embed/#{video_id}?color=white&theme=light\"></iframe></div>"
-  end
 end
 
 set :css_dir, 'assets/stylesheets'

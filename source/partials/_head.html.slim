@@ -3,7 +3,7 @@ meta content="yes" name="apple-mobile-web-app-capable"
 meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
 meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"
 
-title= page_title
+title= "#{page_title}"
 
 = stylesheet_link_tag 'main'
 
@@ -39,10 +39,7 @@ title= page_title
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
-  meta content=page_title property="og:title"
-  meta content=site_author property="article:author"
-  meta content=site_author property="article:publisher"
-  meta content=site_title property="og:site_name"
-  meta content="summary" name="twitter:card"
-  meta content=twitter name="twitter:site"
-  meta content=page_title name="twitter:title"
+  meta content="#{page_title}" property="og:title"
+  meta content="#{site_author}" property="article:author"
+  meta content="#{site_author}" property="article:publisher"
+  meta content="#{site_title}" property="og:site_name"

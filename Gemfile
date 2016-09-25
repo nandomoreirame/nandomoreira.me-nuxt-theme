@@ -16,31 +16,18 @@ gem 'middleman-livereload'
 
 gem 'rack-contrib'
 gem 'rack-rewrite'
-gem 'puma'
-
 gem 'slim'
-
-gem 'nokogiri' # for article.summary
-
+gem 'nokogiri'
 gem 'middleman-autoprefixer'
-gem 'sass-media_query_combiner' # for combine media query
-
+gem 'sass-media_query_combiner'
 gem 'redcarpet'
+gem 'rake'
 
 ###
 # Front-end assets
 ###
 gem 'bourbon', '~> 4.2', '>= 4.2.6'
-gem 'neat', '~> 1.7', '>= 1.7.4'
 gem 'sass', '~> 3.4', :require => false
-
-###
-# Development environment
-###
-group :development do
-  gem 'rake'
-  gem 'foreman'
-end
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
