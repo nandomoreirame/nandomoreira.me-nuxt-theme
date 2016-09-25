@@ -1,6 +1,3 @@
-###
-# Blog settings
-###
 Slim::Engine.disable_option_validator!
 
 # Time.zone = "UTC"
@@ -23,11 +20,7 @@ require "helpers/custom_helpers"
 helpers CustomHelpers
 
 activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
-
   blog.permalink = "/{title}"
-  # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   blog.taglink = "tags/{tag}.html"
 
@@ -41,7 +34,6 @@ activate :blog do |blog|
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
-  # Enable pagination
   blog.paginate = true
   blog.per_page = 10
   blog.page_link = "page/{num}"
@@ -70,7 +62,6 @@ set :url_root, 'https://nandomoreira.me/'
 activate :search_engine_sitemap, default_priority: 0.5,
                                  default_change_frequency: "always"
 
-# Change Compass configuration
 compass_config do |config|
   config.output_style = :expanded
   config.line_comments = false
@@ -109,36 +100,25 @@ configure :build do
   activate :asset_host, :host => '//d2pcfnwkh4jlye.cloudfront.net'
   set :google_analytics_account, 'UA-52446115-1'
   set :enable_zopim, true
-
-  # Automatic image dimensions on image_tag helper
   activate :automatic_image_sizes
   activate :automatic_alt_tags
 end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  # remote is optional (default is "origin")
-  # run `git remote -v` to see a list of possible remotes
   deploy.remote = "origin"
+  deploy.branch = "master"
 
   committer_app = "#{Middleman::Deploy::PACKAGE} v#{Middleman::Deploy::VERSION}"
   commit_message = "Deployed using #{committer_app}"
-
-  # branch is optional (default is "gh-pages")
-  # run `git branch -a` to see a list of possible branches
-  deploy.branch = "master"
 
   if ENV["TRAVIS_BUILD_NUMBER"] then
     commit_message += " (Travis Build \##{ENV["TRAVIS_BUILD_NUMBER"]})"
   end
 
   deploy.commit_message = commit_message
-
-  # strategy is optional (default is :force_push)
-  # deploy.strategy = :submodule
 end
 
-# Reload the browser automatically whenever files change
 configure :development do
   set :debug_assets, true
   activate :livereload

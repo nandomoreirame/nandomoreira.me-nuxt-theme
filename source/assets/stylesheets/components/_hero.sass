@@ -58,3 +58,23 @@
     margin: 0 ($spacing-mini / 2)
     text-transform: lowercase
     min-width: 130px
+    overflow: hidden
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 150%
+      height: 100%
+      background: rgba(#fff, .2)
+      z-index: -1
+      transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0)
+      transform-origin: 0% 100%
+      transition: transform .3s, opacity .3s, background-color .3s
+
+    &:hover:before
+      opacity: 1
+      transform: rotate3d(0, 0, 1, 0deg)
+      transition-timing-function: cubic-bezier(.2, 1, .3, 1)
