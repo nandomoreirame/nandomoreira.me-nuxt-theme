@@ -6,7 +6,7 @@
   min-height: 120px
 
   +media($tablet-large)
-    min-height: 100px
+    min-height: 140px
 
   .navbar-toggle
     position: absolute
@@ -17,4 +17,21 @@
 
     +media($mobile-large)
       top: 40px
+      left: 40px
+
+  &.is-fixed
+    left: 0
+    right: 0
+    top: 0
+    position: fixed
+    z-index: 100
+
+    .navbar-toggle
+      position: fixed
       right: 40px
+
+    .logo,
+    .navbar-toggle
+      svg path,
+      svg rect
+        fill: $color-base

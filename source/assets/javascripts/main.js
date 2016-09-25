@@ -19,4 +19,13 @@
 
   titleParallax.init();
 
+  var header = document.querySelector('.header');
+
+  window.addEventListener("scroll", function(event) {
+    if (this.scrollY > 530) {
+      header.classList.add("is-fixed");
+    } else {
+      header.classList.remove("is-fixed");
+    }
+  }, false);
 })();

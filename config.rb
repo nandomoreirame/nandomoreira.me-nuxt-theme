@@ -1,6 +1,4 @@
 Slim::Engine.disable_option_validator!
-
-# Time.zone = "UTC"
 Time.zone = "America/Sao_Paulo"
 
 set :site_url, 'https://nandomoreira.me'
@@ -16,6 +14,7 @@ set :social_instagram, 'https://instagram.com/nandomoreira.me'
 set :disqus_shortname, 'fernandomoreira'
 set :enable_zopim, false
 
+require 'sass-media_query_combiner'
 require "helpers/custom_helpers"
 helpers CustomHelpers
 
@@ -46,8 +45,9 @@ activate :i18n do |l|
   l.no_fallbacks = true
 end
 
-page "/feed.xml", layout: false
-page "/sitemap.xml", layout: false
+page "/*.xml", layout: false
+page "/*.json", layout: false
+page "/*.txt", layout: false
 page "/blog.html", layout: "blog"
 page "/posts/*.html", layout: "posts"
 
@@ -82,17 +82,15 @@ set :markdown, :fenced_code_blocks => true,
                :autolink => true,
                :smartypants => true
 
-require 'sass-media_query_combiner'
-
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.ignore   = ['source/assets/stylesheets/vendors/']
+  # config.ignore   = ['source/assets/stylesheets/vendors/']
 end
 
 # Build-specific configuration
 configure :build do
   activate :minify_css
-  activate :minify_html
+  # activate :minify_html
   activate :minify_javascript
   activate :gzip
   activate :asset_hash
