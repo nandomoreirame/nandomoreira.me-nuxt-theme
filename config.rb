@@ -1,6 +1,10 @@
 Slim::Engine.disable_option_validator!
 Time.zone = "America/Sao_Paulo"
 
+require 'sass-media_query_combiner'
+require "helpers/custom_helpers"
+helpers CustomHelpers
+
 set :site_url, 'https://nandomoreira.me'
 set :site_title, 'Fernando Moreira | Front-end developer'
 set :site_author, 'Fernando Moreira'
@@ -12,11 +16,6 @@ set :social_github, 'https://github.com/nandomoreirame'
 set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
 set :social_instagram, 'https://instagram.com/nandomoreira.me'
 set :disqus_shortname, 'fernandomoreira'
-set :enable_zopim, false
-
-require 'sass-media_query_combiner'
-require "helpers/custom_helpers"
-helpers CustomHelpers
 
 activate :blog do |blog|
   blog.permalink = "/{title}"
@@ -90,14 +89,13 @@ end
 # Build-specific configuration
 configure :build do
   activate :minify_css
-  # activate :minify_html
+  activate :minify_html
   activate :minify_javascript
   activate :gzip
   activate :asset_hash
   activate :cache_buster
   activate :asset_host, :host => '//d2pcfnwkh4jlye.cloudfront.net'
   set :google_analytics_account, 'UA-52446115-1'
-  set :enable_zopim, true
   activate :automatic_image_sizes
   activate :automatic_alt_tags
 end

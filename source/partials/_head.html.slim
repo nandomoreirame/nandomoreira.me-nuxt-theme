@@ -26,6 +26,10 @@ title= "#{page_title}"
   link href="#{image_path('favicon/manifest.json')}" rel="manifest"
   meta content="#f7f7f7" name="msapplication-TileColor"
   meta content="#{image_path('favicon/ms-icon-144x144.png')}" name="msapplication-TileImage"
+  meta content="#{page_title}" property="og:title"
+  meta content="#{site_author}" property="article:author"
+  meta content="#{site_author}" property="article:publisher"
+  meta content="#{site_title}" property="og:site_name"
   meta content="#f7f7f7" name="theme-color"
 
   javascript:
@@ -38,8 +42,3 @@ title= "#{page_title}"
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-
-  meta content="#{page_title}" property="og:title"
-  meta content="#{site_author}" property="article:author"
-  meta content="#{site_author}" property="article:publisher"
-  meta content="#{site_title}" property="og:site_name"
