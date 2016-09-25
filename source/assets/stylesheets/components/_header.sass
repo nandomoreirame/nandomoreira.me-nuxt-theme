@@ -4,6 +4,7 @@
   display: block
   width: 100%
   min-height: 120px
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out
 
   +media($tablet-large)
     min-height: 140px
@@ -18,20 +19,3 @@
     +media($mobile-large)
       top: 40px
       left: 40px
-
-  &.is-fixed
-    left: 0
-    right: 0
-    top: 0
-    position: fixed
-    z-index: 100
-
-    .navbar-toggle
-      position: fixed
-      right: 40px
-
-    .logo,
-    .navbar-toggle
-      svg path,
-      svg rect
-        fill: $color-base
