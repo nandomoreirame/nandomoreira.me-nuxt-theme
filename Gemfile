@@ -18,6 +18,7 @@ gem 'middleman-autoprefixer'
 gem 'sass-media_query_combiner'
 gem 'redcarpet'
 gem 'rake'
+gem 'foreman'
 gem 'builder', '~> 3.0'
 gem 'bourbon', '~> 4.2', '>= 4.2.6'
 gem 'sass', '~> 3.4', :require => false

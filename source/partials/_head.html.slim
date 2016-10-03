@@ -5,7 +5,7 @@ meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewp
 
 title= "#{page_title}"
 
-= stylesheet_link_tag 'main'
+= partial "partials/replace-stylesheets"
 
 - if build?
   = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
