@@ -5,8 +5,6 @@ meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewp
 
 title= "#{page_title}"
 
-= partial "partials/replace-stylesheets"
-
 - if build?
   = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
@@ -42,3 +40,5 @@ title= "#{page_title}"
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
+
+= partial "partials/replace-stylesheets"
