@@ -2,12 +2,10 @@ meta charset="utf-8"
 meta content="yes" name="apple-mobile-web-app-capable"
 meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
 meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"
-
+= partial "partials/replace-stylesheets"
 title= "#{page_title}"
-
 - if build?
   = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
-
   link href="#{image_path('favicon/apple-icon-57x57.png')}" rel="apple-touch-icon" sizes="57x57"
   link href="#{image_path('favicon/apple-icon-60x60.png')}" rel="apple-touch-icon" sizes="60x60"
   link href="#{image_path('favicon/apple-icon-72x72.png')}" rel="apple-touch-icon" sizes="72x72"
@@ -40,5 +38,3 @@ title= "#{page_title}"
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-
-= partial "partials/replace-stylesheets"
