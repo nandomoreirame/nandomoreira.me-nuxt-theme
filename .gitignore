@@ -23,4 +23,3 @@
 /bower_components
 
 source/assets/stylesheets/main.min.css
-source/partials/_replace-stylesheets.html.slim
