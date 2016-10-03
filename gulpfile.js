@@ -32,7 +32,7 @@ gulp.task('replace', () => {
     .pipe($.plumber.stop());
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', ['stylesheets', 'replace'], () => {
   gulp.watch(`${config.stylesheets}/**/*.{sass,scss}`, ['stylesheets', 'replace']);
 });
 
