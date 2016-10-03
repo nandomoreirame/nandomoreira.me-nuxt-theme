@@ -11,7 +11,7 @@ section.container
   .card.card--about.text-center
     h2 Quem sou eu?
 
-    img.avatar alt="" src="/assets/images/avatar.png" width="160px" height="160px"
+    img.avatar alt="" src="/assets/images/avatar.jpg" width="160px" height="160px"
 
     div itemscope="" itemtype="http://schema.org/Person"
       p
@@ -19,7 +19,7 @@ section.container
         strong itemprop="name"
           = 'Fernando Moreira '
         = '(como você pôde ver no titulo do site). '
-        = 'Moro em Curitiba/Paraná. '
+        strong= 'Moro em Curitiba/Paraná. '
         span itemprop="jobTitle"
           = 'Trabalho como desenvolvedor front-end '
           / = 'na '
@@ -29,8 +29,10 @@ section.container
           = 'e desenvolvimento ágil, gosto de códigos legíveis, semânticos e reutilizáveis.'
       p
         = 'Hoje sou especializado em desenvolvimento web usando '
-        = link_to "Wordpress ", "http://br.wordpress.org/"
-        = 'com foco em front-end eu sempre cuido da usabilidade e performance de um site. '
+        strong= link_to "Wordpress ", "http://br.wordpress.org/"
+        = 'com foco em '
+        em= 'front-end '
+        = 'eu sempre cuido da usabilidade e performance de um site. '
       p
         = 'Para entrar em contato comigo basta enviar um email para '
         em itemprop="email"

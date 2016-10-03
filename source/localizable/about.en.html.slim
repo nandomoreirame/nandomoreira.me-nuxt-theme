@@ -11,23 +11,33 @@ section.container
   .card.card--about.text-center
     h2 Who am I?
 
-    img.avatar alt="" src="/assets/images/avatar.png" width="160px" height="160px"
+    img.avatar alt="" src="/assets/images/avatar.jpg" width="160px" height="160px"
 
     div itemscope="" itemtype="http://schema.org/Person"
       p
         = "Hi! I'm "
-        strong itemprop="name"  Fernando Moreira (as you can see the name of my site).
+        strong itemprop="name"  Fernando Moreira
+        = ' (as you can see the name of my site).'
         span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
-          = " I live in Curitiba/Paraná. "
+          strong= " I live in Curitiba/Paraná. "
           = "I'm"
           span itemprop="jobTitle"
             = ' Front-end developer '
-          = "and love everything related to web. I'm obsessed with performance and agile development, I like readable coding, semantic and reusable."
+          = "and love everything related to web. I'm obsessed with "
+          strong= 'performance '
+          = 'and '
+          strong= 'agile development '
+          = ', I like readable coding, '
+          strong= 'semantic '
+          = 'and '
+          strong= 'reusable.'
 
       p
         = "Today I'm specializing in web development using "
-        = link_to "Wordpress", "http://br.wordpress.org/"
-        = " with focus in front-end I always take care of usability and performance of a website."
+        strong= link_to "Wordpress", "http://br.wordpress.org/"
+        = ' with focus in '
+        strong= 'front-end '
+        = 'I always take care of usability and performance of a website.'
 
       p
         = 'For contact me, please send an email to '
