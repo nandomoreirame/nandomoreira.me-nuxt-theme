@@ -2,7 +2,7 @@ meta charset="utf-8"
 meta content="yes" name="apple-mobile-web-app-capable"
 meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
 meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"
-= partial "partials/replace-stylesheets"
+= partial "partials/inline-stylesheets"
 title= "#{page_title}"
 - if build?
   = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"

@@ -22,4 +22,5 @@
 /node_modules
 /bower_components
 
+source/assets/stylesheets/inline.min.css
 source/assets/stylesheets/main.min.css

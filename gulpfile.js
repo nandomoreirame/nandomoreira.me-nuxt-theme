@@ -7,7 +7,7 @@ var config  = require('./gulp.config.js');
 var fs      = require('fs');
 
 gulp.task('stylesheets', () => {
-  gulp.src([`${config.stylesheets}/main.sass`])
+  gulp.src([`${config.stylesheets}/*.sass`])
     .pipe($.plumber(config.plumberErrorHandler))
     .pipe($.sass({ includePaths: [ bourbon.includePaths ] }))
     .pipe($.autoprefixer({ browsers: ['last 2 versions'] }))
@@ -20,13 +20,13 @@ gulp.task('stylesheets', () => {
 });
 
 gulp.task('replace', () => {
-  gulp.src([`${config.partials}/_replace-stylesheets.html`])
+  gulp.src([`${config.partials}/_inline-stylesheets.html`])
     .pipe($.plumber(config.plumberErrorHandler))
-    .pipe($.replace('__STYLESHEET__HERE__', function(s) {
-      var style = fs.readFileSync(`${config.stylesheets}/main.min.css`, 'utf8');
+    .pipe($.replace('__INLINE_STYLESHEET__', function(s) {
+      var style = fs.readFileSync(`${config.stylesheets}/inline.min.css`, 'utf8');
       return 'css:\n  ' + style;
     }))
-    .pipe($.rename('_replace-stylesheets.html.slim'))
+    .pipe($.rename('_inline-stylesheets.html.slim'))
     .pipe($.size({ title: 'Replace stylesheets', gzip: false, showFiles: true }))
     .pipe(gulp.dest(config.partials))
     .pipe($.plumber.stop());
