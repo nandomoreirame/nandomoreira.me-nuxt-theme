@@ -6,17 +6,6 @@ footer.footer
     = " by #{link_to(site_author, site_url)} "
     = "using #{link_to "middlemanapp.com", "http://middlemanapp.com" , :target => :blank }"
 
-= stylesheet_link_tag 'syntax'
-= stylesheet_link_tag 'main'
-
 script#dsq-count-scr async="" data-cfasync="false" src="//#{disqus_shortname}.disqus.com/count.js"
-= javascript_include_tag "main"
-
-- if build?
-  javascript:
-    window.smartlook||(function(d) {
-    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
-    })(document);
-    smartlook('init', '2003a33e77eb7c7670b53ac44872f3986dc31497');
+= javascript_include_tag "main", { async: true }
+= stylesheet_link_tag 'syntax'
