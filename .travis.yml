@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.3.1
+node_js:
+  - "6.9"
 branches:
   only:
     - source
@@ -11,7 +13,7 @@ env:
     - GH_EMAIL="nandomoreira.me@gmail.com"
 cache: bundler
 gemfile: travisGemfile
-install: bundle install
+install: npm install
 script: bundle exec rake travis:script
 after_success: bundle exec rake travis:after_success
 notifications:

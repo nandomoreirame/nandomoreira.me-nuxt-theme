@@ -6,7 +6,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "preinstall": "npm install -g npm gulp",
-    "postinstall": "bundle install",
+    "postinstall": "bundle install && gulp build",
     "start": "./node_modules/.bin/concurrently --kill-others --prefix \"[{name}]\" --names \"gulp,middleman\" \"gulp watch\" \"bundle exec middleman server -p 3000\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

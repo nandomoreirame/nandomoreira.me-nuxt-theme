@@ -22,7 +22,7 @@ const config = {
   }
 };
 
-Gulp.task('stylesheets', () => {
+Gulp.task('stylesheets', ['replace'], () => {
   Gulp.src([`${config.sass}/*.sass`])
     .pipe($.plumber(config.plumberErrorHandler))
     .pipe($.sass({ includePaths }))
@@ -36,7 +36,7 @@ Gulp.task('stylesheets', () => {
 });
 
 Gulp.task('replace', () => {
-  Gulp.src([`${config.partials}/_inline-stylesheets.html`])
+  return Gulp.src([`${config.partials}/_inline-stylesheets.html`])
     .pipe($.plumber(config.plumberErrorHandler))
     .pipe($.replace('__INLINE_STYLESHEET__', function(s) {
       var style = fs.readFileSync(`${config.css}/inline.min.css`, 'utf8');
@@ -48,8 +48,10 @@ Gulp.task('replace', () => {
     .pipe($.plumber.stop());
 });
 
-Gulp.task('watch', ['stylesheets', 'replace'], () => {
-  Gulp.watch(`${config.sass}/**/*.{sass,scss}`, ['stylesheets', 'replace']);
+Gulp.task('build', ['stylesheets']);
+
+Gulp.task('watch', ['build'], () => {
+  Gulp.watch(`${config.sass}/**/*.{sass,scss}`, ['stylesheets']);
 });
 
 Gulp.task('default', [ 'watch' ]);
