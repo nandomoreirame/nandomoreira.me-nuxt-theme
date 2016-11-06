@@ -7,6 +7,7 @@ require "helpers/custom_helpers"
 helpers CustomHelpers
 
 set :site_url, 'https://nandomoreira.me'
+set :site_domain, 'nandomoreira.me'
 set :site_title, 'Fernando Moreira | Front-end developer'
 set :site_author, 'Fernando Moreira'
 set :site_description, 'Front-end developer'

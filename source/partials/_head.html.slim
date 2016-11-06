@@ -39,6 +39,6 @@ title= "#{page_title}"
 
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "#{site_url}" + '/assets/javascripts/ga.js';
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "#{site_domain}" + '/assets/javascripts/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
