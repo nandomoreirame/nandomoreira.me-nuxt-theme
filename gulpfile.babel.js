@@ -7,8 +7,7 @@ import fs      from 'fs';
 
 const $ = Plugins();
 
-const includePaths = [ Bourbon.includePaths ];
-const browsers = ['last 2 versions'];
+const isProduction = $.util.env.type === 'production' ? true : false;
 const config = {
   source: './source',
   partials: './source/partials',
@@ -21,15 +20,22 @@ const config = {
     })
   }
 };
+const browsers = ['last 2 versions'];
 
 Gulp.task('stylesheets', () => {
   return Gulp.src([`${config.sass}/*.sass`])
     .pipe($.plumber(config.plumberErrorHandler))
-    .pipe($.sass({ includePaths }))
+    .pipe($.sass({
+      sourceComments: isProduction ? false : 'normal',
+      includePaths: [
+        config.sass,
+        Bourbon.includePaths
+      ]
+    }))
     .pipe($.autoprefixer({ browsers }))
     .pipe($.combineMq())
-    .pipe($.cssnano())
-    .pipe($.rename({ suffix: '.min' }))
+    .pipe(isProduction ? $.cssnano() : $.jsbeautifier())
+    .pipe(isProduction ? $.rename({ suffix: '.min' }) : $.util.noop())
     .pipe($.size({ title: 'Build and Minify Stylesheets', gzip: false, showFiles: true }))
     .pipe(Gulp.dest(config.css))
     .pipe($.plumber.stop());
@@ -39,7 +45,8 @@ Gulp.task('stylesheets', () => {
   Gulp.src([`${config.partials}/_inline-stylesheets.html`])
     .pipe($.plumber(config.plumberErrorHandler))
     .pipe($.replace('__INLINE_STYLESHEET__', function(s) {
-      var style = fs.readFileSync(`${config.css}/inline.min.css`, 'utf8');
+      const file = isProduction ? 'inline.min.css' : 'inline.css';
+      const style = fs.readFileSync(`${config.css}/${file}`, 'utf8');
       return 'css:\n  ' + style;
     }))
     .pipe($.rename('_inline-stylesheets.html.slim'))

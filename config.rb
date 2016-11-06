@@ -1,3 +1,4 @@
+require 'slim'
 Slim::Engine.disable_option_validator!
 Time.zone = "America/Sao_Paulo"
 
@@ -116,6 +117,7 @@ activate :deploy do |deploy|
 end
 
 configure :development do
+  Slim::Engine.default_options[:pretty] = true
   set :debug_assets, true
   activate :livereload
 end

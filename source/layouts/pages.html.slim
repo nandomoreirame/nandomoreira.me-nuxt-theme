@@ -14,4 +14,7 @@ html.no-js
     main.main role="main"
       = yield
     = partial "partials/footer"
-    = stylesheet_link_tag 'main.min'
+    - if build?
+      = stylesheet_link_tag "main.min"
+    - else
+      = stylesheet_link_tag "main"

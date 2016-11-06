@@ -96,4 +96,7 @@ html.no-js
           = partial "partials/comments"
 
     = partial "partials/footer"
-    = stylesheet_link_tag 'main.min'
+    - if build?
+      = stylesheet_link_tag "main.min"
+    - else
+      = stylesheet_link_tag "main"
