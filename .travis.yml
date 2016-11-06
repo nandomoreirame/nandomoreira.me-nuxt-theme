@@ -16,6 +16,8 @@ before_install:
   - sudo apt-get install -y build-essential -qq
   - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   - sudo apt-get install -y nodejs -qq
+  - nvm -v
+  - node -v
 install: npm install
 script: bundle exec rake travis:script
 after_success: bundle exec rake travis:after_success
