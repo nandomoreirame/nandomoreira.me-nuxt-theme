@@ -11,4 +11,5 @@ html.no-js
     - body_class = body_class.sub(/[_]/, '-')
   body class="#{body_class}"
     = yield
+    = stylesheet_link_tag 'main.min'
     = javascript_include_tag "main"

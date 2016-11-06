@@ -61,6 +61,7 @@
     display: inline-block
     color: $color-white
     transition: all .2s ease-in-out
+    position: relative
 
     &::after
       content: ""
@@ -69,6 +70,8 @@
       width: 0
       height: 2px
       background-color: #fff
+      margin-top: 5px
+      +position(absolute, 50% 0 null 0)
 
     &,
     &:hover,
