@@ -40,8 +40,6 @@ GEM
     eventmachine (1.2.0.1)
     execjs (2.7.0)
     ffi (1.9.14)
-    foreman (0.82.0)
-      thor (~> 0.19.1)
     git-version-bump (0.15.1)
     haml (4.0.7)
       tilt
@@ -181,7 +179,6 @@ PLATFORMS
 DEPENDENCIES
   bourbon (~> 4.2, >= 4.2.6)
   builder (~> 3.0)
-  foreman
   middleman (~> 3.3.12)
   middleman-autoprefixer
   middleman-blog (~> 3.5.3)

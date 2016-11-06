@@ -1,2 +1,0 @@
-gulp: gulp
-middleman: middleman

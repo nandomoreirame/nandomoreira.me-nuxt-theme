@@ -23,8 +23,8 @@
 ## Setup ##
 
 ```
-sudo gem install bundler
-bundle install
+npm install
+npm start
 ```
 
 ---

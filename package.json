@@ -5,6 +5,9 @@
   "homepage": "https://github.com/nandomoreirame/nandomoreirame.github.io#readme",
   "main": "gulpfile.js",
   "scripts": {
+    "preinstall": "npm install -g npm gulp",
+    "postinstall": "bundle install",
+    "start": "./node_modules/.bin/concurrently --kill-others --prefix \"[{name}]\" --names \"gulp,middleman\" \"gulp watch\" \"bundle exec middleman server -p 3000\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +20,9 @@
     "url": "https://github.com/nandomoreirame/nandomoreirame.github.io/issues"
   },
   "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "concurrently": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-combine-mq": "^0.4.0",
