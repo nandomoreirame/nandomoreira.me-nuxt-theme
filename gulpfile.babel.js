@@ -22,8 +22,8 @@ const config = {
   }
 };
 
-Gulp.task('stylesheets', ['replace'], () => {
-  Gulp.src([`${config.sass}/*.sass`])
+Gulp.task('stylesheets', () => {
+  return Gulp.src([`${config.sass}/*.sass`])
     .pipe($.plumber(config.plumberErrorHandler))
     .pipe($.sass({ includePaths }))
     .pipe($.autoprefixer({ browsers }))
@@ -33,10 +33,10 @@ Gulp.task('stylesheets', ['replace'], () => {
     .pipe($.size({ title: 'Build and Minify Stylesheets', gzip: false, showFiles: true }))
     .pipe(Gulp.dest(config.css))
     .pipe($.plumber.stop());
-});
+})
 
-Gulp.task('replace', () => {
-  return Gulp.src([`${config.partials}/_inline-stylesheets.html`])
+.task('replace', ['stylesheets'], () => {
+  Gulp.src([`${config.partials}/_inline-stylesheets.html`])
     .pipe($.plumber(config.plumberErrorHandler))
     .pipe($.replace('__INLINE_STYLESHEET__', function(s) {
       var style = fs.readFileSync(`${config.css}/inline.min.css`, 'utf8');
@@ -46,12 +46,10 @@ Gulp.task('replace', () => {
     .pipe($.size({ title: 'Replace stylesheets', gzip: false, showFiles: true }))
     .pipe(Gulp.dest(config.partials))
     .pipe($.plumber.stop());
-});
+})
 
-Gulp.task('build', ['stylesheets']);
-
-Gulp.task('watch', ['build'], () => {
+.task('build', ['replace'])
+.task('watch', ['build'], () => {
   Gulp.watch(`${config.sass}/**/*.{sass,scss}`, ['stylesheets']);
-});
-
-Gulp.task('default', [ 'watch' ]);
+})
+.task('default', [ 'watch' ]);
