@@ -12,8 +12,7 @@ html.no-js
   body class="#{body_class} theme-secondary"
     = partial "partials/header"
     main.main role="main"
-      .container
-        = yield
+      = yield
     = partial "partials/footer"
 
 - if build?

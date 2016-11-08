@@ -4,42 +4,43 @@ layout: pages
 body_class: theme-primary
 ---
 
-section.container
+section
   header.page-title.js-text-parallax
     h1 Sobre mim
 
-  .card.card--about.text-center
-    h2 Quem sou eu?
+  .container
+    .card.card--about.text-center
+      h2 Quem sou eu?
 
-    img.avatar alt="" src="/assets/images/avatar.png" width="160px" height="160px"
+      img.avatar alt="" src="/assets/images/avatar.png" width="160px" height="160px"
 
-    div itemscope="" itemtype="http://schema.org/Person"
-      p
-        = 'Olá, me chamo '
-        strong itemprop="name"
-          = 'Fernando Moreira '
-        = '(como você pôde ver no titulo do site). '
-        strong= 'Moro em Curitiba/Paraná. '
-        span itemprop="jobTitle"
-          = 'Trabalho como desenvolvedor front-end '
-          / = 'na '
-          / = link_to '@pipefy', 'http://pipefy.com'
-          = ' e amo tudo relacionado a web, sou obcecado por '
-          em= 'performance '
-          = 'e desenvolvimento ágil, gosto de códigos legíveis, semânticos e reutilizáveis.'
-      p
-        = 'Hoje sou especializado em desenvolvimento web usando '
-        strong= link_to "Wordpress ", "http://br.wordpress.org/"
-        = 'com foco em '
-        em= 'front-end '
-        = 'eu sempre cuido da usabilidade e performance de um site. '
-      p
-        = 'Para entrar em contato comigo basta enviar um email para '
-        em itemprop="email"
-          = link_to "nandomoreira.me[arroba]gmail.com ", "mailto:nandomoreira.me@gmail.com"
-        = 'ou me procurar em uma das minhas redes sociais.'
+      div itemscope="" itemtype="http://schema.org/Person"
+        p
+          = 'Olá, me chamo '
+          strong itemprop="name"
+            = 'Fernando Moreira '
+          = '(como você pôde ver no titulo do site). '
+          strong= 'Moro em Curitiba/Paraná. '
+          span itemprop="jobTitle"
+            = 'Trabalho como desenvolvedor front-end '
+            / = 'na '
+            / = link_to '@pipefy', 'http://pipefy.com'
+            = ' e amo tudo relacionado a web, sou obcecado por '
+            em= 'performance '
+            = 'e desenvolvimento ágil, gosto de códigos legíveis, semânticos e reutilizáveis.'
+        p
+          = 'Hoje sou especializado em desenvolvimento web usando '
+          strong= link_to "Wordpress ", "http://br.wordpress.org/"
+          = 'com foco em '
+          em= 'front-end '
+          = 'eu sempre cuido da usabilidade e performance de um site. '
+        p
+          = 'Para entrar em contato comigo basta enviar um email para '
+          em itemprop="email"
+            = link_to "nandomoreira.me[arroba]gmail.com ", "mailto:nandomoreira.me@gmail.com"
+          = 'ou me procurar em uma das minhas redes sociais.'
 
-    = partial 'partials/social'
-    - other_langs.each do |lang|
-      = link_to t(lang.to_s), local_path('about', { :language => lang.to_s }), class: 'link-translate'
+      = partial 'partials/social'
+      - other_langs.each do |lang|
+        = link_to t(lang.to_s), local_path('about', { :language => lang.to_s }), class: 'link-translate'
 

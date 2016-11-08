@@ -1,17 +1,37 @@
-<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+<%= Rouge::Themes::Monokai.render(:scope => '.highlight') %>
 
 .highlight {
-  padding: .8rem 1.25rem;
-  margin-bottom: 1.875rem;
-  border: none;
-  overflow-x: auto;
-  border-radius: .1875rem;
+  padding: 2em 0;
+  margin-bottom: 1.875em;
+  overflow: visible;
+  border-radius: 0;
+  position: relative;
+}
+
+.highlight:before,
+.highlight:after {
+  content: "";
+  display: block;
+  background: #3b3b3b;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.highlight:before {
+  transform: translateX(-100%);
+}
+
+.highlight:after {
+  transform: translateX(100%);
 }
 
 .highlight,
 .highlight pre {
-  background-color: rgba(0, 0, 0, .05);
+  background-color: #3b3b3b;
   font-size: .8rem;
+  border: none;
 }
 
 .highlight code {
@@ -19,6 +39,7 @@
   font-weight: 300;
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 .highlight.sass .err {

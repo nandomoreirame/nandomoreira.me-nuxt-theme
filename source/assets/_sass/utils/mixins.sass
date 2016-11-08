@@ -11,8 +11,6 @@
     background-color: darken($bg-color, 3%)
     border-color: darken($border-color, 15%)
 
-
-$default-feature: min-width
 =media($query: $feature $value)
   @if length($query) == 1
     @media screen and ($default-feature: nth($query, 1))

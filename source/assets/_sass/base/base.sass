@@ -11,12 +11,13 @@ body
 hr
   border: 0
   display: block
-  text-align: center
   margin-bottom: $spacing-base
   margin-top: $spacing-base
+  position: relative
+  height: 60px
 
   &:before
-    font-family: $font-family-base
+    font-family: inherit
     font-weight: 400
     font-style: italic
     font-size: 2rem
@@ -24,5 +25,11 @@ hr
     content: '...'
     display: inline-block
     margin-left: -.5em
+    line-height: 1
     color: rgba($color-base, .5)
-    position: relative
+    +position(absolute, 0 null null 50%)
+
+.main
+  position: relative
+  overflow-x: hidden
+  z-index: 5

@@ -1,10 +1,11 @@
 .header
-  +clearfix
-  position: relative
+  position: absolute
   display: block
   width: 100%
-  min-height: 120px
+  // min-height: 120px
   transition: transform .2s ease-in-out, opacity .2s ease-in-out
+
+  +clearfix()
 
   +media($tablet-large)
     min-height: 140px

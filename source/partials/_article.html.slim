@@ -11,5 +11,5 @@ article.article
         - article.tags.each do |tag|
           = link_to "##{tag}", tag_path(tag)
   p.article-summary
-    = strip_tags(article.summary(160)) + ' '
+    = strip_tags(article.summary(180)) + ' '
     =link_to '[' + t(:read_more) + ']', article.url
