@@ -3,25 +3,8 @@ aside.share-icons
   ul.list-inline
     li.twitter
       = link_to '#', onclick: "var twitter_url = 'https://twitter.com/share?url=#{site_url}#{current_page.url}&amp;text='+ encodeURI('#{page_title}'); PopupCenter(twitter_url,'xtf','500','500')", :target => :blank do
-        svg height="44" viewbox=("100 40 44 44") width="44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          defs
-            circle#a cx="22" cy="22" r="22"
-            mask#b fill="#fff" height="44" width="44" x="0" y="0"
-              use xlink:href="#a"
-          g fill="none" fill-rule="evenodd" transform=("translate(100 40)")
-            path d=("M0 0h44v44H0z")
-            use mask="url(#b)" stroke="#1da1f2" stroke-width="4" xlink:href="#a"
-            path d=("M30.526 16.846c.89-.562 1.573-1.452 1.893-2.513-.84.52-1.76.898-2.74 1.102C28.9 14.55 27.78 14 26.54 14c-2.38 0-4.308 2.035-4.308 4.544 0 .356.036.703.11 1.034-3.58-.19-6.754-1.996-8.88-4.747-.37.68-.583 1.46-.583 2.29 0 1.58.76 2.97 1.91 3.79-.71-.023-1.37-.23-1.958-.57v.058c0 2.203 1.484 4.04 3.46 4.456-.364.107-.74.16-1.138.16-.278 0-.55-.027-.81-.08.547 1.804 2.14 3.12 4.024 3.155-1.478 1.22-3.335 1.944-5.353 1.944-.348 0-.69-.02-1.028-.06C13.902 31.25 16.167 32 18.6 32c7.925 0 12.256-6.924 12.256-12.93 0-.196 0-.393-.01-.586.84-.64 1.57-1.442 2.15-2.353-.778.367-1.61.61-2.48.72z") fill="#1da1f2"
-
+        | Tweet
     li.facebook
       = link_to '#', onclick: "PopupCenter('http://www.facebook.com/sharer.php?u=#{site_url}#{current_page.url}','xtf','500','500')", :target => :blank do
-        svg height="44" viewbox=("40 40 44 44") width="44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          defs
-            circle#a cx="22" cy="22" r="22"
-            mask#b fill="#fff" height="44" width="44" x="0" y="0"
-              use xlink:href="#a"
-          g fill="none" fill-rule="evenodd" transform=("translate(40 40)")
-            path d=("M0 0h44v44H0z")
-            use mask="url(#b)" stroke="#3b5998" stroke-width="4" xlink:href="#a"
-            path d=("M23.315 35h-4.878V23.5H16v-3.964h2.437v-2.38c0-3.233 1.376-5.156 5.286-5.156h3.255v3.964h-2.034c-1.523 0-1.623.554-1.623 1.588l-.005 1.984H27l-.43 3.963h-3.256V35z") fill="#3b5998"
+        | Share
 

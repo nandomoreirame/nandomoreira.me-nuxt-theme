@@ -15,7 +15,7 @@ html.no-js
       = yield
     = partial "partials/footer"
 
-- if build?
-  = stylesheet_link_tag "main.min"
-- else
-  = stylesheet_link_tag "main"
+    - if build?
+      = stylesheet_link_tag "main.min"
+    - else
+      = stylesheet_link_tag "main"

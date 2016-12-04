@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.3.1
+  - 2.3.0
 branches:
   only:
     - source
@@ -14,7 +14,8 @@ gemfile: travisGemfile
 before_install:
   - nvm install v6.9.1
   - nvm use v6.9.1
-install: npm install
+  - npm install -g gulp yarn
+install: yarn
 script: bundle exec rake travis:script
 after_success: bundle exec rake travis:after_success
 notifications:

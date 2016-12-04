@@ -2,6 +2,10 @@
   @extend .card
   margin-top: 0
   margin-bottom: $spacing-base
+  transition: box-shadow .25s ease-in-out
+
+  &:hover
+    box-shadow: 0 .3em .5em rgba($color-gray, .1)
 
   img
     width: 100%
@@ -98,25 +102,19 @@ iframe
     height: 100%
 
 .share-icons
-  text-align: center
-
   ul
     margin: 0
-    padding: 0
+    padding: 1em 0 2em
     text-align: center
 
-  svg
-    display: block
+  li
+    padding: 0 .4em
 
-  li.facebook
-    a:after
-      content: 'Facebook'
-      color: #3b5998
+  li.facebook a
+    color: #3b5998
 
-  li.twitter
-    a:after
-      content: 'Twitter'
-      color: #1da1f2
+  li.twitter a
+    color: #1da1f2
 
   a
     font-weight: $font-weight-light
