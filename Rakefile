@@ -1,11 +1,11 @@
 # encoding: UTF-8
 require 'rubygems'
 
-# desc "Middleman build"
-# task :build do
-#   puts "\nBuilding project"
-#   try "middleman build"
-# end
+desc "Middleman build"
+task :build do
+  puts "\nBuilding project"
+  try "middleman build"
+end
 
 desc "Middleman deploy"
 task :deploy do
@@ -14,9 +14,9 @@ task :deploy do
 end
 
 namespace :travis do
-  # task :script do
-  #   Rake::Task["build"].invoke
-  # end
+  task :script do
+    Rake::Task["build"].invoke
+  end
 
   task :after_success do
     try "./travis-deploy.sh"
