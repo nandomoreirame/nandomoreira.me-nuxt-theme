@@ -1,4 +1,5 @@
 en:
+  lang: en
   hello_iam: Hello, I'm
   like_coffee: and I really like coffee
   front_dev: front-end developer
@@ -6,8 +7,10 @@ en:
   about_me: About me
   blog: Blog
   writing: Writing
+  prev_page: Previous page
+  next_page: Next page
   about: About
-  read_more: Read more
+  read_more: Read complete article
   en: English
   br: Portuguese
   paths:

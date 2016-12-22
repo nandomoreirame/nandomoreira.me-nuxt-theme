@@ -16,12 +16,12 @@ header.page-title.js-text-parallax
   - if paginate && num_pages > 1
     nav.paginate
       - if prev_page
-        = link_to 'Previous page', prev_page, class: 'previous-page button-white'
+        = link_to t(:prev_page), prev_page, class: 'previous-page button-white', role: 'button'
       - else
-        = link_to 'Previous page', '#', class: 'previous-page button-white disabled'
+        = link_to t(:prev_page), '#', class: 'previous-page button-white disabled', role: 'button'
       span
-        | Page #{page_number} of #{num_pages}
+        | Página #{page_number} de #{num_pages}
       - if next_page
-        = link_to 'Next page', next_page, class: 'next-page button-white'
+        = link_to t(:next_page), next_page, class: 'next-page button-white', role: 'button'
       - else
-        = link_to 'Next page', '#', class: 'next-page button-white disabled'
+        = link_to t(:next_page), '#', class: 'next-page button-white disabled', role: 'button'

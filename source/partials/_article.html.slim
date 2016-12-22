@@ -1,11 +1,11 @@
 article.article
   header.article-header
-    h1.article-title
+    h2.article-title
       = link_to article.title, article
     span.article-meta
-      = article.date.strftime('%b') + ' ' + article.date.strftime('%Y')
+      = article.date.strftime('%d') + '/' + article.date.strftime('%m') + '/' + article.date.strftime('%Y')
       = ' | '
-      = link_to '0 comments', article.url + '#comments', class: 'disqus-comment-count', :'data-disqus-url' => "#{site_url}#{article.url}"
+      = link_to '0 comentários', article.url + '#comments', class: 'disqus-comment-count', :'data-disqus-url' => "#{site_url}#{article.url}"
       = ' | '
       span.tags
         - article.tags.each do |tag|

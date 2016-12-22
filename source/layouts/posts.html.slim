@@ -1,5 +1,5 @@
 doctype html
-html.no-js lang="pt-br"
+html.no-js lang=t(:lang)
   head
     = partial "partials/head"
 
@@ -81,7 +81,7 @@ html.no-js lang="pt-br"
         .container
           meta content="#{current_page.date.strftime('%Y-%m-%d')}" itemprop="datePublished"
           span.article-meta
-            = "#{current_page.date.strftime('%b')} #{current_page.date.strftime('%Y')}"
+            = "#{current_page.date.strftime('%d')}/#{current_page.date.strftime('%m')}/#{current_page.date.strftime('%Y')}"
             span.tags
               = ' | '
               - current_page.tags.each do |tag|

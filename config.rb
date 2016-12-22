@@ -42,7 +42,7 @@ end
 # i18n
 activate :i18n do |l|
   l.path = "/:locale/"
-  l.mount_at_root = :en
+  l.mount_at_root = :br
   l.no_fallbacks = true
 end
 
