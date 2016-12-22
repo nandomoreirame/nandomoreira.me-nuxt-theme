@@ -1,7 +1,12 @@
 .card
   background-color: $color-white
   padding: $spacing-base $spacing-small
+  transition: box-shadow .25s ease-in-out
   max-width: $tablet-large
+
+  &:hover,
+  &:focus
+    box-shadow: 0 15px 65px -10px rgba($color-gray, .3);
 
   +media($tablet)
     padding: $spacing-base

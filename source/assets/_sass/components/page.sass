@@ -51,10 +51,18 @@
 
 
 .card--about
+  a,
   .link-translate,
   .link-translate::before,
-  .link-translate::after, a
+  .link-translate::after
     color: $color-primary
+
+  .link-translate
+    font-size: 80%
+
+    &:hover,
+    &:focus
+      color: lighten($color-primary, 15%)
 
   .social
     path
