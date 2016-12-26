@@ -19,7 +19,7 @@ namespace :travis do
   end
 
   task :after_success do
-    try "./travis-deploy.sh"
+    try "./travisDeploy.sh"
   end
 end
 

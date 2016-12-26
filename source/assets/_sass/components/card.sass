@@ -4,6 +4,23 @@
   transition: box-shadow .25s ease-in-out
   max-width: $tablet-large
 
+  opacity: 0
+  transform: translate3d(0, -30px, 0)
+
+  animation-name: fadeInDown
+  animation-fill-mode: forwards
+  animation-duration: .6s
+  animation-delay: 1s
+
+  &:nth-child(1)
+    animation-delay: .4s
+
+  &:nth-child(2)
+    animation-delay: .6s
+
+  &:nth-child(3)
+    animation-delay: .8s
+
   &:hover,
   &:focus
     box-shadow: 0 15px 65px -10px rgba($color-gray, .3);

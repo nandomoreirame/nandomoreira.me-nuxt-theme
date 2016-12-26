@@ -51,7 +51,7 @@
   li
     font-size: 2rem
     transition: all .2s ease-in-out
-    transform: translate(0, -30px)
+    transform: translate3d(0, -30px, 0)
     opacity: 0
 
     +media($tablet)
@@ -123,11 +123,11 @@
 @keyframes fadeInDown
   0%
     opacity: 0
-    transform: translate(0, -30px)
+    transform: translate3d(0, -30px, 0)
 
   100%
     opacity: 1
-    transform: translate(0, 0)
+    transform: translate3d(0, 0, 0)
 
 @keyframes fadeIn
   0%

@@ -75,7 +75,7 @@ html.no-js lang=t(:lang)
   body class="#{body_class} single"
     = partial "partials/header"
     main.main role="main"
-      header.page-title.js-text-parallax style="background-image: url(#{current_article.data.image})"
+      header.page-title style="background-image: url(#{current_article.data.image})"
         - if current_article.data.image
           .page-title__overlay
         .container
