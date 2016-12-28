@@ -7,3 +7,4 @@ Disallow: /mug/
 Disallow: /end2end/
 Disallow: /simplest/
 Disallow: /dotX/
+Disallow: /jekyll-powerful/
