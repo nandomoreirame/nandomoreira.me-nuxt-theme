@@ -94,7 +94,6 @@ html.no-js lang=t(:lang)
           .container-inn
             .article-content itemprop="articleBody"
               = yield
-              = partial "partials/share"
 
         - unless current_article.nil?
           = partial "partials/comments"

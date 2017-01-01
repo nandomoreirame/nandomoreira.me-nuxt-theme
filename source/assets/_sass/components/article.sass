@@ -106,49 +106,6 @@ iframe
     width: 100%
     height: 100%
 
-.share-icons
-  ul
-    margin: 0
-    padding: 1em 0 2em
-    text-align: center
-
-  li
-    padding: 0 .4em
-
-  li.facebook a
-    color: #3b5998
-
-  li.twitter a
-    color: #1da1f2
-
-  a
-    font-weight: $font-weight-light
-    vertical-align: middle
-    display: block
-    opacity: .2
-    transition: opacity .2s ease-in-out, transform .2s ease-in-out
-    color: $color-base
-    text-decoration: none
-
-    &:after
-      opacity: 0
-      display: block
-      text-align: center
-      transform: translateY(-40%)
-      transition: opacity .2s ease-in-out, transform .2s ease-in-out
-      position: relative
-      left: -15%
-      font-size: 1rem
-
-    &:hover
-      opacity: .75
-      transform: rotate(8deg)
-
-      &:after
-        opacity: 1
-        transform: translateY(0)
-
-
 +media(max-width $tablet)
   body.single,
   body.about
@@ -164,7 +121,6 @@ iframe
     .article
       p, h1, h2,
       h3, h4, h5,
-      .share-icons,
       .article-title
         padding-left: $spacing-base
         padding-right: $spacing-base
