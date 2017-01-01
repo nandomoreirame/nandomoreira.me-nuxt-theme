@@ -87,6 +87,8 @@ html.no-js lang=t(:lang)
               - current_page.tags.each do |tag|
                 = link_to "##{tag}", tag_path(tag)
           h1.article-title itemprop="headline" = current_page.data.title
+          - if current_page.data.presentation
+            h4.article-presentation= current_page.data.presentation
       .container
         article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
           .container-inn
