@@ -27,6 +27,12 @@
     font-size: .9rem
     display: inline-block
     color: rgba(#222, .5)
+    padding: 0 .2em
+
+    a:hover,
+    a:active,
+    a:focus
+      color: $color-white
 
 .article-title
   font-size: 1.8rem
@@ -34,6 +40,12 @@
 
   &, a
     color: $color-secondary
+
+  a:hover,
+  a:active,
+  a:focus
+    text-decoration: underline
+    background-color: transparent
 
   +media($desktop)
     font-size: 2.2rem

@@ -11,18 +11,22 @@ body
   font-feature-settings: "calt" 1
   text-rendering: optimizeLegibility
 
-  +media($desktop)
-    font-size: 1.2rem
-
 a
   color: $color-quaternary
-  text-decoration: none
+  text-decoration: underline
   border: 0
 
-  &:hover
-    color: darken($color-tertiary, 5%)
-    text-decoration: underline
-    outline: none
+  &:hover,
+  &:active,
+  &:focus
+    color: $color-white
+    background-color: darken($color-tertiary, 5%)
+    text-decoration: none
+
+  &.logo:hover,
+  &.logo:active,
+  &.logo:focus
+    background-color: transparent
 
 em
   font-style: italic
@@ -37,7 +41,7 @@ big
   font-size: 150%
 
 h1, h2, h3, h4, h5, h6,
-p, dl, table, blockquote
+p, dl, table, blockquote, figcaption
   margin: 0 0 $spacing-small 0
 
 h1, h2, h3, h4, h5, h6
@@ -81,6 +85,12 @@ sup
   font-size: .8em
   position: relative
   top: -.5em
+
+figcaption
+  text-align: center
+  font-style: italic
+  line-height: $line-height-base
+  font-size: $font-size-small
 
 blockquote
   border-left: .3rem solid $color-quaternary
