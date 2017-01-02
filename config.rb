@@ -94,7 +94,7 @@ configure :build do
   activate :minify_html
   activate :minify_javascript
   activate :gzip
-  activate :asset_hash
+  # activate :asset_hash
   activate :cache_buster
   activate :asset_host, :host => '//d2pcfnwkh4jlye.cloudfront.net'
   set :google_analytics_account, 'UA-52446115-1'
