@@ -3,8 +3,10 @@ footer.footer
     = "Made with "
     svg height="24" viewbox=("0 0 24 24") width="24" xmlns="http://www.w3.org/2000/svg"
       path d=("M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z")
-    = " by #{link_to(site_author, site_url)} "
-    = "using #{link_to "middlemanapp.com", "http://middlemanapp.com" , :target => :blank }"
+    = " by #{link_to site_author, social_github, :target => :blank}, "
+    = "#{link_to "Open source project", "#{social_github}/nandomoreirame.github.io", :target => :blank, :rel => :nofollow} "
+    = "using #{link_to "middlemanapp.com", "http://middlemanapp.com/", :target => :blank, :rel => :nofollow} "
+    = "and #{link_to "Gulpjs", "http://gulpjs.com/", :target => :blank, :rel => :nofollow}"
 
 script#dsq-count-scr async="" data-cfasync="false" src="//#{disqus_shortname}.disqus.com/count.js"
 = stylesheet_link_tag 'syntax'
