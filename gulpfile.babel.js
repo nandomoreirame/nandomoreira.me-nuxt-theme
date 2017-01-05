@@ -13,6 +13,7 @@ const config = {
   partials: './source/partials',
   sass: './source/assets/_sass',
   css: './source/assets/stylesheets',
+  images: './source/assets/images',
   plumberErrorHandler: {
     errorHandler: $.notify.onError({
       title   : 'Gulp',
@@ -49,6 +50,20 @@ Gulp.task('replace', ['stylesheets'], () => Gulp.src([`${config.partials}/_inlin
   .pipe($.size({ title: 'Replace stylesheets', gzip: false, showFiles: true }))
   .pipe(Gulp.dest(config.partials))
   .pipe($.plumber.stop()));
+
+Gulp.task('images', () => Gulp.src([`${config.images}/**/*`])
+  .pipe($.image({
+    pngquant: true,
+    optipng: true,
+    zopflipng: true,
+    advpng: true,
+    jpegRecompress: false,
+    jpegoptim: true,
+    mozjpeg: true,
+    gifsicle: true,
+    svgo: true
+  }))
+  .pipe(Gulp.dest(`${config.images}`)));
 
 Gulp.task('build', ['replace']);
 
