@@ -6,7 +6,7 @@
   font-size: $font-size-base
   font-weight: $font-weight-light
   letter-spacing: $letter-spacing-base
-  transition: .1s background-color linear, .1s border-color linear
+  transition: .1s background-color linear, .1s border-color linear, box-shadow .15s ease-in-out
   line-height: 3rem
   padding: 0 $spacing-small
   text-align: center
@@ -19,6 +19,13 @@
   &:hover
     text-decoration: none
     color: $color-white
+
+  &:hover,
+  &:focus
+    box-shadow: 0 10px 25px -8px rgba($color-gray, .3)
+
+  &:active
+    box-shadow: 0 10px 7px -8px rgba($color-gray, .3)
 
   &,
   &:focus
