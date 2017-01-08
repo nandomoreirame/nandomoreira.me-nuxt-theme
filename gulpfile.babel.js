@@ -52,7 +52,7 @@ Gulp.task('replace', ['stylesheets'], () => Gulp.src([`${config.partials}/_inlin
   .pipe($.plumber.stop()));
 
 Gulp.task('images', () => Gulp.src([`${config.images}/**/*`])
-  .pipe($.image({
+  .pipe(isProduction ? $.image({
     pngquant: true,
     optipng: true,
     zopflipng: true,
@@ -62,10 +62,10 @@ Gulp.task('images', () => Gulp.src([`${config.images}/**/*`])
     mozjpeg: true,
     gifsicle: true,
     svgo: true
-  }))
-  .pipe(Gulp.dest(`${config.images}`)));
+  }) : $.util.noop())
+  .pipe(isProduction ? Gulp.dest(`${config.images}`) : $.util.noop()));
 
-Gulp.task('build', ['replace']);
+Gulp.task('build', ['replace', 'images']);
 
 Gulp.task('watch', ['build'], () => {
   Gulp.watch(`${config.sass}/**/*.{sass,scss}`, ['stylesheets']);
