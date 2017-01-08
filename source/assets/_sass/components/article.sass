@@ -95,6 +95,23 @@ iframe
   +media($desktop)
     padding: $spacing-big $spacing-small
 
+.article-link
+  position: relative
+  display: inline-block
+  padding: 0 .2em
+
+  &--external
+    margin-right: 20px
+
+    &:after
+      display: inline-block
+      content: ''
+      background-image: url(../images/external-link.svg)
+      background-size: 100%
+      width: 20px
+      height: 20px
+      +position(absolute, 4px -18px null null)
+
 iframe
   border: none
   margin: 0

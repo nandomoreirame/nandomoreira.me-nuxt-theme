@@ -90,7 +90,7 @@ html.no-js lang=t(:lang)
           - if current_page.data.presentation
             h4.article-presentation= current_page.data.presentation
       .container
-        article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
+        article#article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
           .container-inn
             .article-content itemprop="articleBody"
               = yield
@@ -105,3 +105,13 @@ html.no-js lang=t(:lang)
       script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391" type="text/javascript"
     - else
       = stylesheet_link_tag "main"
+
+    javascript:
+      var _article = document.getElementById('article');
+      var _links = _article.getElementsByTagName('a');
+
+      for (var i = 0; i < _links.length; i++) {
+        var _elem = _links[i];
+        _elem.setAttribute("target", "_blank");
+        _elem.setAttribute("class", "article-link article-link--external");
+      }
