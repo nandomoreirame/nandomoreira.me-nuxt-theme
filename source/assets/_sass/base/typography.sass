@@ -42,12 +42,15 @@ big
 
 h1, h2, h3, h4, h5, h6,
 p, dl, table, blockquote, figcaption
-  margin: 0 0 $spacing-small 0
+  margin: 0 0 $spacing-base 0
+
+  &:last-child
+    margin-bottom: 0
 
 h1, h2, h3, h4, h5, h6
   color: inherit
+  letter-spacing: -.04rem
   font-weight: $font-weight-bold
-  letter-spacing: -.05rem
 
   a
     color: inherit
@@ -93,14 +96,14 @@ figcaption
   font-size: $font-size-small
 
 blockquote
-  border-left: .3rem solid $color-quaternary
-  padding: $spacing-mini $spacing-small
-  color: lighten($color-base, 15%)
-  margin-left: -($spacing-base)
-  margin-right: -($spacing-base)
+  color: #999
+  font-size: 1.5em
+  margin-top: $spacing-base
+  margin-bottom: $spacing-base
+  text-align: center
+  line-height: 1.25
 
   p
-    font-size: 1.6rem
     font-weight: $font-weight-light
 
   & *:last-child

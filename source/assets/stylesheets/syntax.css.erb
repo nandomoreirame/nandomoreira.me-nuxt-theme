@@ -1,13 +1,14 @@
 <%= Rouge::Themes::Github.render(:scope => '.highlight') %>
 
 .highlight {
-  padding: 1.2em;
+  padding: 1.2em 2.4em !important;
   margin-bottom: 1.875em;
   overflow: hidden;
   overflow-x: auto;
   border-radius: 0;
   position: relative;
 }
+
 <%#
 .highlight:before,
 .highlight:after {
@@ -30,7 +31,7 @@
 
 .highlight,
 .highlight pre {
-  background-color: #efefef;
+  background-color: rgba(0, 0, 0, 0.05);
   font-size: .8rem;
   border: none;
 }

@@ -54,6 +54,9 @@
   color: darken(#fff, 15%)
   font-weight: 300
   letter-spacing: .06em
+  position: relative
+  opacity: .9
+  z-index: 2
 
 .blog-list
   .article p
@@ -75,9 +78,11 @@
     +media($desktop)
       font-size: 3rem
 
-.image
-  margin-left: -($spacing-base)
-  margin-right: -($spacing-base)
++media($tablet)
+  pre.highlight,
+  .image
+    margin-left: -($spacing-base)
+    margin-right: -($spacing-base)
 
 .image,
 iframe
@@ -123,7 +128,7 @@ iframe
       margin-right: 0
 
     .main > .container,
-    .article, blockquote
+    .article, pre.highlight
       padding-left: 0
       padding-right: 0
 
