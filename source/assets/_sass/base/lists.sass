@@ -2,12 +2,15 @@ dl,
 ol,
 ul
   margin: 0 0 $spacing-base
-  padding-left: $spacing-small
+  padding-left: $spacing-big
 
   dl,
   ul,
   ol
     margin: $spacing-small 0 $spacing-small $spacing-base
+
+  +media($tablet)
+    padding-left: $spacing-small
 
 dl
   list-style: none
