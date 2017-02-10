@@ -67,6 +67,8 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-alias (0.0.16)
+      middleman-core (~> 3.2)
     middleman-autoprefixer (2.7.0)
       autoprefixer-rails (>= 6.3.1, < 7.0.0)
       middleman-core (>= 3.3.3)
@@ -178,6 +180,7 @@ DEPENDENCIES
   bourbon (~> 4.2, >= 4.2.6)
   builder (~> 3.0)
   middleman (~> 3.3.12)
+  middleman-alias
   middleman-autoprefixer
   middleman-blog (~> 3.5.3)
   middleman-deploy

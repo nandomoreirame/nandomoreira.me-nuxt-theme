@@ -8,9 +8,9 @@ helpers CustomHelpers
 
 set :site_url, 'https://nandomoreira.me'
 set :site_domain, 'nandomoreira.me'
-set :site_title, 'Fernando Moreira | Front-end developer'
+set :site_title, 'Fernando Moreira | Front-end / UX Designer'
 set :site_author, 'Fernando Moreira'
-set :site_description, 'Front-end developer'
+set :site_description, 'Front-end / UX Designer'
 set :site_author_image, 'avatar.png'
 set :twitter, '@umdevUX'
 set :social_twitter, 'https://twitter.com/umdevUX'
@@ -19,8 +19,10 @@ set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
 set :social_instagram, 'https://instagram.com/umdevux'
 set :disqus_shortname, 'fernandomoreira'
 
+activate :alias
+
 activate :blog do |blog|
-  blog.permalink = "/{title}"
+  blog.permalink = "{title}"
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   blog.taglink = "tags/{tag}.html"
 
@@ -53,7 +55,7 @@ page "/blog.html", layout: "blog"
 page "/posts/*.html", layout: "posts"
 
 # Title
-activate :title, site: 'Fernando Moreira | Front-end developer', separator: ' — '
+activate :title, site: 'Fernando Moreira | Front-end / UX Designer', separator: ' — '
 
 # Metatags
 activate :meta_tags

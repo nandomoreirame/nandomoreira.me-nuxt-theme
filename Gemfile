@@ -21,3 +21,4 @@ gem 'rake'
 gem 'builder', '~> 3.0'
 gem 'bourbon', '~> 4.2', '>= 4.2.6'
 gem 'sass', '~> 3.4', :require => false
+gem 'middleman-alias'
