@@ -22,15 +22,15 @@
     .navbar__inner
       ul.nav
         li
-          = link_to t(:writing), '/blog'
-        li
           = link_to t(:about_me), local_path(t('paths.about'))
         li
-          = link_to t(:experiments), 'https://codepen.io/nandomoreirame/', :target => :blank
-        / li
-          / a href="#"  Projects
+          = link_to t(:writing), '/blog'
         li
-          = link_to 'Feed', '/feed.xml', :target => :blank
+          = link_to 'Medium', medium_url, target: '_blank'
+        li
+          = link_to t(:experiments), 'https://codepen.io/nandomoreirame/', target: '_blank'
+        li
+          = link_to 'Feed', '/feed.xml', target: '_blank'
 
 
       = partial 'partials/social'
