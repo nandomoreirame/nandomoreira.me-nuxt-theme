@@ -10,12 +10,10 @@ html.no-js lang=t(:lang)
       - body_class += ' ' + current_page.data.body_class
     - body_class = body_class.sub(/[_]/, '-')
   body class="#{body_class} theme-secondary"
-    = partial "partials/header"
-    main.main role="main"
-      = yield
-    = partial "partials/footer"
-
-    - if build?
-      = stylesheet_link_tag "main.min", { async: true }
-    - else
-      = stylesheet_link_tag "main", { async: true }
+    #barba-wrapper
+      .barba-container
+        = partial "partials/header"
+        main.main role="main"
+          = yield
+        = partial "partials/footer"
+    = partial "partials/footer-scripts"

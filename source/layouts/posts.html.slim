@@ -73,38 +73,38 @@ html.no-js lang=t(:lang)
         }
       }
   body class="#{body_class} single"
-    = partial "partials/header"
-    main.main role="main"
-      header.page-title style="background-image: url(#{current_article.data.image})"
-        - if current_article.data.image
-          .page-title__overlay
-        .container
-          meta content="#{current_page.date.strftime('%Y-%m-%d')}" itemprop="datePublished"
-          span.article-meta
-            = "#{current_page.date.strftime('%d')}/#{current_page.date.strftime('%m')}/#{current_page.date.strftime('%Y')}"
-            span.tags
-              = ' | '
-              - current_page.tags.each do |tag|
-                = link_to "##{tag}", tag_path(tag)
-          h1.article-title itemprop="headline" = current_page.data.title
-          - if current_page.data.presentation
-            h4.article-presentation= current_page.data.presentation
-      .container
-        article#article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
-          .container-inn
-            .article-content itemprop="articleBody"
-              = yield
+    #barba-wrapper
+      .barba-container
+        = partial "partials/header"
+        main.main role="main"
+          header.page-title style="background-image: url(#{current_article.data.image})"
+            - if current_article.data.image
+              .page-title__overlay
+            .container
+              meta content="#{current_page.date.strftime('%Y-%m-%d')}" itemprop="datePublished"
+              span.article-meta
+                = "#{current_page.date.strftime('%d')}/#{current_page.date.strftime('%m')}/#{current_page.date.strftime('%Y')}"
+                span.tags
+                  = ' | '
+                  - current_page.tags.each do |tag|
+                    = link_to "##{tag}", tag_path(tag)
+              h1.article-title itemprop="headline" = current_page.data.title
+              - if current_page.data.presentation
+                h4.article-presentation= current_page.data.presentation
+          .container
+            article#article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
+              .container-inn
+                .article-content itemprop="articleBody"
+                  = yield
 
-        - unless current_article.nil?
-          = partial "partials/comments"
+            - unless current_article.nil?
+              = partial "partials/comments"
 
-    = partial "partials/footer"
+        = partial "partials/footer"
+        = partial "partials/footer-scripts"
 
     - if build?
-      = stylesheet_link_tag "main.min"
       script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391" type="text/javascript"
-    - else
-      = stylesheet_link_tag "main"
 
     javascript:
       var _article = document.getElementById('article');

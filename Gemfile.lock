@@ -50,6 +50,8 @@ GEM
     htmlcompressor (0.2.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    jquery-middleman (3.1.2)
+      thor (>= 0.14, < 2.0)
     json (1.8.3)
     kramdown (1.12.0)
     listen (2.10.1)
@@ -179,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon (~> 4.2, >= 4.2.6)
   builder (~> 3.0)
+  jquery-middleman
   middleman (~> 3.3.12)
   middleman-alias
   middleman-autoprefixer
@@ -198,9 +201,6 @@ DEPENDENCIES
   sass (~> 3.4)
   sass-media_query_combiner
   slim
-
-RUBY VERSION
-   ruby 2.3.0p0
 
 BUNDLED WITH
    1.13.6

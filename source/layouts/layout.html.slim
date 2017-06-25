@@ -10,9 +10,7 @@ html.no-js lang=t(:lang)
       - body_class += ' ' + current_page.data.body_class
     - body_class = body_class.sub(/[_]/, '-')
   body class="#{body_class}"
-    = yield
-
-    - if build?
-      = stylesheet_link_tag "main.min"
-    - else
-      = stylesheet_link_tag "main"
+    #barba-wrapper
+      .barba-container
+        = yield
+    = partial "partials/footer-scripts"

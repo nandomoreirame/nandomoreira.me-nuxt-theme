@@ -1,0 +1,6 @@
+- if build?
+  = stylesheet_link_tag 'main.min', { async: true }
+  = javascript_include_tag 'main.min', { async: true }
+- else
+  = stylesheet_link_tag 'main', { async: true }
+  = javascript_include_tag 'main', { async: true }

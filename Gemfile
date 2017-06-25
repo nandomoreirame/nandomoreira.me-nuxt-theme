@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
 
 gem 'middleman', '~> 3.3.12'
 gem 'middleman-blog', '~> 3.5.3'
@@ -10,6 +9,7 @@ gem 'middleman-meta-tags'
 gem 'middleman-search_engine_sitemap'
 gem 'middleman-minify-html'
 gem 'middleman-livereload'
+gem "jquery-middleman"
 gem 'rack-contrib'
 gem 'rack-rewrite'
 gem 'slim'
