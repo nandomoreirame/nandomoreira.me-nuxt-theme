@@ -1,74 +1,81 @@
-'use strict';
+'use strict'
 
-import Gulp    from 'gulp';
-import Plugins from 'gulp-load-plugins';
-import Bourbon from 'node-bourbon';
-import fs      from 'fs';
+import pkg from './package.json'
+import config from './gulpfile.config'
+import gulp from 'gulp'
+import plugins from 'gulp-load-plugins'
+import runSequence from 'run-sequence'
+import swPrecache from 'sw-precache'
+import del from 'del'
+import fs from 'fs'
 
-const $ = Plugins();
-const browsers = ['last 2 versions'];
-const isProduction = $.util.env.type === 'production' ? true : false;
-const config = {
-  source: './source',
-  partials: './source/partials',
-  sass: './source/assets/_sass',
-  css: './source/assets/stylesheets',
-  images: './source/assets/images',
-  plumberErrorHandler: {
-    errorHandler: $.notify.onError({
-      title   : 'Gulp',
-      message : 'Error: <%= error.message %>'
-    })
+const $ = plugins()
+
+gulp.task('clean', () => del([
+    `${config.source.css}/*.css`,
+    `!${config.source.css}/*.css.erb`,
+    `${config.source.partials}/_inline-stylesheets.html.slim`
+  ], {
+    dot: true
   }
-};
+))
 
-Gulp.task('stylesheets', () => Gulp.src([`${config.sass}/*.sass`])
-  .pipe($.plumber(config.plumberErrorHandler))
-  .pipe($.sass({
-    sourceComments: isProduction ? false : 'normal',
-    includePaths: [
-      config.sass,
-      Bourbon.includePaths
-    ]
-  }))
-  .pipe($.autoprefixer({ browsers }))
+gulp.task('stylesheets', () => gulp.src([`${config.source.sass}/*.sass`])
+  .pipe($.plumber(config.plumberHandler))
+  .pipe($.sass(config.sassSettings))
   .pipe($.combineMq())
-  .pipe(isProduction ? $.cssnano() : $.jsbeautifier())
-  .pipe(isProduction ? $.rename({ suffix: '.min' }) : $.util.noop())
-  .pipe($.size({ title: 'Build and Minify Stylesheets', gzip: false, showFiles: true }))
-  .pipe(Gulp.dest(config.css))
-  .pipe($.plumber.stop()));
+  .pipe(config.isProduction ? $.cssnano({ autoprefixer: config.autoprefixer, add: true }) : $.jsbeautifier())
+  .pipe(config.isProduction ? $.rename({ suffix: '.min' }) : $.util.noop())
+  .pipe($.header(config.banner.join('\n'), { pkg : pkg } ))
+  .pipe($.size({ title: 'Build Stylesheets', showFiles: true }))
+  .pipe(gulp.dest(config.source.css))
+  .pipe($.plumber.stop()))
 
-Gulp.task('replace', ['stylesheets'], () => Gulp.src([`${config.partials}/_inline-stylesheets.html`])
-  .pipe($.plumber(config.plumberErrorHandler))
+gulp.task('replace', () => gulp.src([`${config.source.partials}/_inline-stylesheets.html`])
+  .pipe($.plumber(config.plumberHandler))
   .pipe($.replace('__INLINE_STYLESHEET__', function(s) {
-    const file = isProduction ? 'inline.min.css' : 'inline.css';
-    const style = fs.readFileSync(`${config.css}/${file}`, 'utf8');
-    return 'css:\n  ' + style;
+    const file = config.isProduction ? 'inline.min.css' : 'inline.css'
+    const style = fs.readFileSync(`${config.source.css}/${file}`, 'utf8')
+    return 'css:\n  ' + style
   }))
   .pipe($.rename('_inline-stylesheets.html.slim'))
-  .pipe($.size({ title: 'Replace stylesheets', gzip: false, showFiles: true }))
-  .pipe(Gulp.dest(config.partials))
-  .pipe($.plumber.stop()));
+  .pipe($.size({ title: 'Replace stylesheets', showFiles: true }))
+  .pipe(gulp.dest(config.source.partials))
+  .pipe($.plumber.stop()))
 
-Gulp.task('images', () => Gulp.src([`${config.images}/**/*`])
-  .pipe(isProduction ? $.image({
-    pngquant: true,
-    optipng: true,
-    zopflipng: true,
-    advpng: true,
-    jpegRecompress: false,
-    jpegoptim: true,
-    mozjpeg: true,
-    gifsicle: true,
-    svgo: true
-  }) : $.util.noop())
-  .pipe(isProduction ? Gulp.dest(`${config.images}`) : $.util.noop()));
+gulp.task('images', () => gulp.src([`${config.source.images}/**/*`])
+  .pipe(config.isProduction ? $.image(config.imageMin) : $.util.noop())
+  .pipe(config.isProduction ? gulp.dest(`${config.source.images}`) : $.util.noop()))
 
-Gulp.task('build', ['replace', 'images']);
+gulp.task('generate-service-worker', (callback) => {
+  swPrecache.write(config.source.sw, {
+    staticFileGlobs: [
+      `${config.source.stylesheets}/*.css`,
+      `${config.source.javascripts}/*.js`,
+      `${config.source.images}/**/*.{png,jpg,svg}`,
+      `${config.source.fonts}/**/*`
+    ],
+    runtimeCaching: [{
+      urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
+      handler: 'cacheFirst'
+    }],
+    stripPrefix: './source',
+    cacheId: `${pkg.name}`
+  }, callback)
+})
 
-Gulp.task('watch', ['build'], () => {
-  Gulp.watch(`${config.sass}/**/*.{sass,scss}`, ['stylesheets']);
-});
+gulp.task('watch', ['build'], () => {
+  gulp.watch(`${config.source.sass}/**/*`, ['stylesheets'])
+})
 
-Gulp.task('default', [ 'watch' ]);
+gulp.task('build', ['clean'], callback =>
+  runSequence(
+    ['images'],
+    ['stylesheets'],
+    ['replace'],
+    ['generate-service-worker'],
+    callback
+  )
+)
+
+gulp.task('default', [ 'build' ])

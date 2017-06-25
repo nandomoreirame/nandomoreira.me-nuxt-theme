@@ -1,9 +1,9 @@
 {
   "name": "nandomoreirame.github.io",
-  "version": "1.0.0",
-  "description": "> :gem: My personal website and blog >> http://nandomoreira.me/",
+  "version": "3.0.0",
+  "description": "> My personal website and blog >> http://nandomoreira.me/",
   "homepage": "https://github.com/nandomoreirame/nandomoreirame.github.io#readme",
-  "main": "gulpfile.js",
+  "main": "gulpfile.babel.js",
   "scripts": {
     "dev": "./node_modules/.bin/concurrently --kill-others --prefix \"[{name}]\" --names \"gulp,middleman\" \"gulp watch\" \"bundle exec middleman server -p 3000\"",
     "postinstall": "bundle install && gulp build --type production",
@@ -23,10 +23,11 @@
     "babel-core": "^6.18.2",
     "babel-preset-es2015": "^6.18.0",
     "concurrently": "^3.1.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
     "gulp-combine-mq": "^0.4.0",
     "gulp-cssnano": "^2.1.2",
+    "gulp-header": "^1.8.8",
     "gulp-image": "^2.7.2",
     "gulp-jsbeautifier": "^2.0.3",
     "gulp-load-plugins": "^1.3.0",
@@ -37,6 +38,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
     "gulp-util": "^3.0.7",
-    "node-bourbon": "^4.2.8"
+    "node-bourbon": "^4.2.8",
+    "run-sequence": "^1.2.2",
+    "sw-precache": "^5.2.0"
   }
 }

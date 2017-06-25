@@ -1,22 +1,26 @@
 language: ruby
 rvm:
-  - 2.3.0
+  - 2.3.3
 branches:
   only:
     - source
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - GH_USER="Fernando Moreira"
-    - GH_EMAIL="nandomoreira.me@gmail.com"
-cache: bundler
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_USER="Fernando Moreira"
+  - GH_EMAIL="nandomoreira.me@gmail.com"
 gemfile: travisGemfile
 before_install:
-  - nvm install v6.9.1
-  - nvm use v6.9.1
-  - npm install -g gulp yarn
+- nvm install v6.9.1
+- nvm use v6.9.1
+- npm install -g gulp yarn
 install: yarn
 script: bundle exec rake travis:script
 after_success: bundle exec rake travis:after_success
+cache:
+  bundler: true
+  yarn: true
+  directories:
+  - node_modules # NPM packages
 notifications:
   email: false
