@@ -54,12 +54,11 @@ module.exports = {
     svgo: true
   },
   banner: [
-    '/**',
-    ' * <%= pkg.name %> - <%= pkg.description %>',
-    ' * @version v<%= pkg.version %>',
-    ' * @link <%= pkg.homepage %>',
-    ' * @license <%= pkg.license %>',
-    ' */',
-    ''
+    ' /**',
+    '   * <%= pkg.name %> - <%= pkg.description %>',
+    '   * @version v<%= pkg.version %>',
+    '   * @link <%= pkg.homepage %>',
+    '   * @license <%= pkg.license %>',
+    '   */'
   ]
 }

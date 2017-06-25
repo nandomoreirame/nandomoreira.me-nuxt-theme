@@ -44,7 +44,7 @@ gulp.task('replace', () => gulp.src([`${config.source.partials}/_inline-styleshe
   .pipe($.plumber.stop()))
 
 gulp.task('images', () => gulp.src([`${config.source.images}/**/*`])
-  .pipe(config.isProduction ? $.image(config.imageMin) : $.util.noop())
+  // .pipe(config.isProduction ? $.image(config.imageMin) : $.util.noop())
   .pipe(config.isProduction ? gulp.dest(`${config.source.images}`) : $.util.noop()))
 
 gulp.task('generate-service-worker', (callback) => {
