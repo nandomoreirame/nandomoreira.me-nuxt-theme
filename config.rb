@@ -6,6 +6,13 @@ require 'sass-media_query_combiner'
 require "helpers/custom_helpers"
 helpers CustomHelpers
 
+# Sprockets
+activate :sprockets
+
+after_configuration do
+  sprockets.append_path File.join( root, "node_modules/" )
+end
+
 set :site_url, 'https://nandomoreira.me'
 set :site_domain, 'nandomoreira.me'
 set :site_title, 'Fernando Moreira | Front-end / UX Designer'

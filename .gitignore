@@ -59,3 +59,4 @@ jspm_packages
 
 source/assets/stylesheets/*.css
 source/partials/_inline-stylesheets.html.slim
+source/assets/javascripts/service-worker.js
