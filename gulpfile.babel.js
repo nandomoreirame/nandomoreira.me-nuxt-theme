@@ -60,6 +60,7 @@ gulp.task('generate-service-worker', (callback) => {
       handler: 'cacheFirst'
     }],
     stripPrefix: './source',
+    replacePrefix: '//d2pcfnwkh4jlye.cloudfront.net',
     cacheId: `${pkg.name}`
   }, callback)
 })
