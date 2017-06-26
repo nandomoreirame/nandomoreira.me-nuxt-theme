@@ -58,9 +58,11 @@ gulp.task('generate-service-worker', (callback) => {
     runtimeCaching: [{
       urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
       handler: 'cacheFirst'
+    }, {
+      urlPattern: /^https:\/\/d2pcfnwkh4jlye\.cloudfront\.net\//,
+      handler: 'cacheFirst'
     }],
     stripPrefix: './source',
-    replacePrefix: (config.isProduction) ? '//d2pcfnwkh4jlye.cloudfront.net' : '',
     cacheId: `${pkg.name}`
   }, callback)
 })
