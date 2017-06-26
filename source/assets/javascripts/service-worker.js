@@ -286,6 +286,7 @@ self.addEventListener('fetch', function(event) {
 // Runtime cache configuration, using the sw-toolbox library.
 
 toolbox.router.get(/^https:\/\/fonts\.googleapis\.com\//, toolbox.cacheFirst, {});
+toolbox.router.get(/^https:\/\/d2pcfnwkh4jlye\.cloudfront\.net\//, toolbox.cacheFirst, {});
 
 
 

@@ -72,7 +72,7 @@ html.no-js lang=t(:lang)
           newWindow.focus();
         }
       }
-  body class="#{body_class} single"
+  body class="#{body_class} single" data-disqus-shortname="#{disqus_shortname}" data-disqus-identifier="#{current_article.url}" data-disqus-title="#{current_article.data.title}" data-disqus-url="#{site_url}#{current_article.url}"
     #barba-wrapper
       .barba-container
         = partial "partials/header"
@@ -101,17 +101,8 @@ html.no-js lang=t(:lang)
               = partial "partials/comments"
 
         = partial "partials/footer"
-        = partial "partials/footer-scripts"
 
-    - if build?
-      script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391" type="text/javascript"
+        - if build?
+          script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391" type="text/javascript"
 
-    javascript:
-      var _article = document.getElementById('article');
-      var _links = _article.getElementsByTagName('a');
-
-      for (var i = 0; i < _links.length; i++) {
-        var _elem = _links[i];
-        _elem.setAttribute("target", "_blank");
-        _elem.setAttribute("class", "article-link article-link--external");
-      }
+    = partial "partials/footer-scripts"
