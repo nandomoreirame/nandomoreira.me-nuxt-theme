@@ -1,14 +1,10 @@
-(function (b) {
+/* eslint no-use-before-define: 0  */
+var app = app || {};
+
+app = (function ($, b) {
   'use strict';
 
-  b.Pjax.start();
-  b.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
-    var _response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML);
-    var $body = $(_response).filter('notbody');
-    var _bodyClasses = $body.attr('class');
-
-    $('body').attr('class', _bodyClasses);
-
+  function attrBlank () {
     var _article = document.getElementById('article');
     if (typeof _article !== 'undefined' && _article !== null) {
       var _links = _article.getElementsByTagName('a');
@@ -19,7 +15,9 @@
         _elem.setAttribute("class", "article-link article-link--external");
       }
     }
+  }
 
+  function setupDisqus () {
     var _disqus_thread = document.getElementById('disqus_thread');
     if (typeof _disqus_thread !== 'undefined' && _disqus_thread !== null) {
       var disqus_shortname = $body.data('disqus-shortname');
@@ -36,5 +34,32 @@
 
       disqusLoader('#disqus_thread', options);
     }
-  });
-})(Barba);
+  }
+
+  function barba () {
+    // b.Pjax.start();
+    b.Pjax.init();
+    b.Prefetch.init();
+
+    b.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container, newPageRawHTML) {
+      var _response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML);
+      var $body = $(_response).filter('notbody');
+      var _bodyClasses = $body.attr('class');
+      $('body').attr('class', _bodyClasses);
+      attrBlank();
+      setupDisqus();
+    });
+  }
+
+  function init () {
+    attrBlank();
+    setupDisqus();
+    barba();
+  }
+
+  return {
+    init: init
+  };
+})(jQuery, Barba);
+
+app.init();

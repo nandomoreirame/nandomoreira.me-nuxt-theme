@@ -1,0 +1,33 @@
+.navbar
+  display: none
+
+.navbar-toggle
+  +position(fixed, 20px 20px null null)
+  z-index: 10000
+  padding: 20px 10px
+
+  +media($mobile-large)
+    top: 40px
+    right: 40px
+
+  &__open
+    display: block
+
+  &__close
+    display: none
+
+  svg
+    margin: 0 0 6px
+    transition: all .2s ease-in-out
+    position: relative
+    display: block
+
+  &:hover,
+  &:focus
+    background-color: transparent
+
+    .rect-top
+      transform: translateY(-2px)
+
+    .rect-bottom
+      transform: translateY(2px)

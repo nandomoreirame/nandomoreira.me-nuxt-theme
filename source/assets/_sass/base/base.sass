@@ -1,17 +1,11 @@
-html,
-body
+html, body,
+body.home--hero #barba-wrapper,
+body.home--hero .barba-container
   +size(100%) // include Bourbon size mixin -> http://bourbon.io/docs/#size
-  padding: 0
-  margin: 0
 
 body
   background-color: rgba(0, 0, 0, .05)
   line-height: $line-height-base
-
-  &.home--hero
-    #barba-wrapper,
-    .barba-container
-      +size(100%)
 
 hr
   border: 0

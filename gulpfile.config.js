@@ -56,11 +56,11 @@ module.exports = {
   banner: [
     ' /**',
     '  ',
-    '   Véi, na boa...',
+    '   Vei, na boa...',
     '  ',
     '          .---.',
     '         /o   o\\',
-    '      __(=  "  =)__   <- Foca no código!!',
+    '      __(=  "  =)__   <- Foca no codigo!!',
     '        //"-=-"/\\',
     '          )   (_',
     '         /      `"=-._',

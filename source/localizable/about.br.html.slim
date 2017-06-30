@@ -4,7 +4,7 @@ layout: pages
 body_class: theme-primary
 ---
 
-section#article
+section
   header.page-title
     h1 Sobre mim
 
@@ -42,5 +42,5 @@ section#article
 
       = partial 'partials/social'
       - other_langs.each do |lang|
-        = link_to t(lang.to_s), local_path('about', { :language => lang.to_s }), class: 'link-translate'
+        = link_to t(lang.to_s) + ", please", local_path('about', { :language => lang.to_s }), class: 'link-translate'
 
