@@ -1,8 +1,9 @@
 {
-  "name": "nandomoreirame.github.io",
+  "name": "nandomoreira.me",
   "version": "3.0.0",
   "description": "> My personal website and blog >> http://nandomoreira.me/",
   "homepage": "https://github.com/nandomoreirame/nandomoreirame.github.io#readme",
+  "private": true,
   "main": "gulpfile.babel.js",
   "scripts": {
     "dev": "./node_modules/.bin/concurrently --kill-others --prefix \"[{name}]\" --names \"gulp,middleman\" \"gulp watch\" \"bundle exec middleman server -p 3000\"",
