@@ -4,6 +4,7 @@
   width: 100%
   // min-height: 120px
   transition: transform .2s ease-in-out, opacity .2s ease-in-out
+  z-index: 999
 
   +clearfix()
 
@@ -15,7 +16,7 @@
 
   .logo
     +position(absolute, 20px null null 20px)
-    z-index: 10000
+    z-index: 1000
 
     +media($mobile-large)
       top: 40px
