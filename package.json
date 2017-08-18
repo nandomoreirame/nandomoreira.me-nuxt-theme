@@ -44,7 +44,6 @@
     "sw-precache": "^5.2.0"
   },
   "dependencies": {
-    "barba.js": "^1.0.0",
     "jquery": "^2.2.4"
   }
 }

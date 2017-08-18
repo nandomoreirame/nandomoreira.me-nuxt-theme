@@ -59,19 +59,28 @@
 
 .action-buttons
   margin-top: $spacing-base
+  padding: 0 $spacing-small
   opacity: 0
   animation-name: fadeIn
   animation-fill-mode: forwards
   animation-duration: .6s
   animation-delay: .8s
 
+  +media($mobile-large)
+    padding: 0
+
   a
-    display: inline-block
-    margin: 0 ($spacing-mini / 2)
     text-transform: lowercase
-    min-width: 130px
     overflow: hidden
     position: relative
+    min-width: 100%
+    display: block
+    margin: ($spacing-mini / 2) 0
+
+    +media($mobile-large)
+      margin: 0 ($spacing-mini / 2)
+      display: inline-block
+      min-width: 130px
 
     &:before
       content: ''

@@ -91,6 +91,10 @@ html.no-js lang=t(:lang)
               h1.article-title itemprop="headline" = current_page.data.title
               - if current_page.data.presentation
                 h4.article-presentation= current_page.data.presentation
+
+            figure.article-author
+              img.avatar alt="" src="/assets/images/avatar.png" width="90px" height="90px"
+
           .container
             article#article.article itemscope="" itemtype="http://schema.org/NewsArticle" role="article"
               .container-inn

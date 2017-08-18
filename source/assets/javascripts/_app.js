@@ -1,7 +1,7 @@
 /* eslint no-use-before-define: 0  */
 var app = app || {};
 
-app = (function ($, b) {
+app = (function ($) {
   'use strict';
 
   function attrBlank () {
@@ -36,30 +36,14 @@ app = (function ($, b) {
     }
   }
 
-  function barba () {
-    // b.Pjax.start();
-    b.Pjax.init();
-    b.Prefetch.init();
-
-    b.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container, newPageRawHTML) {
-      var _response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML);
-      var $body = $(_response).filter('notbody');
-      var _bodyClasses = $body.attr('class');
-      $('body').attr('class', _bodyClasses);
-      attrBlank();
-      setupDisqus();
-    });
-  }
-
   function init () {
     attrBlank();
     setupDisqus();
-    barba();
   }
 
   return {
     init: init
   };
-})(jQuery, Barba);
+})(jQuery);
 
 app.init();
