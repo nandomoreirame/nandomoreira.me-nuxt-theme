@@ -7,7 +7,10 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "dev": "./node_modules/.bin/concurrently --kill-others --prefix \"[{name}]\" --names \"gulp,middleman\" \"gulp watch\" \"bundle exec middleman server -p 3000\"",
-    "postinstall": "bundle install && gulp build --type production",
+    "postinstall": "npm run build",
+    "bundle": "bundle install",
+    "gulp": "gulp build --type production",
+    "build": "npm run bundle && npm run gulp",
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

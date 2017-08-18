@@ -22,7 +22,7 @@
     .navbar__inner
       ul.nav
         li
-          = link_to t(:about_me), local_path(t('paths.about'))
+          = link_to t(:about_me), '/about'
         li
           = link_to t(:writing), '/blog'
         li
@@ -34,6 +34,3 @@
 
 
       = partial 'partials/social'
-      / - other_langs.each do |lang|
-      /   small.translate
-      /     = link_to t(lang.to_s), local_path('', { :language => lang.to_s })

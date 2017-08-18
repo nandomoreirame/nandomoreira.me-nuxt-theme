@@ -41,6 +41,3 @@ section
           = 'ou me procurar em uma das minhas redes sociais.'
 
       = partial 'partials/social'
-      - other_langs.each do |lang|
-        = link_to t(lang.to_s) + ", please", local_path('about', { :language => lang.to_s }), class: 'link-translate'
-
