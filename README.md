@@ -1,6 +1,6 @@
-# nandomoreira.me
+# [nandomoreira.me](http://nandomoreira.me/)
 
-> Nuxt.js project
+[![Build Status](https://travis-ci.org/nandomoreirame/nandomoreirame.github.io.svg?branch=source)](https://travis-ci.org/nandomoreirame/nandomoreirame.github.io) [![Stories in Ready](https://badge.waffle.io/nandomoreirame/nandomoreirame.github.io.png?label=ready&title=Ready)](http://waffle.io/nandomoreirame/nandomoreirame.github.io) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Build Setup
 
@@ -19,4 +19,6 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## License
+
+It is free under the [open-source MIT license](/LICENSE).
