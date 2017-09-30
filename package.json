@@ -1,7 +1,7 @@
 {
   "name": "nandomoreira.me",
   "version": "4.0.0",
-  "description": "Nuxt.js project",
+  "description": "My superfast website and blog using Nuxt.js",
   "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
   "private": true,
   "scripts": {
@@ -13,11 +13,6 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "test": "echo \"no has tests lol\""
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
   },
   "dependencies": {
     "@nuxtjs/axios": "latest",
