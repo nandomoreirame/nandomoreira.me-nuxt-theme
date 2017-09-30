@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="red">Hello {{ name }}!</h1>
+      <h1>Hello!</h1>
       <nuxt-link to="/about">About page</nuxt-link>
     </div>
   </section>
@@ -10,9 +10,6 @@
 <script>
 export default {
   name: 'home',
-  data () {
-    return { name: 'world' }
-  },
   head: {
     title: 'Home page',
     meta: [
@@ -23,6 +20,4 @@ export default {
 </script>
 
 <style lang="sass">
-.red
-  color: #f00
 </style>

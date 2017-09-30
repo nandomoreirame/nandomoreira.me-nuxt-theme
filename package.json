@@ -12,12 +12,7 @@
     "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "ava"
-  },
-  "ava": {
-    "require": [
-      "babel-register"
-    ]
+    "test": "echo \"no has tests lol\""
   },
   "babel": {
     "presets": [
@@ -25,12 +20,12 @@
     ]
   },
   "dependencies": {
-    "nuxtent": "latest",
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/google-analytics": "^1.0.0",
     "nuxt": "latest",
-    "@nuxtjs/axios": "latest"
+    "nuxtent": "latest"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
     "babel-eslint": "^7.2.3",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",

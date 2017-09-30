@@ -1,16 +1,27 @@
 module.exports = {
-  content: {
-    permalink: ':slug',
-    page: '/_content',
-    generate: [ // for static build
-      'get', 'getAll'
+  content: [
+    [
+      'posts',
+      {
+        page: '/posts/_slug',
+        permalink: '/:slug',
+        generate: ['get', 'getAll'],
+        isPost: false
+      }
     ],
-    isPost: false
-  },
-
+    [
+      'projects',
+      {
+        page: '/projects/_slug',
+        permalink: '/projects/:slug',
+        generate: ['get', 'getAll'],
+        isPost: false
+      }
+    ]
+  ],
   api: {
     baseURL: process.env.NODE_ENV === 'production'
-      ? 'http://localhost:3000'
+      ? 'https://nandomoreira.me'
       : 'http://localhost:3000'
   }
 }
