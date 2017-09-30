@@ -25,7 +25,9 @@
     ]
   },
   "dependencies": {
-    "nuxt": "latest"
+    "nuxtent": "latest",
+    "nuxt": "latest",
+    "@nuxtjs/axios": "latest"
   },
   "devDependencies": {
     "ava": "^0.22.0",

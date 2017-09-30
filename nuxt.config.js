@@ -45,5 +45,8 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: [
+    ['nuxtent']
+  ],
 }
