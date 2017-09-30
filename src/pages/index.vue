@@ -1,10 +1,14 @@
 <template>
-  <section class="container">
-    <div>
+  <main>
+    <div class="container">
       <h1>Hello!</h1>
-      <nuxt-link to="/about">About page</nuxt-link>
+      <ul>
+        <li><nuxt-link to="/about">About page</nuxt-link></li>
+        <li><nuxt-link to="/projects">Projects</nuxt-link></li>
+        <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+      </ul>
     </div>
-  </section>
+  </main>
 </template>
 
 <script>

@@ -53,6 +53,8 @@ Em especial ao time de TI da [LojasKD](https://www.lojaskd.com.br/) por me acolh
 
 Para refletir um pouco mais sobre o trabalho em equipe eu vou deixar esse video do **Bernard De Luna** como bônus.
 
-<%= youtube('EJzhit_HAIA') %>
+<div class="video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/EJzhit_HAIA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 **UM FELIZ 2017 TIME!**

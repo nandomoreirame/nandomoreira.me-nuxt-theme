@@ -11,8 +11,18 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    { src: '~assets/sass/main.sass', lang: 'sass' }
+  ],
   loading: { color: '#3B8070' },
+  loading: false,
   plugins: [],
+  modules: [
+    'nuxtent',
+    [
+      '@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }
+    ]
+  ],
   build: {
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
@@ -24,8 +34,5 @@ module.exports = {
         })
       }
     }
-  },
-  modules: [
-    ['nuxtent']
-  ]
+  }
 }
