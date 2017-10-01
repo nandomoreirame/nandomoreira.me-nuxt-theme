@@ -14,8 +14,10 @@ module.exports = {
   css: [
     { src: '~assets/sass/main.sass', lang: 'sass' }
   ],
-  loading: { color: '#3B8070' },
-  loading: false,
+  loading: {
+    color: '#3B8070',
+    height: '3px'
+  },
   plugins: [],
   modules: [
     'nuxtent',
