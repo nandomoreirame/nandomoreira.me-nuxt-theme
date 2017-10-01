@@ -26,7 +26,7 @@ Eu tenho amplo conhecimento em tecnologias para _front-end_ como **HTML(Jekyll/l
 ## E aí, Bora? 👊
 
 <div class="image">
-  <%= image_tag '/assets/images/posts/2015/10/madruga.gif' %>
+  <img src="/images/posts/2015/10/madruga.gif"/>
 </div>
 
 Eu apoio totalmente a troca deconhecimento, seja em uma boa conversa sobre culinária ou em um repositório no _Github_.

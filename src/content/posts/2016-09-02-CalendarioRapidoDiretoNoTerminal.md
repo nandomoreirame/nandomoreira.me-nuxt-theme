@@ -25,7 +25,7 @@ $ cal
 O comando acima sem nenhum parâmentro exibe o mês atual completo pra você.
 
 <div class="image">
-  <%= image_tag '/assets/images/posts/2016/09/cal-command.png' %>
+  <img src="/images/posts/2016/09/cal-command.png"/>
 </div>
 
 Se você quiser escolher o Mês para ser exibido você precisa passar o múmero do mês (de 1 a 12) e o ano, assim:
@@ -37,7 +37,7 @@ $ cal 3 2017
 Isso vai imprimir o mês excolhido.
 
 <div class="image">
-  <%= image_tag '/assets/images/posts/2016/09/cal-march-2017.png' %>
+  <img src="/images/posts/2016/09/cal-march-2017.png"/>
 </div>
 
 Caso você queira apenas o ano
@@ -47,10 +47,10 @@ $ cal 2018
 ```
 
 <div class="image">
-  <%= image_tag '/assets/images/posts/2016/09/cal-year-2018.png' %>
+  <img src="/images/posts/2016/09/cal-year-2018.png"/>
 </div>
 
-That's it! <%= link_to 'Aqui está um link para uma simples doc', 'http://ss64.com/bash/cal.html', target: 'blank' %>
+That's it! <%= link_to 'Aqui está um link para uma simples doc', 'http://ss64.com/bash/cal.html', target: 'blank"/>
 
 Espero que use e abuse! 😀
 

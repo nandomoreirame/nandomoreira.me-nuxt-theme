@@ -14,11 +14,13 @@
 <script>
 export default {
   name: 'home',
-  head: {
-    title: 'Home page',
-    meta: [
-      { hid: 'description', name: 'description', content: 'Home page description' }
-    ]
+  head () {
+    return {
+      title: `Home page | Fernando Moreira`,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Home page description' }
+      ]
+    }
   }
 }
 </script>

@@ -16,7 +16,7 @@ tags:
 Eu tenho um pouco mais de 6 anos de experiência em desenvolvimento web e posso falar que já vi de tudo um pouco nessa área, e esse artigo vai tratar de um assunto um pouco polêmico (como mamilos): _**O profissional deve saber de outras áreas que não são relacionadas a área dele?**_
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/polemico.jpg', alt: 'Mamilos polemicos' %>
+  <img src="/images/posts/2015/12/polemico.jpg" alt="Mamilos polemicos"/>
 </div>
 
 > **Nota:** Porque eu me referi ao **profissional** e não ao **front-end** no texto acima? Por que, apesar do texto ser focado no mundo front-end, onde estou mais ligado, ele também vale para designers, programadores, marketeiros, UX e afins.
@@ -28,7 +28,7 @@ Durante minha trajetória até aqui eu já trabalhei com alguns programadores e 
 Calma jovem, antes de você vir com pedras nas mãos eu vou começar a defender a minha opinião com os 6 itens logo abaixo.
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/urso.jpg', alt: 'Urso, senta aqui jovem, vamos conversar' %>
+  <img src="/images/posts/2015/12/urso.jpg" alt="Urso, senta aqui jovem, vamos conversar"/>
 </div>
 
 ## 1. Você raramente será passado para trás
@@ -36,7 +36,7 @@ Calma jovem, antes de você vir com pedras nas mãos eu vou começar a defender 
 Nessa área tem muito de, como dizia minha mãe: _"Tentar tapar o sol com a peneira!"_.
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/turtles.gif', alt: 'tartarugas rodando na agua' %>
+  <img src="/images/posts/2015/12/turtles.gif" alt="tartarugas rodando na agua"/>
 </div>
 
 Sempre tem um que "acha" que o jeito dele desenvolver é o certo, mas tá longe de ser, tem aquele "espertalhão" que enrola por horas em uma tarefa que ele levaria alguns minutos, e por ai vai.
@@ -50,7 +50,7 @@ Entendendo como algumas coisas funcionam você pode cortar o barato desses fanfa
 Não seja aquele programador que chega no horário, bate o ponto e cola o traseiro na cadeira o dia todo. De uma volta pela empresa, vá no departamento de marketing e assista um pouco do processo deles, pergunte como o designer chegou aquela ideia, acompanhe o UX no processo de planejamento do produto. Isso tudo pode trazer vários beneficios, agrega conhecimento a você e aos envolvidos.
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/spok.gif', alt: 'Spock - Star Trek' %>
+  <img src="/images/posts/2015/12/spok.gif" alt="Spock - Star Trek"/>
 </div>
 
 > De uma volta pela empresa, vai te fazer bem!
@@ -60,7 +60,7 @@ Não seja aquele programador que chega no horário, bate o ponto e cola o trasei
 Essa vai, com um carinho especial, para programadores back-end, aqueles programadores que ainda tem medo das tags HTML5 e das animações das CSS3.
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/robo.gif', alt: 'Robo e gatinho' %>
+  <img src="/images/posts/2015/12/robo.gif" alt="Robo e gatinho"/>
 </div>
 
 Não seja esse cara. Entenda como as tecnologias novas podem ajudar em um projeto, como o HTML5 pode melhorar, e muito, o SEO de um website, como as animações das CSS3 podem, em alguns casos, até substituir o Javascript, não custa dar uma lida em artigos e tutoriais na internet.
@@ -70,7 +70,7 @@ Não seja esse cara. Entenda como as tecnologias novas podem ajudar em um projet
 Um designer que aprende a programar não quer dizer que a empresa vai passar as tarefas do programador pra ele, quando ele estiver com o tempo livre, e assim vale para o programador ou para o front-end.
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/skate.gif', alt: 'Aprendendo skate de dedos' %>
+  <img src="/images/posts/2015/12/skate.gif" alt="Aprendendo skate de dedos"/>
 </div>
 
 Aprender algo novo eleva muito o seu valor, como pessoa e como profissional, e isso ninguém tira de você.
@@ -88,7 +88,7 @@ Geralmente, nas descrições das vagas, eles pedem um monte de coisas, mas muita
 ## 6. E por último, não seja apenas um recortador de PSD!
 
 <div class="image">
-  <%= image_tag 'posts/2015/12/bugginho.png', alt: 'Bugginho developer, amiguinhos!' %>
+  <img src="/images/posts/2015/12/bugginho.png" alt="Bugginho developer, amiguinhos!"/>
 </div>
 
 Se você se titula por ai um **_Front-end engineer_** e não sabe se virar bem com alguma linguagem de programação, não sabe otimizar a performance de um site, ou não sabe usar o terminal a seu favor, sinto muito te dizer amigo, mas **_você é apenas um recortador de PSD_**.
