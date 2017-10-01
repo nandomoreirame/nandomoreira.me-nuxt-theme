@@ -13,3 +13,6 @@ dist
 .nyc_output
 .tmp
 coverage
+
+workbox-*
+sw.js

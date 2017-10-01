@@ -1,3 +1,5 @@
 src/plugins
 .nuxt/
 dist/
+workbox-*
+sw.js

@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 module.exports = {
   srcDir: 'src/',
   dev: (process.env.NODE_ENV !== 'production'),
@@ -21,25 +23,28 @@ module.exports = {
       { name: 'twitter:site', content: '@oseunando' }
     ],
     link: [
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon/favicon-16x16.ico' },
-      { rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/apple-icon-57x57.png' },
-      { rel: 'apple-touch-icon', sizes: '60x60', href: '/favicon/apple-icon-60x60.png' },
-      { rel: 'apple-touch-icon', sizes: '72x72', href: '/favicon/apple-icon-72x72.png' },
-      { rel: 'apple-touch-icon', sizes: '76x76', href: '/favicon/apple-icon-76x76.png' },
-      { rel: 'apple-touch-icon', sizes: '114x114', href: '/favicon/apple-icon-114x114.png' },
-      { rel: 'apple-touch-icon', sizes: '120x120', href: '/favicon/apple-icon-120x120.png' },
-      { rel: 'apple-touch-icon', sizes: '144x144', href: '/favicon/apple-icon-144x144.png' },
-      { rel: 'apple-touch-icon', sizes: '152x152', href: '/favicon/apple-icon-152x152.png' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-icon-180x180.png' },
-      { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon/android-icon-192x192.png' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-192x192.png' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
-      { rel: 'manifest', href: '/favicon/manifest.json' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-16x16.ico' },
+      { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '60x60', href: '/apple-icon-60x60.png' },
+      { rel: 'apple-touch-icon', sizes: '72x72', href: '/apple-icon-72x72.png' },
+      { rel: 'apple-touch-icon', sizes: '76x76', href: '/apple-icon-76x76.png' },
+      { rel: 'apple-touch-icon', sizes: '114x114', href: '/apple-icon-114x114.png' },
+      { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-icon-120x120.png' },
+      { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-icon-144x144.png' },
+      { rel: 'apple-touch-icon', sizes: '152x152', href: '/apple-icon-152x152.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' },
+      { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-icon-192x192.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-192x192.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: '/humans.txt' },
       { rel: 'me', href: 'nandomoreira.me@gmail.com' }
     ]
+  },
+  manifest: {
+    name: 'Fernando Moreira',
+    lang: 'pt_BR'
   },
   css: [
     { src: '~assets/sass/main.sass', lang: 'sass' }
@@ -53,10 +58,14 @@ module.exports = {
     { src: '~/plugins/disqusLoader.js', ssr: false }
   ],
   modules: [
-    'nuxtent',
-    [
-      '@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }
-    ]
+    ['@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }],
+    ['@nuxtjs/browserconfig', { TileColor: '#0c59a0' }],
+    '@nuxtjs/sitemap',
+    '@nuxtjs/optimize',
+    '@nuxtjs/manifest',
+    '@nuxtjs/workbox',
+    '@nuxtjs/icon',
+    'nuxtent'
   ],
   build: {
     extend (config, ctx) {
@@ -68,6 +77,17 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://nandomoreira.me',
+    cacheTime: 1000 * 60 * 15,
+    generate: true,
+    routes () {
+      return axios.get('/content-api').then(res => {
+        return res.data.map(page => page.path)
+      })
     }
   }
 }
