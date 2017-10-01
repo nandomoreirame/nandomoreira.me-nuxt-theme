@@ -1,5 +1,7 @@
 const axios = require('axios')
 
+const { resolve } = require('path')
+
 module.exports = {
   srcDir: 'src/',
   dev: (process.env.NODE_ENV !== 'production'),
@@ -53,10 +55,7 @@ module.exports = {
     color: '#0c59a0',
     height: '3px'
   },
-  plugins: [
-    { src: '~/plugins/helpers.js', ssr: false },
-    { src: '~/plugins/disqusLoader.js', ssr: false }
-  ],
+  plugins: [],
   modules: [
     ['@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }],
     ['@nuxtjs/browserconfig', { TileColor: '#0c59a0' }],
@@ -69,6 +68,7 @@ module.exports = {
   ],
   build: {
     extend (config, ctx) {
+      config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

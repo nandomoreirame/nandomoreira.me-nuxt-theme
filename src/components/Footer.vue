@@ -15,5 +15,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+.footer
+  padding: 15px 0
 </style>
