@@ -10,7 +10,7 @@
     "build": "nuxt build",
     "start": "npm run build && nuxt start",
     "generate": "npm run clean && NODE_ENV=production nuxt generate",
-    "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup",
+    "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup --force",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "test": "echo \"no has tests lol\""
