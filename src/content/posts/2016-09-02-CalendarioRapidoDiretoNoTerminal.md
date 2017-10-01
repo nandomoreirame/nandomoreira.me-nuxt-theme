@@ -50,7 +50,7 @@ $ cal 2018
   <img src="/images/posts/2016/09/cal-year-2018.png"/>
 </div>
 
-That's it! <%= link_to 'Aqui está um link para uma simples doc', 'http://ss64.com/bash/cal.html', target: 'blank"/>
+That's it! <a href="http://ss64.com/bash/cal.html" title="Aqui está um link para uma simples doc" target="blank">Aqui está um link para uma simples doc</a>
 
 Espero que use e abuse! 😀
 
