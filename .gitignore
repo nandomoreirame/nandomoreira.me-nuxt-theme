@@ -14,5 +14,6 @@ dist
 .tmp
 coverage
 
+browserconfig.xml
 workbox-*
 sw.js
