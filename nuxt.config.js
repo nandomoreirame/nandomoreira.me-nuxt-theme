@@ -1,10 +1,8 @@
-const { resolve } = require('path')
-
 module.exports = {
   srcDir: 'src/',
   dev: (process.env.NODE_ENV !== 'production'),
   head: {
-    title: 'Fernando Moreira',
+    title: 'Fernando Moreira | Front-end / UX Designer',
     htmlAttrs: {
       lang: 'pt-BR'
     },
@@ -15,13 +13,12 @@ module.exports = {
       { charset: 'utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: 'Fernando Moreira | Front-end / UX Designer' },
-      { name: 'keyword', content: 'front-end,front,wordpress,javascript,html,css,desenvolvedor,curitiba,paraná' },
       { name: 'og:locale', content: 'pt_BR' },
-      { name: 'twitter:site', content: '@oseunando' },
       { name: 'googlebot', content: 'index,follow' },
       { name: 'robots', content: 'index,follow,noodp' },
-      { name: 'theme-color', content: '#0c59a0' }
+      { name: 'theme-color', content: '#0c59a0' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@oseunando' }
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon/favicon-16x16.ico' },
@@ -52,6 +49,7 @@ module.exports = {
     height: '3px'
   },
   plugins: [
+    { src: '~/plugins/helpers.js', ssr: false },
     { src: '~/plugins/disqusLoader.js', ssr: false }
   ],
   modules: [
@@ -62,7 +60,6 @@ module.exports = {
   ],
   build: {
     extend (config, ctx) {
-      config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

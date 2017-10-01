@@ -9,21 +9,25 @@
       </ul>
       <nuxt-child />
     </div>
+    <meta-tags :title="pageTitle"></meta-tags>
   </main>
 </template>
 
 <script>
 export default {
   name: 'projects',
-  head () {
+  data () {
     return {
-      title: `Projetos | Fernando Moreira`
+      pageTitle: `Projetos - Fernando Moreira | Front-end / UX Designer`
     }
   },
   async asyncData ({ app }) {
     return {
       projects: await app.$content('/projects').getAll()
     }
+  },
+  components: {
+    MetaTags: () => import('~/components/MetaTags')
   }
 }
 </script>

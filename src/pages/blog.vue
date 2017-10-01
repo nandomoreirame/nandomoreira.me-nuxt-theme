@@ -11,24 +11,26 @@
       </ul>
       <nuxt-child />
     </div>
+    <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
   </main>
 </template>
 
 <script>
 export default {
   name: 'blog',
-  head () {
+  data () {
     return {
-      title: `Blog | Fernando Moreira`,
-      meta: [
-        { hid: 'description', name: 'description', content: 'Blog description' }
-      ]
+      pageTitle: `Blog | Fernando Moreira`,
+      pageDescription: 'Blog description'
     }
   },
   async asyncData ({ app }) {
     return {
       posts: await app.$content('/posts').getAll()
     }
+  },
+  components: {
+    MetaTags: () => import('~/components/MetaTags')
   }
 }
 </script>

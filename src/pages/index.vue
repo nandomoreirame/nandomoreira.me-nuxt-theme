@@ -8,19 +8,15 @@
         <li><nuxt-link to="/blog">Blog</nuxt-link></li>
       </ul>
     </div>
+    <meta-tags></meta-tags>
   </main>
 </template>
 
 <script>
 export default {
   name: 'home',
-  head () {
-    return {
-      title: `Home page | Fernando Moreira`,
-      meta: [
-        { hid: 'description', name: 'description', content: 'Home page description' }
-      ]
-    }
+  components: {
+    MetaTags: () => import('~/components/MetaTags')
   }
 }
 </script>
