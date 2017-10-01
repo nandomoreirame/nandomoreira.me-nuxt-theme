@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'projects',
   async asyncData ({ app }) {
     return {
       projects: await app.$content('/projects').getAll()

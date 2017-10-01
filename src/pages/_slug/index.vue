@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'home',
+  name: 'article',
   async asyncData ({ app, route }) {
     return {
       post: await app.$content('/posts').get(route.path)

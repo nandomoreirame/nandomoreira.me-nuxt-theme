@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'project',
   async asyncData ({ app, route }) {
     return {
       project: await app.$content('/projects').get(route.path)

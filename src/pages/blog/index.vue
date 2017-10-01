@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'blog',
   async asyncData ({ app }) {
     return {
       posts: await app.$content('/posts').getAll()
