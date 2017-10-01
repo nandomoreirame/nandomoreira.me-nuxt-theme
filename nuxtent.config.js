@@ -21,7 +21,6 @@ module.exports = {
   ],
   api: {
     baseURL: process.env.NODE_ENV === 'production'
-      ? 'https://nandomoreira.me'
-      : 'http://localhost:3000'
+      ? '' : 'http://localhost:3000'
   }
 }
