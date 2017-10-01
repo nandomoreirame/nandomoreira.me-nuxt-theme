@@ -9,3 +9,7 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+.nyc_output
+.tmp
+coverage

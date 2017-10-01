@@ -13,7 +13,9 @@
     "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup --force",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "echo \"no has tests lol\""
+    "test": "NODE_ENV=test mocha-webpack --webpack-config test/webpack.config.js test/specs --recursive --require test/setup.js",
+    "test:coverage": "nyc npm test",
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "@nuxtjs/axios": "latest",
@@ -23,6 +25,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "browser-env": "^3.2.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
@@ -32,7 +37,10 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "jsdom": "^11.2.0",
+    "mocha": "^3.5.3",
+    "mocha-webpack": "^0.7.0",
     "node-sass": "^4.5.3",
+    "nyc": "^11.2.1",
     "push-dir": "^0.4.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6"
