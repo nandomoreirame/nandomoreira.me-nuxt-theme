@@ -18,7 +18,9 @@ module.exports = {
     color: '#3B8070',
     height: '3px'
   },
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/disqusLoader.js', ssr: false }
+  ],
   modules: [
     'nuxtent',
     [

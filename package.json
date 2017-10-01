@@ -36,5 +36,8 @@
     "push-dir": "^0.4.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6"
-  }
+  },
+  "eslintIgnore": [
+    "src/plugins"
+  ]
 }
