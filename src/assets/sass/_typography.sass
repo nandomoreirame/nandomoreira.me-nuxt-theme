@@ -1,7 +1,7 @@
-@import url('//fonts.googleapis.com/css?family=Merriweather:300,400,700|Montserrat:500,700');
+@import url('//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,700');
 
 a
-  color: $color-quaternary
+  color: $color-primary
   text-decoration: underline
   transition: background-color .15s ease-in-out, color .15s ease-in-out
   border: 0
@@ -10,7 +10,7 @@ a
   &:active,
   &:focus
     color: $color-white
-    background-color: darken($color-tertiary, 5%)
+    background-color: $color-primary
     text-decoration: none
 
   &.logo:hover,
@@ -39,8 +39,8 @@ p, dl, table, blockquote, figcaption
 
 h1, h2, h3, h4, h5, h6
   color: inherit
-  letter-spacing: -.04rem
-  font-weight: $font-weight-bold
+  letter-spacing: -.01rem
+  font-weight: $font-weight-normal
   font-family: $font-family-heading
 
   a

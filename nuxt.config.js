@@ -82,12 +82,11 @@ module.exports = {
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://nandomoreira.me',
-    cacheTime: 1000 * 60 * 15,
+    cacheTime: 1000 * 60 * 150,
     generate: true,
     routes () {
-      return axios.get('/content-api').then(res => {
-        return res.data.map(page => page.path)
-      })
+      return axios.get('http://localhost:3000/content-api')
+        .then(res => res.data.map(page => page.path))
     }
   }
 }

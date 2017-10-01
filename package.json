@@ -29,7 +29,8 @@
     "@nuxtjs/workbox": "^1.2.0",
     "nuxt": "latest",
     "nuxtent": "latest",
-    "vue-disqus": "^2.0.3"
+    "vue-disqus": "^2.0.3",
+    "vue-moment": "^2.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

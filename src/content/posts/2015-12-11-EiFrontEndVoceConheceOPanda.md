@@ -3,7 +3,7 @@ title: "Ei front-end! Você conhece o Panda? 🐼"
 date: 2015-12-11
 description: "Essa é uma dica rápida para quem ama e trabalha com desenvolvimento de interfaces para o usuário"
 keywords: "dicas, extensões, criação, web, criativo, inspiração"
-image: posts/2015/12/panda-app-chrome-extension.png
+image: /images/posts/2015/12/panda-app-chrome-extension.png
 tags:
 - dicas
 - extensões

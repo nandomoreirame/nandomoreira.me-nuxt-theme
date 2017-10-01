@@ -3,7 +3,7 @@ title: "Como ver o Calendário direto pelo terminal"
 date: 2016-09-02
 comments: true
 description: "Essa será uma dica bem curta e rápida, assim como o comando que você vai executar no seu terminal."
-image: /assets/images/posts/2016/09/cal-command.png
+image: /images/posts/2016/09/cal-command.png
 categories:
  - dicas
 tags:

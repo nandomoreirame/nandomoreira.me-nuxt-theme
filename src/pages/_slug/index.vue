@@ -1,28 +1,35 @@
 <template>
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
-    <div class="container">
-      <header class="article__header">
+    <header class="article__header">
+      <div class="container">
         <h1 class="article__title" itemprop="headline">{{ post.title }}</h1>
+        <p v-if="post.description" itemprop="description" class="article__description">{{ post.description }}</p>
         <div class="article__meta">
-          <span v-if="post.date" itemprop="datePublished" :content="post.date">{{ post.date }}</span><br>
-          <span v-if="post.description" itemprop="description">{{ post.description }}</span><br>
-          <span>Author: <span itemprop="author">Fernando Moreira</span></span>
+          <span v-if="post.date" itemprop="datePublished" :content="post.date">{{ post.date | moment("DD/MM/YYYY") }}</span>
+          <span>Author: <em itemprop="author">Fernando Moreira</em></span>
         </div>
         <figure v-if="post.image" class="article__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <meta itemprop="url" :content="post.image">
-            <img :src="post.image" :alt="post.title">
+            <img :src="post.image" :alt="`Imagem de: ${post.title}`">
         </figure>
-      </header>
-      <main itemprop="articleBody" role="main">
+      </div>
+    </header>
+    <main itemprop="articleBody" role="main">
+      <div class="container">
         <nuxtent-body :body="post.body"/>
-      </main>
-    </div>
-    <comments :disqusTitle="post.title" :disqusIdentifier="post.permalink" :disqusUrl="disqusUrl"></comments>
+      </div>
+    </main>
+    <footer class="article__footer">
+      <comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></comments>
+    </footer>
   </article>
 </template>
 
 <script>
 // const { siteUrl } = require('~/utilities/Helpers')
+import Vue from 'vue'
+
+Vue.use(require('vue-moment'))
 
 export default {
   name: 'article',
@@ -30,7 +37,6 @@ export default {
     const data = await app.$content('/posts').get(route.path)
     return {
       post: data,
-      disqusUrl: `https://nandomoreira.ne${data.permalink}`,
       postTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
       postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
       postImage: (data.image) ? `${data.image}` : 'https://nandomoreira.me/images/social.jpg'
@@ -55,16 +61,49 @@ export default {
   },
   components: {
     Comments: () => import('~/components/Comments')
+  },
+  methods: {
+    splitIdentifier: identifier =>
+      identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
+    disqusUrl: permalink =>
+      `https://nandomoreira.ne${permalink}`
   }
 }
 </script>
 
 <style lang="sass">
-.article
-  .image
+.article .image
+  display: block
+  margin: 15px 0
+  img
+    width: 100%
     display: block
-    margin: 15px 0
+</style>
+
+<style lang="sass" scoped>
+.article
+  &__header
+    text-align: center
+    padding: 2.5rem 0
+
+  &__title
+    font-size: 3.75rem
+
+  &__description
+    font-weight: 300
+    font-style: 400
+    font-size: 1.25rem
+
+  &__image
     img
-      width: 100%
+      max-width: 100%
+      display: block
+
+  &__meta
+    margin-bottom: 15px
+    padding-bottom: 15px
+    border-bottom: 1px solid #dedede
+
+    span
       display: block
 </style>
