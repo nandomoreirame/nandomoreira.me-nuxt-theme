@@ -1,12 +1,15 @@
 <template>
   <main>
+    <page-header title="Styleguide" :breadcrumbs="breadcrumbs"></page-header>
     <div class="styleguide container">
-      <h1>Styleguide</h1>
       <div class="styleguide__colors">
         <h4>Primary colors</h4>
         <span class="color color--primary"></span>
         <span class="color color--secondary"></span>
         <span class="color color--tertiary"></span>
+      </div>
+      <div class="styleguide__colors">
+        <h4>Gray colors</h4>
         <span class="color color--gray"></span>
         <span class="color color--base"></span>
         <span class="color color--border"></span>
@@ -22,20 +25,31 @@ export default {
   name: 'about',
   data () {
     return {
+      breadcrumbs: [
+        {
+          active: false,
+          url: '/',
+          title: 'Home'
+        },
+        {
+          active: true,
+          url: '/styleguide',
+          title: 'Styleguide'
+        }
+      ]
     }
   },
   components: {
-    MetaTags: () => import('~/components/MetaTags')
+    MetaTags: () => import('~/components/MetaTags'),
+    PageHeader: () => import('~/components/PageHeader')
   }
 }
 </script>
 
 <style lang="sass" scoped>
+@import "~assets/sass/settings"
 .styleguide
-  max-width: 1300px
-
   &__colors
-
   .color
     width: 150px
     height: 150px
@@ -44,10 +58,8 @@ export default {
     box-shadow: 0 2px 6px 0 rgba(32, 31, 32, 0.14)
     display: inline-block
     overflow: hidden
-
     &:not(:last-child)
       margin-right: 15px
-
     &:after
       content: ''
       display: block
@@ -63,33 +75,32 @@ export default {
       line-height: 1.23
       text-align: left
       color: #4c484c
-
     &--primary
-      background-color: #2296F4
+      background-color: $color-primary
       &:after
-        content: '#2296F4'
+        content: '#{$color-primary}'
     &--secondary
-      background-color: #78AFF7
+      background-color: $color-secondary
       &:after
-        content: '#78AFF7'
+        content: '#{$color-secondary}'
     &--tertiary
-      background-color: #AAC8FA
+      background-color: $color-tertiary
       &:after
-        content: '#AAC8FA'
+        content: '#{$color-tertiary}'
     &--silver
-      background-color: #E8E8E8
+      background-color: $color-silver
       &:after
-        content: '#E8E8E8'
+        content: '#{$color-silver}'
     &--gray
-      background-color: #201F20
+      background-color: $color-gray
       &:after
-        content: '#201F20'
+        content: '#{$color-gray}'
     &--border
-      background-color: #9F9E9F
+      background-color: $border-color-base
       &:after
-        content: '#9F9E9F'
+        content: '#{$border-color-base}'
     &--base
-      background-color: #5B5B5B
+      background-color: $color-base
       &:after
-        content: '#5B5B5B'
+        content: '#{$color-base}'
 </style>

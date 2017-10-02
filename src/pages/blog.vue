@@ -61,17 +61,30 @@ export default {
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
 .post-list
-  max-width: 32rem
-  margin-right: auto
-  margin-left: auto
+  // max-width: 32rem
+  // margin-right: auto
+  // margin-left: auto
+  display: flex
+  flex-flow: row wrap
+  margin-left: -($spacing-small)
+  margin-right: -($spacing-small)
+
 .article
   border-radius: 3px
   background-color: #fff
   text-align: center
   box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5)
-  padding: 1rem 1.6rem
+  padding: $spacing-small $spacing-base
   margin: 2rem 0
+  flex: 1 0 1
+  width: 100%
+  margin: 0 $spacing-small $spacing-base
+  display: inline-block
+  border: 1px solid #eee
+  position: relative
   @extend %clearfix
+  +media($tablet)
+    flex: 1 0 ($container-width/2)-60px
   &__description a
     color: $color-base
     text-decoration: none
@@ -80,8 +93,8 @@ export default {
     opacity: .65
     letter-spacing: .1em
     font-size: .8rem
-    padding-top: 1rem
-    padding-bottom: 1rem
+    padding-top: $spacing-small
+    padding-bottom: $spacing-small
   &__title
     font-size: 2rem
     margin-top: .2em

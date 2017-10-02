@@ -7,7 +7,7 @@
       </div>
     </main>
     <footer class="article__footer">
-      <comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></comments>
+      <disqus-comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus-comments>
     </footer>
   </article>
 </template>
@@ -61,7 +61,7 @@ export default {
     }
   },
   components: {
-    Comments: () => import('~/components/Comments'),
+    DisqusComments: () => import('~/components/DisqusComments'),
     PageHeader: () => import('~/components/PageHeader')
   },
   methods: {

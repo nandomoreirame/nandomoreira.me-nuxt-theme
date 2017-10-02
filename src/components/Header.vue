@@ -1,19 +1,16 @@
 <template>
   <header class="header">
     <h1 class="header__logo"><nuxt-link to="/">n</nuxt-link></h1>
-    <nav class="navbar">
-      <ul class="navbar__nav">
-        <li class="navbar__nav-item"><nuxt-link to="/about">Sobre</nuxt-link></li>
-        <li class="navbar__nav-item"><nuxt-link to="/projects">Projetos</nuxt-link></li>
-        <li class="navbar__nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
-      </ul>
-    </nav>
+    <navbar></navbar>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'pageHeader'
+  name: 'pageHeader',
+  components: {
+    Navbar: () => import('~/components/Navbar.vue')
+  }
 }
 </script>
 
@@ -38,18 +35,4 @@ export default {
     line-height: 1
     a
       color: #fff
-.navbar
-  &__nav
-    list-style: none
-    padding: 0
-    margin: 0
-  &__nav-item
-    display: inline-block
-    text-transform: uppercase
-    letter-spacing: .1em
-    margin-left: 1rem
-    a
-      color: #fff
-      text-decoration: none
-      font-size: .875rem
 </style>

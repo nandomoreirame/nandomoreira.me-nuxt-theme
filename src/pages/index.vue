@@ -1,9 +1,10 @@
 <template>
   <main>
     <div class="hero">
-      <div class="hero__inner">
-        <h1>Olá, eu sou o <span>Fernando</span>!</h1>
-        <h2>Sou desenvolvedor <strong>Front-end</strong> e entusiasta da <strong>Experiência do Usuário</strong></h2>
+      <div class="hero__inner" itemscope itemtype="http://schema.org/Person">
+        <img src="~/assets/images/avatar.png" itemprop="image" alt="Foto de Fernando"/>
+        <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
+        <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor Front-end</strong> e entusiasta da <strong>Experiência do Usuário</strong></h2>
         <nav class="hero__buttons">
           <nuxt-link class="hero__buttons--link" to="/about">Sobre</nuxt-link>
           <nuxt-link class="hero__buttons--link" to="/projects">Projetos</nuxt-link>
