@@ -25,7 +25,7 @@ export default {
   &__header
     background-color: $color-primary
     padding: 10rem 0 3rem
-    max-height: 320px
+    min-height: 320px
     @extend %clearfix
   &__title
     text-transform: uppercase

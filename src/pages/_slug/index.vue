@@ -77,29 +77,31 @@ export default {
 </style>
 
 <style lang="sass" scoped>
+@import "~assets/sass/vars"
+@import "~assets/sass/mixins"
+@import "~assets/sass/placeholders"
 .article
   &__header
     text-align: center
     padding: 2.5rem 0
-
   &__title
-    font-size: 3.75rem
-
+    font-size: 2.6rem
+    +media($tablet)
+      font-size: 3rem
+    +media($tablet-large)
+      font-size: 4rem
   &__description
     font-weight: 300
     font-style: 400
     font-size: 1.25rem
-
   &__image
     img
       max-width: 100%
       display: block
-
   &__meta
     margin-bottom: 15px
     padding-bottom: 15px
     border-bottom: 1px solid #dedede
-
     span
       display: block
 </style>

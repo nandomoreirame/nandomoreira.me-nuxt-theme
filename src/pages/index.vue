@@ -101,10 +101,10 @@ main,
       font-size: 4vw
 
   h2
-    font-size: 4vw
     font-family: $font-family-base
     font-weight: 300
     color: #fff
+    font-size: 4vw
 
     +media($tablet)
       font-size: 3vw
