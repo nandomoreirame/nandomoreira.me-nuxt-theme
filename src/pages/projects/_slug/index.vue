@@ -1,8 +1,10 @@
 <template>
   <main>
-    <article class="container">
-      <h1>Projeto: {{ project.name }}</h1>
-      <nuxtent-body :body="project.body" />
+    <article class="project">
+      <page-header :title="`Projeto: ${project.name}`"></page-header>
+      <div class="container">
+        <nuxtent-body :body="project.body" />
+      </div>
     </article>
     <meta-tags :title="projectTitle" :description="projectDesc" :image="projectImage"></meta-tags>
   </main>
@@ -21,7 +23,8 @@ export default {
     }
   },
   components: {
-    MetaTags: () => import('~/components/MetaTags')
+    MetaTags: () => import('~/components/MetaTags'),
+    PageHeader: () => import('~/components/PageHeader')
   }
 }
 </script>

@@ -1,8 +1,7 @@
 <template>
   <main>
+    <page-header title="Sobre" description="Um pouco sobre mim"></page-header>
     <div class="container">
-      <h1>{{ pageTitle }}</h1>
-      <p>{{ pageDescription }}</p>
       <p><nuxt-link to="/">Home page</nuxt-link></p>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
@@ -19,7 +18,8 @@ export default {
     }
   },
   components: {
-    MetaTags: () => import('~/components/MetaTags')
+    MetaTags: () => import('~/components/MetaTags'),
+    PageHeader: () => import('~/components/PageHeader')
   }
 }
 </script>

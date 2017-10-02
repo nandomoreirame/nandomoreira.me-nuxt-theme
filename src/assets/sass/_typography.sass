@@ -3,20 +3,17 @@
 a
   color: $color-primary
   text-decoration: underline
-  transition: background-color .15s ease-in-out, color .15s ease-in-out
+  transition: background-color .15s ease-in-out, color .15s ease-in-out, outline .1s ease-in-out
   border: 0
 
   &:hover,
   &:active,
   &:focus
-    color: $color-white
-    background-color: $color-primary
     text-decoration: none
 
-  &.logo:hover,
-  &.logo:active,
-  &.logo:focus
-    background-color: transparent
+  &:focus
+    outline: 3px solid rgba($color-primary,0.8)
+    outline-offset: 2px
 
 em
   font-style: italic

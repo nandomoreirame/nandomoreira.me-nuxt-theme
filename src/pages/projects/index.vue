@@ -1,9 +1,9 @@
 <template>
   <main>
+    <page-header title="Projetos"></page-header>
     <div class="container">
-      <h1>Projetos</h1>
       <ul>
-        <li v-for="(project, key) in projects" :key=key>
+        <li v-for="(project, key) in projects" :key="key">
           <nuxt-link :to="project.permalink">{{ project.name }}</nuxt-link>
         </li>
       </ul>
@@ -27,7 +27,8 @@ export default {
     }
   },
   components: {
-    MetaTags: () => import('~/components/MetaTags')
+    MetaTags: () => import('~/components/MetaTags'),
+    PageHeader: () => import('~/components/PageHeader')
   }
 }
 </script>

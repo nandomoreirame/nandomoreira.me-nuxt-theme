@@ -5,12 +5,12 @@
         <h1 class="article__title" itemprop="headline">{{ post.title }}</h1>
         <p v-if="post.description" itemprop="description" class="article__description">{{ post.description }}</p>
         <div class="article__meta">
-          <span v-if="post.date" itemprop="datePublished" :content="post.date">{{ post.date | moment("DD/MM/YYYY") }}</span>
-          <span>Author: <em itemprop="author">Fernando Moreira</em></span>
+          <span v-if="post.date" itemprop="datePublished" :content="post.date">{{ post.date | moment("MMMM, YYYY") }} </span>
+          <span>by <em itemprop="author">Fernando Moreira</em></span>
         </div>
         <figure v-if="post.image" class="article__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop="url" :content="post.image">
-            <img :src="post.image" :alt="`Imagem de: ${post.title}`">
+          <meta itemprop="url" :content="post.image">
+          <img :src="post.image" :alt="`Imagem de: ${post.title}`">
         </figure>
       </div>
     </header>
@@ -26,10 +26,7 @@
 </template>
 
 <script>
-// const { siteUrl } = require('~/utilities/Helpers')
-import Vue from 'vue'
-
-Vue.use(require('vue-moment'))
+const { siteUrl } = require('~/utilities/Helpers')
 
 export default {
   name: 'article',
@@ -39,7 +36,7 @@ export default {
       post: data,
       postTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
       postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
-      postImage: (data.image) ? `${data.image}` : 'https://nandomoreira.me/images/social.jpg'
+      postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`
     }
   },
   head () {
@@ -65,8 +62,7 @@ export default {
   methods: {
     splitIdentifier: identifier =>
       identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
-    disqusUrl: permalink =>
-      `https://nandomoreira.ne${permalink}`
+    disqusUrl: permalink => `${siteUrl}${permalink}`
   }
 }
 </script>

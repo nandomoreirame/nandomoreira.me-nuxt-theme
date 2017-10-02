@@ -1,6 +1,7 @@
 const axios = require('axios')
 
 const { resolve } = require('path')
+// const bourbon = require('node-bourbon')
 
 module.exports = {
   srcDir: 'src/',
@@ -52,10 +53,12 @@ module.exports = {
     { src: '~assets/sass/main.sass', lang: 'sass' }
   ],
   loading: {
-    color: '#0c59a0',
+    color: '#fff',
     height: '3px'
   },
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/moment.js' }
+  ],
   modules: [
     ['@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }],
     ['@nuxtjs/browserconfig', { TileColor: '#0c59a0' }],
@@ -67,8 +70,11 @@ module.exports = {
     'nuxtent'
   ],
   build: {
+    vendor: ['axios', 'vue-moment'],
     extend (config, ctx) {
-      config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
+      config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
+      config.resolve.alias['~utilities'] = resolve(__dirname, 'src/utilities')
+
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
