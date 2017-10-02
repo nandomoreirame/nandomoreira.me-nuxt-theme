@@ -24,13 +24,11 @@ export default {
 
 <style lang="sass" scoped>
 .comments
-  background-color: #f8f9f8
+  background-color: #fff
   padding: 30px 0
   margin-top: 15px
-
   h3
     font-size: 1.2rem
-
     span
       opacity: 0.6
       font-weight: 500

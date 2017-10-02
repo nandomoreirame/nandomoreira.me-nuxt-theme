@@ -12,7 +12,7 @@ a
     text-decoration: none
 
   &:focus
-    outline: 3px solid rgba($color-primary,0.8)
+    outline: 3px solid rgba($color-primary,.7)
     outline-offset: 2px
 
 em
@@ -29,16 +29,17 @@ big
 
 h1, h2, h3, h4, h5, h6,
 p, dl, table, blockquote, figcaption
-  margin: 0 0 $spacing-base 0
+  margin: 0 0 $spacing-small 0
 
   &:last-child
     margin-bottom: 0
 
 h1, h2, h3, h4, h5, h6
-  color: inherit
+  color: $color-base
   letter-spacing: -.01rem
   font-weight: $font-weight-normal
   font-family: $font-family-heading
+  margin-top: $spacing-base
 
   a
     color: inherit
@@ -107,7 +108,7 @@ code
   color: inherit
   margin: 0 .2rem
   padding: .2rem .5rem
-  font-size: .8rem
+  font-size: $font-size-small
   white-space: nowrap
 
 pre

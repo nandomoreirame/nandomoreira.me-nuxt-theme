@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Projetos"></page-header>
+    <page-header title="Projetos" :breadcrumbs="breadcrumbs"></page-header>
     <div class="container">
       <ul>
         <li v-for="(project, key) in projects" :key="key">
@@ -18,7 +18,19 @@ export default {
   name: 'projects',
   data () {
     return {
-      pageTitle: `Projetos - Fernando Moreira | Front-end / UX Designer`
+      pageTitle: `Projetos - Fernando Moreira | Front-end / UX Designer`,
+      breadcrumbs: [
+        {
+          active: false,
+          url: '/',
+          title: 'Home'
+        },
+        {
+          active: true,
+          url: '/projects',
+          title: 'Projetos'
+        }
+      ]
     }
   },
   async asyncData ({ app }) {

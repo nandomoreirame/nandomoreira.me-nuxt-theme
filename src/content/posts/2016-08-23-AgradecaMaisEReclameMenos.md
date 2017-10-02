@@ -2,6 +2,7 @@
 title: "Reflexão: agradeça mais e reclame menos"
 description: "Você já parou pra pensar quantas vezes você reclama por dia, ou quantas vezes você reclamou hoje?"
 date: 2016-08-23
+image: /images/posts/2016/08/angry.gif
 categories:
 - geral
 tags:

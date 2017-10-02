@@ -1,7 +1,7 @@
 <template>
   <main>
     <article class="project">
-      <page-header :title="`Projeto: ${project.name}`"></page-header>
+      <page-header :title="project.name" :breadcrumbs="breadcrumbs"></page-header>
       <div class="container">
         <nuxtent-body :body="project.body" />
       </div>
@@ -19,7 +19,24 @@ export default {
       project: data,
       projectTitle: `Projeto: ${data.name} - Fernando Moreira | Front-end / UX Designer`,
       projectDesc: data.description ? `${data.description}` : `${data.name} Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
-      projectImage: (data.image) ? `${data.image}` : 'https://nandomoreira.me/images/social.jpg'
+      projectImage: (data.image) ? `${data.image}` : 'https://nandomoreira.me/images/social.jpg',
+      breadcrumbs: [
+        {
+          active: false,
+          url: '/',
+          title: 'Home'
+        },
+        {
+          active: false,
+          url: '/projects',
+          title: 'Projetos'
+        },
+        {
+          active: true,
+          url: `${data.permalink}`,
+          title: `${data.name}`
+        }
+      ]
     }
   },
   components: {

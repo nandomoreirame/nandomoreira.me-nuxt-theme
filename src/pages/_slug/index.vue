@@ -1,19 +1,6 @@
 <template>
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
-    <header class="article__header">
-      <div class="container">
-        <h1 class="article__title" itemprop="headline">{{ post.title }}</h1>
-        <p v-if="post.description" itemprop="description" class="article__description">{{ post.description }}</p>
-        <div class="article__meta">
-          <span v-if="post.date" itemprop="datePublished" :content="post.date">{{ post.date | moment("MMMM, YYYY") }} </span>
-          <span>by <em itemprop="author">Fernando Moreira</em></span>
-        </div>
-        <figure v-if="post.image" class="article__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <meta itemprop="url" :content="post.image">
-          <img :src="post.image" :alt="`Imagem de: ${post.title}`">
-        </figure>
-      </div>
-    </header>
+    <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :breadcrumbs="breadcrumbs" :author="true"></page-header>
     <main itemprop="articleBody" role="main">
       <div class="container">
         <nuxtent-body :body="post.body"/>
@@ -36,7 +23,24 @@ export default {
       post: data,
       postTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
       postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
-      postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`
+      postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`,
+      breadcrumbs: [
+        {
+          active: false,
+          url: '/',
+          title: 'Home'
+        },
+        {
+          active: false,
+          url: '/blog',
+          title: 'Blog'
+        },
+        {
+          active: true,
+          url: `${data.permalink}`,
+          title: `${data.title}`
+        }
+      ]
     }
   },
   head () {
@@ -57,7 +61,8 @@ export default {
     }
   },
   components: {
-    Comments: () => import('~/components/Comments')
+    Comments: () => import('~/components/Comments'),
+    PageHeader: () => import('~/components/PageHeader')
   },
   methods: {
     splitIdentifier: identifier =>
@@ -77,9 +82,7 @@ export default {
 </style>
 
 <style lang="sass" scoped>
-@import "~assets/sass/vars"
-@import "~assets/sass/mixins"
-@import "~assets/sass/placeholders"
+@import "~assets/sass/settings"
 .article
   &__header
     text-align: center
@@ -90,18 +93,8 @@ export default {
       font-size: 3rem
     +media($tablet-large)
       font-size: 4rem
-  &__description
-    font-weight: 300
-    font-style: 400
-    font-size: 1.25rem
   &__image
     img
       max-width: 100%
-      display: block
-  &__meta
-    margin-bottom: 15px
-    padding-bottom: 15px
-    border-bottom: 1px solid #dedede
-    span
       display: block
 </style>

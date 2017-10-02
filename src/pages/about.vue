@@ -1,8 +1,7 @@
 <template>
   <main>
-    <page-header title="Sobre" description="Um pouco sobre mim"></page-header>
+    <page-header title="Sobre" :breadcrumbs="breadcrumbs"></page-header>
     <div class="container">
-      <p><nuxt-link to="/">Home page</nuxt-link></p>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
   </main>
@@ -14,7 +13,19 @@ export default {
   data () {
     return {
       pageTitle: `About | Fernando Moreira`,
-      pageDescription: `Fugiat deserunt dolore enim qui occaecat esse esse Lorem commodo nostrud cupidatat.`
+      pageDescription: `Fugiat deserunt dolore enim qui occaecat esse esse Lorem commodo nostrud cupidatat.`,
+      breadcrumbs: [
+        {
+          active: false,
+          url: '/',
+          title: 'Home'
+        },
+        {
+          active: true,
+          url: '/about',
+          title: 'Sobre mim'
+        }
+      ]
     }
   },
   components: {
