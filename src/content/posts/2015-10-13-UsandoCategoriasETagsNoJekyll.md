@@ -4,7 +4,10 @@ date: 2015-10-13
 description: "GitHub Pages serviço é simplesmente incrível! E com a integração Jekyll ele fica ainda mais impressionante! Mas existem algumas limitações neste grande sistema automatizado"
 keywords: "jekyll, categorias, tags, blog"
 categories: jekyll
-tags: github, gh-pages, jekyll
+tags:
+- github
+- gh-pages
+- jekyll
 ---
 
 > Esse artigo foi traduzido de: [How to use tags and categories on github pages without plugins](http://www.minddust.com/post/tags-and-categories-on-github-pages/)

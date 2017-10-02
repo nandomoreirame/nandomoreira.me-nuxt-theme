@@ -4,7 +4,10 @@ date: 2015-10-12
 description: "É isso mesmo que você leu, Faço front-end de graça, mas tem alguns requisitos necessários para que isso aconteça, vem comigo que te explico como"
 keywords: "front-end, frontend, html, css, free, freedom, job, projeto, open-source, open, source"
 categories: geral
-tags: front-end, open-source, geral
+tags:
+- front-end
+- open-source
+- geral
 ---
 
 Você deve estar se perguntando: _**"Front-end de graça? Como assim?"**_

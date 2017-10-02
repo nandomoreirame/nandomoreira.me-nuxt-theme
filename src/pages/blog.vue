@@ -16,7 +16,7 @@
           <p v-if="post.description" itemprop="description" class="article__description">
             <nuxt-link :title="post.title" :to="post.permalink">{{ post.description }}</nuxt-link>
           </p>
-          <nuxt-link class="article__readmore" :title="post.title" :to="post.permalink">Continue lendo...</nuxt-link>
+          <nuxt-link class="article__readmore" :title="post.title" :to="post.permalink">Continue lendo</nuxt-link>
         </article>
       </div>
       <nuxt-child />

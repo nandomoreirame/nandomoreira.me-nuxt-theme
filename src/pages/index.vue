@@ -5,7 +5,7 @@
         <h1>Olá, eu sou o <span>Fernando</span>!</h1>
         <h2>Sou desenvolvedor <strong>Front-end</strong> e entusiasta da <strong>Experiência do Usuário</strong></h2>
         <nav class="hero__buttons">
-          <nuxt-link class="hero__buttons--link" to="/about">Sobre mim</nuxt-link>
+          <nuxt-link class="hero__buttons--link" to="/about">Sobre</nuxt-link>
           <nuxt-link class="hero__buttons--link" to="/projects">Projetos</nuxt-link>
           <nuxt-link class="hero__buttons--link" to="/blog">Blog</nuxt-link>
         </nav>
@@ -50,6 +50,8 @@ main,
 .hero
   display: table
   &__buttons
+    padding: $spacing-small 0
+    @extend %clearfix
     &--link
       margin: 0 10px
       font-size: 1rem
@@ -76,9 +78,13 @@ main,
     +media($desktop)
       padding-right: 10rem
       padding-left: 10rem
+  h1,
+  h2
+    padding-bottom: $spacing-small
+    color: #fff
+    margin: 0
   h1
     font-size: 10vw
-    color: #fff
     +media($tablet)
       font-size: 7vw
     +media($tablet-large)
@@ -86,7 +92,6 @@ main,
   h2
     font-family: $font-family-base
     font-weight: 300
-    color: #fff
     font-size: 4vw
     +media($tablet)
       font-size: 3vw
