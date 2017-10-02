@@ -62,7 +62,7 @@ module.exports = {
   modules: [
     ['@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }],
     ['@nuxtjs/browserconfig', { TileColor: '#0c59a0' }],
-    '@nuxtjs/sitemap',
+    // '@nuxtjs/sitemap',
     '@nuxtjs/optimize',
     // '@nuxtjs/manifest',
     // '@nuxtjs/workbox',
@@ -85,14 +85,21 @@ module.exports = {
       }
     }
   },
-  sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://nandomoreira.me',
-    cacheTime: 1000 * 60 * 150,
-    generate: true,
-    routes () {
-      return axios.get('http://localhost:3000/content-api')
-        .then(res => res.data.map(page => page.path))
-    }
+  minify: {
+    removeAttributeQuotes: false,
+    removeComments: false,
+    removeScriptTypeAttributes: false,
+    removeStyleLinkTypeAttributes: false,
+    removeTagWhitespace: false
   }
+  // sitemap: {
+  //   path: '/sitemap.xml',
+  //   hostname: 'https://nandomoreira.me',
+  //   cacheTime: 1000 * 60 * 150,
+  //   generate: true,
+  //   routes () {
+  //     return axios.get('http://localhost:3000/content-api')
+  //       .then(res => res.data.map(page => page.path))
+  //   }
+  // }
 }

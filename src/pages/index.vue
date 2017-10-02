@@ -2,7 +2,9 @@
   <main>
     <div class="hero">
       <div class="hero__inner" itemscope itemtype="http://schema.org/Person">
-        <img src="~/assets/images/avatar.png" itemprop="image" alt="Foto de Fernando"/>
+        <figure>
+          <img class="hero__avatar" src="~/assets/images/avatar.png" width="120px" height="120px" itemprop="image" alt="Foto de Fernando">
+        </figure>
         <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
         <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor Front-end</strong> e entusiasta da <strong>Experiência do Usuário</strong></h2>
         <nav class="hero__buttons">
@@ -98,6 +100,9 @@ main,
       font-size: 3vw
     +media($tablet-large)
       font-size: 1.6vw
+  &__avatar
+    border-radius: 50%
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1)
   &__bottom-description
     position: absolute
     bottom: 1rem
