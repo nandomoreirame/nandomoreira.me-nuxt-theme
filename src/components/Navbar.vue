@@ -1,20 +1,8 @@
 <template>
   <nav class="navbar" role="navigation">
-    <ul class="navbar__nav">
-      <li class="navbar__nav-item" role="menuitem">
-        <nuxt-link to="/">Home</nuxt-link>
-      </li>
-      <li class="navbar__nav-item" role="menuitem">
-        <nuxt-link to="/about">Sobre</nuxt-link>
-      </li>
-      <li class="navbar__nav-item" role="menuitem">
-        <nuxt-link to="/projects">Projetos</nuxt-link>
-      </li>
-      <li class="navbar__nav-item" role="menuitem">
-        <nuxt-link to="/blog">Blog</nuxt-link>
-      </li>
-      <li class="navbar__nav-item" role="menuitem">
-        <nuxt-link to="/styleguide">Styleguide</nuxt-link>
+    <ul class="navbar__nav" role="menu">
+      <li v-for="(item, key) in navItems" :key="key" class="navbar__nav-item" role="menuitem">
+        <nuxt-link :to="item.link" :title="item.title" role="link">{{ item.title }}</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -22,7 +10,33 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data () {
+    return {
+      navItems: [
+        {
+          link: '/',
+          title: 'Home'
+        },
+        {
+          link: '/about',
+          title: 'Sobre'
+        },
+        {
+          link: '/blog',
+          title: 'Blog'
+        },
+        {
+          link: '/projects',
+          title: 'Projetos'
+        },
+        {
+          link: '/styleguide',
+          title: 'Styleguide'
+        }
+      ]
+    }
+  }
 }
 </script>
 

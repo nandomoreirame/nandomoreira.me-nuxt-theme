@@ -16,7 +16,7 @@
           <p v-if="post.description" itemprop="description" class="article__description">
             <nuxt-link :title="post.title" :to="post.permalink">{{ post.description }}</nuxt-link>
           </p>
-          <nuxt-link class="article__readmore" :title="post.title" :to="post.permalink">Continue lendo</nuxt-link>
+          <nuxt-link-button :title="post.title" :buttonPermalink="post.permalink">Continue lendo</nuxt-link-button>
         </article>
       </div>
       <nuxt-child />
@@ -53,7 +53,8 @@ export default {
   },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
-    PageHeader: () => import('~/components/PageHeader')
+    PageHeader: () => import('~/components/PageHeader'),
+    NuxtLinkButton: () => import('~/components/NuxtLinkButton')
   }
 }
 </script>
@@ -61,9 +62,6 @@ export default {
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
 .post-list
-  // max-width: 32rem
-  // margin-right: auto
-  // margin-left: auto
   display: flex
   flex-flow: row wrap
   margin-left: -($spacing-small)
@@ -86,7 +84,7 @@ export default {
   +media($tablet)
     flex: 1 0 ($container-width/2)-60px
   &__description a
-    color: $color-base
+    color: $text-color
     text-decoration: none
   &__meta
     text-transform: uppercase
@@ -99,14 +97,4 @@ export default {
     font-size: 2rem
     margin-top: .2em
     margin-bottom: .2em
-  &__readmore
-    @extend %button
-    color: $color-primary
-    background-color: #fff
-    box-shadow: 0 8px 20px 0 rgba(224, 224, 224, .5)
-    border: 3px solid $color-primary
-    &:hover,
-    &:focus
-      background-color: $color-primary
-      color: #fff
 </style>

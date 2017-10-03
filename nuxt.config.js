@@ -1,4 +1,4 @@
-const axios = require('axios')
+// const axios = require('axios')
 
 const { resolve } = require('path')
 // const bourbon = require('node-bourbon')
@@ -21,7 +21,7 @@ module.exports = {
       { name: 'og:locale', content: 'pt_BR' },
       { name: 'googlebot', content: 'index,follow' },
       { name: 'robots', content: 'index,follow,noodp' },
-      { name: 'theme-color', content: '#0c59a0' },
+      { name: 'theme-color', content: '#0860a8' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@oseunando' }
     ],
@@ -47,26 +47,26 @@ module.exports = {
   },
   manifest: {
     name: 'Fernando Moreira',
+    description: 'Desenvolvedor Front-end e UX Designer em Curitiba/PR',
+    theme_color: '#0860a8',
+    background_color: '#0860a8',
     lang: 'pt_BR'
   },
   css: [
     { src: '~assets/sass/main.sass', lang: 'sass' }
   ],
-  loading: {
-    color: '#fff',
-    height: '3px'
-  },
+  loading: false,
   plugins: [
     { src: '~/plugins/moment.js' }
   ],
   modules: [
-    ['@nuxtjs/google-analytics', { ua: 'UA-52446115-1' }],
-    ['@nuxtjs/browserconfig', { TileColor: '#0c59a0' }],
+    ['@nuxtjs/google-analytics', { ua: (process.env.NODE_ENV === 'production' ? 'UA-52446115-1' : 'UA-00000000-0') }],
+    ['@nuxtjs/browserconfig', { TileColor: '#0860a8' }],
     // '@nuxtjs/sitemap',
     '@nuxtjs/optimize',
-    // '@nuxtjs/manifest',
-    // '@nuxtjs/workbox',
-    // '@nuxtjs/icon',
+    '@nuxtjs/manifest',
+    '@nuxtjs/workbox',
+    '@nuxtjs/icon',
     'nuxtent'
   ],
   build: {
@@ -86,11 +86,11 @@ module.exports = {
     }
   },
   minify: {
-    removeAttributeQuotes: false,
-    removeComments: false,
-    removeScriptTypeAttributes: false,
-    removeStyleLinkTypeAttributes: false,
-    removeTagWhitespace: false
+    removeAttributeQuotes: true,
+    removeComments: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    removeTagWhitespace: true
   }
   // sitemap: {
   //   path: '/sitemap.xml',

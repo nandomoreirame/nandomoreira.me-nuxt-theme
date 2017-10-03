@@ -50,7 +50,7 @@ export default {
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
 .pageHeader
-  background-color: $color-primary
+  background-color: $primary-color
   padding: 10rem 0 1rem
   margin-bottom: 3rem
   min-height: 320px

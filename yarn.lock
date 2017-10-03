@@ -6542,6 +6542,10 @@ uuid@^3.0.0, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
+v-autocomplete@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/v-autocomplete/-/v-autocomplete-1.5.3.tgz#60b58d597a62e3b414f2d10073d820c50d482faf"
+
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz#2804babe712ad3379459acfbe24746ab2c303fbc"

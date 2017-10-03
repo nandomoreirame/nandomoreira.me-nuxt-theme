@@ -1,0 +1,24 @@
+.page-enter-active,
+.page-leave-active
+  transition: opacity .12s ease-in-out
+
+.page-enter,
+.page-leave-to
+  opacity: 0
+
+@keyframes slide-in-fwd-center
+  0%
+    transform: translateZ(-1400px)
+    opacity: 0
+  100%
+    transform: translateZ(0)
+    opacity: 1
+
+@keyframes tracking-in-expand
+  0%
+    letter-spacing: -0.5em
+    opacity: 0
+  40%
+    opacity: 0.6
+  100%
+    opacity: 1

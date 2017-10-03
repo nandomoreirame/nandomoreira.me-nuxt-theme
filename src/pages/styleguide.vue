@@ -4,16 +4,11 @@
     <div class="styleguide container">
       <div class="styleguide__colors">
         <h4>Primary colors</h4>
-        <span class="color color--primary"></span>
-        <span class="color color--secondary"></span>
-        <span class="color color--tertiary"></span>
+        <span class="styleguide__color" v-for="color in colors.primary" :key="color" v-bind:class="`styleguide__color--${color}`"></span>
       </div>
       <div class="styleguide__colors">
         <h4>Gray colors</h4>
-        <span class="color color--gray"></span>
-        <span class="color color--base"></span>
-        <span class="color color--border"></span>
-        <span class="color color--silver"></span>
+        <span class="styleguide__color" v-for="color in colors.grays" :key="color" v-bind:class="`styleguide__color--${color}`"></span>
       </div>
     </div>
     <meta-tags></meta-tags>
@@ -22,9 +17,23 @@
 
 <script>
 export default {
-  name: 'about',
+  name: 'Styleguide',
   data () {
     return {
+      colors: {
+        primary: [
+          'primary',
+          'secondary',
+          'tertiary'
+        ],
+        grays: [
+          'gray',
+          'base',
+          'border',
+          'silver',
+          'background'
+        ]
+      },
       breadcrumbs: [
         {
           active: false,
@@ -49,10 +58,10 @@ export default {
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
 .styleguide
-  &__colors
-  .color
-    width: 150px
-    height: 150px
+  // &__colors
+  &__color
+    width: 220px
+    height: 160px
     border-radius: 10px
     position: relative
     box-shadow: 0 2px 6px 0 rgba(32, 31, 32, 0.14)
@@ -76,31 +85,35 @@ export default {
       text-align: left
       color: #4c484c
     &--primary
-      background-color: $color-primary
+      background-color: $primary-color
       &:after
-        content: '#{$color-primary}'
+        content: '#{$primary-color} - $primary-color'
     &--secondary
-      background-color: $color-secondary
+      background-color: $secondary-color
       &:after
-        content: '#{$color-secondary}'
+        content: '#{$secondary-color} - $secondary-color'
     &--tertiary
-      background-color: $color-tertiary
+      background-color: $tertiary-color
       &:after
-        content: '#{$color-tertiary}'
+        content: '#{$tertiary-color} - $tertiary-color'
     &--silver
-      background-color: $color-silver
+      background-color: $silver-color
       &:after
-        content: '#{$color-silver}'
+        content: '#{$silver-color} - $silver-color'
     &--gray
-      background-color: $color-gray
+      background-color: $gray-color
       &:after
-        content: '#{$color-gray}'
+        content: '#{$gray-color} - $gray-color'
     &--border
-      background-color: $border-color-base
+      background-color: $border-color
       &:after
-        content: '#{$border-color-base}'
+        content: '#{$border-color} - $border-color'
     &--base
-      background-color: $color-base
+      background-color: $text-color
       &:after
-        content: '#{$color-base}'
+        content: '#{$text-color} - $text-color'
+    &--background
+      background-color: $bg-base-color
+      &:after
+        content: '#{$bg-base-color} - $bg-base-color'
 </style>
