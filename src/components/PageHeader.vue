@@ -64,10 +64,10 @@ export default {
   &__image
     position: absolute
     width: 100%
-    top: 50%
+    top: 20%
     left: 50%
     right: 0
-    transform: translate3d(-50%, -50%, 0)
+    transform: translate3d(-50%, -20%, 0)
     z-index: 1
     opacity: .1
     &, img

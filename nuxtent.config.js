@@ -13,7 +13,16 @@ module.exports = {
       'projects',
       {
         page: '/projects/_slug',
-        permalink: '/projects/:slug',
+        permalink: '/project/:slug',
+        generate: ['get', 'getAll'],
+        isPost: false
+      }
+    ],
+    [
+      'lab',
+      {
+        page: '/lab/_slug',
+        permalink: '/experiment/:slug',
         generate: ['get', 'getAll'],
         isPost: false
       }

@@ -31,6 +31,10 @@ export default {
           title: 'Projetos'
         },
         {
+          link: '/experiments',
+          title: 'Experimentos'
+        },
+        {
           link: '/styleguide',
           title: 'Styleguide'
         }
@@ -51,6 +55,10 @@ export default {
     text-transform: uppercase
     letter-spacing: .1em
     margin-left: 1rem
+    &:not(:last-child):after
+      content: '•'
+      color: #fff
+      margin-left: 15px
     a
       color: #fff
       text-decoration: none

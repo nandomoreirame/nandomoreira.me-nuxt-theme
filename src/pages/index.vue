@@ -7,9 +7,10 @@
       <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
       <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor Front-end</strong> e entusiasta da <strong>Experiência do Usuário</strong></h2>
       <nav class="hero__buttons">
-        <nuxt-link class="hero__buttons--link" to="/about">Sobre</nuxt-link>
-        <nuxt-link class="hero__buttons--link" to="/projects">Projetos</nuxt-link>
-        <nuxt-link class="hero__buttons--link" to="/blog">Blog</nuxt-link>
+        <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/about">Sobre</nuxt-link-button>
+        <!-- <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/projects">Projetos</nuxt-link-button> -->
+        <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/blog">Blog</nuxt-link-button>
+        <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/experiments">Experimentos</nuxt-link-button>
       </nav>
       <p class="hero__bottom-description">
         <small-bottom-text></small-bottom-text>
@@ -25,24 +26,18 @@ export default {
   layout: 'blank',
   components: {
     MetaTags: () => import('~/components/MetaTags'),
+    NuxtLinkButton: () => import('~/components/NuxtLinkButton'),
     SmallBottomText: () => import('~/components/SmallBottomText.vue')
   }
 }
 </script>
 
 <style lang="sass">
+@import "~assets/sass/settings"
 #__nuxt,
 #__nuxt > div:last-child
   width: 100%
   height: 100%
-
-.hero__bottom-description
-  &, a
-    color: #fff
-</style>
-
-<style lang="sass" scoped>
-@import "~assets/sass/settings"
 .hero
   display: table
   width: 100%
@@ -99,22 +94,12 @@ export default {
     left: 0
     z-index: 5
     text-align: center
+    &, a
+      color: #fff
   &__buttons
     animation-delay: 2s
     padding: $spacing-small 0
     @extend %clearfix
-    &--link
-      margin: 0 10px
-      font-size: 1rem
-      text-transform: uppercase
-      font-weight: 700
-      padding: .4rem 0
-      width: 200px
-      border: 3px solid #fff
-      color: #fff
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1)
-      @extend %button
-      &:hover,
-      &:focus
-        background-color: rgba(#fff, .2)
+    // .nuxt-link-button
+    //   width: 200px
 </style>

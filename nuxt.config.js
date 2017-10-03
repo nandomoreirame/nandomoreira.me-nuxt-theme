@@ -63,10 +63,10 @@ module.exports = {
     ['@nuxtjs/google-analytics', { ua: (process.env.NODE_ENV === 'production' ? 'UA-52446115-1' : 'UA-00000000-0') }],
     ['@nuxtjs/browserconfig', { TileColor: '#0860a8' }],
     // '@nuxtjs/sitemap',
-    '@nuxtjs/optimize',
-    '@nuxtjs/manifest',
-    '@nuxtjs/workbox',
-    '@nuxtjs/icon',
+    // '@nuxtjs/optimize',
+    // '@nuxtjs/manifest',
+    // '@nuxtjs/workbox',
+    // '@nuxtjs/icon',
     'nuxtent'
   ],
   build: {
