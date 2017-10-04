@@ -73,28 +73,20 @@ export default {
 </script>
 
 <style lang="sass">
-.article .image
-  display: block
-  margin: 15px 0
-  img
-    width: 100%
+.article
+  pre
+    overflow-x: auto
+  .image
     display: block
+    margin: 15px 0
+    img
+      width: 100%
+      display: block
 </style>
 
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
 .article
-  &__header
-    text-align: center
-    padding: 2.5rem 0
-  &__title
-    font-size: 2.6rem
-    +media($tablet)
-      font-size: 3rem
-    +media($tablet-large)
-      font-size: 4rem
-  &__image
-    img
-      max-width: 100%
-      display: block
+  main .container
+    max-width: $tablet
 </style>

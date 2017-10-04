@@ -22,10 +22,13 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import "~assets/sass/settings"
 .comments
   background-color: #fff
   padding: 30px 0
   margin-top: 15px
+  .container
+    max-width: $tablet
   h3
     font-size: 1.2rem
     span
