@@ -21,7 +21,6 @@
   "dependencies": {
     "@nuxtjs/axios": "latest",
     "@nuxtjs/browserconfig": "^0.0.6",
-    "@nuxtjs/google-analytics": "^1.0.0",
     "@nuxtjs/icon": "^1.1.0",
     "@nuxtjs/manifest": "^1.7.0",
     "@nuxtjs/optimize": "^1.1.1",

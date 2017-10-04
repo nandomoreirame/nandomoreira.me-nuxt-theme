@@ -11,9 +11,6 @@ module.exports = {
     htmlAttrs: {
       lang: 'pt-BR'
     },
-    // bodyAttrs: {
-    //   class: 'test-class'
-    // },
     meta: [
       { charset: 'utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
@@ -23,7 +20,8 @@ module.exports = {
       { name: 'robots', content: 'index,follow,noodp' },
       { name: 'theme-color', content: '#0860a8' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@oseunando' }
+      { name: 'twitter:site', content: '@oseunando' },
+      { rel: 'preload', as: 'style', href: '//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,500,700' }
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-16x16.ico' },
@@ -57,16 +55,16 @@ module.exports = {
   ],
   loading: false,
   plugins: [
+    { src: '~/plugins/browser.js', ssr: false },
     { src: '~/plugins/moment.js' }
   ],
   modules: [
-    ['@nuxtjs/google-analytics', { ua: (process.env.NODE_ENV === 'production' ? 'UA-52446115-1' : 'UA-00000000-0') }],
     ['@nuxtjs/browserconfig', { TileColor: '#0860a8' }],
     // '@nuxtjs/sitemap',
-    // '@nuxtjs/optimize',
-    // '@nuxtjs/manifest',
-    // '@nuxtjs/workbox',
-    // '@nuxtjs/icon',
+    '@nuxtjs/optimize',
+    '@nuxtjs/manifest',
+    '@nuxtjs/workbox',
+    '@nuxtjs/icon',
     'nuxtent'
   ],
   build: {

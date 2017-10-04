@@ -75,6 +75,5 @@
 
   &--large
     line-height: 56px
-    text-transform: uppercase
     font-size: $font-size-base
 </style>

@@ -31,6 +31,7 @@ export default {
     max-width: $tablet
   h3
     font-size: 1.2rem
+    margin-top: 0
     span
       opacity: 0.6
       font-weight: 500

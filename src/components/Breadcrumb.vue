@@ -42,9 +42,8 @@ export default {
     padding-right: .5rem
     &--active,
     &:hover
-      color: #cfefef
+      color: $tertiary-color
       text-decoration: underline
-      opacity: .6
     &--active
       pointer-events: none
 </style>

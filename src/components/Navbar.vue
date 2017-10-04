@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import "~assets/sass/settings"
 .navbar
   &__nav
     list-style: none
@@ -52,7 +53,8 @@ export default {
     margin: 0
   &__nav-item
     display: inline-block
-    text-transform: uppercase
+    // text-transform: uppercase
+    font-weight: $font-weight-regular
     letter-spacing: .1em
     margin-left: 1rem
     &:not(:last-child):after
@@ -63,4 +65,10 @@ export default {
       color: #fff
       text-decoration: none
       font-size: .875rem
+      &.nuxt-link-exact-active,
+      &:hover
+        color: $tertiary-color
+        text-decoration: underline
+      &.nuxt-link-exact-active
+        pointer-events: none
 </style>

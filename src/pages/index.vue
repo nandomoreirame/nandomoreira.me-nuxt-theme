@@ -5,7 +5,7 @@
         <img class="hero__avatar" src="~/assets/images/avatar.png" width="120px" height="120px" itemprop="image" alt="Foto de Fernando">
       </figure>
       <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
-      <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor Front-end</strong> e entusiasta da <strong>Experiência do Usuário</strong></h2>
+      <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong></h2>
       <nav class="hero__buttons">
         <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/about">Sobre</nuxt-link-button>
         <!-- <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/projects">Projetos</nuxt-link-button> -->
@@ -72,6 +72,9 @@ export default {
     font-size: 10vw
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
     animation-delay: .6s
+    text-shadow: 0px 1px 0px #c0c0c0, 0px 2px 0px #b0b0b0, 0px 3px 0px #a0a0a0, 0px 4px 0px #909090, 0px 5px 10px rgba(0, 0, 0, 0.2)
+    +media($mobile-large)
+      font-size: 8vw
     +media($tablet)
       font-size: 7vw
     +media($tablet-large)
@@ -80,11 +83,16 @@ export default {
     font-family: $font-family-base
     font-weight: 300
     animation-delay: 1.2s
-    font-size: 4vw
+    font-size: 7vw
+    strong
+      color: $tertiary-color
+      text-decoration: underline
+    +media($mobile-large)
+      font-size: 5vw
     +media($tablet)
-      font-size: 3vw
+      font-size: 4vw
     +media($tablet-large)
-      font-size: 1.6vw
+      font-size: 2vw
   &__bottom-description
     animation-delay: 1.6s
     position: absolute
@@ -100,6 +108,10 @@ export default {
     animation-delay: 2s
     padding: $spacing-small 0
     @extend %clearfix
-    // .nuxt-link-button
-    //   width: 200px
+    .nuxt-link-button
+      text-transform: uppercase
+      margin-bottom: 15px
+      // width: 200px
+      +media($tablet)
+        margin-bottom: 0
 </style>
