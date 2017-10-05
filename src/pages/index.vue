@@ -2,11 +2,14 @@
   <div class="hero">
     <div class="hero__inner" itemscope itemtype="http://schema.org/Person">
       <figure>
-        <img class="hero__avatar" src="~/assets/images/avatar.png" width="120px" height="120px" itemprop="image" alt="Foto de Fernando">
+        <img class="hero__avatar" src="~/assets/images/avatar.jpeg" width="160px" height="160px" itemprop="image" alt="Foto de Fernando">
       </figure>
       <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
       <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong></h2>
       <navbar></navbar>
+      <div class="hero__social-icons">
+        <social-icons></social-icons>
+      </div>
       <p class="hero__bottom-description">
         <small-bottom-text></small-bottom-text>
       </p>
@@ -22,6 +25,7 @@ export default {
   components: {
     MetaTags: () => import('~/components/MetaTags'),
     Navbar: () => import('~/components/Navbar'),
+    SocialIcons: () => import('~/components/SocialIcons'),
     SmallBottomText: () => import('~/components/SmallBottomText.vue')
   }
 }
@@ -51,8 +55,10 @@ export default {
       padding-right: 10rem
       padding-left: 10rem
   h2,
+  .navbar,
   &__avatar,
-  .navbar
+  &__social-icons
+    opacity: 0
     animation: slide-in-fwd-center .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
   &__avatar
     border-radius: 50%
@@ -90,6 +96,8 @@ export default {
       font-size: 2vw
   .navbar
     animation-delay: 1.8s
+  &__social-icons
+    animation-delay: 2.2s
   &__bottom-description
     animation-delay: 1.6s
     position: absolute

@@ -39,7 +39,7 @@
   border-radius: 3px
   border: 3px solid transparent
   position: relative
-  transition: .2s background-color ease-in-out, .2s color ease-in-out
+  transition: .2s background-color ease, .2s color ease
   &:not(:last-child)
     margin-right: $spacing-mini
 

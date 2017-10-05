@@ -62,6 +62,9 @@ export default {
   background-color: $bg-base-color
   transition: opacity .3s ease
   overflow-y: auto
+  .ais-stats
+    opacity: .75
+    color: $gray-color
   &__close
     position: fixed
     z-index: 100
@@ -78,7 +81,7 @@ export default {
     border: none
     background: none transparent
   &__inner
-    max-width: $desktop
+    max-width: $tablet
     width: 100%
     margin: 0 auto
     padding: 4rem
@@ -88,8 +91,13 @@ export default {
     width: 100%
     box-sizing: inherit
     padding: $spacing-small
+    box-shadow: 0 2px 6px 0 rgba(32, 31, 32, .14)
+    margin: 0 0 $spacing-mini
     border: none
     border-radius: 3px
+    &:focus
+      outline: 3px solid rgba($primary-color,.7)
+      outline-offset: 3px
 .article
   padding-bottom: $spacing-small
   text-decoration: none
