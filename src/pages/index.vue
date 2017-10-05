@@ -5,7 +5,9 @@
         <img class="hero__avatar" src="~/assets/images/avatar.jpeg" width="160px" height="160px" itemprop="image" alt="Foto de Fernando">
       </figure>
       <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
-      <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong></h2>
+      <h2 role="presentation">
+        <strong itemprop="jobTitle">Desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong>
+      </h2>
       <navbar></navbar>
       <div class="hero__social-icons">
         <social-icons></social-icons>

@@ -22,7 +22,7 @@ export default {
     return {
       post: data,
       postTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
-      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
+      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR`,
       postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`,
       breadcrumbs: [
         {

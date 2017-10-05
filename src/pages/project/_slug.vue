@@ -18,7 +18,7 @@ export default {
     return {
       project: data,
       projectTitle: `Projeto: ${data.name} - Fernando Moreira | Front-end / UX Designer`,
-      projectDesc: data.description ? `${data.description}` : `${data.name} Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
+      projectDesc: data.description ? `${data.description}` : `${data.name} Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR`,
       projectImage: (data.image) ? `${data.image}` : 'https://nandomoreira.me/images/social.jpg',
       breadcrumbs: [
         {

@@ -45,7 +45,7 @@ module.exports = {
   },
   manifest: {
     name: 'Fernando Moreira',
-    description: 'Desenvolvedor Front-end e UX Designer em Curitiba/PR',
+    description: 'Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR',
     theme_color: '#0860a8',
     background_color: '#0860a8',
     lang: 'pt_BR'

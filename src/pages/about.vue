@@ -33,7 +33,7 @@ export default {
     return {
       yearsOld: (this.getYearsOld() - 1989),
       pageTitle: `About | Fernando Moreira`,
-      pageDescription: `Fugiat deserunt dolore enim qui occaecat esse esse Lorem commodo nostrud cupidatat.`,
+      pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
       breadcrumbs: [
         {
           active: false,

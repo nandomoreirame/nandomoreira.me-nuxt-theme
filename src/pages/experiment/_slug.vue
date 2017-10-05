@@ -20,7 +20,7 @@ export default {
     return {
       experiment: data,
       experimentTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
-      experimentDesc: data.description ? `${data.description}` : `${data.title} - Fernando Moreira | Desenvolvedor Front-end e UX Designer em Curitiba/PR`,
+      experimentDesc: data.description ? `${data.description}` : `${data.title} - Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR`,
       experimentImage: `https://codepen.io/oknoblich/pen/${data.pen}/image/large.png`,
       breadcrumbs: [
         {

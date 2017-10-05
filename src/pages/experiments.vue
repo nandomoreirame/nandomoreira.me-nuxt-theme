@@ -21,7 +21,7 @@
       </div>
       <nuxt-child />
     </div>
-    <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
+    <meta-tags :title="pageTitle"></meta-tags>
   </main>
 </template>
 
@@ -31,7 +31,6 @@ export default {
   data () {
     return {
       pageTitle: `Meus experimentos | Fernando Moreira`,
-      pageDescription: 'Meus experimentos description',
       breadcrumbs: [
         {
           active: false,
