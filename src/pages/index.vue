@@ -6,12 +6,7 @@
       </figure>
       <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
       <h2 role="presentation">Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong></h2>
-      <nav class="hero__buttons">
-        <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/about">Sobre</nuxt-link-button>
-        <!-- <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/projects">Projetos</nuxt-link-button> -->
-        <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/blog">Blog</nuxt-link-button>
-        <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="/experiments">Experimentos</nuxt-link-button>
-      </nav>
+      <navbar></navbar>
       <p class="hero__bottom-description">
         <small-bottom-text></small-bottom-text>
       </p>
@@ -26,7 +21,7 @@ export default {
   layout: 'blank',
   components: {
     MetaTags: () => import('~/components/MetaTags'),
-    NuxtLinkButton: () => import('~/components/NuxtLinkButton'),
+    Navbar: () => import('~/components/Navbar'),
     SmallBottomText: () => import('~/components/SmallBottomText.vue')
   }
 }
@@ -57,7 +52,7 @@ export default {
       padding-left: 10rem
   h2,
   &__avatar,
-  &__buttons
+  .navbar
     animation: slide-in-fwd-center .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
   &__avatar
     border-radius: 50%
@@ -93,6 +88,8 @@ export default {
       font-size: 4vw
     +media($tablet-large)
       font-size: 2vw
+  .navbar
+    animation-delay: 1.8s
   &__bottom-description
     animation-delay: 1.6s
     position: absolute
@@ -104,14 +101,4 @@ export default {
     text-align: center
     &, a
       color: #fff
-  &__buttons
-    animation-delay: 2s
-    padding: $spacing-small 0
-    @extend %clearfix
-    .nuxt-link-button
-      text-transform: uppercase
-      margin-bottom: 15px
-      // width: 200px
-      +media($tablet)
-        margin-bottom: 0
 </style>

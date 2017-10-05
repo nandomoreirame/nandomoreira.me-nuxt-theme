@@ -9,8 +9,8 @@
               <nuxt-link :to="post.permalink" :title="post.title">{{ post.title }}</nuxt-link>
             </h2>
             <div class="article__meta">
-              <span v-if="post.date" itemprop="datePublished" :content="post.date">{{ post.date | moment("MMMM, YYYY") }} </span>
-              <span>by <span itemprop="author">Fernando Moreira</span></span>
+              <span v-if="post.date" itemprop="datePublished" :content="post.date">Publicado em {{ post.date | moment("MMMM") }} de {{ post.date | moment("YYYY") }} </span>
+              <span>por <span itemprop="author">Fernando Moreira</span></span>
             </div>
           </header>
           <p v-if="post.description" itemprop="description" class="article__description">

@@ -1,11 +1,15 @@
 import Vuex from 'vuex'
-import mutations from './mutations'
 
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      showSearch: false
     },
-    mutations
+    mutations: {
+      showSearch (state, payload) {
+        state.showSearch = payload
+      }
+    }
   })
 }
 

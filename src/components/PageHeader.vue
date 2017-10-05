@@ -9,8 +9,8 @@
       <breadcrumb :breadcrumbs="breadcrumbs"></breadcrumb>
       <p v-if="description" itemprop="description" class="pageHeader__description">{{ description }}</p>
       <div class="pageHeader__meta">
-        <span v-if="author">by <span itemprop="author">Fernando Moreira</span></span>
-        <span v-if="date" itemprop="datePublished" :content="date">{{ date | moment("MMMM, YYYY") }} </span>
+        <span v-if="date" itemprop="datePublished" :content="date">Publicado em {{ date | moment("MMMM") }} de {{ date | moment("YYYY") }} </span>
+        <span v-if="author">por <span itemprop="author">Fernando Moreira</span></span>
       </div>
     </div>
   </header>

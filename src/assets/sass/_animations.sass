@@ -1,9 +1,9 @@
-.page-enter-active,
+.page-enter-active
+  transition: all .12s ease
 .page-leave-active
-  transition: opacity .12s ease-in-out
-
-.page-enter,
-.page-leave-to
+  transition: all .2s cubic-bezier(1.0, .5, .8, 1.0)
+.page-enter, .page-leave-to
+  transform: translateX(10px)
   opacity: 0
 
 @keyframes slide-in-fwd-center
@@ -16,9 +16,9 @@
 
 @keyframes tracking-in-expand
   0%
-    letter-spacing: -0.5em
+    letter-spacing: -.5em
     opacity: 0
   40%
-    opacity: 0.6
+    opacity: .6
   100%
     opacity: 1

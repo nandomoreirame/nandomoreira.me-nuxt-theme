@@ -26,9 +26,11 @@
     "@nuxtjs/optimize": "^1.1.1",
     "@nuxtjs/sitemap": "^0.0.3",
     "@nuxtjs/workbox": "^1.2.0",
+    "moment": "^2.18.1",
     "nuxt": "latest",
     "nuxtent": "latest",
     "vue-disqus": "^2.0.3",
+    "vue-instantsearch": "^1.0.1",
     "vue-moment": "^2.0.2"
   },
   "devDependencies": {

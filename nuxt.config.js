@@ -56,6 +56,7 @@ module.exports = {
   loading: false,
   plugins: [
     { src: '~/plugins/browser.js', ssr: false },
+    { src: '~/plugins/instantsearch.js' },
     { src: '~/plugins/moment.js' }
   ],
   modules: [
