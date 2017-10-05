@@ -1,7 +1,11 @@
 <template>
   <ais-index v-if="showSearch" class="search" :search-store="searchStore">
     <div class="search__inner">
-      <button @click="toggleSearch(false)" role="button"  class="search__close">&times;</button>
+      <button @click="toggleSearch(false)" role="button"  class="search__close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 12 16" fill="#404756">
+          <path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/>
+        </svg>
+      </button>
       <ais-input placeholder="Digite algo..." class="search__input"></ais-input>
       <ais-stats v-if="searchStore.query.length > 1">
         <template scope="{ totalResults, query }">
