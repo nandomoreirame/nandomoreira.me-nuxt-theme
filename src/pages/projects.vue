@@ -2,11 +2,14 @@
   <main>
     <page-header title="Projetos" :breadcrumbs="breadcrumbs"></page-header>
     <div class="container">
-      <div class="project-list">
+      <div class="alert">
+        <p>Oops, essa página ainda está sendo construida, por favor entre mas não repare na bagunça.</p>
+      </div>
+      <!-- <div class="project-list">
         <article class="project" v-for="(project, key) in projects" :key="key">
           <nuxt-link :to="project.permalink">{{ project.name }}</nuxt-link>
         </article>
-      </div>
+      </div> -->
       <nuxt-child />
     </div>
     <meta-tags :title="pageTitle"></meta-tags>
@@ -52,6 +55,12 @@ export default {
   flex-flow: row wrap
   margin-left: -($spacing-small)
   margin-right: -($spacing-small)
+
+.alert
+  padding: $spacing-small
+  margin-bottom: $spacing-base
+  background-color: $silver-color
+  text-align: center
 
 .project
   border-radius: 3px
