@@ -3,10 +3,17 @@
     <div class="search__inner">
       <button @click="toggleSearch(false)" role="button"  class="search__close">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 12 16" fill="#404756">
+          <title id="close-icon">Close icon</title>
           <path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/>
         </svg>
       </button>
-      <ais-input placeholder="Digite algo..." class="search__input"></ais-input>
+      <div class="search__box">
+        <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#404756">
+          <title id="searchicon">Search icon</title>
+          <path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/>
+        </svg>
+        <ais-input placeholder="Digite algo..." class="search__input"></ais-input>
+      </div>
       <ais-stats v-if="searchStore.query.length > 1">
         <template scope="{ totalResults, query }">
           Você está buscando por: <strong>{{ query }}</strong>. Foram encontrados <strong>{{ totalResults }} resultados</strong>.
@@ -56,6 +63,7 @@ export default {
 
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
+@import "~assets/sass/article"
 .search
   position: fixed
   z-index: 99
@@ -69,6 +77,7 @@ export default {
   .ais-stats
     opacity: .75
     color: $gray-color
+    margin-bottom: $spacing-mini
   &__close
     position: fixed
     z-index: 100
@@ -84,6 +93,13 @@ export default {
     display: block
     border: none
     background: none transparent
+  &__box
+    position: relative
+  &__icon
+    position: absolute
+    opacity: .8
+    left: 25px
+    top: 38px
   &__inner
     max-width: $tablet
     width: 100%
@@ -94,7 +110,7 @@ export default {
     line-height: 45px
     width: 100%
     box-sizing: inherit
-    padding: $spacing-small
+    padding: $spacing-small $spacing-small $spacing-small $spacing-big
     box-shadow: 0 2px 6px 0 rgba(32, 31, 32, .14)
     margin: 0 0 $spacing-mini
     border: none
@@ -103,11 +119,8 @@ export default {
       outline: 3px solid rgba($primary-color,.7)
       outline-offset: 3px
 .article
-  padding-bottom: $spacing-small
+  +article
+  min-height: 100%
   text-decoration: none
-  display: block
-  &:not(:last-child)
-    border-bottom: $border-base
-  &__title
-    margin-bottom: 0
+  margin: 0 0 $spacing-small
 </style>

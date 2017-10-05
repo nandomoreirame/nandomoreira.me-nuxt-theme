@@ -20,8 +20,7 @@ module.exports = {
       { name: 'robots', content: 'index,follow,noodp' },
       { name: 'theme-color', content: '#0860a8' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@oseunando' },
-      { rel: 'preload', as: 'style', href: '//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,500,700' }
+      { name: 'twitter:site', content: '@oseunando' }
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-16x16.ico' },
@@ -51,6 +50,9 @@ module.exports = {
     lang: 'pt_BR'
   },
   css: [
+    // 'highlight.js/styles/dracula.css',
+    // 'highlight.js/styles/github-gist.css',
+    'highlight.js/styles/tomorrow-night.css',
     { src: '~assets/sass/main.sass', lang: 'sass' }
   ],
   loading: false,
@@ -61,6 +63,7 @@ module.exports = {
   ],
   modules: [
     ['@nuxtjs/browserconfig', { TileColor: '#0860a8' }],
+    '@nuxtjs/markdownit',
     // '@nuxtjs/sitemap',
     '@nuxtjs/optimize',
     '@nuxtjs/manifest',
@@ -90,6 +93,17 @@ module.exports = {
     removeScriptTypeAttributes: true,
     removeStyleLinkTypeAttributes: true,
     removeTagWhitespace: true
+  },
+  markdownit: {
+    preset: 'default',
+    html: true,
+    linkify: true,
+    breaks: true,
+    langPrefix: 'language-',
+    use: [
+      'markdown-it-container',
+      'markdown-it-attrs'
+    ]
   }
   // sitemap: {
   //   path: '/sitemap.xml',

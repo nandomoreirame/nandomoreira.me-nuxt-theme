@@ -73,20 +73,28 @@ export default {
 </script>
 
 <style lang="sass">
+@import "~assets/sass/settings"
 .article
-  pre
-    overflow-x: auto
   .image
     display: block
     margin: 15px 0
     img
       width: 100%
       display: block
+  pre
+    background: #232e23
+    color: $silver-color
+    overflow-x: auto
+
+    code
+      background: #232e23
 </style>
 
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
+@import "~assets/sass/article"
 .article
   main .container
     max-width: $tablet
+    +article
 </style>

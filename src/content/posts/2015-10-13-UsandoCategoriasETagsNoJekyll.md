@@ -33,7 +33,7 @@ Aqui está um pequeno guia de como implementá-lo:
 
 #### 1. Adicione um pouco de lógica no template do seu layout _post.html_
 
-```liquid
+```twig
 {% assign post = page %}
 {% if post.tags.size > 0 %}
   {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="icon icon-tag"></i>{% else %}<i class="icon icon-tags"></i>{% endif %}: {% endcapture %}
@@ -61,7 +61,7 @@ Aqui está um pequeno guia de como implementá-lo:
 
 #### 3. Crie um layout chamado *blog_by_tag.html*
 
-```liquid
+```twig
 <h1>Articles by tag :{{ page.tag }}</h1>
 <div>
   {% if site.tags[page.tag] %}
@@ -102,6 +102,6 @@ tag: github-pages
 ---
 ```
 
-> Para uma implementação mais complexa de categorias: [Veja meu repositório](https://github.com/nandomoreirame/nandomoreira.me/tree/fcaa1fa6d99b3a0b2838842c291cdc0e86b935a6/source/jekyll)
+> Para uma implementação mais complexa de categorias e tags veja nesse repositório: [github.com/nandomoreirame/nandomoreira-jekyll-theme](https://github.com/nandomoreirame/nandomoreira-jekyll-theme/tree/master/source/_data)
 
 /end

@@ -1,20 +1,14 @@
 <template>
   <div class="hero">
     <div class="hero__inner" itemscope itemtype="http://schema.org/Person">
-      <figure>
-        <img class="hero__avatar" src="~/assets/images/avatar.jpeg" width="160px" height="160px" itemprop="image" alt="Foto de Fernando">
-      </figure>
-      <h1>Olá, eu sou o <span itemprop="name">Fernando</span>!</h1>
+      <h1>Olá, <br>Eu sou o <span itemprop="name">Fernando</span>.</h1>
       <h2 role="presentation">
-        <strong itemprop="jobTitle">Desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong>
+        <strong itemprop="jobTitle">Desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong>.
       </h2>
       <navbar></navbar>
       <div class="hero__social-icons">
         <social-icons></social-icons>
       </div>
-      <p class="hero__bottom-description">
-        <small-bottom-text></small-bottom-text>
-      </p>
     </div>
     <meta-tags></meta-tags>
   </div>
@@ -39,25 +33,25 @@ export default {
 #__nuxt > div:last-child
   width: 100%
   height: 100%
+.navbar
+  opacity: 0
+  animation: slide-in-fwd-center .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation-delay: 1.8s
+</style>
+
+<style lang="sass" scoped>
+@import "~assets/sass/settings"
 .hero
   display: table
   width: 100%
   height: 100%
   background-color: $primary-color
   &__inner
-    display: table-cell
-    vertical-align: middle
-    text-align: center
-    padding-right: 2rem
-    padding-left: 2rem
+    text-align: left
+    padding: 2rem 1rem
     +media($tablet)
-      padding-right: 5rem
-      padding-left: 5rem
-    +media($desktop)
-      padding-right: 10rem
-      padding-left: 10rem
+      padding: 8rem 10rem
   h2,
-  .navbar,
   &__avatar,
   &__social-icons
     opacity: 0
@@ -72,43 +66,30 @@ export default {
     color: #fff
     margin: 0
   h1
-    font-size: 10vw
+    // font-size: 6rem
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
     animation-delay: .6s
     text-shadow: 0px 1px 0px #c0c0c0, 0px 2px 0px #b0b0b0, 0px 3px 0px #a0a0a0, 0px 4px 0px #909090, 0px 5px 10px rgba(0, 0, 0, 0.2)
-    +media($mobile-large)
-      font-size: 8vw
-    +media($tablet)
-      font-size: 7vw
+    // +media($mobile-large)
+    //   font-size: 8vw
+    // +media($tablet)
+    //   font-size: 7vw
     +media($tablet-large)
-      font-size: 4vw
+      font-size: 7rem
   h2
     font-family: $font-family-base
     font-weight: 300
     animation-delay: 1.2s
-    font-size: 7vw
+    // font-size: 7vw
     strong
       color: $tertiary-color
       text-decoration: underline
-    +media($mobile-large)
-      font-size: 5vw
-    +media($tablet)
-      font-size: 4vw
+    // +media($mobile-large)
+    //   font-size: 5vw
+    // +media($tablet)
+    //   font-size: 4vw
     +media($tablet-large)
-      font-size: 2vw
-  .navbar
-    animation-delay: 1.8s
+      font-size: 1.8rem
   &__social-icons
     animation-delay: 2.2s
-  &__bottom-description
-    animation-delay: 1.6s
-    position: absolute
-    bottom: 1rem
-    width: 100%
-    right: 0
-    left: 0
-    z-index: 5
-    text-align: center
-    &, a
-      color: #fff
 </style>

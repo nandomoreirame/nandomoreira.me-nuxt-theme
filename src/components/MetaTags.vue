@@ -3,8 +3,6 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
-
 export default {
   name: 'MetaTags',
   props: [
@@ -13,7 +11,6 @@ export default {
     'image'
   ],
   head () {
-    // this.$store.commit('changePageTitle')
     const pageTitle = (this.title) ? this.title : 'Fernando Moreira | Front-end / UX Designer'
     const pageDesc = (this.description) ? this.description : 'Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR'
     const pageKeywords = (this.keywords) ? this.keywords : 'front-end,front,wordpress,javascript,html,css,desenvolvedor,curitiba,paraná'
