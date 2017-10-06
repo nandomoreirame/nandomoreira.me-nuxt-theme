@@ -84,11 +84,35 @@ export default {
   &__nav-link
     color: #fff
     text-decoration: none
-    font-size: $font-size-base
+    letter-spacing: .05rem
+    font-size: $font-size-small
+    position: relative
+    text-transform: uppercase
+    &:before
+      z-index: 2
+      background: $secondary-color
+      transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
+    &:after
+      z-index: 3
+      transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: calc(100% + 5px)
+      width: 0
+      right: 0
+      height: 3px
     &.nuxt-link-exact-active,
     &:hover
       color: $tertiary-color
-      text-decoration: underline
+      &:before,
+      &:after
+        width: 100%
+        left: 0
+      &:after
+        background: $tertiary-color
     &.nuxt-link-exact-active
       pointer-events: none
 </style>

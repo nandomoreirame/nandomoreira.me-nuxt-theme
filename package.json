@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "clean": "rimraf .nuxt && rimraf dist",
     "build": "nuxt build",
-    "start": "npm run build && nuxt start",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production nuxt start",
     "generate": "npm run clean && NODE_ENV=production nuxt generate",
     "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup --force",
     "lint": "eslint --ext .js,.vue .",
