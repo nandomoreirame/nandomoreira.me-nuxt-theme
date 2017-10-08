@@ -75,12 +75,11 @@ export default {
 <style lang="sass">
 @import "~assets/sass/settings"
 .article
-  .image
+  display: block
+  margin: 0
+  img
+    width: 100%
     display: block
-    margin: 15px 0
-    img
-      width: 100%
-      display: block
   pre
     background: #232e23
     color: $silver-color

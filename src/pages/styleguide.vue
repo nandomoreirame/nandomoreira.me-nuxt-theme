@@ -13,11 +13,22 @@
         <div class="typography">
           <div class="typography__fonts typography__fonts--suez">
             <h2>AaBb</h2>
-            <span><span>Suez One</span> <span>-</span> <span>Regular</span></span>
+            <span>
+              <span>Suez One</span>
+              <span> - </span>
+              <span>Regular</span>
+            </span>
           </div>
           <div class="typography__fonts typography__fonts--ubuntu">
             <h2>AaBb</h2>
-            <span><span>Ubuntu</span>  <span>-</span>  <span class="r">Regular</span> <span class="l">Light</span> <span class="n">Medium</span> <span class="b">Bold</span></span>
+            <span>
+              <span>Ubuntu</span>
+              <span> - </span>
+              <span class="r">Regular</span>
+              <span class="l">Light</span>
+              <span class="n">Medium</span>
+              <span class="b">Bold</span>
+            </span>
           </div>
         </div>
       </section>
