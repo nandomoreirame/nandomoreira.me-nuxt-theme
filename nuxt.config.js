@@ -39,7 +39,8 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: '/humans.txt' },
-      { rel: 'me', href: 'nandomoreira.me@gmail.com' }
+      { rel: 'me', href: 'nandomoreira.me@gmail.com' },
+      { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,500,700' }
     ]
   },
   manifest: {
