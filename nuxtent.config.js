@@ -15,8 +15,7 @@ module.exports = {
       'projects',
       {
         page: '/projects/_slug',
-        permalink: '/project/:slug',
-        generate: ['get', 'getAll'],
+        generate: ['getAll'],
         isPost: true
       }
     ],

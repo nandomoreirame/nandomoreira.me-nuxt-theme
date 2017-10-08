@@ -84,12 +84,16 @@ export default {
 .project
   align-items: center
   min-height: 450px
+  padding-top: $spacing-small
+  border-bottom: $border-base
+  padding-bottom: $spacing-base
+  &:not(:last-child)
+    margin-bottom: $spacing-large
   &__content
+    padding: 0 $spacing-base
     order: 1
-    flex: 0 0 40%
   &__thumbnail
     order: 2
-    flex: 0 0 60%
     img
       display: block
       max-width: 100%
