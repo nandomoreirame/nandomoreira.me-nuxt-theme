@@ -1,3 +1,5 @@
+import lozad from 'lozad';
+
 const env = (process.env.NODE_ENV === 'production');
 
 /*
@@ -42,3 +44,12 @@ const trackEvents = e => {
 }
 
 document.addEventListener('click', e => trackEvents(e));
+
+lozad('.lozad', {
+  load: function(el) {
+      el.src = el.dataset.src;
+      el.onload = function() {
+          el.classList.add('lozad--fade')
+      }
+  }
+}).observe()

@@ -7,9 +7,14 @@
 
 .grid
   display: flex
-  flex-flow: row wrap
+  flex-flow: row
+  flex-wrap: wrap
+  justify-content: space-around
   margin-left: -($spacing-small)
   margin-right: -($spacing-small)
+
+  &--reverse
+    flex-wrap: wrap-reverse
 
   &__column
     flex: 1

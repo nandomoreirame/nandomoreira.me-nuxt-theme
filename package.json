@@ -28,6 +28,7 @@
     "@nuxtjs/sitemap": "^0.0.3",
     "@nuxtjs/workbox": "^1.2.0",
     "highlight.js": "^9.12.0",
+    "lozad": "^1.0.6",
     "markdown-it-attrs": "^1.2.0",
     "markdown-it-container": "^2.0.0",
     "moment": "^2.18.1",

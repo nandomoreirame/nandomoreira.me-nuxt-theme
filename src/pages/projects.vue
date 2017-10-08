@@ -5,11 +5,30 @@
       <div class="alert">
         <p>Oops, essa página ainda está sendo construida, por favor entre mas não repare na bagunça.</p>
       </div>
-      <!-- <div class="project-list">
-        <article class="project" v-for="(project, key) in projects" :key="key">
-          <nuxt-link :to="project.permalink">{{ project.name }}</nuxt-link>
+      <div class="project-list">
+        <article class="project grid grid--1of2" v-for="(project, key) in projects" :key="key" :class="(key % 2 !== 0) ? 'project--invert' : ''">
+          <div class="project__content grid__column">
+            <h2 class="project__title"><a :href="project.url" target="_blank">{{ project.name }}</a></h2>
+            <p class="project__description">{{ project.description }}</p>
+            <div class="project__meta">
+              <span class="project__url"><strong>URL: </strong><a :href="project.url" target="_blank">{{ humanizeUrl(project.url) }}</a></span><br>
+              <span class="project__date"><strong>Data: </strong>{{ project.date | moment('MMMM') }} de {{ project.date | moment('YYYY') }}</span><br>
+              <span class="project__tags">
+                <small v-for="(tag, tagKey) in project.tags" :key="tagKey">
+                  <a :href="`https://twitter.com/intent/tweet?text=Veja o projeto: ${project.name} feito por @oseunando em:&url=https://nandomoreira.me/projects/&hashtags=${tag}`" target="_blank">
+                    #{{ tag }}
+                  </a>
+                </small>
+              </span>
+            </div>
+          </div>
+          <figure class="project__thumbnail grid__column">
+            <a :href="project.url" target="_blank">
+              <img :data-src="project.thumbnail" :alt="`Thumbnail de: ${project.name}`" class="lozad">
+            </a>
+          </figure>
         </article>
-      </div> -->
+      </div>
       <nuxt-child />
     </div>
     <meta-tags :title="pageTitle"></meta-tags>
@@ -41,6 +60,13 @@ export default {
       projects: await app.$content('/projects').getAll()
     }
   },
+  methods: {
+    humanizeUrl: url =>
+      url
+        .replace(/(http:|https:)/g, '')
+        .replace(/(www.)/g, '')
+        .replace(/(\/\/)/g, '')
+  },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
     PageHeader: () => import('~/components/PageHeader')
@@ -50,31 +76,30 @@ export default {
 
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
-.project-list
-  display: flex
-  flex-flow: row wrap
-  margin-left: -($spacing-small)
-  margin-right: -($spacing-small)
-
 .alert
   padding: $spacing-small
   margin-bottom: $spacing-base
   background-color: $silver-color
   text-align: center
-
 .project
-  border-radius: 3px
-  background-color: #fff
-  text-align: center
-  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5)
-  padding: $spacing-small $spacing-base
-  margin: 0 $spacing-small $spacing-base
-  width: 100%
-  display: inline-block
-  border: 1px solid #eee
-  position: relative
-  @extend %clearfix
-
-  +media($tablet)
-    flex: 1 0 ($container-width/2)-60px
+  align-items: center
+  min-height: 450px
+  &__content
+    order: 1
+    flex: 0 0 40%
+  &__thumbnail
+    order: 2
+    flex: 0 0 60%
+    img
+      display: block
+      max-width: 100%
+  &__tags
+    small
+      display: inline-block
+      margin-right: 5px
+  &--invert
+    .project__content
+      order: 2
+    .project__thumbnail
+      order: 1
 </style>
