@@ -13,9 +13,7 @@ Você já parou pra pensar quantas vezes você reclama por dia, ou quantas vezes
 
 E se a gente substituir nossas reclamações diárias por agradecimentos?
 
-<div class="image">
-  <img src="/images/posts/2016/08/thanks.gif"/>
-</div>
+![Gif Thanks](/images/posts/2016/08/thanks.gif)
 
 E se pararmos de reclamar que está chovendo no horário de ir pro trabalho apenas agradecer por ter um trabalho?
 
@@ -25,9 +23,7 @@ E se apenas agradecermos por ter agasalhos para nos aquecer todos dias ao invés
 
 Parar de reclamar que está muito quente e simplesmente agradecer pela água ou refrigerante (com limão e gelo) que tomamos, apenas porque podemos.
 
-<div class="image">
-  <img src="/images/posts/2016/08/nooo.gif"/>
-</div>
+![Gif nooo](/images/posts/2016/08/nooo.gif)
 
 Ao invés de reclamar que as coisas não estão dando certo, porque não agradecer que você quase conseguiu? agradeca que você teve forças e quase chegou perto.
 
@@ -43,9 +39,7 @@ Semana passada eu perdi meu emprego, um trabalho que eu amava apesar de tudo, um
 
 Eu poderia tá puto agora, irritado e xingando tudo e todos ao meu redor, mas não estou, muito pelo contrário estou muito feliz! Dai você pensa: **_"mas quem diabos fica feliz por perder o emprego?”_**
 
-<div class="image">
-  <img src="/images/posts/2016/08/angry.gif"/>
-</div>
+![Gif angry](/images/posts/2016/08/angry.gif)
 
 Calma jovem.
 

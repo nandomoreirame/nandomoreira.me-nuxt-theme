@@ -16,9 +16,7 @@ tags:
 
 Eu tenho um pouco mais de 6 anos de experiência em desenvolvimento web e posso falar que já vi de tudo um pouco nessa área, e esse artigo vai tratar de um assunto um pouco polêmico (como mamilos): _**O profissional deve saber de outras áreas que não são relacionadas a área dele?**_
 
-<div class="image">
-  <img src="/images/posts/2015/12/polemico.jpg" alt="Mamilos polemicos"/>
-</div>
+![Mamilos polêmico](/images/posts/2015/12/polemico.jpg)
 
 > **Nota:** Porque eu me referi ao **profissional** e não ao **front-end** no texto acima? Por que, apesar do texto ser focado no mundo front-end, onde estou mais ligado, ele também vale para designers, programadores, marketeiros, UX e afins.
 
@@ -28,17 +26,13 @@ Durante minha trajetória até aqui eu já trabalhei com alguns programadores e 
 
 Calma jovem, antes de você vir com pedras nas mãos eu vou começar a defender a minha opinião com os 6 itens logo abaixo.
 
-<div class="image">
-  <img src="/images/posts/2015/12/urso.jpg" alt="Urso, senta aqui jovem, vamos conversar"/>
-</div>
+![Urso, senta aqui jovem, vamos conversar](/images/posts/2015/12/urso.jpg)
 
 ## 1. Você raramente será passado para trás
 
 Nessa área tem muito de, como dizia minha mãe: _"Tentar tapar o sol com a peneira!"_.
 
-<div class="image">
-  <img src="/images/posts/2015/12/turtles.gif" alt="tartarugas rodando na agua"/>
-</div>
+![tartarugas rodando na agua](/images/posts/2015/12/turtles.gif)
 
 Sempre tem um que "acha" que o jeito dele desenvolver é o certo, mas tá longe de ser, tem aquele "espertalhão" que enrola por horas em uma tarefa que ele levaria alguns minutos, e por ai vai.
 
@@ -50,9 +44,7 @@ Entendendo como algumas coisas funcionam você pode cortar o barato desses fanfa
 
 Não seja aquele programador que chega no horário, bate o ponto e cola o traseiro na cadeira o dia todo. De uma volta pela empresa, vá no departamento de marketing e assista um pouco do processo deles, pergunte como o designer chegou aquela ideia, acompanhe o UX no processo de planejamento do produto. Isso tudo pode trazer vários beneficios, agrega conhecimento a você e aos envolvidos.
 
-<div class="image">
-  <img src="/images/posts/2015/12/spok.gif" alt="Spock - Star Trek"/>
-</div>
+![Spock - Star Trek](/images/posts/2015/12/spok.gif)
 
 > De uma volta pela empresa, vai te fazer bem!
 
@@ -60,9 +52,7 @@ Não seja aquele programador que chega no horário, bate o ponto e cola o trasei
 
 Essa vai, com um carinho especial, para programadores back-end, aqueles programadores que ainda tem medo das tags HTML5 e das animações das CSS3.
 
-<div class="image">
-  <img src="/images/posts/2015/12/robo.gif" alt="Robo e gatinho"/>
-</div>
+![Robo e gatinho](/images/posts/2015/12/robo.gif)
 
 Não seja esse cara. Entenda como as tecnologias novas podem ajudar em um projeto, como o HTML5 pode melhorar, e muito, o SEO de um website, como as animações das CSS3 podem, em alguns casos, até substituir o Javascript, não custa dar uma lida em artigos e tutoriais na internet.
 
@@ -70,9 +60,7 @@ Não seja esse cara. Entenda como as tecnologias novas podem ajudar em um projet
 
 Um designer que aprende a programar não quer dizer que a empresa vai passar as tarefas do programador pra ele, quando ele estiver com o tempo livre, e assim vale para o programador ou para o front-end.
 
-<div class="image">
-  <img src="/images/posts/2015/12/skate.gif" alt="Aprendendo skate de dedos"/>
-</div>
+![Aprendendo skate de dedos](/images/posts/2015/12/skate.gif)
 
 Aprender algo novo eleva muito o seu valor, como pessoa e como profissional, e isso ninguém tira de você.
 
@@ -88,9 +76,7 @@ Geralmente, nas descrições das vagas, eles pedem um monte de coisas, mas muita
 
 ## 6. E por último, não seja apenas um recortador de PSD!
 
-<div class="image">
-  <img src="/images/posts/2015/12/bugginho.png" alt="Bugginho developer, amiguinhos!"/>
-</div>
+![Bugginho developer, amiguinhos!](/images/posts/2015/12/bugginho.png)
 
 Se você se titula por ai um **_Front-end engineer_** e não sabe se virar bem com alguma linguagem de programação, não sabe otimizar a performance de um site, ou não sabe usar o terminal a seu favor, sinto muito te dizer amigo, mas **_você é apenas um recortador de PSD_**.
 
@@ -106,7 +92,7 @@ Não deixe que digam que você é **_"apenas um fatiador de layout"_** e **_"dia
 
 ## Conclusão
 
-O mercado necessita de profissionais que interajam e aprendem sobre outras áreas, que não estejam relacionadas apenas com a sua formação.Se você não correr poderá ficar para trás.
+O mercado necessita de profissionais que interajam e aprendem sobre outras áreas, que não estejam relacionadas apenas com a sua formação. Se você não correr poderá ficar para trás.
 
 Tem cada vez mais por ai, designers sabendo front-end, front-end sabendo UX e back-end tendo noções de design, não deixe que uma dessas pessoas tome sua vaga no mercado de trabalho.
 

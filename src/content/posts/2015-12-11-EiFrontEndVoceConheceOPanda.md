@@ -17,9 +17,7 @@ O [Panda 4 - News & Inspiration Dashboard](http://usepanda.com/) é um dashborad
 
 Ele tem a versão [web](http://usepanda.com/app/) e extensões para [Firefox](https://addons.mozilla.org/en-US/firefox/addon/panda-daily-news/) e [Google Chrome](https://chrome.google.com/webstore/detail/panda-4-news-inspiration/haafibkemckmbknhfkiiniobjpgkebko). Eu uso ele nos dois navegadores (Firefox e Chrome).
 
-<div class="image">
-  <img src="/images/posts/2015/12/panda-app-chrome-extension.png" alt="Panda App Chrome extension"/>
-</div>
+![Panda App Chrome extension](/images/posts/2015/12/panda-app-chrome-extension.png)
 
 Acho incrivel apreciar o trabalho de grandes mentes do mundo web e sempre que preciso buscar uma inspiração pra algo que estou criando é nesses sites que encontro o que preciso.
 
