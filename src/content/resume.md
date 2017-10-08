@@ -27,7 +27,7 @@ Blog: [nandomoreira.me/blog](/blog)
 * Task runners (Gulp, Grunt, Rake);
 * Generators (Yeoman and others);
 * Package Managers (npm, bower, ruby bundler, composer);
-* Cordova/Phonegap (ionic and others)
+* Cordova/Phonegap (ionic and others);
 * Git (Github, Bitbucket, Gitlab and others);
 * PHP and Frameworks PHP (Codeigniter, Laravel, Symfony and others);
 * CMS PHP (WordPress, Joomla! e basic Drupal);
