@@ -23,16 +23,19 @@
       </div>
       <nuxt-child />
     </div>
-    <meta-tags :title="pageTitle"></meta-tags>
+    <meta-tags :title="pageTitle" :url="pageUrl"></meta-tags>
   </main>
 </template>
 
 <script>
+import { siteUrl } from '~/utilities/Helpers'
+
 export default {
   name: 'blog',
   data () {
     return {
       pageTitle: `Blog | Fernando Moreira`,
+      pageUrl: `${siteUrl}/blog`,
       breadcrumbs: [
         {
           active: false,

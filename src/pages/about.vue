@@ -7,12 +7,13 @@
       <h3>Entre em contato</h3>
       <social-icons iconColor="#404756"></social-icons>
     </div>
-    <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
   </main>
 </template>
 
 <script>
 import aboutme from '~/content/aboutme.md'
+import { siteUrl } from '~/utilities/Helpers'
 
 export default {
   name: 'About',
@@ -20,6 +21,7 @@ export default {
     return {
       pageTitle: `Sobre | Fernando Moreira`,
       pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
+      pageUrl: `${siteUrl}/about`,
       breadcrumbs: [
         {
           active: false,

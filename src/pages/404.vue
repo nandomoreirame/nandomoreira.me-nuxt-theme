@@ -10,11 +10,8 @@
       <div class="hero__social-icons">
         <social-icons></social-icons>
       </div>
-      <p class="hero__bottom-description">
-        <small-bottom-text></small-bottom-text>
-      </p>
     </div>
-    <meta-tags></meta-tags>
+    <meta-tags :title="pageTitle"></meta-tags>
   </div>
 </template>
 
@@ -22,11 +19,15 @@
 export default {
   name: 'Error404',
   layout: 'blank',
+  data () {
+    return {
+      pageTitle: `Erro 404 | Fernando Moreira`
+    }
+  },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
     Navbar: () => import('~/components/Navbar'),
-    SocialIcons: () => import('~/components/SocialIcons'),
-    SmallBottomText: () => import('~/components/SmallBottomText.vue')
+    SocialIcons: () => import('~/components/SocialIcons')
   }
 }
 </script>

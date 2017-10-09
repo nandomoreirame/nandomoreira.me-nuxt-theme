@@ -9,6 +9,7 @@
     <footer class="article__footer">
       <disqus-comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus-comments>
     </footer>
+    <meta-tags :title="postTitle" :url="postUrl" ogType="article"></meta-tags>
   </article>
 </template>
 
@@ -24,6 +25,7 @@ export default {
       postTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
       postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR`,
       postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`,
+      postUrl: `${siteUrl}${data.permalink}`,
       breadcrumbs: [
         {
           active: false,
@@ -45,22 +47,11 @@ export default {
   },
   head () {
     return {
-      title: `${this.postTitle}`,
-      meta: [
-        { property: 'og:type', content: 'article' },
-        { property: 'og:title', content: `${this.postTitle}` },
-        { property: 'og:site_name', content: 'nandomoreira.me' },
-        { property: 'og:url', content: `${this.post.permalink}` },
-        { property: 'og:image', content: `${this.postImage}` },
-        { property: 'article:author', content: 'Fernando Moreira' },
-        { name: 'twitter:title', content: `${this.postTitle}` },
-        { name: 'twitter:description', content: `${this.postDesc}` },
-        { name: 'twitter:image', content: `${this.postImage}` },
-        { name: 'twitter:image:alt', content: `${this.postTitle}` }
-      ]
+      title: `${this.postTitle}`
     }
   },
   components: {
+    MetaTags: () => import('~/components/MetaTags'),
     DisqusComments: () => import('~/components/DisqusComments'),
     PageHeader: () => import('~/components/PageHeader')
   },
@@ -84,9 +75,22 @@ export default {
     background: #232e23
     color: $silver-color
     overflow-x: auto
-
     code
       background: #232e23
+  .video
+    position: relative
+    padding-bottom: 56.25%
+    padding-top: 25px
+    height: 0
+    margin-bottom: $spacing-base
+    iframe,
+    object,
+    embed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
 </style>
 
 <style lang="sass" scoped>

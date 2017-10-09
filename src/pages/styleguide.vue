@@ -44,15 +44,19 @@
         </div>
       </section>
     </div>
-    <meta-tags></meta-tags>
+    <meta-tags :title="pageTitle" :url="pageUrl"></meta-tags>
   </main>
 </template>
 
 <script>
+import { siteUrl } from '~/utilities/Helpers'
+
 export default {
   name: 'Styleguide',
   data () {
     return {
+      pageTitle: `Styleguide - Fernando Moreira | Front-end / UX Designer`,
+      pageUrl: `${siteUrl}/styleguide`,
       colors: {
         primary: [
           'primary',

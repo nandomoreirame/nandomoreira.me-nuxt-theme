@@ -1,4 +1,4 @@
-import lozad from 'lozad';
+const lozad = require('lozad');
 
 const env = (process.env.NODE_ENV === 'production');
 
@@ -27,7 +27,7 @@ export default ({ app }) => {
     */
     ga('set', 'page', to.fullPath);
     ga('send', 'pageview');
-  })
+  });
 }
 
 const trackEvents = e => {
@@ -46,10 +46,8 @@ const trackEvents = e => {
 document.addEventListener('click', e => trackEvents(e));
 
 lozad('.lozad', {
-  load: function(el) {
-      el.src = el.dataset.src;
-      el.onload = function() {
-          el.classList.add('lozad--fade')
-      }
+  load: el => {
+    el.src = el.dataset.src;
+    el.onload = () => el.classList.add('lozad--fade');
   }
-}).observe()
+}).observe();

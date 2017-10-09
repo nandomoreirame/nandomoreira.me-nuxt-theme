@@ -20,7 +20,9 @@ module.exports = {
       { name: 'robots', content: 'index,follow,noodp' },
       { name: 'theme-color', content: '#0860a8' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@oseunando' }
+      { name: 'twitter:site', content: '@oseunando' },
+      { name: 'country', content: 'Brazil' },
+      { name: 'revisit-after', content: '7 days' }
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-16x16.ico' },
@@ -73,7 +75,13 @@ module.exports = {
     'nuxtent'
   ],
   build: {
-    vendor: ['axios', 'vue-moment'],
+    vendor: [
+      'axios',
+      'moment',
+      'vue-moment',
+      'vue-instantsearch',
+      'lozad'
+    ],
     extend (config, ctx) {
       config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
       config.resolve.alias['~utilities'] = resolve(__dirname, 'src/utilities')

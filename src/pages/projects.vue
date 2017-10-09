@@ -31,16 +31,19 @@
       </div>
       <nuxt-child />
     </div>
-    <meta-tags :title="pageTitle"></meta-tags>
+    <meta-tags :title="pageTitle" :url="pageUrl"></meta-tags>
   </main>
 </template>
 
 <script>
+import { siteUrl } from '~/utilities/Helpers'
+
 export default {
   name: 'projects',
   data () {
     return {
       pageTitle: `Projetos - Fernando Moreira | Front-end / UX Designer`,
+      pageUrl: `${siteUrl}/projects`,
       breadcrumbs: [
         {
           active: false,
