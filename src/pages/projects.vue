@@ -24,7 +24,7 @@
           </div>
           <figure class="project__thumbnail grid__column">
             <a :href="project.url" target="_blank">
-              <img src="project.thumbnail" :alt="`Thumbnail de: ${project.name}`">
+              <img :src="project.thumbnail" :alt="`Thumbnail de: ${project.name}`">
             </a>
           </figure>
         </article>
