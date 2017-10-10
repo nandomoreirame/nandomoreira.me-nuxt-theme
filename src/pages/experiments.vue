@@ -6,7 +6,7 @@
         <article class="experiment" v-for="(experiment, key) in experiments" :key="key">
           <figure class="experiment__image">
             <nuxt-link :to="experiment.permalink" :title="experiment.title">
-              <img class="lozad" :data-src="`https://codepen.io/oknoblich/pen/${experiment.pen}/image/small.png`" :alt="`Imagem do pen: ${experiment.pen}`">
+              <img src="`https://codepen.io/oknoblich/pen/${experiment.pen}/image/small.png`" :alt="`Imagem do pen: ${experiment.pen}`">
             </nuxt-link>
           </figure>
           <header class="experiment__header">

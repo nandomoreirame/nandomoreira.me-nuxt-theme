@@ -88,30 +88,22 @@ export default {
     font-size: $font-size-small
     position: relative
     text-transform: uppercase
-    &:before
-      z-index: 2
-      background: $secondary-color
-      transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
     &:after
       z-index: 3
-      transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
-    &:before,
-    &:after
+      left: 0
+      transition: all .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
       content: ''
       display: block
       position: absolute
       top: calc(100% + 5px)
       width: 0
-      right: 0
       height: 3px
     &.nuxt-link-exact-active,
     &:hover
       color: $tertiary-color
-      &:before,
       &:after
-        width: 100%
+        width: 50%
         left: 0
-      &:after
         background: $tertiary-color
     &.nuxt-link-exact-active
       pointer-events: none
