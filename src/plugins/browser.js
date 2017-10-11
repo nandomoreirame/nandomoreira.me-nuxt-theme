@@ -51,3 +51,11 @@ lozad('.lozad', {
     el.onload = () => el.classList.add('lozad--fade');
   }
 }).observe();
+
+// const container = document.querySelector('[data-autotarget]');
+// const links = container.getElementsByTagName('a');
+
+// [].forEach.call(links, (el, i) => {
+//   console.log(el);
+//   el.setAttribute('target', '_blank');
+// });

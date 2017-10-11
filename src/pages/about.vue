@@ -2,7 +2,7 @@
   <main>
     <page-header title="Sobre" :breadcrumbs="breadcrumbs"></page-header>
     <div class="container">
-      <div class="aboutme" v-html="aboutme"></div>
+      <div class="aboutme" v-html="aboutme" data-autotarget></div>
       <hr>
       <h3>Entre em contato</h3>
       <social-icons iconColor="#404756"></social-icons>
@@ -48,6 +48,34 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+@import "~assets/sass/settings"
+.avatar
+  width: 280px
+  float: left
+  display: inline-block
+  position: relative
+  margin-right: $spacing-large
+  line-height: 1
+  &:before
+    content: ''
+    display: block
+    z-index: 1
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 15px
+    left: 15px
+    background-color: rgba($gray-color, .5)
+  img
+    position: relative
+    z-index: 2
+    max-width: 100%
+    width: 100%
+    height: auto
+    display: inline-block
+</style>
 
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
