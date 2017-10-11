@@ -44,11 +44,14 @@ export default {
 .hero
   display: table
   width: 100%
-  height: 100%
+  min-height: 100vh
   background-image: $primary-gradient-color
   &__inner
     text-align: left
     padding: 2rem 1rem
+    // position: absolute
+    // width: 100%
+    // height: 100%
     +media($tablet)
       padding: 8rem 10rem
   h2,

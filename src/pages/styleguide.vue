@@ -2,6 +2,7 @@
   <main>
     <page-header title="Styleguide" :breadcrumbs="breadcrumbs"></page-header>
     <div class="styleguide container">
+      <alert>Oops, essa página ainda está sendo construida, por favor entre mas não repare na bagunça.</alert>
       <section class="styleguide__section">
         <h2>Primary colors</h2>
         <span class="styleguide__color" v-for="color in colors.primary" :key="color" v-bind:class="`bgcolor--${color} styleguide__color--${color}`"></span>
@@ -86,6 +87,7 @@ export default {
     }
   },
   components: {
+    Alert: () => import('~/components/Alert'),
     MetaTags: () => import('~/components/MetaTags'),
     NuxtLinkButton: () => import('~/components/NuxtLinkButton'),
     PageHeader: () => import('~/components/PageHeader')
@@ -105,7 +107,7 @@ export default {
     height: 160px
     border-radius: 10px
     position: relative
-    box-shadow: 0 2px 6px 0 rgba(32, 31, 32, 0.14)
+    box-shadow: $box-shadow-base
     display: inline-block
     overflow: hidden
     &:not(:last-child)
@@ -174,7 +176,7 @@ export default {
     padding: $spacing-small $spacing-base
     display: inline-block
     margin-right: $spacing-small
-    box-shadow: 0 2px 6px 0 rgba(32, 31, 32, 0.14)
+    box-shadow: $box-shadow-base
     &--suez
       &, h2
         font-family: $font-family-heading

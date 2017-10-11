@@ -4,7 +4,7 @@
     `${buttonClass}--${buttonType ? `${buttonType}` : 'default'}`,
     buttonSize ? `${buttonClass}--${buttonSize}` : ''
   ]" :title="title ? title : ''" :to="buttonPermalink">
-    <slot></slot>
+    <slot/>
   </nuxt-link>
 </template>
 

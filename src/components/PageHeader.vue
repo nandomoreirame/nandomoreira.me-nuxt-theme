@@ -51,9 +51,11 @@ export default {
 @import "~assets/sass/settings"
 .pageHeader
   background-color: $primary-color
-  padding: 10rem 0 1rem
+  padding: 10rem 0 5rem
   margin-bottom: 3rem
   min-height: 320px
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%)
+  overflow: hidden
   @extend %clearfix
   &--background
     position: relative
