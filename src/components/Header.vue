@@ -1,6 +1,12 @@
 <template>
   <header class="header">
-    <h1 class="header__logo"><nuxt-link to="/">n</nuxt-link></h1>
+    <nuxt-link to="/" class="header__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+        <line x1="20" y1="12" x2="4" y2="12"/>
+        <polyline points="10 18 4 12 10 6"/>
+      </svg>
+      <span>Ir para Home</span>
+    </nuxt-link>
     <navbar></navbar>
   </header>
 </template>
@@ -29,10 +35,22 @@ export default {
   z-index: 10
   min-height: 100px
   padding: 0 2rem
-  &__logo
+  &__back
     margin: 0
     padding: 0
-    line-height: 1
-    a
+    position: relative
+    overflow: hidden
+    svg, span
+      line-height: 1
+      vertical-align: middle
+      display: inline-block
+    span
+      opacity: 0
       color: #fff
+      margin-left: .8rem
+      transform: translate3d(-100%, 0, 0)
+      transition: .2s transform cubic-bezier(0.29, 0.18, 0.26, 0.83), .2s opacity cubic-bezier(0.29, 0.18, 0.26, 0.83)
+    &:hover span
+      opacity: 1
+      transform: translate3d(0, 0, 0)
 </style>

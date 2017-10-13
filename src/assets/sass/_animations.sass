@@ -1,19 +1,25 @@
-.page-enter-active
-  transition: all .12s ease
 .page-leave-active
-  transition: all .2s cubic-bezier(1.0, .5, .8, 1.0)
-.page-enter, .page-leave-to
+  transition: opacity .2s cubic-bezier(1.0, .5, .8, 1.0)
+
+.page-enter,
+.page-leave-to
   transform: translateX(10px)
   opacity: 0
 
 .lozad--fade
-  animation: lozadFade .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation: fadeIn .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
-@keyframes lozadFade
+@keyframes fadeIn
   from
     opacity: 0
   to
     opacity: 1
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
 
 @keyframes slide-in-fwd-center
   0%
