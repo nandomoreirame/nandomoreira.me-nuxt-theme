@@ -4,11 +4,11 @@
     <main itemprop="articleBody" role="main">
       <div class="container">
         <nuxtent-body :body="post.body"/>
+        <footer class="article__footer">
+          <disqus-comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus-comments>
+        </footer>
       </div>
     </main>
-    <footer class="article__footer">
-      <disqus-comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus-comments>
-    </footer>
     <meta-tags :title="postTitle" :url="postUrl" ogType="article"></meta-tags>
   </article>
 </template>

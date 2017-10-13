@@ -45,7 +45,7 @@ export default {
   display: table
   width: 100%
   min-height: 100vh
-  background-image: $primary-gradient-color
+  background: $primary-color
   &__inner
     text-align: left
     padding: 2rem 1rem

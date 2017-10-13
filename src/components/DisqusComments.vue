@@ -1,9 +1,7 @@
 <template>
   <aside class="comments">
-    <div class="container">
-      <h3>Comentários para: <span>"{{disqusTitle}}"</span></h3>
-      <vue-disqus shortname="fernandomoreira" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
-    </div>
+    <h3>Comentários para: <span>"{{disqusTitle}}"</span></h3>
+    <vue-disqus shortname="fernandomoreira" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
   </aside>
 </template>
 
@@ -25,10 +23,9 @@ export default {
 @import "~assets/sass/settings"
 .comments
   background-color: #fff
-  padding: 30px 0
-  margin-top: 15px
-  .container
-    max-width: $tablet
+  border-top: $border-base
+  padding: $spacing-base 0 0
+  margin-top: $spacing-base
   h3
     font-size: 1.2rem
     margin-top: 0
