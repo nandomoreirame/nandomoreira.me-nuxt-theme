@@ -2,14 +2,13 @@
 title: "8 meses de MalaPronta e o fim."
 date: 2015-09-30
 description: "Eu queria poder dizer que to feliz com tudo isso, mas não to. Eu amava trabalhar lá, apesar de muitas intrigas e desavenças, eu amava meu emprego."
+image: /images/posts/2015/09/galera-do-porao-malapronta.jpg
 categories: geral
 tags:
 - geral
 ---
 
 Esse post não poderia começar melhor, com um "*I love U*" para MalaPronta.com, um ambiente descontraído com piadas ruins (mas que são boas) e uma sala que não é nem quente nem fria e nem escura ou clara(entendedores entenderão).
-
-![Galera do porão da MalaPronta.com](/images/posts/2015/09/galera-do-porao-malapronta.jpg)
 
 Eu queria poder dizer que to feliz com tudo isso, mas não to. Eu amava trabalhar lá, apesar de muitas intrigas e desavenças, eu amava meu emprego.
 
@@ -74,3 +73,5 @@ Como eu comentei no início desse post, por mais que existiam intrigas, fofocas 
 Eu aprendi muito com as pessoas em minha volta, desenvolvedores super inteligentes, antenados e focados no trabalho. Aprendi tecnologias novas como Symfony, Vagrant, sistemas de deploys inteligentes, sistemas de monitoramentos, aprendi a ser humilde com os caras mais humildes que já conheci e que são fodas pakas, aprendi que nunca uma piada sua é boa ou tão ruim se não tiver ouvintes que a entendam bem, aprendi que um ambiente (quente ou frio, escuro ou claro) nunca é acolhedor se não tiver pessoas legais é carismáticas nele.
 
 Sempre vou sentir saudades das pessoas do porão da MalaPronta, vulgo **3° andar**.
+
+![Galera do porão da MalaPronta.com](/images/posts/2015/09/galera-do-porao-malapronta.jpg)
