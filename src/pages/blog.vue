@@ -17,7 +17,12 @@
             <p v-if="post.description" itemprop="description" class="article__description">
               <nuxt-link :title="post.title" :to="post.permalink">{{ post.description }}</nuxt-link>
             </p>
-            <nuxt-link-button :title="post.title" buttonType="ghost" :buttonPermalink="post.permalink">Continue lendo</nuxt-link-button>
+            <div class="article__button">
+              <nuxt-link-button :title="post.title" buttonType="ghost" :buttonPermalink="post.permalink">Continue lendo</nuxt-link-button>
+            </div>
+            <figure class="article__image" v-if="post.image">
+              <img :src="post.image" :alt="`imagem de ${post.title}`">
+            </figure>
           </article>
         </div>
       </div>
@@ -69,4 +74,29 @@ export default {
 .article
   +article
   text-align: center
+  position: relative
+  overflow: hidden
+  &__button
+    display: inline-block
+    margin: 0 auto
+  &__title,
+  &__meta,
+  &__button,
+  &__description
+    position: relative
+    z-index: 2
+  &__button:hover ~ .article__image
+    display: block
+  &__image
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    opacity: 0.2
+    z-index: 1
+    img
+      width: 150%
+      height: auto
+      display: block
 </style>
