@@ -19,8 +19,8 @@ export default {
     const data = await app.$content('/lab').get(route.path)
     return {
       experiment: data,
-      experimentTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
-      experimentDesc: data.description ? `${data.description}` : `${data.title} - Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR`,
+      experimentTitle: `${data.title} - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+      experimentDesc: data.description ? `${data.description}` : `${data.title} - Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR`,
       experimentImage: `https://codepen.io/oknoblich/pen/${data.pen}/image/large.png`,
       breadcrumbs: [
         {

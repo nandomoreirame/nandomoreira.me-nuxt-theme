@@ -40,7 +40,7 @@ export default {
   name: 'projects',
   data () {
     return {
-      pageTitle: `Projetos - Fernando Moreira | Front-end / UX Designer`,
+      pageTitle: `Projetos - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageUrl: `${siteUrl}/projects`,
       breadcrumbs: [
         {

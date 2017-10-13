@@ -8,7 +8,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Fernando Moreira | Front-end / UX Designer'
+      default: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR'
     },
     description: {
       type: String,

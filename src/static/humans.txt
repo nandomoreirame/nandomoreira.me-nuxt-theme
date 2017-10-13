@@ -6,7 +6,7 @@ team involved and used Stack. Remembering, we are human and not machines. A big 
 
 /* TEAM */
   Title: Fernando Moreira
-  Name: Fernando Moreira | Front-end / UX Designer
+  Name: Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR
   Site: https://nandomoreira.me
   Contact: nandomoreira.me [at] gmail.com
   Twitter: @oseunando

@@ -7,7 +7,7 @@ module.exports = {
   srcDir: 'src/',
   dev: (process.env.NODE_ENV !== 'production'),
   head: {
-    title: 'Fernando Moreira | Front-end / UX Designer',
+    title: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR',
     htmlAttrs: {
       lang: 'pt-BR'
     },
@@ -24,7 +24,7 @@ module.exports = {
       { name: 'country', content: 'Brazil' },
       { name: 'revisit-after', content: '7 days' },
       { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'application-name', content: 'Fernando Moreira | Front-end / UX Designer' },
+      { name: 'application-name', content: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR' },
       { name: 'generator', content: 'Visual Studio Code v1.17' }
     ],
     link: [
@@ -50,7 +50,7 @@ module.exports = {
   },
   manifest: {
     name: 'Fernando Moreira',
-    description: 'Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR',
+    description: 'Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR',
     theme_color: '#0860a8',
     background_color: '#0860a8',
     lang: 'pt_BR'

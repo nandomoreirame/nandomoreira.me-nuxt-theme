@@ -3,7 +3,7 @@
     <div class="hero__inner" itemscope itemtype="http://schema.org/Person">
       <h1>Olá, <br>Eu sou o <span itemprop="name">Fernando</span>.</h1>
       <h2 role="presentation">
-        <strong itemprop="jobTitle">Desenvolvedor front-end</strong> e entusiasta da <strong>experiência do usuário</strong>.
+        <strong itemprop="jobTitle">Desenvolvedor front-end</strong> e <strong>WordPress</strong> na <strong><a href="https://onedevstudio.github.io/" target="_blank">Onedev Studio</a></strong> em Curitiba/PR.
       </h2>
       <navbar></navbar>
       <div class="hero__social-icons">

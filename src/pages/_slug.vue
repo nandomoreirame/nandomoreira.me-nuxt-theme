@@ -22,8 +22,8 @@ export default {
     const data = await app.$content('/posts').get(route.path)
     return {
       post: data,
-      postTitle: `${data.title} - Fernando Moreira | Front-end / UX Designer`,
-      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e entusiasta da experiência do usuário | Curitiba/PR`,
+      postTitle: `${data.title} - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR`,
       postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`,
       postUrl: `${siteUrl}${data.permalink}`,
       breadcrumbs: [

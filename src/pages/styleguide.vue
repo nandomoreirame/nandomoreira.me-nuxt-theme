@@ -56,7 +56,7 @@ export default {
   name: 'Styleguide',
   data () {
     return {
-      pageTitle: `Styleguide - Fernando Moreira | Front-end / UX Designer`,
+      pageTitle: `Styleguide - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageUrl: `${siteUrl}/styleguide`,
       colors: {
         primary: [
