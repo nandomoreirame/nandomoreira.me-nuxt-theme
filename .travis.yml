@@ -20,8 +20,8 @@ deploy:
   email: nandomoreira.me@gmail.com
   name: Fernando Moreira
   on:
-    branch: master
+    all_branches: true
 branches:
   only:
-    - master
     - source
+    - master
