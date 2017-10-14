@@ -2,13 +2,20 @@ language: node_js
 node_js:
   - "6"
 cache:
-  bundler: true
   yarn: true
   directories:
-  - node_modules
+    - node_modules
 before_script:
-- npm run generate
+  - yarn generate
 after_success:
-- npm run coveralls
+  - yarn coveralls
 notifications:
   email: false
+deploy:
+  local_dir: dist
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  target_branch: master
+  email: nandomoreira.me@gmail.com
+  name: Fernando Moreira
