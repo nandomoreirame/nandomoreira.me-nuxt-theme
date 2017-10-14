@@ -19,3 +19,9 @@ deploy:
   target_branch: master
   email: nandomoreira.me@gmail.com
   name: Fernando Moreira
+  on:
+    branch: master
+branches:
+  only:
+    - master
+    - source
