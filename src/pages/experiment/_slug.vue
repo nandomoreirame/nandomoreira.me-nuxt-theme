@@ -4,8 +4,12 @@
       <page-header :title="experiment.title" :breadcrumbs="breadcrumbs" :image="experimentImage"></page-header>
       <div class="container">
         <nuxtent-body :body="experiment.body" />
-        <p data-height="650" :data-slug-hash="experiment.pen" data-default-tab="result" data-user="nandomoreirame" data-embed-version="2" :data-pen-title="experiment.pen" data-preview="true" class="codepen">See the Pen <a :href="`https://codepen.io/nandomoreirame/pen/${experiment.pen}/`">{{ experiment.pen }}</a> by Fernando Moreira (<a href="https://codepen.io/nandomoreirame">@nandomoreirame</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        <p data-height="650" :data-slug-hash="experiment.pen" data-default-tab="result" data-user="nandomoreirame" data-embed-version="2" :data-pen-title="experiment.pen" data-preview="true" class="codepen">
+          See the Pen <a :href="`https://codepen.io/nandomoreirame/pen/${experiment.pen}/`">{{ experiment.pen }}</a>
+          by Fernando Moreira (<a href="https://codepen.io/nandomoreirame">@nandomoreirame</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </p>
+        <script async src="//production-assets.codepen.io/assets/embed/ei.js"></script>
       </div>
     </article>
     <meta-tags :title="experimentTitle" :description="experimentDesc"></meta-tags>

@@ -17,8 +17,7 @@ Um pseudo selector das CSS3 muito útil é o `:target`, ele fornece recursos de 
 
 É bem simples de entender, vamos ver uma demonstração nesse <a href="http://codepen.io/nandomoreirame/details/WGpjaY/" target="_blank">Pen</a>
 
-<p data-height="360" data-theme-id="light" data-slug-hash="WGpjaY" data-default-tab="result" data-user="nandomoreirame" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/nandomoreirame/pen/WGpjaY/">WGpjaY</a> by Fernando Moreira (<a href="http://codepen.io/nandomoreirame">@nandomoreirame</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+[![Modal usando CSS3 :target](https://codepen.io/oknoblich/pen/WGpjaY/image/large.png)](https://codepen.io/nandomoreirame/pen/WGpjaY)
 
 O pseudo selector `:target` pode ser aplicado em qualqer tag, classe ou ID em seu CSS, mais ou menos assim:
 

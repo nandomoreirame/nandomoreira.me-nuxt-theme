@@ -169,7 +169,7 @@ Ainda utilizando a classe `.circle` vamos criar a faixa branca da bandeira.
 
 ## O resultado final
 
-[Resultado final](/experiment/pen-zr-r-rwx)
+[![Bandeira do Brasil 🇧🇷 apenas com CSS](https://codepen.io/oknoblich/pen/zrRRwx/image/large.png)](https://codepen.io/nandomoreirame/pen/zrRRwx)
 
 Ainda falta fazer as estrelas que, ao aceitar o meu [_pull request_](https://github.com/pattle/Flags-in-CSS/pull/5), o [Christopher Pattle](https://github.com/pattle) perguntou se não seria legal coloca-las, bem... Eu estou pensando ainda se coloco. :D
 

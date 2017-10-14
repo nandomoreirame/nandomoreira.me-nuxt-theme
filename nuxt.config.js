@@ -98,13 +98,13 @@ module.exports = {
       }
     }
   },
-  // minify: {
-  //   removeAttributeQuotes: true,
-  //   removeComments: true,
-  //   removeScriptTypeAttributes: true,
-  //   removeStyleLinkTypeAttributes: true,
-  //   removeTagWhitespace: true
-  // },
+  minify: {
+    removeAttributeQuotes: true,
+    removeComments: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    removeTagWhitespace: true
+  },
   markdownit: {
     preset: 'default',
     html: true,

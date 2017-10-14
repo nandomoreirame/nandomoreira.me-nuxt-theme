@@ -53,10 +53,8 @@ Em especial ao time de TI da [LojasKD](https://www.lojaskd.com.br/) por me acolh
 
 😎
 
-Para refletir um pouco mais sobre o trabalho em equipe eu vou deixar esse video do **Bernard De Luna** como bônus.
+E como Bônus, para você refletir um pouco mais sobre o trabalho em equipe, vou deixar esse video do **Bernard De Luna** sobre **Perseverança e time**.
 
-<div class="video">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/EJzhit_HAIA" frameborder="0" allowfullscreen></iframe>
-</div>
+[![Perseverança e time](https://img.youtube.com/vi/EJzhit_HAIA/maxresdefault.jpg)](https://www.youtube.com/watch?v=EJzhit_HAIA)
 
 **UM FELIZ 2017 TIME!**
