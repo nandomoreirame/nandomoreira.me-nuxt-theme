@@ -1,5 +1,4 @@
-// const axios = require('axios')
-
+const axios = require('axios')
 const { resolve } = require('path')
 // const bourbon = require('node-bourbon')
 
@@ -70,7 +69,7 @@ module.exports = {
   modules: [
     ['@nuxtjs/browserconfig', { TileColor: '#0860a8' }],
     '@nuxtjs/markdownit',
-    // '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap',
     '@nuxtjs/optimize',
     '@nuxtjs/manifest',
     '@nuxtjs/workbox',
@@ -99,13 +98,13 @@ module.exports = {
       }
     }
   },
-  minify: {
-    removeAttributeQuotes: true,
-    removeComments: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributes: true,
-    removeTagWhitespace: true
-  },
+  // minify: {
+  //   removeAttributeQuotes: true,
+  //   removeComments: true,
+  //   removeScriptTypeAttributes: true,
+  //   removeStyleLinkTypeAttributes: true,
+  //   removeTagWhitespace: true
+  // },
   markdownit: {
     preset: 'default',
     html: true,
@@ -116,15 +115,21 @@ module.exports = {
       'markdown-it-container',
       'markdown-it-attrs'
     ]
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://nandomoreira.me',
+    cacheTime: 1000 * 60 * 150,
+    generate: true,
+    routes () {
+      // const APIURL = 'http://localhost:3000/content-api'
+      // const dataContents = ['/posts', '/projects', '/lab']
+      // return dataContents.map(page =>
+      //   axios.get(`${APIURL}${page}`).then(res =>
+      //     res.data.map(page => console.log(page.path))))
+      return axios.get('http://localhost:3000/content-api/posts').then(res => {
+        return res.data.map(page => page.permalink)
+      })
+    }
   }
-  // sitemap: {
-  //   path: '/sitemap.xml',
-  //   hostname: 'https://nandomoreira.me',
-  //   cacheTime: 1000 * 60 * 150,
-  //   generate: true,
-  //   routes () {
-  //     return axios.get('http://localhost:3000/content-api')
-  //       .then(res => res.data.map(page => page.path))
-  //   }
-  // }
 }

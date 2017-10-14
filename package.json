@@ -5,7 +5,7 @@
   "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "clean": "rimraf .nuxt && rimraf dist",
     "build": "nuxt build",
     "start": "NODE_ENV=production npm run build && NODE_ENV=production nuxt start",
