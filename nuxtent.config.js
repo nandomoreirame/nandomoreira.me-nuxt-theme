@@ -23,8 +23,7 @@ module.exports = {
       'lab',
       {
         page: '/lab/_slug',
-        permalink: '/experiment/:slug',
-        generate: ['get', 'getAll'],
+        generate: ['getAll'],
         isPost: false
       }
     ]

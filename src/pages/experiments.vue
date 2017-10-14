@@ -3,21 +3,15 @@
     <page-header title="Meus experimentos" :breadcrumbs="breadcrumbs"></page-header>
     <div class="container">
       <div class="experiments-list">
-        <article class="experiment" v-for="(experiment, key) in experiments" :key="key">
+        <a class="experiment" v-for="(experiment, key) in experiments" :key="key" :href="`https://codepen.io/nandomoreirame/details/${experiment.pen}`" target="_blank" :title="experiment.title">
           <figure class="experiment__image">
-            <nuxt-link :to="experiment.permalink" :title="experiment.title">
-              <img :src="`https://codepen.io/oknoblich/pen/${experiment.pen}/image/small.png`" :alt="`Imagem do pen: ${experiment.pen}`">
-            </nuxt-link>
+            <img :src="`https://codepen.io/oknoblich/pen/${experiment.pen}/image/small.png`" :alt="`Imagem do pen: ${experiment.pen}`">
           </figure>
           <header class="experiment__header">
-            <h2 class="experiment__title">
-              <nuxt-link :to="experiment.permalink" :title="experiment.title">{{ experiment.title }}</nuxt-link>
-            </h2>
-            <div class="experiment__meta">
-              <a :href="`https://codepen.io/nandomoreirame/details/${experiment.pen}/`" target="_blank">ver no codepen.io</a>
-            </div>
+            <h2 class="experiment__title">{{ experiment.title }}</h2>
+            <span class="experiment__meta">ver no codepen.io</span>
           </header>
-        </article>
+        </a>
       </div>
       <nuxt-child />
     </div>
@@ -68,7 +62,6 @@ export default {
   flex-flow: row wrap
   margin-left: -($spacing-small)
   margin-right: -($spacing-small)
-
 .experiment
   border-radius: 3px
   background-color: #fff
