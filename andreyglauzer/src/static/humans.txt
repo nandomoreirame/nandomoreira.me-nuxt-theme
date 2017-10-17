@@ -1,0 +1,13 @@
+(pt) The humans.txt iniciativa legal do (humanstxt.org), para falar um pouco de quem está por trás das aplicações construídas na web,
+equipe envolvida e Stack usado. Lembrando, somos humanos e não máquinas. Um grande obrigado a você que acessou o meu blog pessoal.
+
+(en) The human.txt legal initiative of (humanstxt.org), to speak a little of who is behind the web-built applications,
+team involved and used Stack. Remembering, we are human and not machines. A big thank you to you who accessed my personal blog.
+
+/* TEAM */
+  Title: Fernando Moreira
+  Name: Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR
+  Site: https://nandomoreira.me
+  Contact: nandomoreira.me [at] gmail.com
+  Twitter: @oseunando
+  Location: Curitiba, Paraná, Brazil

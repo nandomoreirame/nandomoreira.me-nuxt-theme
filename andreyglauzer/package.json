@@ -1,0 +1,74 @@
+{
+  "name": "nandomoreira.me",
+  "version": "4.0.0",
+  "description": "My superfast website and blog using Nuxt.js",
+  "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "clean": "rimraf .nuxt && rimraf dist",
+    "build": "nuxt build",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production nuxt start",
+    "generate": "npm run clean && NODE_ENV=production nuxt generate",
+    "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup --force",
+    "lint": "eslint --ext .js,.vue .",
+    "precommit": "npm run lint",
+    "test": "NODE_ENV=test mocha-webpack --webpack-config test/webpack.config.js test/specs --recursive --require test/setup.js",
+    "test:coverage": "nyc npm test",
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
+    "prepublish": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/browserconfig": "^0.0.6",
+    "@nuxtjs/icon": "^1.1.0",
+    "@nuxtjs/manifest": "^1.7.0",
+    "@nuxtjs/markdownit": "^1.1.2",
+    "@nuxtjs/optimize": "^1.1.1",
+    "@nuxtjs/sitemap": "^0.0.3",
+    "@nuxtjs/workbox": "^1.2.0",
+    "highlight.js": "^9.12.0",
+    "lozad": "^1.0.6",
+    "markdown-it-attrs": "^1.2.0",
+    "markdown-it-container": "^2.0.0",
+    "moment": "^2.18.1",
+    "nuxt": "latest",
+    "nuxtent": "latest",
+    "vue-disqus": "^2.0.3",
+    "vue-instantsearch": "^1.0.1",
+    "vue-moment": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "browser-env": "^3.2.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "jsdom": "^11.2.0",
+    "mocha": "^3.5.3",
+    "mocha-webpack": "^0.7.0",
+    "node-bourbon": "^4.2.8",
+    "node-sass": "^4.5.3",
+    "nyc": "^11.2.1",
+    "push-dir": "^0.4.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+<template>
+  <footer class="footer">
+    <div class="container">
+      <small>
+        Made with ♥️ by <a href="https://twitter.com/oseunando" target="_blank">nandomoreira</a>,
+        using <a href="https://vuejs.org/" target="_blank">Vuejs</a> and <a href="https://nuxtjs.org" target="_blank">NuxtJS</a>.
+        This is an <a href="https://github.com/nandomoreirame/nandomoreirame.github.io" target="_blank">open source code</a>.
+      </small>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: 'pageFooter'
+}
+</script>
+
+<style lang="sass" scoped>
+.footer
+  text-align: center
+  padding: 15px 0
+</style>

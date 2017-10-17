@@ -17,12 +17,11 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   target_branch: master
-  email: nglauzer@gmail.com
-  name: Andrey Glauzer
+  email: nandomoreira.me@gmail.com
+  name: Fernando Moreira
   on:
     all_branches: true
 branches:
   only:
     - source
     - master
-
