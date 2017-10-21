@@ -119,10 +119,10 @@ module.exports = {
     ]
   },
   sitemap: {
-    path: '/sitemap.xml',
+    path: (isProduction ? '/sitemap-prod.xml' : '/sitemap.xml'),
     hostname: 'https://nandomoreira.me',
     cacheTime: 1000 * 60 * 150,
-    generate: !isProduction,
+    generate: true,
     routes () {
       // const APIURL = 'http://localhost:3000/content-api'
       // const dataContents = ['/posts', '/projects', '/lab']
