@@ -5,7 +5,7 @@
       <img :src="image" :alt="`Imagem de: ${title}`">
     </figure>
     <div class="container">
-      <h1 class="pageHeader__title">{{ title }}</h1>
+      <h1 class="pageHeader__title" itemprop="headline">{{ title }}</h1>
       <breadcrumb :breadcrumbs="breadcrumbs"></breadcrumb>
       <p v-if="description" itemprop="description" class="pageHeader__description">{{ description }}</p>
       <div class="pageHeader__meta">
