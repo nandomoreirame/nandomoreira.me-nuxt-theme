@@ -1,8 +1,8 @@
 <template>
   <header class="pageHeader" :class="{ 'pageHeader--background': image }">
-    <figure v-if="image" class="pageHeader__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-      <meta itemprop="url" :content="image">
-      <img :src="image" :alt="`Imagem de: ${title}`">
+    <figure v-if="image || shareImage" class="pageHeader__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+      <meta itemprop="url" :content="shareImage">
+      <img v-if="image" :src="image" :alt="`Imagem de: ${title}`">
     </figure>
     <div class="container">
       <h1 class="pageHeader__title" itemprop="headline">{{ title }}</h1>
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+const { siteUrl } = require('~/utilities/Helpers')
+
 export default {
   name: 'PageHeader',
   props: {
@@ -29,6 +31,10 @@ export default {
     },
     'image': {
       type: String
+    },
+    'shareImage': {
+      type: String,
+      default: `${siteUrl}/images/social.jpg`
     },
     'author': {
       type: Boolean,

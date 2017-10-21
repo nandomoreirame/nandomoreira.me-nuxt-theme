@@ -10,7 +10,7 @@ module.exports = {
   head: {
     title: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR',
     htmlAttrs: {
-      dir: 'rtl',
+      dir: 'ltr',
       lang: 'pt-BR'
     },
     meta: [

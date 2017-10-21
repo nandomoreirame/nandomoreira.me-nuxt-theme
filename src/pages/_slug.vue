@@ -1,6 +1,6 @@
 <template>
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
-    <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :breadcrumbs="breadcrumbs" :author="true"></page-header>
+    <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"></page-header>
     <main itemprop="articleBody" role="main">
       <div class="container">
         <nuxtent-body :body="post.body"/>
@@ -24,7 +24,7 @@ export default {
       post: data,
       postTitle: `${data.title} - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR`,
-      postImage: (data.image) ? `${data.image}` : `${siteUrl}/images/social.jpg`,
+      postImage: (data.image) ? `${siteUrl}${data.image}` : `${siteUrl}/images/social.jpg`,
       postUrl: `${siteUrl}${data.permalink}`,
       breadcrumbs: [
         {
