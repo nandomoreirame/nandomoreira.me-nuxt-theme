@@ -2,9 +2,11 @@ const axios = require('axios')
 const { resolve } = require('path')
 // const bourbon = require('node-bourbon')
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
   srcDir: 'src/',
-  dev: (process.env.NODE_ENV !== 'production'),
+  dev: !isProduction,
   head: {
     title: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR',
     htmlAttrs: {
@@ -120,7 +122,7 @@ module.exports = {
     path: '/sitemap.xml',
     hostname: 'https://nandomoreira.me',
     cacheTime: 1000 * 60 * 150,
-    generate: true,
+    generate: !isProduction,
     routes () {
       // const APIURL = 'http://localhost:3000/content-api'
       // const dataContents = ['/posts', '/projects', '/lab']
