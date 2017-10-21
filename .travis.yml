@@ -16,7 +16,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  target_branch: gh-pages
+  target_branch: master
   email: nandomoreira.me@gmail.com
   name: Fernando Moreira
   on:
@@ -25,4 +25,3 @@ branches:
   only:
     - source
     - master
-    - gh-pages
