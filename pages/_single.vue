@@ -3,10 +3,7 @@
     <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"></page-header>
     <main itemprop="articleBody" role="main">
       <div class="container">
-        <nuxtent-body :body="post.body"/>
-        <footer class="article__footer">
-          <disqus-comments :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus-comments>
-        </footer>
+        <nuxtent-body :body="post.body" />
       </div>
     </main>
     <meta-tags :title="postTitle" :url="postUrl" ogType="article"></meta-tags>
@@ -52,7 +49,6 @@ export default {
   },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
-    DisqusComments: () => import('~/components/DisqusComments'),
     PageHeader: () => import('~/components/PageHeader')
   },
   methods: {
@@ -65,18 +61,27 @@ export default {
 
 <style lang="sass">
 @import "~assets/sass/settings"
+@import "~assets/sass/article"
+
 .article
   display: block
   margin: 0
+
+  main .container
+    max-width: $tablet
+    +article
+
   img
     width: 100%
     display: block
+
   pre
     background: #232e23
     color: $honeydew-color
     overflow-x: auto
     code
       background: #232e23
+
   .video
     position: relative
     padding-bottom: 56.25%
@@ -91,13 +96,4 @@ export default {
       left: 0
       width: 100%
       height: 100%
-</style>
-
-<style lang="sass" scoped>
-@import "~assets/sass/settings"
-@import "~assets/sass/article"
-.article
-  main .container
-    max-width: $tablet
-    +article
 </style>

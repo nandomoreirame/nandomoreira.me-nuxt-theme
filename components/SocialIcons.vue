@@ -69,11 +69,12 @@
   &__item
     display: inline-block
     vertical-align: middle
+    text-align: center
     line-height: 1
     &:not(:last-child)
       margin-right: $spacing-small
   &__link
-    display: block
+    display: inline-block
     opacity: .8
     transition: .2s transform ease, .2s opacity ease
     &:hover,
