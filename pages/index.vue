@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+
     <section class="home__hero section">
       <div class="section__inner" itemscope itemtype="http://schema.org/Person">
         <h1>Olá, eu sou o <span itemprop="name">Fernando</span>.</h1>
@@ -12,23 +13,11 @@
         </div>
       </div>
     </section>
-    <section class="home__work section">
-      <div class="section__inner">
-        <header class="section__header">
-          <h2>Último <strong>Projeto</strong></h2>
-        </header>
-        <div class="container">
-          <project :project="lastProject" />
-          <div class="section__button">
-            <nuxt-link-button buttonType="ghost-white" buttonPermalink="/projects">mais projetos</nuxt-link-button>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <section class="home__article section">
       <div class="section__inner">
         <header class="section__header">
-          <h2>Último <strong>Artigo</strong></h2>
+          <h2>Último Artigo</h2>
         </header>
         <div class="container">
           <post-item :count="0" :post="lastArticle"></post-item>
@@ -38,6 +27,35 @@
         </div>
       </div>
     </section>
+
+    <section class="home__work section">
+      <div class="section__inner">
+        <header class="section__header">
+          <h2>Último Projeto</h2>
+        </header>
+        <div class="container">
+          <project :project="lastProject" />
+          <div class="section__button">
+            <nuxt-link-button buttonType="ghost-white" buttonPermalink="/projects">mais projetos</nuxt-link-button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home__dribbble section">
+      <div class="section__inner">
+        <header class="section__header">
+          <h2>Últimos Shots</h2>
+        </header>
+        <div class="container">
+          <dribbble token="8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e" user="umdevux"></dribbble>
+          <div class="section__button">
+            <nuxt-link-button buttonType="ghost" buttonPermalink="/blog">mais shots</nuxt-link-button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <meta-tags></meta-tags>
   </div>
 </template>
@@ -48,6 +66,7 @@ export default {
   async asyncData ({ app, route }) {
     const projects = await app.$content('/projects').getAll()
     const posts = await app.$content('/posts').getAll()
+
     return {
       lastProject: projects[0],
       lastArticle: posts[0]
@@ -58,7 +77,8 @@ export default {
     SocialIcons: () => import('~/components/SocialIcons'),
     NuxtLinkButton: () => import('~/components/NuxtLinkButton'),
     Project: () => import('~/components/Project'),
-    PostItem: () => import('~/components/PostItem')
+    PostItem: () => import('~/components/PostItem'),
+    Dribbble: () => import('~/components/Dribbble')
   }
 }
 </script>
@@ -71,7 +91,7 @@ export default {
   @extend %clearfix
 
   +media($tablet)
-    height: 80vh
+    padding: 8rem 0
     display: table
 
   &__inner
@@ -114,9 +134,13 @@ export default {
       border-bottom: 20px solid transparent
       border-left: 20px solid transparent
       margin-left: -20px
+
 .home
   &__hero
     text-align: center
+
+    +media($tablet)
+      height: 80vh
 
     h1,
     h2
