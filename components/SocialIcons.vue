@@ -69,6 +69,7 @@
   &__item
     display: inline-block
     vertical-align: middle
+    text-align: center
     line-height: 1
     &:not(:last-child)
       margin-right: $spacing-small

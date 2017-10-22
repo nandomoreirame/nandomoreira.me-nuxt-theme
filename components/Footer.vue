@@ -54,6 +54,7 @@ export default {
   &__text,
   &__social-icons
     padding-top: $spacing-small
+    padding-bottom: $spacing-small
     +media($tablet)
       line-height: 60px
       vertical-align: middle
