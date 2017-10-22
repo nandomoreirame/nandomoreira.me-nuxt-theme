@@ -5,7 +5,6 @@ const { resolve } = require('path')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  srcDir: 'src/',
   dev: !isProduction,
   head: {
     title: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR',
@@ -20,7 +19,7 @@ module.exports = {
       { name: 'og:locale', content: 'pt_BR' },
       { name: 'googlebot', content: 'index,follow' },
       { name: 'robots', content: 'index,follow,noodp' },
-      { name: 'theme-color', content: '#0860a8' },
+      { name: 'theme-color', content: '#4dba87' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@oseunando' },
       { name: 'country', content: 'Brazil' },
@@ -53,24 +52,23 @@ module.exports = {
   manifest: {
     name: 'Fernando Moreira',
     description: 'Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR',
-    theme_color: '#0860a8',
-    background_color: '#0860a8',
+    theme_color: '#4dba87',
+    background_color: '#4dba87',
     lang: 'pt_BR'
   },
   css: [
-    // 'highlight.js/styles/dracula.css',
-    // 'highlight.js/styles/github-gist.css',
     'highlight.js/styles/tomorrow-night.css',
+    { src: '~/node_modules/normalize.css/normalize.css', lang: 'css' },
     { src: '~assets/sass/main.sass', lang: 'sass' }
   ],
-  loading: false,
+  loading: { color: '#4dba87' },
   plugins: [
     { src: '~/plugins/browser.js', ssr: false },
     { src: '~/plugins/instantsearch.js' },
     { src: '~/plugins/moment.js' }
   ],
   modules: [
-    ['@nuxtjs/browserconfig', { TileColor: '#0860a8' }],
+    ['@nuxtjs/browserconfig', { TileColor: '#4dba87' }],
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/optimize',
@@ -89,7 +87,7 @@ module.exports = {
     ],
     extend (config, ctx) {
       config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
-      config.resolve.alias['~utilities'] = resolve(__dirname, 'src/utilities')
+      config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
 
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
@@ -120,7 +118,7 @@ module.exports = {
     ]
   },
   sitemap: {
-    path: (isProduction ? '/sitemap-prod.xml' : '/sitemap.xml'),
+    path: (isProduction ? '/sitemap-prod.xml' : '/sitemap-dev.xml'),
     hostname: 'https://nandomoreira.me',
     cacheTime: 1000 * 60 * 150,
     generate: true,

@@ -5,8 +5,8 @@ module.exports = {
     [
       'posts',
       {
-        page: '/posts/_slug',
-        permalink: '/:slug',
+        page: '/_single',
+        permalink: ':slug',
         generate: ['get', 'getAll'],
         isPost: true
       }

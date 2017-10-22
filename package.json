@@ -32,6 +32,7 @@
     "markdown-it-attrs": "^1.2.0",
     "markdown-it-container": "^2.0.0",
     "moment": "^2.18.1",
+    "normalize.css": "^7.0.0",
     "nuxt": "latest",
     "nuxtent": "latest",
     "vue-disqus": "^2.0.3",

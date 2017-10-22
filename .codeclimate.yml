@@ -14,4 +14,4 @@ ratings:
   - "**.js"
   - "**.vue"
 exclude_paths:
-- "src/plugins"
+- "plugins"
