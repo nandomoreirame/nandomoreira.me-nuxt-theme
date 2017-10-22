@@ -90,21 +90,21 @@ export default {
   position: relative
   @extend %clearfix
 
-  +media($tablet)
-    padding: 8rem 0
-    display: table
-
   &__inner
+    padding: 0
+    margin-bottom: $spacing-large
     +media($tablet)
-      display: table-cell
-      vertical-align: middle
+      padding: 8rem 0
+      margin-bottom: 0
 
   &__button
     text-align: center
-    position: absolute
-    bottom: $spacing-large
-    right: 0
-    left: 0
+
+    +media($tablet)
+      position: absolute
+      bottom: $spacing-base
+      left: 0
+      right: 0
 
     a
       text-transform: uppercase
@@ -113,10 +113,14 @@ export default {
     text-align: center
     background-color: $feldgrau-color
     padding: $spacing-small
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
+    margin-bottom: $spacing-base
+    position: relative
+
+    +media($tablet)
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
 
     h2
       color: #fff
@@ -138,9 +142,14 @@ export default {
 .home
   &__hero
     text-align: center
+    padding-top: ($spacing-large * 2)
 
     +media($tablet)
       height: 80vh
+      display: table
+      .section__inner
+        display: table-cell
+        vertical-align: middle
 
     h1,
     h2
@@ -200,6 +209,12 @@ export default {
 
   &__work
     background-color: $mint-color
+
+    .project
+      figure
+        margin-bottom: $spacing-small
+        +media($tablet)
+          margin-bottom: 0
 
     .project,
     .project a

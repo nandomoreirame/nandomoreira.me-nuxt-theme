@@ -111,15 +111,16 @@
     background: #c5d2d9 no-repeat 50%
     background-size: cover
 
-  &--featured
-    flex: 1 1 100%
-    flex-direction: row
-    .postItem__image-link
-      flex: 1 1 auto
-    .postItem__image
-      position: absolute
-      width: 100%
-      height: 100%
-    .postItem__content
-      flex: 0 1 357px
+  +media($tablet-large)
+    &--featured
+      flex: 1 1 100%
+      flex-direction: row
+      .postItem__image-link
+        flex: 1 1 auto
+      .postItem__image
+        position: absolute
+        width: 100%
+        height: 100%
+      .postItem__content
+        flex: 0 1 357px
 </style>

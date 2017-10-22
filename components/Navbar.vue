@@ -1,5 +1,17 @@
 <template>
   <div>
+    <input type="checkbox" id="ToggleNavbar">
+    <label tabindex="-1" class="navbar-toggle" for="ToggleNavbar" role="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#435466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </label>
     <nav class="navbar" role="navigation">
       <ul class="navbar__nav" role="menu">
         <li class="navbar__nav-item navbar__nav-item--search">
@@ -11,7 +23,9 @@
           </a>
         </li>
         <li v-for="(item, key) in navItems" :key="key" class="navbar__nav-item" role="menuitem">
-          <nuxt-link :to="item.link" :title="item.title" role="link" class="navbar__nav-link">{{ item.title }}</nuxt-link>
+          <nuxt-link :to="item.link" :title="item.title" role="link" class="navbar__nav-link">
+            {{ item.title }}
+          </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -64,30 +78,66 @@ export default {
 <style lang="sass" scoped>
 @import "~assets/sass/settings"
 .navbar
+  +media(max-width $tablet-large)
+    position: fixed
+    z-index: 1000
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba($feldgrau-color, .95)
+    display: none
+
+  +media($tablet-large)
+    display: block
+    position: relative
+
   &__nav
     list-style: none
     padding: 0
     margin: 0
+    display: table-cell
+    vertical-align: middle
+
+    +media($tablet-large)
+      display: inline-block
+
   &__nav-item
-    display: inline-block
     font-weight: $font-weight-bold
     letter-spacing: -.01em
-    &--search svg
-      position: relative
-      top: 2px
+    +media($tablet-large)
+      display: inline-block
+
     &:not(:first-child)
       margin-left: 1rem
+
     &:not(:last-child):after
       content: '•'
       color: #435466
       margin-left: 15px
+
+    &--search
+      display: none
+      +media($tablet-large)
+        display: inline-block
+        svg
+          position: relative
+          top: 2px
+
   &__nav-link
-    color: #435466
+    color: #fff
+    font-size: 2rem
     text-decoration: none
     letter-spacing: .05rem
-    font-size: $font-size-small
     position: relative
     text-transform: uppercase
+
+    +media($tablet-large)
+      font-size: $font-size-small
+      color: $feldgrau-color
+
     &:after
       z-index: 3
       left: 0
@@ -107,4 +157,37 @@ export default {
         background: $khaki-color
     &.nuxt-link-exact-active
       pointer-events: none
+
+.navbar-toggle
+  position: relative
+  display: inline-block
+  z-index: 10001
+  line-height: 1
+  vertical-align: middle
+
+  +media($tablet-large)
+    display: none
+
+  .feather-x
+    display: none
+
+#ToggleNavbar
+  position: absolute
+  border: 0
+  clip: rect(0,0,0,0)
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  overflow: hidden
+
+  +media(max-width $tablet-large)
+    &:checked
+      ~ .navbar
+        display: table
+      ~ .navbar-toggle
+        .feather-x
+          display: block
+        .feather-menu
+          display: none
 </style>
