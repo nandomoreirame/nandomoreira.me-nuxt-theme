@@ -50,7 +50,7 @@ export default {
   components: {
     MetaTags: () => import('~/components/MetaTags'),
     PageHeader: () => import('~/components/PageHeader'),
-    NuxtLinkButton: () => import('~/components/NuxtLinkButton')
+    LinkButton: () => import('~/components/LinkButton')
   }
 }
 </script>

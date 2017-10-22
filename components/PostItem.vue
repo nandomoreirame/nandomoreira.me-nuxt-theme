@@ -18,24 +18,23 @@
           <span v-if="post.date" itemprop="datePublished" :content="post.date">Publicado em {{ post.date | moment("MMMM") }} de {{ post.date | moment("YYYY") }} </span>
           <span>por <strong itemprop="author">Fernando Moreira</strong></span>
         </small>
-        <!-- <nuxt-link-button :title="post.title" buttonType="ghost" :buttonPermalink="post.permalink">Continue lendo</nuxt-link-button> -->
       </footer>
     </div>
   </article>
 </template>
 
 <script>
-  export default {
-    name: 'PostItem',
-    props: {
-      'post': {
-        required: true
-      },
-      'count': {
-        type: Number
-      }
+export default {
+  name: 'PostItem',
+  props: {
+    'post': {
+      required: true
+    },
+    'count': {
+      type: Number
     }
   }
+}
 </script>
 
 <style lang="sass">

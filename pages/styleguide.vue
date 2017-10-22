@@ -35,13 +35,13 @@
       </section>
       <section class="styleguide__section">
         <h2>Buttons</h2>
-        <nuxt-link-button buttonPermalink="#">default</nuxt-link-button>
-        <nuxt-link-button buttonSize="large" buttonPermalink="#">default large</nuxt-link-button>
-        <nuxt-link-button buttonType="ghost" buttonPermalink="#">ghost</nuxt-link-button>
-        <nuxt-link-button buttonType="ghost" buttonSize="large" buttonPermalink="#">ghost large</nuxt-link-button>
+        <link-button buttonPermalink="#">default</link-button>
+        <link-button buttonSize="large" buttonPermalink="#">default large</link-button>
+        <link-button buttonType="ghost" buttonPermalink="#">ghost</link-button>
+        <link-button buttonType="ghost" buttonSize="large" buttonPermalink="#">ghost large</link-button>
         <div class="buttons__ghost-white bgcolor--primary">
-          <nuxt-link-button buttonType="ghost-white" buttonPermalink="#">ghost white</nuxt-link-button>
-          <nuxt-link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="#">ghost white large</nuxt-link-button>
+          <link-button buttonType="ghost-white" buttonPermalink="#">ghost white</link-button>
+          <link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="#">ghost white large</link-button>
         </div>
       </section>
     </div>
@@ -89,7 +89,7 @@ export default {
   components: {
     Alert: () => import('~/components/Alert'),
     MetaTags: () => import('~/components/MetaTags'),
-    NuxtLinkButton: () => import('~/components/NuxtLinkButton'),
+    LinkButton: () => import('~/components/LinkButton'),
     PageHeader: () => import('~/components/PageHeader')
   }
 }

@@ -43,7 +43,7 @@ export default {
     MetaTags: () => import('~/components/MetaTags'),
     PageHeader: () => import('~/components/PageHeader'),
     PostItem: () => import('~/components/PostItem'),
-    NuxtLinkButton: () => import('~/components/NuxtLinkButton')
+    LinkButton: () => import('~/components/LinkButton')
   }
 }
 </script>

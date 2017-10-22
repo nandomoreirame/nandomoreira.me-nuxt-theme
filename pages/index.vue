@@ -22,7 +22,7 @@
         <div class="container">
           <post-item :count="0" :post="lastArticle"></post-item>
           <div class="section__button">
-            <nuxt-link-button buttonType="ghost" buttonPermalink="/blog">mais artigos</nuxt-link-button>
+            <link-button buttonType="ghost" buttonPermalink="/blog">mais artigos</link-button>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <div class="container">
           <project :project="lastProject" />
           <div class="section__button">
-            <nuxt-link-button buttonType="ghost-white" buttonPermalink="/projects">mais projetos</nuxt-link-button>
+            <link-button buttonType="ghost-white" buttonPermalink="/projects">mais projetos</link-button>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
         <div class="container">
           <dribbble token="8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e" user="umdevux"></dribbble>
           <div class="section__button">
-            <nuxt-link-button buttonType="ghost" buttonPermalink="/blog">mais shots</nuxt-link-button>
+            <link-button buttonType="ghost" buttonPermalink="https://dribbble.com/umdevux" :nuxtLink="false" linkTarget="_blank">mais shots</link-button>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ export default {
   components: {
     MetaTags: () => import('~/components/MetaTags'),
     SocialIcons: () => import('~/components/SocialIcons'),
-    NuxtLinkButton: () => import('~/components/NuxtLinkButton'),
+    LinkButton: () => import('~/components/LinkButton'),
     Project: () => import('~/components/Project'),
     PostItem: () => import('~/components/PostItem'),
     Dribbble: () => import('~/components/Dribbble')
