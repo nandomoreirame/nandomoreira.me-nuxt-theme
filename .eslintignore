@@ -1,4 +1,4 @@
-src/plugins
+plugins
 .nuxt/
 dist/
 workbox-*
