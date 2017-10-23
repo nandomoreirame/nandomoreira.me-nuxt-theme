@@ -1,4 +1,4 @@
-const axios = require('axios')
+// const axios = require('axios')
 const { resolve } = require('path')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -104,32 +104,32 @@ module.exports = {
     removeScriptTypeAttributes: true,
     removeStyleLinkTypeAttributes: true,
     removeTagWhitespace: true
-  },
-  markdownit: {
-    preset: 'default',
-    html: true,
-    linkify: true,
-    breaks: true,
-    langPrefix: 'language-',
-    use: [
-      'markdown-it-container',
-      'markdown-it-attrs'
-    ]
-  },
-  sitemap: {
-    path: (isProduction ? '/sitemap-prod.xml' : '/sitemap-dev.xml'),
-    hostname: 'https://nandomoreira.me',
-    cacheTime: 1000 * 60 * 150,
-    generate: true,
-    routes () {
-      // const APIURL = 'http://localhost:3000/content-api'
-      // const dataContents = ['/posts', '/projects', '/lab']
-      // return dataContents.map(page =>
-      //   axios.get(`${APIURL}${page}`).then(res =>
-      //     res.data.map(page => console.log(page.path))))
-      return axios.get('http://localhost:3000/content-api/posts').then(res => {
-        return res.data.map(page => page.permalink)
-      })
-    }
   }
+  // markdownit: {
+  //   preset: 'default',
+  //   html: true,
+  //   linkify: true,
+  //   breaks: true,
+  //   langPrefix: 'language-',
+  //   use: [
+  //     'markdown-it-container',
+  //     'markdown-it-attrs'
+  //   ]
+  // },
+  // sitemap: {
+  //   path: (isProduction ? '/sitemap-prod.xml' : '/sitemap-dev.xml'),
+  //   hostname: 'https://nandomoreira.me',
+  //   cacheTime: 1000 * 60 * 150,
+  //   generate: true,
+  //   routes () {
+  //     // const APIURL = 'http://localhost:3000/content-api'
+  //     // const dataContents = ['/posts', '/projects', '/lab']
+  //     // return dataContents.map(page =>
+  //     //   axios.get(`${APIURL}${page}`).then(res =>
+  //     //     res.data.map(page => console.log(page.path))))
+  //     return axios.get('http://localhost:3000/content-api/posts').then(res => {
+  //       return res.data.map(page => page.permalink)
+  //     })
+  //   }
+  // }
 }
