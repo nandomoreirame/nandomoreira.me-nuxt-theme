@@ -10,7 +10,6 @@
     "build": "nuxt build",
     "start": "NODE_ENV=production npm run build && NODE_ENV=production nuxt start",
     "generate": "npm run clean && NODE_ENV=production nuxt generate",
-    "deploy": "npm run generate && push-dir --dir=dist --branch=master --cleanup --force",
     "lint": "eslint --ext .js,.vue .",
     "precommit": "npm run lint",
     "test": "NODE_ENV=test mocha-webpack --webpack-config test/webpack.config.js test/specs --recursive --require test/setup.js",
@@ -58,7 +57,6 @@
     "mocha-webpack": "^0.7.0",
     "node-sass": "^4.5.3",
     "nyc": "^11.2.1",
-    "push-dir": "^0.4.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6"
   },

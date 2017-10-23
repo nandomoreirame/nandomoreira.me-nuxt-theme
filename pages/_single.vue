@@ -79,6 +79,7 @@ export default {
     background: #232e23
     color: $honeydew-color
     overflow-x: auto
+    margin-bottom: $spacing-base
     code
       background: #232e23
 
