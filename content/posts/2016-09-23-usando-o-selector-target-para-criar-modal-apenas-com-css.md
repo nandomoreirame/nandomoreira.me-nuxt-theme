@@ -11,6 +11,8 @@ tags:
  - css
 ---
 
+![Usando o pseudo selector :target para criar modal apenas com CSS](/images/posts/2016/09/usando-o-selector-target-para-criar-modal-apenas-com-css.png)
+
 ### O pseudo selector
 
 Um pseudo selector das CSS3 muito útil é o `:target`, ele fornece recursos de estilo para um elemento cujo o ID está visivel na url.

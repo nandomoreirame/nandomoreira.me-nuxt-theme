@@ -2,7 +2,7 @@
 title: "Criando a bandeira do Brasil 🇧🇷 apenas com CSS"
 description: "Hoje eu vou demonstrar nesse artigo como eu criei a bandeira do Brasil usando apenas com CSS"
 keywords: "css, css3, html, front-end, frontendm flags, bandeira, brasil"
-image: /images/posts/2016/01/bandeira-do-brasil-com-css.svg
+image: /images/posts/2016/01/bandeira-do-brasil-com-css.png
 categories:
 - css
 tags:

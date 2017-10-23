@@ -10,6 +10,8 @@ tags:
 - npm
 ---
 
+![Usando Browsersync em uma aplicação Ruby on Rails](/images/posts/2016/06/painel-browsersync-io.png)
+
 Aplicações Rails são magníficas não é mesmo? Todas aquelas Gems "mágicas", que fazem de tudo e um pouco mais, são lindas de se ver.
 
 Mas e se eu quiser algo ainda mais "supimpa" pra fazer o meu _front-end_? E se eu não quiser sair do Rails? Será que existe algo que sincronize todos os navegadores possíveis ou que me de históricos e ferramentas para debug do _front-end_, será que existe uma Gem assim para Rails?
