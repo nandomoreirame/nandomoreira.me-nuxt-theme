@@ -5,23 +5,23 @@ cache:
   yarn: true
   directories:
     - node_modules
-before_script:
-  - yarn generate
+# before_script:
+#   - yarn generate
 after_success:
   - yarn coveralls
 notifications:
   email: false
-deploy:
-  local_dir: dist
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  target_branch: master
-  email: nandomoreira.me@gmail.com
-  name: Fernando Moreira
-  on:
-    all_branches: true
-branches:
-  only:
-    - source
-    - master
+# deploy:
+#   local_dir: dist
+#   provider: pages
+#   skip_cleanup: true
+#   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+#   target_branch: master
+#   email: nandomoreira.me@gmail.com
+#   name: Fernando Moreira
+#   on:
+#     all_branches: true
+# branches:
+#   only:
+#     - source
+#     - master
