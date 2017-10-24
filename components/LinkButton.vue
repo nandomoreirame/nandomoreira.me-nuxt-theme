@@ -49,6 +49,12 @@
   &:not(:last-child)
     margin-right: $spacing-mini
 
+  svg
+    margin-right: $spacing-mini
+  svg, span
+    display: inline-block
+    vertical-align: middle
+
   &__link
     line-height: 40px
     padding: 0 1.5rem

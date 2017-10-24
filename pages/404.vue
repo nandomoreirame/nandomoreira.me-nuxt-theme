@@ -6,7 +6,13 @@
         Esse é o terrível erro <strong>404</strong>.
         <span>Infelizmente a página que você está tentando acessar não foi localizada.</span>
       </h2>
-      <navbar></navbar>
+      <link-button buttonType="ghost-white" buttonPermalink="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+          <line x1="20" y1="12" x2="4" y2="12"/>
+          <polyline points="10 18 4 12 10 6"/>
+        </svg>
+        <span>Voltar para home</span>
+      </link-button>
       <div class="hero__social-icons">
         <social-icons></social-icons>
       </div>
@@ -26,7 +32,7 @@ export default {
   },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
-    Navbar: () => import('~/components/Navbar'),
+    LinkButton: () => import('~/components/LinkButton'),
     SocialIcons: () => import('~/components/SocialIcons')
   }
 }
@@ -87,7 +93,6 @@ export default {
       font-size: 4vw
     +media($tablet-large)
       font-size: 2vw
-  .navbar
   &__social-icons
   &__bottom-description
     position: absolute

@@ -53,7 +53,6 @@
 .project
   min-height: 450px
   margin-top: $spacing-large
-  margin-bottom: $spacing-large
   padding-top: $spacing-large
   padding-bottom: $spacing-large
   @extend %clearfix
@@ -61,8 +60,8 @@
   .grid
     align-items: center
 
-  // &:not(:last-child)
-    // border-bottom: $border-base
+  &:not(:last-child)
+    margin-bottom: $spacing-large
 
   &__title
     margin-top: 0
@@ -80,9 +79,11 @@
       display: inline-block
       margin-right: 5px
   &--invert
-    background-color: #fff
-    .project__content
-      order: 2
-    .project__thumbnail
-      order: 1
+    background-color: lighten($border-color, 5%)
+    +media($tablet)
+      margin: 0
+      .project__content
+        order: 2
+      .project__thumbnail
+        order: 1
 </style>
