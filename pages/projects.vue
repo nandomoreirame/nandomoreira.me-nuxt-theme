@@ -1,9 +1,6 @@
 <template>
   <main>
     <page-header title="Projetos" :breadcrumbs="breadcrumbs"></page-header>
-    <div class="container">
-      <alert>Oops, essa página ainda está sendo construída, por favor entre mas não repare na bagunça.</alert>
-    </div>
     <div class="project-list">
       <project v-for="(project, i) in projects" :key="i" :count="i" :project="project"></project>
     </div>
@@ -41,7 +38,6 @@ export default {
     }
   },
   components: {
-    Alert: () => import('~/components/Alert'),
     Project: () => import('~/components/Project'),
     MetaTags: () => import('~/components/MetaTags'),
     PageHeader: () => import('~/components/PageHeader')

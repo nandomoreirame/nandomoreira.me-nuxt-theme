@@ -2,7 +2,6 @@
   <main>
     <page-header title="Styleguide" :breadcrumbs="breadcrumbs"></page-header>
     <div class="styleguide container">
-      <alert>Oops, essa página ainda está sendo construída, por favor entre mas não repare na bagunça.</alert>
       <section class="styleguide__section">
         <h2>Primary colors</h2>
         <span class="styleguide__color" v-for="color in colors.primary" :key="color" v-bind:class="`bgcolor--${color} styleguide__color--${color}`"></span>
@@ -87,7 +86,6 @@ export default {
     }
   },
   components: {
-    Alert: () => import('~/components/Alert'),
     MetaTags: () => import('~/components/MetaTags'),
     LinkButton: () => import('~/components/LinkButton'),
     PageHeader: () => import('~/components/PageHeader')
