@@ -66,6 +66,7 @@ module.exports = {
   loading: { color: '#4dba87' },
   plugins: [
     { src: '~/plugins/browser.js', ssr: false },
+    { src: '~/plugins/tooltip.js', ssr: false },
     { src: '~/plugins/instantsearch.js' },
     { src: '~/plugins/moment.js' }
   ],
@@ -83,6 +84,7 @@ module.exports = {
     vendor: [
       'axios',
       'moment',
+      'v-tooltip',
       'vue-moment',
       'vue-instantsearch'
     ],

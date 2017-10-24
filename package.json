@@ -1,9 +1,17 @@
 {
   "name": "nandomoreira.me",
-  "version": "4.0.0",
-  "description": "My superfast website and blog using Nuxt.js",
-  "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
-  "private": true,
+  "version": "4.2.0",
+  "description": "🏃 My superfast personal SPA blog/site using Vuejs and Nuxt :D",
+  "homepage": "https://nandomoreira.me/",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nandomoreirame/nandomoreira.me.git"
+  },
+  "author": "Fernando Moreira <nandomoreira.me@gmail.com> (https://nandomoreira.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nandomoreirame/nandomoreira.me/issues"
+  },
   "scripts": {
     "dev": "nuxt dev",
     "clean": "rimraf .nuxt && rimraf dist",
@@ -31,6 +39,7 @@
     "normalize.css": "^7.0.0",
     "nuxt": "latest",
     "nuxtent": "latest",
+    "v-tooltip": "^2.0.0-rc.5",
     "vue-disqus": "^2.0.3",
     "vue-instantsearch": "^1.0.1",
     "vue-moment": "^2.0.2"
