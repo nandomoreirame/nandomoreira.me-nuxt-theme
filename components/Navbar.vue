@@ -56,10 +56,10 @@ export default {
         {
           link: '/experiments',
           title: 'Experimentos'
-        },
-        {
-          link: '/styleguide',
-          title: 'Styleguide'
+        // },
+        // {
+        //   link: '/styleguide',
+        //   title: 'Styleguide'
         }
       ]
     }
