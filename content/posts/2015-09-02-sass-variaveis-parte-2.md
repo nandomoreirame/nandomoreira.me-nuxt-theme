@@ -90,7 +90,7 @@ body {
 
 Variável é algo muito útil no desenvolvimento com SASS, eu particularmente uso bastante esse recurso.
 
-Eu sempre crio um arquivo chamado **[variables.scss](https://github.com/nandomoreirame/nandomoreirame.github.io/blob/source/src/sass/settings/_variables.scss)** para agrupar as variáveis globais do meu projeto.
+Eu sempre crio um arquivo chamado **[variables.scss](https://github.com/nandomoreirame/nandomoreira.me/blob/source/src/sass/settings/_variables.scss)** para agrupar as variáveis globais do meu projeto.
 
 Se você for usar um determinado valor em vários lugares e/ou arquivos não exite em momento algum, crie uma variável e armazene esse valor, você vai me agradecer mais tarde.
 

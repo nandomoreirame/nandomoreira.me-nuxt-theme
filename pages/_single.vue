@@ -3,8 +3,11 @@
     <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"></page-header>
     <main itemprop="articleBody" role="main">
       <div class="container">
-        <nuxtent-body :body="post.body" />
+        <nuxtent-body :body="post.body"></nuxtent-body>
       </div>
+      <aside class="container">
+        <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus>
+      </aside>
     </main>
     <meta-tags :title="postTitle" :url="postUrl" ogType="article"></meta-tags>
   </article>
@@ -49,7 +52,8 @@ export default {
   },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
-    PageHeader: () => import('~/components/PageHeader')
+    PageHeader: () => import('~/components/PageHeader'),
+    Disqus: () => import('~/components/Disqus')
   },
   methods: {
     splitIdentifier: identifier =>

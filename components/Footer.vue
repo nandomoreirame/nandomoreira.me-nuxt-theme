@@ -5,7 +5,7 @@
         <small>
           Made with ♥️ by <a href="https://twitter.com/oseunando" target="_blank">@oseunando</a>,
           using <a href="https://vuejs.org/" target="_blank">Vuejs</a> and <a href="https://nuxtjs.org" target="_blank">NuxtJS</a>.
-          This is an <a href="https://github.com/nandomoreirame/nandomoreirame.github.io" target="_blank">open source code</a>.
+          This is an <a href="https://github.com/nandomoreirame/nandomoreira.me" target="_blank">open source code</a>.
         </small>
       </div>
       <div class="footer__social-icons">

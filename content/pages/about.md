@@ -28,7 +28,7 @@ Esse projeto já foi reescrito várias vezes (como foi citado no blog do [Willia
 
 Nele eu já utilizei o [WordPress](https://br.wordpress.org/) (em PHP), [Jekyll](https://jekyllrb.com/) (em Ruby), [Middleman](https://middlemanapp.com/) (em Ruby), e atualmente está escrito em [VueJS](https://vuejs.org/) (em JavaScript) utilizando [NuxtJS](https://nuxtjs.org/) para gerar os arquivos estáticos e hospeda-los no [Github pages](https://pages.github.com/).
 
-O código é totalmente Open Source sob licença [MIT](https://github.com/nandomoreirame/nandomoreirame.github.io/blob/source/LICENSE) e você pode _"forcar"_ ele [aqui](https://github.com/nandomoreirame/nandomoreirame.github.io), fique à vontade para contribuir também :).
+O código é totalmente Open Source sob licença [MIT](https://github.com/nandomoreirame/nandomoreira.me/blob/source/LICENSE) e você pode _"forcar"_ ele [aqui](https://github.com/nandomoreirame/nandomoreira.me), fique à vontade para contribuir também :).
 
 ### Habilidades
 
