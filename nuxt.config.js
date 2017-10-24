@@ -46,6 +46,9 @@ module.exports = {
       { rel: 'author', href: '/humans.txt' },
       { rel: 'me', href: 'nandomoreira.me@gmail.com' },
       { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,500,700' }
+    ],
+    script: [
+      { src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' }
     ]
   },
   manifest: {
