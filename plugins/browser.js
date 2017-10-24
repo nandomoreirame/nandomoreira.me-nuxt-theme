@@ -1,5 +1,3 @@
-const lozad = require('lozad');
-
 const env = (process.env.NODE_ENV === 'production');
 
 /*
@@ -44,21 +42,6 @@ const trackEvents = e => {
 }
 
 document.addEventListener('click', e => trackEvents(e));
-
-lozad('.lozad', {
-  load: el => {
-    el.src = el.dataset.src;
-    el.onload = () => el.classList.add('lozad--fade');
-  }
-}).observe();
-
-// const container = document.querySelector('[data-autotarget]');
-// const links = container.getElementsByTagName('a');
-
-// [].forEach.call(links, (el, i) => {
-//   console.log(el);
-//   el.setAttribute('target', '_blank');
-// });
 
 !function() {
   var t;
