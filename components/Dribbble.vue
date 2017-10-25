@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .shots
   list-style: none
   display: flex

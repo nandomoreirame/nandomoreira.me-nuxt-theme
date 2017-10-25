@@ -64,3 +64,14 @@ document.addEventListener('click', e => trackEvents(e));
 
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('37btheykpfby');
+
+// setTimeout(function () {
+//   let d = document
+//     , s = d.createElement('script')
+//   s.setAttribute('id', 'dsq-count-scr')
+//   s.setAttribute('data-timestamp', +new Date())
+//   s.type = 'text/javascript'
+//   s.async = true
+//   s.src = '//fernandomoreira.disqus.com/count.js'
+//   ;(d.head || d.body).appendChild(s)
+// }, 5)

@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .breadcrumb
   margin: .2rem 0 1rem
   list-style: none

@@ -48,7 +48,8 @@ module.exports = {
       { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,500,700' }
     ],
     script: [
-      { src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' }
+      // { src: '//fernandomoreira.disqus.com/count.js', id: 'dsq-count-scr' },
+      { src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391', async: true }
     ]
   },
   manifest: {
@@ -61,12 +62,13 @@ module.exports = {
   css: [
     'highlight.js/styles/tomorrow-night.css',
     { src: '~/node_modules/normalize.css/normalize.css', lang: 'css' },
-    { src: '~assets/sass/main.sass', lang: 'sass' }
+    { src: '~sass/main.sass', lang: 'sass' }
   ],
   loading: { color: '#4dba87' },
   plugins: [
     { src: '~/plugins/browser.js', ssr: false },
     { src: '~/plugins/tooltip.js', ssr: false },
+    { src: '~/plugins/scrollto.js', ssr: false },
     { src: '~/plugins/instantsearch.js' },
     { src: '~/plugins/moment.js' }
   ],
@@ -91,6 +93,7 @@ module.exports = {
     extend (config, ctx) {
       config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
       config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
+      config.resolve.alias['sass'] = resolve(__dirname, 'sass')
 
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({

@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .comments
   h3
     font-size: 1.2rem

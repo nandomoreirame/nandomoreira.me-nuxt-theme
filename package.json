@@ -42,7 +42,8 @@
     "v-tooltip": "^2.0.0-rc.5",
     "vue-disqus": "^2.0.3",
     "vue-instantsearch": "^1.0.1",
-    "vue-moment": "^2.0.2"
+    "vue-moment": "^2.0.2",
+    "vue-scrollto": "^2.7.8"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

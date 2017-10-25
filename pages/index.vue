@@ -11,16 +11,27 @@
         <div class="home__social-icons">
           <social-icons iconColor="#435466"></social-icons>
         </div>
+        <a class="home__scrollto" href="#" v-scroll-to="{
+            el: '#lastArticle',
+            duration: 800,
+            offset: -80
+        }">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
       </div>
     </section>
 
-    <section class="home__article section">
+    <section id="lastArticle" class="home__article section">
       <div class="section__inner">
         <header class="section__header">
-          <h2>Último Artigo</h2>
+          <h2>Últimos Artigo</h2>
         </header>
         <div class="container">
-          <post-item :count="0" :post="lastArticle"></post-item>
+          <div class="last-articles">
+            <post-item v-for="(post, i) in lastArticles" :key="i" :count="i" :post="post"></post-item>
+          </div>
           <div class="section__button">
             <link-button buttonType="ghost" buttonPermalink="/blog">mais artigos</link-button>
           </div>
@@ -69,7 +80,11 @@ export default {
 
     return {
       lastProject: projects[0],
-      lastArticle: posts[0]
+      lastArticles: [
+        posts[0],
+        posts[1],
+        posts[2]
+      ]
     }
   },
   components: {
@@ -84,10 +99,11 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .section
   width: 100%
   position: relative
+  overflow: hidden
   @extend %clearfix
 
   &__inner
@@ -140,12 +156,32 @@ export default {
       margin-left: -20px
 
 .home
+  &__scrollto
+    display: none
+    +media($tablet)
+      display: block
+      position: absolute
+      bottom: $spacing-small
+      left: 50%
+      margin-left: -30px
+      animation: scrollDown .8s ease-in-out infinite both
+      &:hover,
+      &:active,
+      &:focus
+        animation-play-state: paused
+        transform: translate3d(0, 0, 0)
+        opacity: 1
+      svg
+        line-height: 1
+        display: block
+        margin: 0
+
   &__hero
     text-align: center
     padding-top: ($spacing-large * 2)
 
     +media($tablet)
-      height: 80vh
+      height: 100vh
       display: table
       .section__inner
         display: table-cell
@@ -230,4 +266,22 @@ export default {
     .container
       padding-top: $spacing-base
       padding-bottom: $spacing-base
+
+.last-articles
+  display: flex
+  position: relative
+  flex-flow: row
+  flex-wrap: wrap
+  margin-left: -($spacing-small)
+  margin-right: -($spacing-small)
+  padding: 40px 0 0
+
+@keyframes scrollDown
+  0%
+    transform: translate3d(0, -20px, 0)
+    opacity: .2
+  100%
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+
 </style>

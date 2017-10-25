@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .article-list
   display: flex
   position: relative

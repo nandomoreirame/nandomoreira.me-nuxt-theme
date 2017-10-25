@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .experiments-list
   display: flex
   flex-flow: row wrap

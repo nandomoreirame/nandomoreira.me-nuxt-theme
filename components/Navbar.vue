@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .navbar
   +media(max-width $tablet-large)
     position: fixed

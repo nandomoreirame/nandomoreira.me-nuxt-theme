@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .header
   background-color: #fff
   box-shadow: $box-shadow-base

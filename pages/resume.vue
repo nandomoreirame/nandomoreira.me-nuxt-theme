@@ -26,8 +26,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
-@import "~assets/sass/article"
+@import "~sass/settings"
+@import "~sass/article"
 .resume,
 blockquote
   max-width: $tablet

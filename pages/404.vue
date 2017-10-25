@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 #__nuxt,
 #__nuxt > div:last-child
   width: 100%

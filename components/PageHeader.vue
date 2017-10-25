@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .pageHeader
   padding: 0
   margin-bottom: 3rem
@@ -72,7 +72,7 @@ export default {
     width: 100%
     height: 50px
     background-color: $feldgrau-color
-    animation: bounce-in-bottom 1s both
+    animation: bounceIn 1s both
     animation-delay: .2s
     bottom: 0
     left: 0
@@ -121,4 +121,16 @@ export default {
     span
       display: inline-block
       margin-right: 0.5rem
+
+@keyframes bounceIn
+  0%
+    transform: translateY(500px)
+    animation-timing-function: ease
+  66%
+    transform: translateY(-5px)
+    animation-timing-function: ease
+  100%
+    transform: translateY(5px)
+    animation-timing-function: ease
+
 </style>

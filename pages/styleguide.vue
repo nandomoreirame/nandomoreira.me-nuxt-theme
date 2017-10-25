@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .styleguide
   &__section
     padding-bottom: $spacing-large

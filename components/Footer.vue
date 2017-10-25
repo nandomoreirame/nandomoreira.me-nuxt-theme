@@ -25,11 +25,14 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .footer
   margin-top: $spacing-base
+  margin-bottom: $spacing-large
   border-top: 2px solid $mint-color
   @extend %clearfix
+  +media($tablet)
+    margin-bottom: 0
 
   &__inner
     display: flex
@@ -39,7 +42,6 @@ export default {
     align-content: center
     justify-content: space-between
     flex-direction: row
-
     +media($tablet)
       flex-wrap: nowrap
 

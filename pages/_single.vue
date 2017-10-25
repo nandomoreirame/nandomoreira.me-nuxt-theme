@@ -64,8 +64,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
-@import "~assets/sass/article"
+@import "~sass/settings"
+@import "~sass/article"
 
 .article
   display: block

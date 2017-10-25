@@ -61,7 +61,7 @@
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .social
   list-style: none
   padding: 0

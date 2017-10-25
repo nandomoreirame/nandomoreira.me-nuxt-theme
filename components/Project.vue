@@ -49,8 +49,8 @@
   }
 </script>
 
-<style lang="sass">
-@import "~assets/sass/settings"
+<style lang="sass" scoped>
+@import "~sass/settings"
 .project
   min-height: 450px
   margin-top: $spacing-large
@@ -88,13 +88,15 @@
         background: url("/images/browser.svg") no-repeat 50%
         background-size: 100% 28px
         position: relative
+        overflow: hidden
         small
           position: absolute
           left: 25%
           opacity: .8
+          color: $feldgrau-color
           display: inline-block
           vertical-align: top
-          line-height: 28px
+          line-height: 25px
           font-size: .5rem
     img
       display: block

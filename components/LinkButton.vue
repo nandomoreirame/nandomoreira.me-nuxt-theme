@@ -38,7 +38,7 @@
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 
 .link-button
   display: inline-block

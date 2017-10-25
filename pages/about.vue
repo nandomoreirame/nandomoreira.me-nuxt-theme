@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~assets/sass/settings"
+@import "~sass/settings"
 .avatar
   width: 280px
   float: left
@@ -78,8 +78,8 @@ export default {
 </style>
 
 <style lang="sass" scoped>
-@import "~assets/sass/settings"
-@import "~assets/sass/article"
+@import "~sass/settings"
+@import "~sass/article"
 main .container
   max-width: $tablet
   +article
