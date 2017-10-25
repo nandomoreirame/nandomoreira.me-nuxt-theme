@@ -1,5 +1,10 @@
 <template>
   <header class="header">
+    <a tabindex="1" class="skippy sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Ir para o conteúdo principal</span>
+      </div>
+    </a>
     <nuxt-link tabindex="-1" role="button" to="/" class="header__back">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#435466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
         <line x1="20" y1="12" x2="4" y2="12"/>
@@ -22,6 +27,15 @@ export default {
 
 <style lang="sass" scoped>
 @import "~sass/settings"
+
+.skippy
+  display: block
+  padding: 1em
+  color: #fff
+  position: absolute
+  background-color: $feldgrau-color
+  outline: 0
+
 .header
   background-color: #fff
   box-shadow: $box-shadow-base
