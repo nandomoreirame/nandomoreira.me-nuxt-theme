@@ -2,23 +2,21 @@
 
 [![Build Status](https://travis-ci.org/nandomoreirame/nandomoreira.me.svg?branch=master)](https://travis-ci.org/nandomoreirame/nandomoreira.me) [![Coverage Status](https://coveralls.io/repos/github/nandomoreirame/nandomoreira.me/badge.svg?branch=master)](https://coveralls.io/github/nandomoreirame/nandomoreira.me?branch=master) [![Issues](http://img.shields.io/github/issues/nandomoreirame/nandomoreira.me.svg)]( https://github.com/nandomoreirame/nandomoreira.me/issues ) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-![Screenshot nandomoreira.me](/static/images/projects/nandomoreira.me.png "Screenshot nandomoreira.me")
-
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install # or npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev # or npm run dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build # or npm run build
+$ yarn start # or npm start
 
 # generate static project
-$ npm run generate
+$ yarn generate # or npm run generate
 ```
 
 ## License
