@@ -22,6 +22,8 @@ Hoje sou especializado em desenvolvimento web usando _[WordPress](https://br.wor
 
 Atualmente trabalho como desenvolvedor _Front-end_ utilizando tecnologias sempre atualizadas como, HTML5/5.1, CSS3/4, SASS, ECMAScript 6/7/8, GulpJS e VueJS, nos tempos livres escrevo no meu <nuxt-link to="/blog">Blog</nuxt-link> e contribuo com alguns códigos no [Github](https://github.com/nandomoreirame).
 
+**[O que estou fazendo agora](/about/now)**
+
 ### Sobre esse site
 
 Esse projeto já foi reescrito várias vezes (como foi citado no blog do [Willian Justem](https://willianjusten.com.br/como-se-manter-atualizado-no-frontend/#em-português), eu sou o cara que mais muda de layout para blog na face da Terra!), eu o uso para fazer meus experimentos malucos, geralmente quando estou a estudar uma tecnologia nova.
