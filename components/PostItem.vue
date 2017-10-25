@@ -104,6 +104,7 @@ export default {
     position: relative
     img
       display: none
+
   &__image
     width: 100%
     height: 250px

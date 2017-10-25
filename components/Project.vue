@@ -18,7 +18,8 @@
           </div>
         </div>
         <figure class="project__thumbnail grid__column">
-          <a :href="project.url" target="_blank">
+          <a class="project__thumbnail-browser" :href="project.url" target="_blank">
+            <span class="project__thumbnail-browser-bar"><small>{{ project.url }}</small></span>
             <img :src="project.thumbnail" :alt="`Thumbnail de: ${project.name}`">
           </a>
         </figure>
@@ -71,6 +72,30 @@
   &__thumbnail
     margin: 0
     order: 2
+    &-browser
+      display: inline-block
+      background-color: #fff
+      box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
+      transition: box-shadow .2s ease, transform .2s ease
+      &:hover,
+      &:focus
+        box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
+        transform: translate3D(0, -1px, 0)
+      &-bar
+        display: block
+        width: 100%
+        height: 26px
+        background: url("/images/browser.svg") no-repeat 50%
+        background-size: 100% 28px
+        position: relative
+        small
+          position: absolute
+          left: 25%
+          opacity: .8
+          display: inline-block
+          vertical-align: top
+          line-height: 28px
+          font-size: .5rem
     img
       display: block
       max-width: 100%
