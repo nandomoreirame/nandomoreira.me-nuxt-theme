@@ -26,7 +26,7 @@
     <section id="lastArticle" class="home__article section">
       <div class="section__inner">
         <header class="section__header">
-          <h2>Últimos Artigo</h2>
+          <h2>Últimos Artigos</h2>
         </header>
         <div class="container">
           <div class="last-articles">
