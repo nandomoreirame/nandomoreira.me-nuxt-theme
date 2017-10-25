@@ -180,12 +180,33 @@ export default {
     text-align: center
     padding-top: ($spacing-large * 2)
 
+    &:before
+      transform: translate3d(0, 0, 0)
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: .03
+      background-image: url("/images/hero-icons.svg")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      background-attachment: fixed
+      z-index: 1
+      transform: scale(1.1)
+
     +media($tablet)
       height: 100vh
       display: table
       .section__inner
         display: table-cell
         vertical-align: middle
+
+    .section__inner
+      position: relative
+      z-index: 2
 
     h1,
     h2

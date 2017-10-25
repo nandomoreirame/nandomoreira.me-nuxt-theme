@@ -80,9 +80,12 @@ export default {
 
   &--background
     overflow: hidden
-    background-repeat: no-repeat
     background-position: 50% 50%
-    background-size: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    transform: scale(1.1)
+
     .container
       position: relative
       z-index: 2
