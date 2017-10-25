@@ -2,6 +2,9 @@
   <main>
     <page-header title="O que estou fazendo agora" :breadcrumbs="breadcrumbs"></page-header>
     <div class="container">
+      <h2>Que página é essa?</h2>
+      <p>Esta página agora é tirada da idéia de Derek Sivers em <a href="http://nownownow.com/about" target="_blank">Nownownow</a>, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.</p>
+      <p>Então, aqui é meu <strong>Now</strong>:</p>
       <h2>Lendo os livros:</h2>
       <ul>
         <li><a href="https://pt.wikipedia.org/wiki/Rage_(livro)" target="_blank">Fúria (Rage)</a> - <small>Stephen King</small></li>
@@ -15,14 +18,22 @@
 
       <h2>Adquirindo hábitos:</h2>
       <ul>
+        <li>Leitura</li>
         <li>Rotina diária</li>
         <li>Exerícios físicos</li>
-        <li>Leitura</li>
       </ul>
 
       <h2>Projeto atual</h2>
       <ul>
         <li>Esse projeto</li>
+      </ul>
+
+      <h2>Metas e objetivos</h2>
+      <ul>
+        <li>Lançar um negócio online</li>
+        <li>Estudar Javascript todos os dias</li>
+        <li>Conseguir sair para correr todos os dias (pelo menos toda semana)</li>
+        <li>Escrever mai em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
