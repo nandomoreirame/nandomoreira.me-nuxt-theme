@@ -28,7 +28,7 @@ Atualmente trabalho como desenvolvedor _Front-end_ utilizando tecnologias sempre
 
 Esse projeto já foi reescrito várias vezes (como foi citado no blog do [Willian Justem](https://willianjusten.com.br/como-se-manter-atualizado-no-frontend/#em-português), eu sou o cara que mais muda de layout para blog na face da Terra!), eu o uso para fazer meus experimentos malucos, geralmente quando estou a estudar uma tecnologia nova.
 
-Nele eu já utilizei o [WordPress](https://br.wordpress.org/) (em PHP), [Jekyll](https://jekyllrb.com/) (em Ruby), [Middleman](https://middlemanapp.com/) (em Ruby), e atualmente está escrito em [VueJS](https://vuejs.org/) (em JavaScript) utilizando [NuxtJS](https://nuxtjs.org/) para gerar os arquivos estáticos e hospeda-los no [Github pages](https://pages.github.com/).
+Nele eu já utilizei o [WordPress](https://br.wordpress.org/) (em PHP), [Jekyll](https://jekyllrb.com/) (em Ruby), [Middleman](https://middlemanapp.com/) (em Ruby), e atualmente está escrito em [VueJS](https://vuejs.org/) (em JavaScript) utilizando [NuxtJS](https://nuxtjs.org/) para gerar os arquivos estáticos e hospeda-los no [netlify.com](https://www.netlify.com/).
 
 O código é totalmente Open Source sob licença [MIT](https://github.com/nandomoreirame/nandomoreira.me/blob/source/LICENSE) e você pode _"forcar"_ ele [aqui](https://github.com/nandomoreirame/nandomoreira.me), fique à vontade para contribuir também :).
 
