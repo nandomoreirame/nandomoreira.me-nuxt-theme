@@ -25,7 +25,12 @@ module.exports = {
       { name: 'revisit-after', content: '7 days' },
       { name: 'mobile-web-app-capable', content: 'yes' },
       { name: 'application-name', content: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR' },
-      { name: 'generator', content: 'Visual Studio Code v1.17' }
+      { name: 'generator', content: 'Visual Studio Code v1.17' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'ICBM', content: '-25.4284,-49.2733' },
+      { name: 'geo.position', content: 'latitude;longitude' },
+      { name: 'geo.region', content: 'pt_BR-PR' },
+      { name: 'geo.placename', content: 'Curitiba/Paraná' }
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-16x16.ico' },
@@ -44,7 +49,16 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: '/humans.txt' },
-      { rel: 'me', href: 'nandomoreira.me@gmail.com' }
+      { rel: 'me', href: 'https://nandomoreira.me/about/', type: 'text/html' },
+      { rel: 'me', href: 'mailto:nandomoreira.me@gmail.com' },
+      { rel: 'me', href: 'sms:+5541984401163' },
+      { rel: 'index', href: 'https://nandomoreira.me/' },
+      { rel: 'archives', href: 'https://nandomoreira.me/blog/' },
+      { rel: 'license', href: 'https://github.com/nandomoreirame/nandomoreira.me/blob/master/LICENSE' },
+      { rel: 'dns-prefetch', href: 'https://nandomoreira.me/' },
+      { rel: 'preconnect', href: 'https://nandomoreira.me/' },
+      { rel: 'prefetch', href: 'https://nandomoreira.me/' },
+      { rel: 'prerender', href: 'https://nandomoreira.me/' }
     ],
     script: [
       // { src: '//fernandomoreira.disqus.com/count.js', id: 'dsq-count-scr' },
