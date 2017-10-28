@@ -7,7 +7,7 @@
       </div>
       <nuxt-child />
     </div>
-    <meta-tags :title="pageTitle" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
   </main>
 </template>
 
@@ -18,7 +18,8 @@ export default {
   name: 'blog',
   data () {
     return {
-      pageTitle: `Blog | Fernando Moreira`,
+      pageTitle: `Blog | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+      pageDescription: `Olá, esse é o meu blog! Escrevo sobre desenvolvimento web, front-end, HTML, CSS, JavaScript, design, PHP, WordPress e outras coisas malucas.`,
       pageUrl: `${siteUrl}/blog`,
       breadcrumbs: [
         {

@@ -47,8 +47,8 @@ export default {
   name: 'Now',
   data () {
     return {
-      pageTitle: `O que estou fazendo agora | Fernando Moreira`,
-      pageDescription: `O que estou fazendo agora | Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
+      pageTitle: `O que estou fazendo agora | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+      pageDescription: `Esta página agora é tirada da idéia de Derek Sivers em Nownownow, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.`,
       pageUrl: `${siteUrl}/about/now`,
       breadcrumbs: [
         {

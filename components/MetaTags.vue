@@ -39,10 +39,10 @@ export default {
         { hid: 'og:title', property: 'og:title', content: this.title },
         { hid: 'og:url', property: 'og:url', content: this.url },
         { hid: 'og:image', property: 'og:image', content: this.image },
-        { hid: 'description', name: 'description', content: `${this.title} | ${this.description}` },
+        { hid: 'description', name: 'description', content: `${this.description}` },
         { hid: 'keyword', name: 'keyword', content: this.keywords },
         { hid: 'twitter:title', name: 'twitter:title', content: this.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: `${this.title} | ${this.description}` },
+        { hid: 'twitter:description', name: 'twitter:description', content: `${this.description}` },
         { hid: 'twitter:image', name: 'twitter:image', content: this.image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: this.title },
         { hid: 'canonical', rel: 'canonical', href: this.url }

@@ -19,7 +19,7 @@ export default {
   name: 'About',
   data () {
     return {
-      pageTitle: `Sobre | Fernando Moreira`,
+      pageTitle: `Sobre | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
       pageUrl: `${siteUrl}/about`,
       breadcrumbs: [
