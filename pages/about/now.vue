@@ -25,7 +25,7 @@
 
       <h2>Projeto atual</h2>
       <ul>
-        <li>Esse projeto</li>
+        <li>GRGIT - Recursos Humanos</li>
       </ul>
 
       <h2>Metas e objetivos</h2>
@@ -33,7 +33,7 @@
         <li>Lançar um negócio online</li>
         <li>Estudar Javascript todos os dias</li>
         <li>Conseguir sair para correr todos os dias (pelo menos toda semana)</li>
-        <li>Escrever mai em meu <nuxt-link to="/blog">blog</nuxt-link></li>
+        <li>Escrever mais em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
