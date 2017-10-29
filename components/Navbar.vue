@@ -14,7 +14,7 @@
     </label>
     <nav class="navbar" role="navigation" id="navigation">
       <ul class="navbar__nav" role="menu">
-        <li class="navbar__nav-item navbar__nav-item--search">
+        <li class="navbar__nav-item navbar__nav-item--search" role="menuitem">
           <a href="#" @click="toggleSearch(true)" aria-label="Abrir campo de busca" role="link" class="navbar__nav-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#435466">
               <title id="search-icon">Search icon</title>
@@ -26,6 +26,9 @@
           <nuxt-link :to="item.link" :title="item.title" role="link" class="navbar__nav-link">
             {{ item.title }}
           </nuxt-link>
+        </li>
+        <li class="navbar__nav-item">
+          <a class="twitter-follow-button" href="https://twitter.com/oseunando">Follow me</a>
         </li>
       </ul>
     </nav>
@@ -79,7 +82,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import "~sass/settings"
 .navbar
   +media(max-width $tablet-large)
@@ -111,8 +114,13 @@ export default {
   &__nav-item
     font-weight: $font-weight-bold
     letter-spacing: -.01em
+    line-height: 1
     +media($tablet-large)
       display: inline-block
+
+    iframe
+      display: inline-block
+      vertical-align: middle
 
     &:not(:first-child)
       margin-left: 1rem
