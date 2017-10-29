@@ -17,7 +17,7 @@
         <social-icons></social-icons>
       </div>
     </div>
-    <meta-tags :title="pageTitle"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
   layout: 'blank',
   data () {
     return {
-      pageTitle: `Erro 404 | Fernando Moreira`
+      pageTitle: `Erro 404 | Fernando Moreira`,
+      pageDescription: `Infelizmente a página que você está tentando acessar não foi localizada.`
     }
   },
   components: {
