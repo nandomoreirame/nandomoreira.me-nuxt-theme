@@ -36,7 +36,8 @@ const arrPages = [
   'exemplos'
 ]
 
-export default function ({ store, route, redirect }) {
+export default function ({ route }) {
+  console.log(route)
   console.log(route.path)
   if (arrPages.includes(route.path.replace(/\//g, ''))) {
     window.location = `${redirPathUrl}${route.path}`
