@@ -25,6 +25,8 @@ export default ({ app }) => {
     */
     ga('set', 'page', to.fullPath);
     ga('send', 'pageview');
+
+    console.log(to.name);
   });
 }
 
