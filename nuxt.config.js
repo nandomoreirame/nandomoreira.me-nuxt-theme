@@ -125,9 +125,6 @@ module.exports = {
     removeStyleLinkTypeAttributes: true,
     removeTagWhitespace: true
   },
-  router: {
-    middleware: ['redirect-project']
-  },
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://nandomoreira.me',
