@@ -65,8 +65,7 @@ export default ({ app }) => {
     ga('send', 'pageview');
 
     if (arrPages.includes(to.path)) {
-      console.log(to);
-      console.log(arrPages);
+      window.location = `${redirPathUrl}${to.path}`;
     }
   });
 }
