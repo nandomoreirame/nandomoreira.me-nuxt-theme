@@ -24,7 +24,6 @@ const arrPages = [
   'chef',
   'stormipsum',
   'bs4-grid',
-  'comece-com-gulp',
   'gridfy',
   'hexo-blog',
   'jekyll-powerful',
