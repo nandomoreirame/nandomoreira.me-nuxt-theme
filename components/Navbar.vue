@@ -54,6 +54,10 @@ export default {
           title: 'Projetos'
         },
         {
+          link: '/projects/open-source',
+          title: 'Open Source'
+        },
+        {
           link: '/experiments',
           title: 'Experimentos'
         // },

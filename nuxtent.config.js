@@ -20,6 +20,14 @@ module.exports = {
       }
     ],
     [
+      'open-source',
+      {
+        page: '/open-source/_slug',
+        generate: ['getAll'],
+        isPost: true
+      }
+    ],
+    [
       'lab',
       {
         page: '/lab/_slug',

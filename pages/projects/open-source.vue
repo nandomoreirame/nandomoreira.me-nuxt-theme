@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Projetos" :breadcrumbs="breadcrumbs"></page-header>
+    <page-header title="I ❤️ Open Source" :breadcrumbs="breadcrumbs"></page-header>
     <div class="project-list">
       <project v-for="(project, i) in projects" :key="i" :count="i" :project="project"></project>
     </div>
@@ -13,12 +13,12 @@
 import { siteUrl } from '~/utilities/Helpers'
 
 export default {
-  name: 'projects',
+  name: 'OpenSource',
   data () {
     return {
-      pageTitle: `Projetos - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageDescription: `Esses são alguns dos projetos que construi, alguns são open source outros freelas para clientes.`,
-      pageUrl: `${siteUrl}/projects`,
+      pageTitle: `I ❤️ Open Source - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+      pageDescription: `Esses são alguns dos projetos open sources em que trabalhei.`,
+      pageUrl: `${siteUrl}/projects/open-source`,
       breadcrumbs: [
         {
           active: false,
@@ -26,16 +26,21 @@ export default {
           title: 'Home'
         },
         {
-          active: true,
+          active: false,
           url: '/projects',
           title: 'Projetos'
+        },
+        {
+          active: true,
+          url: '/projects/open-source',
+          title: 'Open Source'
         }
       ]
     }
   },
   async asyncData ({ app }) {
     return {
-      projects: await app.$content('/projects').getAll()
+      projects: await app.$content('/open-source').getAll()
     }
   },
   components: {
