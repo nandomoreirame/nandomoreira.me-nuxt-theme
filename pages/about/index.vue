@@ -49,38 +49,35 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
+<style lang="stylus">
 .avatar
-  width: 280px
-  float: left
-  display: inline-block
-  position: relative
-  margin-right: $spacing-large
-  line-height: 1
+  width 280px
+  float left
+  display inline-block
+  position relative
+  margin-right $spacing-large
+  line-height 1
   &:before
-    content: ''
-    display: block
-    z-index: 1
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 15px
-    left: 15px
-    background-color: rgba($feldgrau-color, .9)
+    content ''
+    display block
+    z-index 1
+    position absolute
+    width 100%
+    height 100%
+    top 15px
+    left 15px
+    background-color rgba($feldgrau-color, .9)
   img
-    position: relative
-    z-index: 2
-    max-width: 100%
-    width: 100%
-    height: auto
-    display: inline-block
+    position relative
+    z-index 2
+    max-width 100%
+    width 100%
+    height auto
+    display inline-block
 </style>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
-@import "~sass/article"
+<style lang="stylus" scoped>
 main .container
-  max-width: $tablet
-  +article
+  max-width $tablet
+  article()
 </style>

@@ -26,56 +26,51 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
+<style lang="stylus">
 .footer
-  margin-top: $spacing-base
-  margin-bottom: $spacing-large
-  border-top: 2px solid $mint-color
-  @extend %clearfix
-  +media($tablet)
-    margin-bottom: 0
+  margin-top $spacing-base
+  margin-bottom $spacing-large
+  border-top 2px solid $mint-color
+  @extend $clearfix
+  +above($tablet)
+    margin-bottom 0
   &__inner
-    display: flex
-    flex-wrap: wrap
-    text-align: center
-    align-items: center
-    align-content: center
-    justify-content: space-between
-    flex-direction: row
-    +media($tablet)
-      flex-wrap: nowrap
-
+    display flex
+    flex-wrap wrap
+    text-align center
+    align-items center
+    align-content center
+    justify-content space-between
+    flex-direction row
+    +above($tablet)
+      flex-wrap nowrap
   &__text
-    order: 2
-    flex: 0 0 100%
-    +media($tablet)
-      order: 1
-      text-align: left
-      flex: 0 0 60%
+    order 2
+    flex 0 0 100%
+    +above($tablet)
+      order 1
+      text-align left
+      flex 0 0 60%
     svg
-      display: inline-block
-      vertical-align: middle
-
+      display inline-block
+      vertical-align middle
   &__text,
   &__social-icons
-    padding-top: $spacing-small
-    padding-bottom: $spacing-small
-    +media($tablet)
-      line-height: 60px
-      vertical-align: middle
-
+    padding-top $spacing-small
+    padding-bottom $spacing-small
+    +above($tablet)
+      line-height 60px
+      vertical-align middle
   &__social-icons
-    order: 1
-    flex: 0 0 100%
-    +media($tablet)
-      order: 2
-      text-align: right
-      flex: 0 0 30%
-
+    order 1
+    flex 0 0 100%
+    +above($tablet)
+      order 2
+      text-align right
+      flex 0 0 30%
     .social
-      margin: 0
+      margin 0
       > .social__item
-        width: percentage(1/5)
-        margin-right: 0
+        width percentage(1/5)
+        margin-right 0
 </style>

@@ -65,82 +65,75 @@
   }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .project
-  min-height: 450px
-  margin-top: $spacing-large
-  padding-top: $spacing-large
-  padding-bottom: $spacing-large
-  @extend %clearfix
-
+  min-height 450px
+  margin-top $spacing-large
+  padding-top $spacing-large
+  padding-bottom $spacing-large
+  @extend $clearfix
   .grid
-    align-items: center
-
+    align-items center
   &:not(:last-child)
-    margin-bottom: $spacing-large
-
+    margin-bottom $spacing-large
   &__title
-    margin-top: 0
-
+    margin-top 0
   &__content
-    padding: 0 $spacing-base
-    order: 1
-
+    padding 0 $spacing-base
+    order 1
   &__meta
     strong
-      margin-right: 5px
-
+      margin-right 5px
   &__url-off
-    opacity: .5
-
+    opacity .5
   &__url,
   &__tags
     strong
-      margin-right: 10px
-
+      margin-right 10px
   &__thumbnail
-    margin: 0
-    order: 2
+    margin 0
+    order 2
     &-browser
-      display: inline-block
-      background-color: #fff
-      box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
-      transition: box-shadow .2s ease, transform .2s ease
+      display inline-block
+      background-color #fff
+      box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
+      transition box-shadow .2s ease, transform .2s ease
       &:hover,
       &:focus
-        box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
-        transform: translate3D(0, -1px, 0)
+        box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
+        transform translate3D(0, -1px, 0)
       &-bar
-        display: block
-        width: 100%
-        height: 26px
-        background: url("/images/browser.svg") no-repeat 50%
-        background-size: 100% 28px
-        position: relative
-        overflow: hidden
+        display block
+        width 100%
+        height 26px
+        background url("/images/browser.svg") no-repeat 50%
+        background-size 100% 28px
+        position relative
+        overflow hidden
         small
-          position: absolute
-          left: 25%
-          opacity: .8
-          color: $feldgrau-color
-          display: inline-block
-          vertical-align: top
-          line-height: 25px
-          font-size: .5rem
+          position absolute
+          left 25%
+          opacity .8
+          color $feldgrau-color
+          display inline-block
+          vertical-align top
+          line-height 25px
+          font-size .5rem
     img
-      display: block
-      max-width: 100%
+      display block
+      max-width 100%
   &__tags
     small
-      display: inline-block
-      margin-right: 5px
+      display inline-block
+      margin-right 5px
   &--invert
-    background-color: lighten($border-color, 5%)
-    +media($tablet)
-      margin: 0
+    background-color lighten($border-color, 5%)
+    +above($tablet)
+      margin 0
       .project__content
-        order: 2
+        order 2
       .project__thumbnail
-        order: 1
+        order 1
+a[href="#"]
+  pointer-events none
 </style>

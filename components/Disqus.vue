@@ -29,13 +29,12 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .comments
   h3
-    font-size: 1.2rem
-    margin-top: 0
+    font-size 1.2rem
+    margin-top 0
     span
-      opacity: 0.6
-      font-weight: 500
+      opacity .6
+      font-weight 500
 </style>

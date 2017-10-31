@@ -76,10 +76,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
-@import "~sass/article"
+<style lang="stylus" scoped>
 main .container
-  max-width: $tablet
-  +article
+  max-width $tablet
+  article()
 </style>

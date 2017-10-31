@@ -1,5 +1,6 @@
 const axios = require('axios')
 const { resolve } = require('path')
+const webpack = require('webpack')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -75,7 +76,7 @@ module.exports = {
   css: [
     'highlight.js/styles/tomorrow-night.css',
     { src: '~/node_modules/normalize.css/normalize.css', lang: 'css' },
-    { src: '~sass/main.sass', lang: 'sass' }
+    { src: '~stylus/main.styl', lang: 'styl' }
   ],
   loading: { color: '#4dba87' },
   plugins: [
@@ -103,10 +104,27 @@ module.exports = {
       'vue-moment',
       'vue-instantsearch'
     ],
+    plugins: [
+      new webpack.LoaderOptionsPlugin({
+        options: {
+          stylus: {
+            use: [ require('rupture')() ],
+            preferPathResolver: 'webpack',
+            import: [
+              '~stylus/_vars.styl',
+              '~stylus/_mixins.styl',
+              '~stylus/_placeholders.styl',
+              '~stylus/_article.styl'
+            ]
+          },
+          context: '/'
+        }
+      })
+    ],
     extend (config, ctx) {
       config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
       config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
-      config.resolve.alias['sass'] = resolve(__dirname, 'sass')
+      config.resolve.alias['stylus'] = resolve(__dirname, 'stylus')
 
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({

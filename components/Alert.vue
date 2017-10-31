@@ -15,13 +15,12 @@
   }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .alert
-  padding: $spacing-small
-  margin-bottom: $spacing-base
-  background-color: rgba($ocean-blue-color, .1)
-  border-radius: $border-radius-base
-  box-shadow: $box-shadow-base
-  text-align: center
+  padding $spacing-small
+  margin-bottom $spacing-base
+  background-color rgba($ocean-blue-color, .1)
+  border-radius $border-radius-base
+  box-shadow $box-shadow-base
+  text-align center
 </style>

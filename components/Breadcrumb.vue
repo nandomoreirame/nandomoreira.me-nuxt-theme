@@ -19,31 +19,30 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .breadcrumb
-  margin: .2rem 0 1rem
-  list-style: none
-  padding: 0
+  margin .2rem 0 1rem
+  list-style none
+  padding 0
   &__item
-    display: inline-block
-    font-size: .85ren
+    display inline-block
+    font-size .85ren
     &:first-child a
-      padding-left: 0
+      padding-left 0
     &:last-child > span
-      display: none
+      display none
   &__link,
   &__divider
-    color: #fff
-    opacity: .8
+    color #fff
+    opacity .8
   &__link
-    text-decoration: none
-    padding-left: .5rem
-    padding-right: .5rem
+    text-decoration none
+    padding-left .5rem
+    padding-right .5rem
     &--active,
     &:hover
-      color: $khaki-color
-      text-decoration: underline
+      color $khaki-color
+      text-decoration underline
     &--active
-      pointer-events: none
+      pointer-events none
 </style>

@@ -25,58 +25,55 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
-
+<style lang="stylus" scoped>
 .skippy
-  display: block
-  padding: 1em
-  color: #fff
-  position: absolute
-  background-color: $feldgrau-color
-  outline: 0
-
+  display block
+  padding 1em
+  color #fff
+  position absolute
+  background-color $feldgrau-color
+  outline 0
 .header
-  background-color: #fff
-  box-shadow: $box-shadow-base
-  display: flex
-  flex-direction: row
-  flex-wrap: nowrap
-  justify-content: space-between
-  align-items: center
-  align-content: center
-  position: fixed
-  top: 0
-  right: 0
-  left: 0
-  z-index: 10
-  min-height: 80px
-  padding: 0 2rem
+  background-color #fff
+  box-shadow $box-shadow-base
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  justify-content space-between
+  align-items center
+  align-content center
+  position fixed
+  top 0
+  right 0
+  left 0
+  z-index 10
+  min-height 80px
+  padding 0 2rem
   &__back
-    margin: 0
-    padding: 0
-    position: relative
-    overflow: hidden
-    opacity: 1
-    transform: translate3d(0,0,0)
-    transition: opacity .2s ease, transform .2s ease
+    margin 0
+    padding 0
+    position relative
+    overflow hidden
+    opacity 1
+    transform translate3d(0,0,0)
+    transition opacity .2s ease, transform .2s ease
     &.nuxt-link-exact-active
-      opacity: 0
-      transform: translate3d(-100%,0,0)
-      pointer-events: none
+      opacity 0
+      transform translate3d(-100%,0,0)
+      pointer-events none
     svg, span
-      line-height: 1
-      vertical-align: middle
-      display: inline-block
+      line-height 1
+      vertical-align middle
+      display inline-block
     span
-      opacity: 0
-      color: #435466
-      margin-left: .8rem
-      transform: translate3d(-100%, 0, 0)
-      transition: .2s transform cubic-bezier(0.29, 0.18, 0.26, 0.83), .2s opacity cubic-bezier(0.29, 0.18, 0.26, 0.83)
+      opacity 0
+      color #435466
+      margin-left .8rem
+      transform translate3d(-100%, 0, 0)
+      transition .2s transform cubic-bezier(0.29, 0.18, 0.26, 0.83), .2s opacity cubic-bezier(0.29, 0.18, 0.26, 0.83)
     &:hover,
     &:focus
       span
-        opacity: 1
-        transform: translate3d(0, 0, 0)
+        opacity 1
+        transform translate3d(0, 0, 0)
 </style>

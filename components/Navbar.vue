@@ -28,7 +28,7 @@
           </nuxt-link>
         </li>
         <li class="navbar__nav-item">
-          <a class="twitter-follow-button" href="https://twitter.com/oseunando">Follow me</a>
+          <!-- <a class="twitter-follow-button" href="https://twitter.com/oseunando">Follow me</a> -->
         </li>
       </ul>
     </nav>
@@ -82,124 +82,114 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
+<style lang="stylus">
 .navbar
-  +media(max-width $tablet-large)
-    position: fixed
-    z-index: 1000
-    width: 100%
-    height: 100vh
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background-color: rgba($feldgrau-color, .95)
-    display: none
-
-  +media($tablet-large)
-    display: block
-    position: relative
-
+  +below($tablet-large)
+    position fixed
+    z-index 1000
+    width 100%
+    height 100vh
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-color rgba($feldgrau-color, .95)
+    display none
+  +above($tablet-large)
+    display block
+    position relative
   &__nav
-    list-style: none
-    padding: 0
-    margin: 0
-    display: table-cell
-    vertical-align: middle
-
-    +media($tablet-large)
-      display: inline-block
-
+    list-style none
+    margin 0
+    display table-cell
+    vertical-align middle
+    padding $spacing-base
+    +above($tablet-large)
+      padding 0
+      display inline-block
   &__nav-item
-    font-weight: $font-weight-bold
-    letter-spacing: -.01em
-    line-height: 1
-    +media($tablet-large)
-      display: inline-block
-
+    font-weight $font-weight-bold
+    letter-spacing -.01em
+    line-height 1
+    text-align right
+    +above($tablet-large)
+      text-align left
+      display inline-block
     iframe
-      display: inline-block
-      vertical-align: middle
-
+      display inline-block
+      vertical-align middle
     &:not(:first-child)
-      margin-left: 1rem
-
+      margin-left 1rem
     &:not(:last-child):after
-      content: '•'
-      color: #435466
-      margin-left: 15px
-
+      content '•'
+      color #435466
+      margin-left 15px
     &--search
-      display: none
-      +media($tablet-large)
-        display: inline-block
+      display none
+      +above($tablet-large)
+        display inline-block
         svg
-          position: relative
-          top: 2px
-
+          position relative
+          top 2px
   &__nav-link
-    color: #fff
-    font-size: 2rem
-    text-decoration: none
-    letter-spacing: .05rem
-    position: relative
-    text-transform: uppercase
-
-    +media($tablet-large)
-      font-size: $font-size-small
-      color: $feldgrau-color
-
+    color #fff
+    font-size 2rem
+    text-decoration none
+    letter-spacing .05rem
+    position relative
+    text-transform uppercase
+    padding 5px 0
+    display block
+    +above($tablet-large)
+      font-size $font-size-small
+      color $feldgrau-color
+      display inline-block
+      padding 0
     &:after
-      z-index: 3
-      left: 0
-      transition: all .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
-      content: ''
-      display: block
-      position: absolute
-      top: calc(100% + 5px)
-      width: 0
-      height: 3px
+      z-index 3
+      left 0
+      transition all .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
+      content ''
+      display block
+      position absolute
+      top calc(100% + 5px)
+      width 0
+      height 3px
     &.nuxt-link-exact-active,
     &:hover
-      color: $mint-color
+      color $mint-color
       &:after
-        width: 50%
-        left: 0
-        background: $khaki-color
+        width 50%
+        left 0
+        background $khaki-color
     &.nuxt-link-exact-active
-      pointer-events: none
-
+      pointer-events none
 .navbar-toggle
-  position: relative
-  display: inline-block
-  z-index: 10001
-  line-height: 1
-  vertical-align: middle
-
-  +media($tablet-large)
-    display: none
-
+  position relative
+  display inline-block
+  z-index 10001
+  line-height 1
+  vertical-align middle
+  +above($tablet-large)
+    display none
   .feather-x
-    display: none
-
+    display none
 #ToggleNavbar
-  position: absolute
-  border: 0
-  clip: rect(0,0,0,0)
-  width: 1px
-  height: 1px
-  margin: -1px
-  padding: 0
-  overflow: hidden
-
-  +media(max-width $tablet-large)
+  position absolute
+  border 0
+  clip rect(0,0,0,0)
+  width 1px
+  height 1px
+  margin -1px
+  padding 0
+  overflow hidden
+  +below($tablet-large)
     &:checked
       ~ .navbar
-        display: table
+        display table
       ~ .navbar-toggle
         .feather-x
-          display: block
+          display block
         .feather-menu
-          display: none
+          display none
 </style>

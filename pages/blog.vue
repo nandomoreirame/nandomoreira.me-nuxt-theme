@@ -49,14 +49,13 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .article-list
-  display: flex
-  position: relative
-  flex-flow: row
-  flex-wrap: wrap
-  margin-left: -($spacing-small)
-  margin-right: -($spacing-small)
-  padding: 40px 0 0
+  display flex
+  position relative
+  flex-flow row
+  flex-wrap wrap
+  margin-left -($spacing-small)
+  margin-right -($spacing-small)
+  padding 40px 0 0
 </style>

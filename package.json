@@ -62,10 +62,11 @@
     "jsdom": "^11.2.0",
     "mocha": "^3.5.3",
     "mocha-webpack": "^0.7.0",
-    "node-sass": "^4.5.3",
     "nyc": "^11.2.1",
     "rimraf": "^2.6.2",
-    "sass-loader": "^6.0.6"
+    "rupture": "^0.6.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
   },
   "nyc": {
     "reporter": [

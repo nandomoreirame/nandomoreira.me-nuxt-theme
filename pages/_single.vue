@@ -63,42 +63,35 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
-@import "~sass/article"
-
+<style lang="stylus">
 .article
-  display: block
-  margin: 0
-
+  display block
+  margin 0
   main .container
-    max-width: $tablet
-    +article
-
+    max-width $tablet
+    article()
   img
-    width: 100%
-    display: block
-
+    width 100%
+    display block
   pre
-    background: #232e23
-    color: $honeydew-color
-    overflow-x: auto
-    margin-bottom: $spacing-base
+    background #232e23
+    color $honeydew-color
+    overflow-x auto
+    margin-bottom $spacing-base
     code
-      background: #232e23
-
+      background #232e23
   .video
-    position: relative
-    padding-bottom: 56.25%
-    padding-top: 25px
-    height: 0
-    margin-bottom: $spacing-base
+    position relative
+    padding-bottom 56.25%
+    padding-top 25px
+    height 0
+    margin-bottom $spacing-base
     iframe,
     object,
     embed
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
 </style>

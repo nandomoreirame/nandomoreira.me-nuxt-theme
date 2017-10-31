@@ -25,17 +25,13 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
-@import "~sass/article"
+<style lang="stylus" scoped>
 .resume,
 blockquote
-  max-width: $tablet
-  margin: $spacing-base auto
-
+  max-width $tablet
+  margin $spacing-base auto
 .resume
-  +article
-
+  article()
 blockquote
-  text-align: center
+  text-align center
 </style>

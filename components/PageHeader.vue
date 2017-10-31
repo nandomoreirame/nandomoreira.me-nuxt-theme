@@ -55,85 +55,76 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .pageHeader
-  padding: 0
-  margin-bottom: 3rem
-  min-height: 320px
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%)
-  overflow: hidden
-  position: relative
-  @extend %clearfix
+  padding 0
+  margin-bottom 3rem
+  min-height 320px
+  clip-path polygon(0 0, 100% 0, 100% 100%, 0 90%)
+  overflow hidden
+  position relative
+  @extend $clearfix
   &:before
-    content: ''
-    display: block
-    position: absolute
-    width: 100%
-    height: 50px
-    background-color: $feldgrau-color
-    animation: bounceIn 1s both
-    animation-delay: .2s
-    bottom: 0
-    left: 0
-    right: 0
-
+    content ''
+    display block
+    position absolute
+    width 100%
+    height 50px
+    background-color $feldgrau-color
+    animation bounceIn 1s both
+    animation-delay .2s
+    bottom 0
+    left 0
+    right 0
   &--background
-    overflow: hidden
-    background-position: 50% 50%
-    background-repeat: no-repeat
-    background-size: cover
-    background-attachment: fixed
-    transform: scale(1.1)
-
+    overflow hidden
+    background-position 50% 50%
+    background-repeat no-repeat
+    background-size cover
+    background-attachment fixed
+    transform scale(1.1)
     .container
-      position: relative
-      z-index: 2
-
+      position relative
+      z-index 2
   &__inner
-    padding: 10rem 0 5rem
-    background-color: rgba($mint-color, .95)
-
+    padding 10rem 0 5rem
+    background-color rgba($mint-color, .95)
   &__image
-    opacity: 0
-    visibility: hidden
-    display: none
-
+    opacity 0
+    visibility hidden
+    display none
   &__title
-    text-transform: uppercase
-    letter-spacing: .1em
-    font-size: 2.5rem
-    color: #fff
-    margin: 0
-
+    text-transform uppercase
+    letter-spacing .1em
+    font-size 2.5rem
+    color #fff
+    margin 0
   &__description
-    font-weight: 300
-    font-style: 400
-    font-size: 1.25rem
-    line-height: 1.4
-    color: #fff
-
+    font-weight 300
+    font-style 400
+    font-size 1.25rem
+    line-height 1.4
+    color #fff
   &__meta
-    color: #fff
-    text-transform: uppercase
-    opacity: .65
-    letter-spacing: .1em
-    font-size: .8rem
-    padding-top: 1rem
-    padding-bottom: 1rem
+    color #fff
+    text-transform uppercase
+    opacity .65
+    letter-spacing .1em
+    font-size .8rem
+    padding-top 1rem
+    padding-bottom 1rem
     span
-      display: inline-block
-      margin-right: 0.5rem
+      display inline-block
+      margin-right 0.5rem
 
 @keyframes bounceIn
   0%
-    transform: translateY(500px)
-    animation-timing-function: ease
+    transform translateY(500px)
+    animation-timing-function ease
   66%
-    transform: translateY(-5px)
-    animation-timing-function: ease
+    transform translateY(-5px)
+    animation-timing-function ease
   100%
-    transform: translateY(5px)
-    animation-timing-function: ease
-
+    transform translateY(5px)
+    animation-timing-function ease
 </style>

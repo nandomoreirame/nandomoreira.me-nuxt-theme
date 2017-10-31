@@ -93,110 +93,108 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
+<style lang="stylus" scoped>
 .styleguide
   &__section
-    padding-bottom: $spacing-large
-    margin-bottom: $spacing-large
-    border-bottom: $border-base
+    padding-bottom $spacing-large
+    margin-bottom $spacing-large
+    border-bottom $border-base
   &__color
-    width: 220px
-    height: 160px
-    border-radius: 10px
-    position: relative
-    box-shadow: $box-shadow-base
-    display: inline-block
-    overflow: hidden
+    width 220px
+    height 160px
+    border-radius 10px
+    position relative
+    box-shadow $box-shadow-base
+    display inline-block
+    overflow hidden
     &:not(:last-child)
-      margin-right: 15px
+      margin-right 15px
     &:after
-      content: ''
-      display: block
-      position: absolute
-      bottom: 0
-      right: 0
-      left: 0
-      background-color: #fff
-      width: 100%
-      padding: 15px
-      font-size: .7rem
-      font-weight: 500
-      line-height: 1.23
-      text-align: left
-      color: #4c484c
+      content ''
+      display block
+      position absolute
+      bottom 0
+      right 0
+      left 0
+      background-color #fff
+      width 100%
+      padding 15px
+      font-size .7rem
+      font-weight 500
+      line-height 1.23
+      text-align left
+      color #4c484c
     &--primary:after
-      content: '#{$mint-color} - $mint-color'
+      content '#{$mint-color} - $mint-color'
     &--secondary:after
-      content: '#{$ocean-blue-color} - $ocean-blue-color'
+      content '#{$ocean-blue-color} - $ocean-blue-color'
     &--tertiary:after
-      content: '#{$khaki-color} - $khaki-color'
+      content '#{$khaki-color} - $khaki-color'
     &--silver:after
-      content: '#{$honeydew-color} - $honeydew-color'
+      content '#{$honeydew-color} - $honeydew-color'
     &--gray:after
-      content: '#{$davys-grey-color} - $davys-grey-color'
+      content '#{$davys-grey-color} - $davys-grey-color'
     &--border:after
-      content: '#{$border-color} - $border-color'
+      content '#{$border-color} - $border-color'
     &--base:after
-      content: '#{$feldgrau-color} - $feldgrau-color'
+      content '#{$feldgrau-color} - $feldgrau-color'
     &--background:after
-      content: '#{$snow-color} - $snow-color'
+      content '#{$snow-color} - $snow-color'
 
   .bgcolor
     &--primary
-      background-color: $mint-color
+      background-color $mint-color
     &--secondary
-      background-color: $ocean-blue-color
+      background-color $ocean-blue-color
     &--tertiary
-      background-color: $khaki-color
+      background-color $khaki-color
     &--silver
-      background-color: $honeydew-color
+      background-color $honeydew-color
     &--gray
-      background-color: $davys-grey-color
+      background-color $davys-grey-color
     &--border
-      background-color: $border-color
+      background-color $border-color
     &--base
-      background-color: $feldgrau-color
+      background-color $feldgrau-color
     &--background
-      background-color: $snow-color
+      background-color $snow-color
 
 .buttons__ghost-white
-  padding: $spacing-base
-  margin: $spacing-small 0
+  padding $spacing-base
+  margin $spacing-small 0
 
 .typography
   &__fonts
-    // min-width: 430px
-    min-height: 146px
-    border-radius: 10px
-    text-align: center
-    background-color: #fff
-    padding: $spacing-small $spacing-base
-    display: inline-block
-    margin-right: $spacing-small
-    box-shadow: $box-shadow-base
+    min-height 146px
+    border-radius 10px
+    text-align center
+    background-color #fff
+    padding $spacing-small $spacing-base
+    display inline-block
+    margin-right $spacing-small
+    box-shadow $box-shadow-base
     &--suez
       &, h2
-        font-family: $font-family-heading
+        font-family $font-family-heading
     &--ubuntu
       &, h2
-        font-family: $font-family-base
+        font-family $font-family-base
     h2
-      font-size: 90px
-      line-height: 0.78
-      color: $feldgrau-color
-      margin: 0 0 15px
+      font-size 90px
+      line-height 0.78
+      color $feldgrau-color
+      margin 0 0 15px
     span
       span
-        display: inline-block
+        display inline-block
         &:not(:last-child)
-          margin-right: 5px
+          margin-right 5px
       &.l
-        font-weight: $font-weight-light
+        font-weight $font-weight-light
       &.n
-        font-weight: $font-weight-normal
+        font-weight $font-weight-normal
       &.r
-        font-weight: $font-weight-regular
+        font-weight $font-weight-regular
       &.b
-        font-weight: $font-weight-bold
+        font-weight $font-weight-bold
 </style>

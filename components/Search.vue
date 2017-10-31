@@ -61,66 +61,64 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import "~sass/settings"
-@import "~sass/article"
+<style lang="stylus" scoped>
 .search
-  position: fixed
-  z-index: 99
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background-color: $snow-color
-  transition: opacity .3s ease
-  overflow-y: auto
+  position fixed
+  z-index 99
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color $snow-color
+  transition opacity .3s ease
+  overflow-y auto
   .ais-stats
-    opacity: .75
-    color: $davys-grey-color
-    margin-bottom: $spacing-mini
+    opacity .75
+    color $davys-grey-color
+    margin-bottom $spacing-mini
   &__close
-    position: fixed
-    z-index: 100
-    top: $spacing-small
-    right: $spacing-small
-    cursor: pointer
-    font-size: 3rem
-    text-decoration: none
-    line-height: 36px
-    margin: 0
-    padding: 0
-    vertical-align: middle
-    display: block
-    border: none
-    background: none transparent
+    position fixed
+    z-index 100
+    top $spacing-small
+    right $spacing-small
+    cursor pointer
+    font-size 3rem
+    text-decoration none
+    line-height 36px
+    margin 0
+    padding 0
+    vertical-align middle
+    display block
+    border none
+    background none transparent
   &__box
-    position: relative
+    position relative
   &__icon
-    position: absolute
-    opacity: .8
-    left: 25px
-    top: 38px
+    position absolute
+    opacity .8
+    left 25px
+    top 38px
   &__inner
-    max-width: $tablet
-    width: 100%
-    margin: 0 auto
-    padding: 4rem
+    max-width $tablet
+    width 100%
+    margin 0 auto
+    padding 4rem
   &__input
-    display: block
-    line-height: 45px
-    width: 100%
-    box-sizing: inherit
-    padding: $spacing-small $spacing-small $spacing-small $spacing-big
-    box-shadow: 0 2px 6px 0 rgba(32, 31, 32, .14)
-    margin: 0 0 $spacing-mini
-    border: none
-    border-radius: 3px
+    display block
+    line-height 45px
+    width 100%
+    box-sizing inherit
+    padding $spacing-small $spacing-small $spacing-small $spacing-big
+    box-shadow 0 2px 6px 0 rgba(32, 31, 32, .14)
+    margin 0 0 $spacing-mini
+    border none
+    border-radius 3px
     &:focus
-      outline: 3px solid rgba($mint-color,.7)
-      outline-offset: 3px
+      outline 3px solid rgba($mint-color,.7)
+      outline-offset 3px
 .article
-  +article
-  min-height: 100%
-  text-decoration: none
-  margin: 0 0 $spacing-small
+  article()
+  min-height 100%
+  text-decoration none
+  margin 0 0 $spacing-small
 </style>

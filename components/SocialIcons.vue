@@ -60,25 +60,24 @@
   }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
+<style lang="stylus">
 .social
-  list-style: none
-  padding: 0
-  margin: $spacing-small 0 0
+  list-style none
+  padding 0
+  margin $spacing-small 0 0
   &__item
-    display: inline-block
-    vertical-align: middle
-    text-align: center
-    line-height: 1
+    display inline-block
+    vertical-align middle
+    text-align center
+    line-height 1
     &:not(:last-child)
-      margin-right: $spacing-small
+      margin-right $spacing-small
   &__link
-    display: block
-    opacity: .8
-    transition: .2s transform ease, .2s opacity ease
+    display block
+    opacity .8
+    transition .2s transform ease, .2s opacity ease
     &:hover,
     &:focus
-      transform: scale(1.1) rotate(10deg)
-      opacity: 1
+      transform scale(1.1) rotate(10deg)
+      opacity 1
 </style>

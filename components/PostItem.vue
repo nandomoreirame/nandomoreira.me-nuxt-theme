@@ -47,98 +47,86 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
+<style lang="stylus">
 .postItem
-  display: flex
-  flex: 1 1 300px
-  flex-direction: column
-  overflow: hidden
-  margin: 0 $spacing-small $spacing-base
-  min-height: 300px
-  background: #fff 50%
-  background-size: cover
-  border-radius: 5px
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
-  transition: box-shadow .2s ease, transform .2s ease
-
+  display flex
+  flex 1 1 300px
+  flex-direction column
+  overflow hidden
+  margin 0 $spacing-small $spacing-base
+  min-height 300px
+  background #fff 50%
+  background-size cover
+  border-radius 5px
+  box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
+  transition box-shadow .2s ease, transform .2s ease
   &:hover,
   &:focus
-    box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
-    transform: translate3D(0, -1px, 0)
-
+    box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
+    transform translate3D(0, -1px, 0)
   a
-    color: $feldgrau-color
-    text-decoration: none
-
+    color $feldgrau-color
+    text-decoration none
   &__content
-    -ms-flex-positive: 1
-    flex-grow: 1
-    display: -ms-flexbox
-    display: flex
-    -ms-flex-direction: column
-    flex-direction: column
-    -ms-flex-pack: justify
-    justify-content: space-between
-
+    -ms-flex-positive 1
+    flex-grow 1
+    display -ms-flexbox
+    display flex
+    -ms-flex-direction column
+    flex-direction column
+    -ms-flex-pack justify
+    justify-content space-between
   &__header,
   &__description,
   &__footer
-    position: relative
-    display: block
-    padding: 0 $spacing-small
-
+    position relative
+    display block
+    padding 0 $spacing-small
   &__footer
-    margin: 0
-    padding-bottom: $spacing-small
-
+    margin 0
+    padding-bottom $spacing-small
   &__meta
-    display: block
-    opacity: .6
-    font-size: .65rem
-    line-height: 1.2em
-    text-transform: uppercase
-    margin: 0
+    display block
+    opacity .6
+    font-size .65rem
+    line-height 1.2em
+    text-transform uppercase
+    margin 0
     span
-      display: block
-      margin-bottom: 5px
+      display block
+      margin-bottom 5px
     svg
-      display: inline-block
-      vertical-align: middle
-      margin-right: 4px
-      line-height: 1
-      top: -2px
-      position: relative
-
+      display inline-block
+      vertical-align middle
+      margin-right 4px
+      line-height 1
+      top -2px
+      position relative
   &__title
-    font-size: 1.4rem
-    margin-bottom: .5rem
-
+    font-size 1.4rem
+    margin-bottom .5rem
   &__description
-    font-size: 1rem
-    line-height: 1.4em
-
+    font-size 1rem
+    line-height 1.4em
   &__image-link
-    position: relative
+    position relative
     img
-      display: none
-
+      display none
   &__image
-    width: 100%
-    height: 250px
-    background: #c5d2d9 no-repeat 50%
-    background-size: cover
-
-  +media($tablet-large)
+    width 100%
+    height 250px
+    background #c5d2d9 no-repeat 50%
+    background-size cover
+  +above($tablet-large)
     &--featured
-      flex: 1 1 100%
-      flex-direction: row
+      flex 1 1 100%
+      flex-direction row
       .postItem__image-link
-        flex: 1 1 auto
+        flex 1 1 auto
       .postItem__image
-        position: absolute
-        width: 100%
-        height: 100%
+        position absolute
+        width 100%
+        height 100%
       .postItem__content
-        flex: 0 1 357px
+        flex 0 1 357px
 </style>

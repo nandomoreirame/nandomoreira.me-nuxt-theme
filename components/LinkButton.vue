@@ -37,66 +37,58 @@
   }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
-
+<style lang="stylus">
 .link-button
-  display: inline-block
-  text-align: center
-  margin: 0
-  vertical-align: middle
-  position: relative
+  display inline-block
+  text-align center
+  margin 0
+  vertical-align middle
+  position relative
   &:not(:last-child)
-    margin-right: $spacing-mini
-
+    margin-right $spacing-mini
   svg
-    margin-right: $spacing-mini
+    margin-right $spacing-mini
   svg, span
-    display: inline-block
-    vertical-align: middle
-
+    display inline-block
+    vertical-align middle
   &__link
-    line-height: 40px
-    padding: 0 1.5rem
-    border-radius: 3px
-    display: inline-block
-    border: 3px solid transparent
-    transition: .2s background-color ease, .2s color ease
-    font-weight: $font-weight-bold
-    text-decoration: none
-    font-size: $font-size-small
-
+    line-height 40px
+    padding 0 1.5rem
+    border-radius 3px
+    display inline-block
+    border 3px solid transparent
+    transition .2s background-color ease, .2s color ease
+    font-weight $font-weight-bold
+    text-decoration none
+    font-size $font-size-small
   &--default &__link
-    border-color: $mint-color
-    background-color: $mint-color
-    color: #fff
+    border-color $mint-color
+    background-color $mint-color
+    color #fff
     &:hover,
     &:focus
-      background-color: lighten($mint-color, 10%)
-      border-color: lighten($mint-color, 10%)
-      color: #fff
-
+      background-color lighten($mint-color, 10%)
+      border-color lighten($mint-color, 10%)
+      color #fff
   &--ghost &__link
-    box-shadow: 0 8px 20px 0 rgba(224, 224, 224, .5)
-    border-color: $mint-color
-    background-color: transparent
-    color: $mint-color
+    box-shadow 0 8px 20px 0 rgba(224, 224, 224, .5)
+    border-color $mint-color
+    background-color transparent
+    color $mint-color
     &:hover,
     &:focus
-      background-color: $mint-color
-      color: #fff
-
+      background-color $mint-color
+      color #fff
   &--ghost-white &__link
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1)
-    border-color: #fff
-    color: #fff
+    box-shadow 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1)
+    border-color #fff
+    color #fff
     &:hover,
     &:focus
-      background-color: rgba(#fff, .2)
-      outline-color: #fff
-      color: #fff
-
+      background-color rgba(#fff, .2)
+      outline-color #fff
+      color #fff
   &--large &__link
-    line-height: 56px
-    font-size: $font-size-base
+    line-height 56px
+    font-size $font-size-base
 </style>

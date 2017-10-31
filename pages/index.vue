@@ -98,211 +98,180 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~sass/settings"
+<style lang="stylus">
 .section
-  width: 100%
-  position: relative
-  overflow: hidden
-  @extend %clearfix
-
+  width 100%
+  position relative
+  overflow hidden
+  @extend $clearfix
   &__inner
-    padding: 0
-    margin-bottom: $spacing-large
-    +media($tablet)
-      padding: 8rem 0
-      margin-bottom: 0
-
+    padding 0
+    margin-bottom $spacing-large
+    +above($tablet)
+      padding 8rem 0
+      margin-bottom 0
   &__button
-    text-align: center
-
-    +media($tablet)
-      position: absolute
-      bottom: $spacing-base
-      left: 0
-      right: 0
-
+    text-align center
+    +above($tablet)
+      position absolute
+      bottom $spacing-base
+      left 0
+      right 0
     a
-      text-transform: uppercase
-
+      text-transform uppercase
   &__header
-    text-align: center
-    background-color: $feldgrau-color
-    padding: $spacing-small
-    margin-bottom: $spacing-base
-    position: relative
-
-    +media($tablet)
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-
+    text-align center
+    background-color $feldgrau-color
+    padding $spacing-small
+    margin-bottom $spacing-base
+    position relative
+    +above($tablet)
+      position absolute
+      top 0
+      left 0
+      right 0
     h2
-      color: #fff
-      margin: 0
-
+      color #fff
+      margin 0
     &:before
-      position: absolute
-      content: ''
-      top: 100%
-      left: 50%
-      width: 0
-      height: 0
-      border-top: 20px $feldgrau-color solid
-      border-right: 20px solid transparent
-      border-bottom: 20px solid transparent
-      border-left: 20px solid transparent
-      margin-left: -20px
+      position absolute
+      content ''
+      top 100%
+      left 50%
+      width 0
+      height 0
+      border-top 20px $feldgrau-color solid
+      border-right 20px solid transparent
+      border-bottom 20px solid transparent
+      border-left 20px solid transparent
+      margin-left -20px
 
 .home
   &__scrollto
-    display: none
-    +media($tablet)
-      display: block
-      position: absolute
-      bottom: $spacing-small
-      left: 50%
-      margin-left: -30px
-      animation: scrollDown .8s ease-in-out infinite both
+    display none
+    +above($tablet)
+      display block
+      position absolute
+      bottom $spacing-small
+      left 50%
+      margin-left -30px
+      animation scrollDown .8s ease-in-out infinite both
       &:hover,
       &:active,
       &:focus
-        animation-play-state: paused
-        transform: translate3d(0, 0, 0)
-        opacity: 1
+        animation-play-state paused
+        transform translate3d(0, 0, 0)
+        opacity 1
       svg
-        line-height: 1
-        display: block
-        margin: 0
-
+        line-height 1
+        display block
+        margin 0
   &__hero
-    text-align: center
-    padding-top: ($spacing-large * 2)
-
+    text-align center
+    padding-top ($spacing-large * 2)
     &:before
-      transform: translate3d(0, 0, 0)
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      opacity: .03
-      background-image: url("/images/hero-icons.svg")
-      background-position: center
-      background-repeat: no-repeat
-      background-size: cover
-      background-attachment: fixed
-      z-index: 1
-      transform: scale(1.1)
-
-    +media($tablet)
-      height: 100vh
-      display: table
+      transform translate3d(0, 0, 0)
+      content ''
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      opacity .03
+      background-image url("/images/hero-icons.svg")
+      background-position center
+      background-repeat no-repeat
+      background-size cover
+      background-attachment fixed
+      z-index 1
+      transform scale(1.1)
+    +above($tablet)
+      height 100vh
+      display table
       .section__inner
-        display: table-cell
-        vertical-align: middle
-
+        display table-cell
+        vertical-align middle
     .section__inner
-      position: relative
-      z-index: 2
-
+      position relative
+      z-index 2
     h1,
     h2
-      display: block
-      max-width: 64rem
-      padding-left: $spacing-small
-      padding-right: $spacing-small
-      margin: $spacing-small auto
-
+      display block
+      max-width 64rem
+      padding-left $spacing-small
+      padding-right $spacing-small
+      margin $spacing-small auto
     h1
-      font-size: 3.2rem
-
-      +media($mobile-large)
-        font-size: 4.6rem
-      +media($tablet)
-        font-size: 5.6rem
-
+      font-size 3.2rem
+      +above($mobile-large)
+        font-size 4.6rem
+      +above($tablet)
+        font-size 5.6rem
       span
-        color: $mint-color
-
+        color $mint-color
       &::after
-        content: ''
-        overflow: hidden
-        background-color: $mint-color
-        height: 20px
-        width: 100%
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 5%)
-        display: block
-
+        content ''
+        overflow hidden
+        background-color $mint-color
+        height 20px
+        width 100%
+        clip-path polygon(0 0, 100% 0, 100% 100%, 0 5%)
+        display block
     h2
-      font-family: $font-family-base
-      font-weight: 300
-      color: $davys-grey-color
-      font-size: 1rem
-
-      +media($mobile-large)
-        font-size: 1.6rem
-      +media($tablet)
-        font-size: 2rem
-
+      font-family $font-family-base
+      font-weight 300
+      color $davys-grey-color
+      font-size 1rem
+      +above($mobile-large)
+        font-size 1.6rem
+      +above($tablet)
+        font-size 2rem
       a
-        color: $link-color
-        text-decoration: underline
-
+        color $link-color
+        text-decoration underline
       small
-        display: block
-        font-size: .9rem
-        margin-top:  $spacing-mini
-
-        +media($mobile-large)
-          font-size: 1.2rem
-        +media($tablet)
-          font-size: 1.4rem
-
+        display block
+        font-size .9rem
+        margin-top  $spacing-mini
+        +above($mobile-large)
+          font-size 1.2rem
+        +above($tablet)
+          font-size 1.4rem
   &__social-icons
-    padding-top: $spacing-small
-
+    padding-top $spacing-small
   &__work
-    background-color: $mint-color
-
+    background-color $mint-color
     .project
       figure
-        margin-bottom: $spacing-small
-        +media($tablet)
-          margin-bottom: 0
-
+        margin-bottom $spacing-small
+        +above($tablet)
+          margin-bottom 0
     .project,
     .project a
-      color: #fff
-
+      color #fff
     .project.project--invert
-      padding-top: $spacing-small
-      padding-bottom: $spacing-small
-      margin-top: 0
-      margin-bottom: 0
-      background-color: transparent
-
+      padding-top $spacing-small
+      padding-bottom $spacing-small
+      margin-top 0
+      margin-bottom 0
+      background-color transparent
     .container
-      padding-top: $spacing-base
-      padding-bottom: $spacing-base
-
+      padding-top $spacing-base
+      padding-bottom $spacing-base
 .last-articles
-  display: flex
-  position: relative
-  flex-flow: row
-  flex-wrap: wrap
-  margin-left: -($spacing-small)
-  margin-right: -($spacing-small)
-  padding: 40px 0 0
+  display flex
+  position relative
+  flex-flow row
+  flex-wrap wrap
+  margin-left -($spacing-small)
+  margin-right -($spacing-small)
+  padding 40px 0 0
 
 @keyframes scrollDown
   0%
-    transform: translate3d(0, -20px, 0)
-    opacity: .2
+    transform translate3d(0, -20px, 0)
+    opacity .2
   100%
-    transform: translate3d(0, 0, 0)
-    opacity: 1
-
+    transform translate3d(0, 0, 0)
+    opacity 1
 </style>
