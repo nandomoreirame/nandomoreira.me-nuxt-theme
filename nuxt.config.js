@@ -63,7 +63,7 @@ module.exports = {
     ],
     script: [
       // { src: '//fernandomoreira.disqus.com/count.js', id: 'dsq-count-scr' },
-      { src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391', async: true }
+      { src: (isProduction ? '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' : ''), async: true }
     ]
   },
   manifest: {

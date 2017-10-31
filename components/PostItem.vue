@@ -1,5 +1,5 @@
 <template>
-  <article class="postItem" :class="`${count === 0 ? 'postItem--featured' : ''}`">
+  <article class="postItem" :class="`${(count%4) === 0 ? 'postItem--featured' : ''}`">
     <nuxt-link :to="post.permalink" class="postItem__image-link" v-if="post.image">
       <div class="postItem__image" :style="`background-image: url(${post.image})`"></div>
       <img :src="post.image" :alt="`imagem de ${post.title}`">

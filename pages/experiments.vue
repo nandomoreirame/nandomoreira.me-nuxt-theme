@@ -65,7 +65,8 @@ export default {
   border-radius 3px
   background-color #fff
   text-align center
-  box-shadow 0 8px 20px 0 rgba(224, 224, 224, 0.5)
+  box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
+  transition box-shadow .2s ease, transform .2s ease
   padding 0
   margin 2rem 0
   flex 1 0 1
@@ -76,8 +77,12 @@ export default {
   position relative
   text-decoration none
   @extend $clearfix
+  &:hover,
+  &:focus
+    box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
+    transform translate3D(0, -1px, 0)
   +above($tablet)
-    flex 1 0 ($container-width/2)-60px
+    flex 1 0 (($container-width / 2) - 60px)
   &__image
     position relative
     width 100%
