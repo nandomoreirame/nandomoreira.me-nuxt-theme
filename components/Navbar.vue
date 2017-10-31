@@ -28,7 +28,7 @@
           </nuxt-link>
         </li>
         <li class="navbar__nav-item">
-          <!-- <a class="twitter-follow-button" href="https://twitter.com/oseunando">Follow me</a> -->
+          <a class="twitter-follow-button" href="https://twitter.com/oseunando">Follow me</a>
         </li>
       </ul>
     </nav>
@@ -145,16 +145,16 @@ export default {
       color $feldgrau-color
       display inline-block
       padding 0
-    &:after
-      z-index 3
-      left 0
-      transition all .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
-      content ''
-      display block
-      position absolute
-      top calc(100% + 5px)
-      width 0
-      height 3px
+      &:after
+        z-index 3
+        left 0
+        transition all .2s cubic-bezier(0.29, 0.18, 0.26, 0.83)
+        content ''
+        display block
+        position absolute
+        top calc(100% + 5px)
+        width 0
+        height 3px
     &.nuxt-link-exact-active,
     &:hover
       color $mint-color

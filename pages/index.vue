@@ -177,14 +177,13 @@ export default {
       left 0
       right 0
       bottom 0
-      opacity .03
-      background-image url("/images/hero-icons.svg")
-      background-position center
+      opacity .3
+      background-image url("/images/hero-cover.jpg")
       background-repeat no-repeat
       background-size cover
       background-attachment fixed
       z-index 1
-      transform scale(1.1)
+      transform scale(1.15)
     +above($tablet)
       height 100vh
       display table
