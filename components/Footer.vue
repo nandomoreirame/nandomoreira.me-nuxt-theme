@@ -30,7 +30,7 @@ export default {
 .footer
   margin-top $spacing-base
   margin-bottom $spacing-large
-  border-top 2px solid $mint-color
+  border-top $border-base
   @extend $clearfix
   +above($tablet)
     margin-bottom 0

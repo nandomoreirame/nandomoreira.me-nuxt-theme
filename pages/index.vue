@@ -6,7 +6,7 @@
         <h1>Oi, eu sou o <span itemprop="name"><nuxt-link title="Meu nome é Fernando Moreira Costa (muito prazer)" to="/about">Fernando</nuxt-link></span>!</h1>
         <h2 role="presentation">
           Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> na <strong><a href="https://onedevstudio.github.io/" target="_blank">Onedev Studio</a></strong> em <strong>Curitiba/PR</strong>.
-          <small>Se você está em busca de um programador freelancer front-end, WordPress, PHP ou JavaScript entre em contato: <a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me@gmail.com</a> ou através das redes sociais abaixo.</small>
+          <small>Se você está em busca de um programador freelancer front-end, WordPress, PHP ou JavaScript entre em contato: <a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me[arroba]gmail.com</a> ou através das redes sociais abaixo.</small>
         </h2>
         <div class="home__social-icons">
           <social-icons iconColor="#435466"></social-icons>
@@ -73,6 +73,17 @@
       </div>
     </section>
 
+    <section class="home__skills section">
+      <div class="section__inner">
+        <header class="section__header">
+          <h2>Minhas habilidades</h2>
+        </header>
+        <div class="container">
+          <skills></skills>
+        </div>
+      </div>
+    </section>
+
     <meta-tags></meta-tags>
   </div>
 </template>
@@ -99,6 +110,7 @@ export default {
     LinkButton: () => import('~/components/LinkButton'),
     Project: () => import('~/components/Project'),
     PostItem: () => import('~/components/PostItem'),
+    Skills: () => import('~/components/Skills'),
     Dribbble: () => import('~/components/Dribbble')
   }
 }
@@ -263,6 +275,11 @@ export default {
     .container
       padding-top $spacing-base
       padding-bottom $spacing-base
+  &__skills
+    .section__inner
+      padding-bottom 0
+      .skills__item:not(:last-child)
+        flex: 1 0 percentage(1/9)
 .last-articles
   display flex
   position relative

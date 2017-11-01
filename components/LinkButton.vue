@@ -90,6 +90,7 @@
       outline-color #fff
       color #fff
   &--large &__link
+    border-radius 8px
     line-height 56px
     font-size $font-size-base
   &--small &__link

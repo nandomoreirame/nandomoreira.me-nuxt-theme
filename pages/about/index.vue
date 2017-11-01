@@ -4,8 +4,10 @@
     <div class="container">
       <div class="aboutme" v-html="aboutme" data-autotarget></div>
       <hr>
-      <h3>Entre em contato</h3>
-      <social-icons iconColor="#435466"></social-icons>
+      <div class="about__skills">
+        <h3>Habilidades</h3>
+        <skills></skills>
+      </div>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
   </main>
@@ -43,7 +45,7 @@ export default {
   },
   components: {
     MetaTags: () => import('~/components/MetaTags'),
-    SocialIcons: () => import('~/components/SocialIcons'),
+    Skills: () => import('~/components/Skills'),
     PageHeader: () => import('~/components/PageHeader')
   }
 }
@@ -55,18 +57,24 @@ export default {
   float left
   display inline-block
   position relative
+  margin-top $spacing-small
   margin-right $spacing-large
   line-height 1
   &:before
     content ''
     display block
-    z-index 1
+    z-index 3
     position absolute
     width 100%
     height 100%
-    top 15px
-    left 15px
-    background-color rgba($feldgrau-color, .9)
+    top 0
+    left 0
+    border 4px solid $mint-color
+    transform translate3d(-5%, -5%, 0)
+    transition border-color .2s ease-in-out, transform .2s ease-in-out
+  &:hover:before
+    border-color $feldgrau-color
+    transform translate3d(5%, 5%, 0)
   img
     position relative
     z-index 2
@@ -79,5 +87,7 @@ export default {
 <style lang="stylus" scoped>
 main .container
   max-width $tablet
-  article()
+  // article()
+.about__skills
+  text-align center
 </style>
