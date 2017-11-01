@@ -128,7 +128,7 @@
       margin-right 5px
   &--invert
     background-color lighten(borderColor, 5%)
-    +above($tablet)
+    +above(md)
       margin 0
       .project__content
         order 2

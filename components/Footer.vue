@@ -32,7 +32,7 @@ export default {
   margin-bottom spacingLarge
   border-top borderBase
   @extend $clearfix
-  +above($tablet)
+  +above(md)
     margin-bottom 0
   &__inner
     display flex
@@ -42,12 +42,12 @@ export default {
     align-content center
     justify-content space-between
     flex-direction row
-    +above($tablet)
+    +above(md)
       flex-wrap nowrap
   &__text
     order 2
     flex 0 0 100%
-    +above($tablet)
+    +above(md)
       order 1
       text-align left
       flex 0 0 60%
@@ -58,13 +58,13 @@ export default {
   &__social-icons
     padding-top spacingSmall
     padding-bottom spacingSmall
-    +above($tablet)
+    +above(md)
       line-height 60px
       vertical-align middle
   &__social-icons
     order 1
     flex 0 0 100%
-    +above($tablet)
+    +above(md)
       order 2
       text-align right
       flex 0 0 30%

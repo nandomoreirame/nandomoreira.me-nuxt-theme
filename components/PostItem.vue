@@ -117,7 +117,7 @@ export default {
     height 250px
     background #c5d2d9 no-repeat 50%
     background-size cover
-  +above($tablet-large)
+  +above(lg)
     &--featured
       flex 1 1 100%
       flex-direction row

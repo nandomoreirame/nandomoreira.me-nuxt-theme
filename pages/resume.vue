@@ -28,7 +28,7 @@ export default {
 <style lang="stylus">
 .resume,
 blockquote
-  max-width $tablet
+  max-width md
   margin spacingBase auto
 .resume
   article()

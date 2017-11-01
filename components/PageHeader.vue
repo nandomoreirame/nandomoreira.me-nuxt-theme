@@ -59,11 +59,12 @@ export default {
 .pageHeader
   padding 0
   margin-bottom 3rem
-  min-height 320px
   clip-path polygon(0 0, 100% 0, 100% 100%, 0 90%)
   overflow hidden
   position relative
   @extend $clearfix
+  +above(md)
+    min-height 320px
   &:before
     content ''
     display block
@@ -82,13 +83,14 @@ export default {
     background-repeat no-repeat
     background-size cover
     background-attachment fixed
-    transform scale(1.1)
     .container
       position relative
       z-index 2
   &__inner
-    padding 10rem 0 5rem
     background-color rgba(mintColor, .95)
+    padding 8rem 0 5rem
+    +above(md)
+      padding-top 10rem
   &__image
     opacity 0
     visibility hidden
@@ -96,15 +98,19 @@ export default {
   &__title
     text-transform uppercase
     letter-spacing .1em
-    font-size 2.5rem
+    font-size 1.8rem
     color #fff
     margin 0
+    +above(md)
+      font-size 2.5rem
   &__description
     font-weight fontWeightLight
     font-style 400
     font-size 1.25rem
     line-height 1.4
     color #fff
+    +above(md)
+      font-size 1rem
   &__meta
     color #fff
     text-transform uppercase

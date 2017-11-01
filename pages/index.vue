@@ -125,12 +125,12 @@ export default {
   &__inner
     padding 0
     margin-bottom spacingLarge
-    +above($tablet)
+    +above(md)
       padding 8rem 0
       margin-bottom 0
   &__button
     text-align center
-    +above($tablet)
+    +above(md)
       position absolute
       bottom spacingBase
       left 0
@@ -143,7 +143,7 @@ export default {
     padding spacingSmall
     margin-bottom spacingBase
     position relative
-    +above($tablet)
+    +above(md)
       position absolute
       top 0
       left 0
@@ -167,7 +167,7 @@ export default {
 .home
   &__scrollto
     display none
-    +above($tablet)
+    +above(md)
       display block
       position absolute
       bottom spacingSmall
@@ -202,7 +202,7 @@ export default {
       background-attachment fixed
       z-index 1
       transform scale(1.15)
-    +above($tablet)
+    +above(md)
       height 100vh
       display table
       .section__inner
@@ -220,9 +220,9 @@ export default {
       margin spacingSmall auto
     h1
       font-size 3.2rem
-      +above($mobile-large)
+      +above(sm)
         font-size 4.6rem
-      +above($tablet)
+      +above(md)
         font-size 5.6rem
       span
         color mintColor
@@ -239,9 +239,9 @@ export default {
       font-weight fontWeightLight
       color davysGreyColor
       font-size 1rem
-      +above($mobile-large)
+      +above(sm)
         font-size 1.6rem
-      +above($tablet)
+      +above(md)
         font-size 2rem
       a
         color linkColor
@@ -250,9 +250,9 @@ export default {
         display block
         font-size .9rem
         margin-top  spacingMini
-        +above($mobile-large)
+        +above(sm)
           font-size 1.2rem
-        +above($tablet)
+        +above(md)
           font-size 1.4rem
   &__social-icons
     padding-top spacingSmall
@@ -261,7 +261,7 @@ export default {
     .project
       figure
         margin-bottom spacingSmall
-        +above($tablet)
+        +above(md)
           margin-bottom 0
     .project,
     .project a

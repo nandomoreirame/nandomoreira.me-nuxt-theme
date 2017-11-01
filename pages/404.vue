@@ -55,10 +55,10 @@ export default {
     text-align center
     padding-right 2rem
     padding-left 2rem
-    +above($tablet)
+    +above(md)
       padding-right 5rem
       padding-left 5rem
-    +above($desktop)
+    +above(xlg)
       padding-right 10rem
       padding-left 10rem
   h1,
@@ -68,11 +68,11 @@ export default {
     margin 0
   h1
     font-size 10vw
-    +above($mobile-large)
+    +above(sm)
       font-size 8vw
-    +above($tablet)
+    +above(md)
       font-size 7vw
-    +above($tablet-large)
+    +above(lg)
       font-size 4vw
   h2
     font-family fontFamilyBase
@@ -83,11 +83,11 @@ export default {
     strong
       color khakiColor
       text-decoration underline
-    +above($mobile-large)
+    +above(sm)
       font-size 5vw
-    +above($tablet)
+    +above(md)
       font-size 4vw
-    +above($tablet-large)
+    +above(lg)
       font-size 2vw
   &__social-icons
   &__bottom-description

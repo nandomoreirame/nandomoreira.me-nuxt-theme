@@ -1,5 +1,5 @@
 .container
-  max-width: $container-width
+  max-width: containerWidth
   margin-left: auto
   margin-right: auto
   padding-right: spacingSmall
@@ -27,17 +27,17 @@
     flex: 0 0 100%
   &--1of2 > .grid__column
     flex: 0 0 50%
-    +below($tablet)
+    +below(md)
       flex: 0 0 100%
   &--1of3 > .grid__column
     flex: 0 0 33.3333%
-    +below($tablet-large)
+    +below(lg)
       flex: 0 0 50%
-    +below($tablet)
+    +below(md)
       flex: 0 0 100%
   &--1of4 > .grid__column
     flex: 0 0 25%
-    +below($desktop)
+    +below(xlg)
       flex: 0 0 50%
-    +below($tablet)
+    +below(md)
       flex: 0 0 100%

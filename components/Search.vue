@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .search
   position fixed
   z-index 99
@@ -99,7 +99,7 @@ export default {
     left 25px
     top 38px
   &__inner
-    max-width $tablet
+    max-width md
     width 100%
     margin 0 auto
     padding 4rem

@@ -86,7 +86,7 @@ export default {
 
 <style lang="stylus">
 main .container
-  max-width $tablet
+  max-width md
   // article()
 .about__skills
   text-align center

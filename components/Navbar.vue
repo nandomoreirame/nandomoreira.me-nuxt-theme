@@ -87,7 +87,7 @@ export default {
 
 <style lang="stylus">
 .navbar
-  +below($tablet-large)
+  +below(lg)
     position fixed
     z-index 1000
     width 100%
@@ -98,7 +98,7 @@ export default {
     bottom 0
     background-color rgba(feldgrauColor, .95)
     display none
-  +above($tablet-large)
+  +above(lg)
     display block
     position relative
   &__nav
@@ -107,11 +107,11 @@ export default {
     display table-cell
     vertical-align middle
     padding spacingSmall
-    +below($tablet-large)
+    +below(lg)
       .link-button__link
         color #fff
         border-color #fff
-    +above($tablet-large)
+    +above(lg)
       padding 0
       display inline-block
   &__nav-item
@@ -119,7 +119,7 @@ export default {
     letter-spacing -.01em
     line-height 1
     text-align right
-    +above($tablet-large)
+    +above(lg)
       text-align left
       display inline-block
     iframe
@@ -133,7 +133,7 @@ export default {
       margin-left 15px
     &--search
       display none
-      +above($tablet-large)
+      +above(lg)
         display inline-block
         svg
           position relative
@@ -147,7 +147,7 @@ export default {
     text-transform uppercase
     padding 5px 0
     display block
-    +above($tablet-large)
+    +above(lg)
       font-size fontSizeSmall
       color feldgrauColor
       display inline-block
@@ -182,7 +182,7 @@ export default {
     width 46px
     path
       transition transform .2s timingFunction
-  +above($tablet-large)
+  +above(lg)
     display none
 
 #ToggleNavbar
@@ -194,7 +194,7 @@ export default {
   margin -1px
   padding 0
   overflow hidden
-  +below($tablet-large)
+  +below(lg)
     &:checked
       ~ .navbar
         display table

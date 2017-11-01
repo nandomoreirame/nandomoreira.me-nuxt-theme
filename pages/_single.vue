@@ -67,9 +67,19 @@ export default {
 .article
   display block
   margin 0
+  padding 0
   main .container
-    max-width $tablet
     article()
+    max-width md
+    border none
+    border-bottom borderBase
+    +below(md)
+      padding 0 spacingSmall spacingBase
+      background transparent none
+      box-shadow none
+      &:last-child
+        padding-top spacingBase
+        border-bottom none
   img
     width 100%
     display block

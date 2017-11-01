@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .article-list
   display flex
   position relative

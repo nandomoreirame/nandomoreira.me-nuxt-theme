@@ -81,8 +81,8 @@ export default {
   &:focus
     box-shadow boxShadowHover
     transform translate(0, -10px)
-  +above($tablet)
-    flex 1 0 (($container-width / 2) - 60px)
+  +above(md)
+    flex 1 0 ((containerWidth / 2) - 60px)
   &__image
     position relative
     width 100%
