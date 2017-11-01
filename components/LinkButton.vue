@@ -47,17 +47,20 @@
   &:not(:last-child)
     margin-right $spacing-mini
   svg
-    margin-right $spacing-mini
+    position relative
+    top -2px
   svg, span
+    margin-right 5px
     display inline-block
     vertical-align middle
+    transition .1s fill ease, .1s color ease, .1s stroke ease
   &__link
     line-height 40px
     padding 0 1.5rem
     border-radius 3px
     display inline-block
     border 3px solid transparent
-    transition .2s background-color ease, .2s color ease
+    transition .2s background-color ease-in-out, .2s color ease-in-out
     font-weight $font-weight-bold
     text-decoration none
     font-size $font-size-small
@@ -71,7 +74,6 @@
       border-color lighten($mint-color, 10%)
       color #fff
   &--ghost &__link
-    box-shadow 0 8px 20px 0 rgba(224, 224, 224, .5)
     border-color $mint-color
     background-color transparent
     color $mint-color
@@ -80,7 +82,6 @@
       background-color $mint-color
       color #fff
   &--ghost-white &__link
-    box-shadow 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1)
     border-color #fff
     color #fff
     &:hover,
@@ -91,4 +92,9 @@
   &--large &__link
     line-height 56px
     font-size $font-size-base
+  &--small &__link
+    border-radius 30px
+    line-height 26px
+    font-size .8rem
+    padding 0 1rem
 </style>
