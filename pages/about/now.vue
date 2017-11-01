@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 main .container
   max-width $tablet
   article()

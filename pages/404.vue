@@ -48,7 +48,7 @@ export default {
   display table
   width 100%
   height 100%
-  background-color $mint-color
+  background-color mintColor
   &__inner
     display table-cell
     vertical-align middle
@@ -63,7 +63,7 @@ export default {
       padding-left 10rem
   h1,
   h2
-    padding-bottom $spacing-small
+    padding-bottom spacingSmall
     color #fff
     margin 0
   h1
@@ -75,13 +75,13 @@ export default {
     +above($tablet-large)
       font-size 4vw
   h2
-    font-family $font-family-base
-    font-weight 300
+    font-family fontFamilyBase
+    font-weight fontWeightLight
     font-size 7vw
     span
       display block
     strong
-      color $khaki-color
+      color khakiColor
       text-decoration underline
     +above($mobile-large)
       font-size 5vw

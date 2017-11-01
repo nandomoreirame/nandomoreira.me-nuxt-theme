@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .breadcrumb
   margin .2rem 0 1rem
   list-style none
@@ -41,7 +41,7 @@ export default {
     padding-right .5rem
     &--active,
     &:hover
-      color $khaki-color
+      color khakiColor
       text-decoration underline
     &--active
       pointer-events none

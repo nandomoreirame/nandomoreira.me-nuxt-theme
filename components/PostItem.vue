@@ -53,19 +53,19 @@ export default {
   flex 1 1 300px
   flex-direction column
   overflow hidden
-  margin 0 $spacing-small $spacing-base
+  margin 0 spacingSmall spacingBase
   min-height 300px
   background #fff 50%
   background-size cover
   border-radius 5px
-  box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
-  transition box-shadow .2s ease, transform .2s ease
+  box-shadow boxShadowBase
+  transition box-shadow .2s timingFunction, transform .2s timingFunction
   &:hover,
   &:focus
-    box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
-    transform translate3D(0, -1px, 0)
+    box-shadow boxShadowHover
+    transform translate(0, -10px)
   a
-    color $feldgrau-color
+    color feldgrauColor
     text-decoration none
   &__content
     -ms-flex-positive 1
@@ -81,10 +81,10 @@ export default {
   &__footer
     position relative
     display block
-    padding 0 $spacing-small
+    padding 0 spacingSmall
   &__footer
     margin 0
-    padding-bottom $spacing-small
+    padding-bottom spacingSmall
   &__meta
     display block
     opacity .6

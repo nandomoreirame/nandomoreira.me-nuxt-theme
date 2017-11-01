@@ -25,11 +25,11 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .resume,
 blockquote
   max-width $tablet
-  margin $spacing-base auto
+  margin spacingBase auto
 .resume
   article()
 blockquote

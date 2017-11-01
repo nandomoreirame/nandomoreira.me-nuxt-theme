@@ -75,9 +75,9 @@ export default {
     display block
   pre
     background #232e23
-    color $honeydew-color
+    color honeydewColor
     overflow-x auto
-    margin-bottom $spacing-base
+    margin-bottom spacingBase
     code
       background #232e23
   .video
@@ -85,7 +85,7 @@ export default {
     padding-bottom 56.25%
     padding-top 25px
     height 0
-    margin-bottom $spacing-base
+    margin-bottom spacingBase
     iframe,
     object,
     embed

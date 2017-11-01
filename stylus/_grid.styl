@@ -2,25 +2,25 @@
   max-width: $container-width
   margin-left: auto
   margin-right: auto
-  padding-right: 1rem
-  padding-left: 1rem
+  padding-right: spacingSmall
+  padding-left: spacingSmall
 
 .grid
   display: flex
   flex-flow: row
   flex-wrap: wrap
   justify-content: space-around
-  margin-left: -($spacing-small)
-  margin-right: -($spacing-small)
+  margin-left: -(spacingSmall)
+  margin-right: -(spacingSmall)
   &--reverse
     flex-wrap: wrap-reverse
   &__column
     flex: 1
     width: 100%
     display: inline-block
-    padding-left: $spacing-small
-    padding-right: $spacing-small
-    margin-bottom: $spacing-base
+    padding-left: spacingSmall
+    padding-right: spacingSmall
+    margin-bottom: spacingBase
   &--fit > .grid__column
     flex: 1
   &--full > .grid__column

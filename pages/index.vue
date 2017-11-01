@@ -124,7 +124,7 @@ export default {
   @extend $clearfix
   &__inner
     padding 0
-    margin-bottom $spacing-large
+    margin-bottom spacingLarge
     +above($tablet)
       padding 8rem 0
       margin-bottom 0
@@ -132,16 +132,16 @@ export default {
     text-align center
     +above($tablet)
       position absolute
-      bottom $spacing-base
+      bottom spacingBase
       left 0
       right 0
     a
       text-transform uppercase
   &__header
     text-align center
-    background-color $feldgrau-color
-    padding $spacing-small
-    margin-bottom $spacing-base
+    background-color feldgrauColor
+    padding spacingSmall
+    margin-bottom spacingBase
     position relative
     +above($tablet)
       position absolute
@@ -158,7 +158,7 @@ export default {
       left 50%
       width 0
       height 0
-      border-top 20px $feldgrau-color solid
+      border-top 20px feldgrauColor solid
       border-right 20px solid transparent
       border-bottom 20px solid transparent
       border-left 20px solid transparent
@@ -170,10 +170,10 @@ export default {
     +above($tablet)
       display block
       position absolute
-      bottom $spacing-small
+      bottom spacingSmall
       left 50%
       margin-left -30px
-      animation scrollDown .8s ease-in-out infinite both
+      animation scrollDown .8s timingFunction infinite both
       &:hover,
       &:active,
       &:focus
@@ -186,7 +186,7 @@ export default {
         margin 0
   &__hero
     text-align center
-    padding-top ($spacing-large * 2)
+    padding-top spacingBig
     &:before
       transform translate3d(0, 0, 0)
       content ''
@@ -215,9 +215,9 @@ export default {
     h2
       display block
       max-width 64rem
-      padding-left $spacing-small
-      padding-right $spacing-small
-      margin $spacing-small auto
+      padding-left spacingSmall
+      padding-right spacingSmall
+      margin spacingSmall auto
     h1
       font-size 3.2rem
       +above($mobile-large)
@@ -225,56 +225,56 @@ export default {
       +above($tablet)
         font-size 5.6rem
       span
-        color $mint-color
+        color mintColor
       &::after
         content ''
         overflow hidden
-        background-color $mint-color
+        background-color mintColor
         height 20px
         width 100%
         clip-path polygon(0 0, 100% 0, 100% 100%, 0 5%)
         display block
     h2
-      font-family $font-family-base
-      font-weight 300
-      color $davys-grey-color
+      font-family fontFamilyBase
+      font-weight fontWeightLight
+      color davysGreyColor
       font-size 1rem
       +above($mobile-large)
         font-size 1.6rem
       +above($tablet)
         font-size 2rem
       a
-        color $link-color
+        color linkColor
         text-decoration underline
       small
         display block
         font-size .9rem
-        margin-top  $spacing-mini
+        margin-top  spacingMini
         +above($mobile-large)
           font-size 1.2rem
         +above($tablet)
           font-size 1.4rem
   &__social-icons
-    padding-top $spacing-small
+    padding-top spacingSmall
   &__work
-    background-color $mint-color
+    background-color mintColor
     .project
       figure
-        margin-bottom $spacing-small
+        margin-bottom spacingSmall
         +above($tablet)
           margin-bottom 0
     .project,
     .project a
       color #fff
     .project.project--invert
-      padding-top $spacing-small
-      padding-bottom $spacing-small
+      padding-top spacingSmall
+      padding-bottom spacingSmall
       margin-top 0
       margin-bottom 0
       background-color transparent
     .container
-      padding-top $spacing-base
-      padding-bottom $spacing-base
+      padding-top spacingBase
+      padding-bottom spacingBase
   &__skills
     .section__inner
       padding-bottom 0
@@ -285,8 +285,8 @@ export default {
   position relative
   flex-flow row
   flex-wrap wrap
-  margin-left -($spacing-small)
-  margin-right -($spacing-small)
+  margin-left -(spacingSmall)
+  margin-right -(spacingSmall)
   padding 40px 0 0
 
 @keyframes scrollDown

@@ -49,13 +49,13 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .article-list
   display flex
   position relative
   flex-flow row
   flex-wrap wrap
-  margin-left -($spacing-small)
-  margin-right -($spacing-small)
+  margin-left -(spacingSmall)
+  margin-right -(spacingSmall)
   padding 40px 0 0
 </style>

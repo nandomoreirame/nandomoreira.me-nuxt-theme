@@ -62,8 +62,8 @@ export default {
   position relative
   flex-flow row
   flex-wrap wrap
-  margin-left -($spacing-small)
-  margin-right -($spacing-small)
+  margin-left -(spacingSmall)
+  margin-right -(spacingSmall)
   padding 40px 0 0
 
 .shot
@@ -71,19 +71,19 @@ export default {
   flex 1 1 300px
   flex-direction column
   overflow hidden
-  margin 0 $spacing-small $spacing-base
+  margin 0 spacingSmall spacingBase
   min-height 300px
   background #fff 50%
   background-size cover
   border-radius 5px
-  box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
-  transition box-shadow .2s ease, transform .2s ease
+  box-shadow boxShadowBase
+  transition box-shadow .2s timingFunction, transform .2s timingFunction
   text-align center
   a
     text-decoration none
   &__title
     font-size 1.2rem
-    padding $spacing-small 0
+    padding spacingSmall 0
     margin 0
   &__figure
     margin 0
@@ -93,6 +93,6 @@ export default {
       height auto
   &:hover,
   &:focus
-    box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
-    transform translate3D(0, -1px, 0)
+    box-shadow boxShadowHover
+    transform translate(0, -10px)
 </style>

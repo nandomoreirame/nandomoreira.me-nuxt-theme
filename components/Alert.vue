@@ -15,12 +15,12 @@
   }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .alert
-  padding $spacing-small
-  margin-bottom $spacing-base
-  background-color rgba($ocean-blue-color, .1)
-  border-radius $border-radius-base
-  box-shadow $box-shadow-base
+  padding spacingSmall
+  margin-bottom spacingBase
+  background-color rgba(oceanBlueColor, .1)
+  border-radius borderRadiusBase
+  box-shadow boxShadowBase
   text-align center
 </style>

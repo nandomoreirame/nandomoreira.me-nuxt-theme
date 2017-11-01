@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .search
   position fixed
   z-index 99
@@ -69,18 +69,18 @@ export default {
   left 0
   width 100%
   height 100%
-  background-color $snow-color
-  transition opacity .3s ease
+  background-color snowColor
+  transition opacity .3s timingFunction
   overflow-y auto
   .ais-stats
     opacity .75
-    color $davys-grey-color
-    margin-bottom $spacing-mini
+    color davysGreyColor
+    margin-bottom spacingMini
   &__close
     position fixed
     z-index 100
-    top $spacing-small
-    right $spacing-small
+    top spacingSmall
+    right spacingSmall
     cursor pointer
     font-size 3rem
     text-decoration none
@@ -108,17 +108,17 @@ export default {
     line-height 45px
     width 100%
     box-sizing inherit
-    padding $spacing-small $spacing-small $spacing-small $spacing-big
+    padding spacingSmall spacingSmall spacingSmall spacingBig
     box-shadow 0 2px 6px 0 rgba(32, 31, 32, .14)
-    margin 0 0 $spacing-mini
+    margin 0 0 spacingMini
     border none
     border-radius 3px
     &:focus
-      outline 3px solid rgba($mint-color,.7)
+      outline 3px solid rgba(mintColor,.7)
       outline-offset 3px
 .article
   article()
   min-height 100%
   text-decoration none
-  margin 0 0 $spacing-small
+  margin 0 0 spacingSmall
 </style>

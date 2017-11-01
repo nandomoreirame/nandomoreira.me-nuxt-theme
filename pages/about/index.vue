@@ -57,8 +57,8 @@ export default {
   float left
   display inline-block
   position relative
-  margin-top $spacing-small
-  margin-right $spacing-large
+  margin-top spacingSmall
+  margin-right spacingLarge
   line-height 1
   &:before
     content ''
@@ -69,11 +69,11 @@ export default {
     height 100%
     top 0
     left 0
-    border 4px solid $mint-color
+    border 4px solid mintColor
     transform translate3d(-5%, -5%, 0)
-    transition border-color .2s ease-in-out, transform .2s ease-in-out
+    transition border-color .2s timingFunction, transform .2s timingFunction
   &:hover:before
-    border-color $feldgrau-color
+    border-color feldgrauColor
     transform translate3d(5%, 5%, 0)
   img
     position relative
@@ -84,7 +84,7 @@ export default {
     display inline-block
 </style>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 main .container
   max-width $tablet
   // article()

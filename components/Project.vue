@@ -65,21 +65,21 @@
   }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .project
   min-height 450px
-  margin-top $spacing-large
-  padding-top $spacing-large
-  padding-bottom $spacing-large
+  margin-top spacingLarge
+  padding-top spacingBig
+  padding-bottom spacingBig
   @extend $clearfix
   .grid
     align-items center
   &:not(:last-child)
-    margin-bottom $spacing-large
+    margin-bottom spacingLarge
   &__title
     margin-top 0
   &__content
-    padding 0 $spacing-base
+    padding 0 spacingBase
     order 1
   &__meta
     strong
@@ -96,12 +96,12 @@
     &-browser
       display inline-block
       background-color #fff
-      box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
-      transition box-shadow .2s ease, transform .2s ease
+      box-shadow boxShadowBase
+      transition box-shadow .2s timingFunction, transform .2s timingFunction
       &:hover,
       &:focus
-        box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
-        transform translate3D(0, -1px, 0)
+        box-shadow boxShadowHover
+        transform translate(0, -10px)
       &-bar
         display block
         width 100%
@@ -114,7 +114,7 @@
           position absolute
           left 25%
           opacity .8
-          color $feldgrau-color
+          color feldgrauColor
           display inline-block
           vertical-align top
           line-height 25px
@@ -127,7 +127,7 @@
       display inline-block
       margin-right 5px
   &--invert
-    background-color lighten($border-color, 5%)
+    background-color lighten(borderColor, 5%)
     +above($tablet)
       margin 0
       .project__content

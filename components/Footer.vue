@@ -28,9 +28,9 @@ export default {
 
 <style lang="stylus">
 .footer
-  margin-top $spacing-base
-  margin-bottom $spacing-large
-  border-top $border-base
+  margin-top spacingBase
+  margin-bottom spacingLarge
+  border-top borderBase
   @extend $clearfix
   +above($tablet)
     margin-bottom 0
@@ -56,8 +56,8 @@ export default {
       vertical-align middle
   &__text,
   &__social-icons
-    padding-top $spacing-small
-    padding-bottom $spacing-small
+    padding-top spacingSmall
+    padding-bottom spacingSmall
     +above($tablet)
       line-height 60px
       vertical-align middle

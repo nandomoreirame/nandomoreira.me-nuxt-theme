@@ -45,7 +45,7 @@
   vertical-align middle
   position relative
   &:not(:last-child)
-    margin-right $spacing-mini
+    margin-right spacingMini
   svg
     position relative
     top -2px
@@ -53,33 +53,33 @@
     margin-right 5px
     display inline-block
     vertical-align middle
-    transition .1s fill ease, .1s color ease, .1s stroke ease
+    transition .1s fill timingFunction, .1s color timingFunction, .1s stroke timingFunction
   &__link
     line-height 40px
     padding 0 1.5rem
     border-radius 3px
     display inline-block
     border 3px solid transparent
-    transition .2s background-color ease-in-out, .2s color ease-in-out
-    font-weight $font-weight-bold
+    transition .2s background-color timingFunction, .2s color timingFunction
+    font-weight fontWeightBold
     text-decoration none
-    font-size $font-size-small
+    font-size fontSizeSmall
   &--default &__link
-    border-color $mint-color
-    background-color $mint-color
+    border-color mintColor
+    background-color mintColor
     color #fff
     &:hover,
     &:focus
-      background-color lighten($mint-color, 10%)
-      border-color lighten($mint-color, 10%)
+      background-color lighten(mintColor, 10%)
+      border-color lighten(mintColor, 10%)
       color #fff
   &--ghost &__link
-    border-color $mint-color
+    border-color mintColor
     background-color transparent
-    color $mint-color
+    color mintColor
     &:hover,
     &:focus
-      background-color $mint-color
+      background-color mintColor
       color #fff
   &--ghost-white &__link
     border-color #fff
@@ -92,7 +92,7 @@
   &--large &__link
     border-radius 8px
     line-height 56px
-    font-size $font-size-base
+    font-size fontSizeBase
   &--small &__link
     border-radius 30px
     line-height 26px

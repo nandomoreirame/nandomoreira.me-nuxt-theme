@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .pageHeader
   padding 0
   margin-bottom 3rem
@@ -70,7 +70,7 @@ export default {
     position absolute
     width 100%
     height 50px
-    background-color $feldgrau-color
+    background-color feldgrauColor
     animation bounceIn 1s both
     animation-delay .2s
     bottom 0
@@ -88,7 +88,7 @@ export default {
       z-index 2
   &__inner
     padding 10rem 0 5rem
-    background-color rgba($mint-color, .95)
+    background-color rgba(mintColor, .95)
   &__image
     opacity 0
     visibility hidden
@@ -100,7 +100,7 @@ export default {
     color #fff
     margin 0
   &__description
-    font-weight 300
+    font-weight fontWeightLight
     font-style 400
     font-size 1.25rem
     line-height 1.4
@@ -120,11 +120,11 @@ export default {
 @keyframes bounceIn
   0%
     transform translateY(500px)
-    animation-timing-function ease
+    animation-timing-function timingFunction
   66%
     transform translateY(-5px)
-    animation-timing-function ease
+    animation-timing-function timingFunction
   100%
     transform translateY(5px)
-    animation-timing-function ease
+    animation-timing-function timingFunction
 </style>

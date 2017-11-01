@@ -29,12 +29,12 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .comments
   h3
     font-size 1.2rem
     margin-top 0
     span
       opacity .6
-      font-weight 500
+      font-weight fontWeightRegular
 </style>

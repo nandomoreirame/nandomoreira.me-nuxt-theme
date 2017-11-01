@@ -55,23 +55,23 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .experiments-list
   display flex
   flex-flow row wrap
-  margin-left -($spacing-small)
-  margin-right -($spacing-small)
+  margin-left -(spacingSmall)
+  margin-right -(spacingSmall)
 .experiment
   border-radius 3px
   background-color #fff
   text-align center
-  box-shadow 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03)
-  transition box-shadow .2s ease, transform .2s ease
+  box-shadow boxShadowBase
+  transition box-shadow .2s timingFunction, transform .2s timingFunction
   padding 0
   margin 2rem 0
   flex 1 0 1
   width 100%
-  margin 0 $spacing-small $spacing-base
+  margin 0 spacingSmall spacingBase
   display inline-block
   border 1px solid #eee
   position relative
@@ -79,8 +79,8 @@ export default {
   @extend $clearfix
   &:hover,
   &:focus
-    box-shadow 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07)
-    transform translate3D(0, -1px, 0)
+    box-shadow boxShadowHover
+    transform translate(0, -10px)
   +above($tablet)
     flex 1 0 (($container-width / 2) - 60px)
   &__image
@@ -96,17 +96,17 @@ export default {
       top 0
       right 0
   &__description a
-    color $feldgrau-color
+    color feldgrauColor
     text-decoration none
   &__header
-    padding $spacing-small $spacing-base
+    padding spacingSmall spacingBase
   &__meta
     text-transform uppercase
     opacity .65
     letter-spacing .1em
     font-size .8rem
-    padding-top $spacing-small
-    padding-bottom $spacing-small
+    padding-top spacingSmall
+    padding-bottom spacingSmall
   &__title
     font-size 1.8rem
     margin-top .2em

@@ -93,18 +93,18 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .styleguide
   &__section
-    padding-bottom $spacing-large
-    margin-bottom $spacing-large
-    border-bottom $border-base
+    padding-bottom spacingLarge
+    margin-bottom spacingLarge
+    border-bottom borderBase
   &__color
     width 220px
     height 160px
     border-radius 10px
     position relative
-    box-shadow $box-shadow-base
+    box-shadow boxShadowBase
     display inline-block
     overflow hidden
     &:not(:last-child)
@@ -120,48 +120,48 @@ export default {
       width 100%
       padding 15px
       font-size .7rem
-      font-weight 500
+      font-weight fontWeightRegular
       line-height 1.23
       text-align left
       color #4c484c
     &--primary:after
-      content '#{$mint-color} - $mint-color'
+      content '#{mintColor} - mintColor'
     &--secondary:after
-      content '#{$ocean-blue-color} - $ocean-blue-color'
+      content '#{oceanBlueColor} - oceanBlueColor'
     &--tertiary:after
-      content '#{$khaki-color} - $khaki-color'
+      content '#{khakiColor} - khakiColor'
     &--silver:after
-      content '#{$honeydew-color} - $honeydew-color'
+      content '#{honeydewColor} - honeydewColor'
     &--gray:after
-      content '#{$davys-grey-color} - $davys-grey-color'
+      content '#{davysGreyColor} - davysGreyColor'
     &--border:after
-      content '#{$border-color} - $border-color'
+      content '#{borderColor} - borderColor'
     &--base:after
-      content '#{$feldgrau-color} - $feldgrau-color'
+      content '#{feldgrauColor} - feldgrauColor'
     &--background:after
-      content '#{$snow-color} - $snow-color'
+      content '#{snowColor} - snowColor'
 
   .bgcolor
     &--primary
-      background-color $mint-color
+      background-color mintColor
     &--secondary
-      background-color $ocean-blue-color
+      background-color oceanBlueColor
     &--tertiary
-      background-color $khaki-color
+      background-color khakiColor
     &--silver
-      background-color $honeydew-color
+      background-color honeydewColor
     &--gray
-      background-color $davys-grey-color
+      background-color davysGreyColor
     &--border
-      background-color $border-color
+      background-color borderColor
     &--base
-      background-color $feldgrau-color
+      background-color feldgrauColor
     &--background
-      background-color $snow-color
+      background-color snowColor
 
 .buttons__ghost-white
-  padding $spacing-base
-  margin $spacing-small 0
+  padding spacingBase
+  margin spacingSmall 0
 
 .typography
   &__fonts
@@ -169,20 +169,20 @@ export default {
     border-radius 10px
     text-align center
     background-color #fff
-    padding $spacing-small $spacing-base
+    padding spacingSmall spacingBase
     display inline-block
-    margin-right $spacing-small
-    box-shadow $box-shadow-base
+    margin-right spacingSmall
+    box-shadow boxShadowBase
     &--suez
       &, h2
-        font-family $font-family-heading
+        font-family fontFamilyHeading
     &--ubuntu
       &, h2
-        font-family $font-family-base
+        font-family fontFamilyBase
     h2
       font-size 90px
       line-height 0.78
-      color $feldgrau-color
+      color feldgrauColor
       margin 0 0 15px
     span
       span
@@ -190,11 +190,11 @@ export default {
         &:not(:last-child)
           margin-right 5px
       &.l
-        font-weight $font-weight-light
+        font-weight fontWeightLight
       &.n
-        font-weight $font-weight-normal
+        font-weight fontWeightNormal
       &.r
-        font-weight $font-weight-regular
+        font-weight fontWeightRegular
       &.b
-        font-weight $font-weight-bold
+        font-weight fontWeightBold
 </style>

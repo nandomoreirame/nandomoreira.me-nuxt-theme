@@ -1,21 +1,21 @@
 a
-  color $link-color
+  color linkColor
   text-decoration underline
-  transition background-color 0.15s ease, color 0.15s ease, outline 0.1s ease
+  transition background-color 0.15s timingFunction, color 0.15s timingFunction, outline 0.1s timingFunction
   border 0
   &:hover,
   &:active,
   &:focus
     text-decoration none
   &:focus
-    outline 3px solid rgba($mint-color, 0.7)
+    outline 3px solid rgba(mintColor, 0.7)
     outline-offset 2px
 
 em
   font-style italic
 
 strong, b
-  font-weight $font-weight-bold
+  font-weight fontWeightBold
 
 small
   font-size 80%
@@ -25,16 +25,16 @@ big
 
 h1, h2, h3, h4, h5, h6,
 p, dl, table, blockquote, figcaption
-  margin 0 0 $spacing-small 0
+  margin 0 0 spacingSmall 0
   &:last-child
     margin-bottom 0
 
 h1, h2, h3, h4, h5, h6
-  color $feldgrau-color
+  color feldgrauColor
   letter-spacing -1*0.01rem
-  font-weight $font-weight-normal
-  font-family $font-family-heading
-  margin-top $spacing-base
+  font-weight fontWeightNormal
+  font-family fontFamilyHeading
+  margin-top spacingBase
   a
     color inherit
     text-decoration none
@@ -73,51 +73,51 @@ sup
   top -1*0.5em
 
 ul, ol
-  padding-left $spacing-small
-  margin-bottom $spacing-small
+  padding-left spacingSmall
+  margin-bottom spacingSmall
   p
     margin 0
   li > ul,
   li > ol
-    margin-bottom $spacing-mini
+    margin-bottom spacingMini
 
 figcaption
   text-align center
   font-style italic
-  line-height $line-height-base
-  font-size $font-size-small
+  line-height lineHeightBase
+  font-size fontSizeSmall
 
 blockquote
-  color $davys-grey-color
-  font-size $font-size-big
-  margin-top $spacing-base
-  margin-bottom $spacing-base
+  color davysGreyColor
+  font-size fontSizeBig
+  margin-top spacingBase
+  margin-bottom spacingBase
   line-height 1.4
   p
-    font-weight $font-weight-light
+    font-weight fontWeightLight
   & *:last-child
     margin 0
 
 pre,
 code
-  font-family $font-family-monospace
+  font-family fontFamilyMonospace
 
 code
-  background rgba($davys-grey-color, 0.05)
-  border-radius $border-radius-base
+  background rgba(davysGreyColor, 0.05)
+  border-radius borderRadiusBase
   color inherit
   margin 0 0.2rem
   padding 0.2rem 0.5rem
-  font-size $font-size-small
+  font-size fontSizeSmall
   white-space nowrap
 
 pre
-  background rgba($davys-grey-color, 0.05)
-  padding 0 $spacing-mini / 2
+  background rgba(davysGreyColor, 0.05)
+  padding 0 spacingMini / 2
   & > code
     font-size inherit
     background transparent
     border-radius 0
     display block
-    padding $spacing-mini $spacing-mini
+    padding spacingMini spacingMini
     white-space pre

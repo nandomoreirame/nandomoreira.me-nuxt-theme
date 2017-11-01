@@ -2,14 +2,10 @@
   <div>
     <input type="checkbox" id="ToggleNavbar">
     <label tabindex="1" class="navbar-toggle" aria-label="Abrir navegação principal" aria-controls="navigation" for="ToggleNavbar" role="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#435466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+        <path fill="none" stroke="currentColor" stroke-width="4" d="M10 20h47" class="top-line" stroke-linecap="round"/>
+        <path fill="none" stroke="currentColor" stroke-width="4" d="M30 30h27" class="middle-line" stroke-linecap="round"/>
+        <path fill="none" stroke="currentColor" stroke-width="4" d="M10 40h47" class="bottom-line" stroke-linecap="round"/>
       </svg>
     </label>
     <nav class="navbar" role="navigation" id="navigation">
@@ -100,7 +96,7 @@ export default {
     left 0
     right 0
     bottom 0
-    background-color rgba($feldgrau-color, .95)
+    background-color rgba(feldgrauColor, .95)
     display none
   +above($tablet-large)
     display block
@@ -110,12 +106,16 @@ export default {
     margin 0
     display table-cell
     vertical-align middle
-    padding $spacing-base
+    padding spacingSmall
+    +below($tablet-large)
+      .link-button__link
+        color #fff
+        border-color #fff
     +above($tablet-large)
       padding 0
       display inline-block
   &__nav-item
-    font-weight $font-weight-bold
+    font-weight fontWeightBold
     letter-spacing -.01em
     line-height 1
     text-align right
@@ -148,8 +148,8 @@ export default {
     padding 5px 0
     display block
     +above($tablet-large)
-      font-size $font-size-small
-      color $feldgrau-color
+      font-size fontSizeSmall
+      color feldgrauColor
       display inline-block
       padding 0
       &:after
@@ -164,27 +164,31 @@ export default {
         height 3px
     &.nuxt-link-exact-active,
     &:hover
-      color $mint-color
+      color mintColor
       &:after
         width 50%
         left 0
-        background $khaki-color
+        background khakiColor
     &.nuxt-link-exact-active
       pointer-events none
+
 .navbar-toggle
   position relative
-  display inline-block
+  display block
   z-index 10001
   line-height 1
   vertical-align middle
+  svg
+    width 46px
+    path
+      transition transform .2s timingFunction
   +above($tablet-large)
     display none
-  .feather-x
-    display none
+
 #ToggleNavbar
   position absolute
   border 0
-  clip rect(0,0,0,0)
+  clip rect(0, 0, 0, 0)
   width 1px
   height 1px
   margin -1px
@@ -195,8 +199,16 @@ export default {
       ~ .navbar
         display table
       ~ .navbar-toggle
-        .feather-x
-          display block
-        .feather-menu
-          display none
+        path
+          stroke #fff
+        .top-line
+          transform rotate(-45deg) translate3d(0, -10px, 0)
+          transform-origin bottom right
+          width 45px
+        .bottom-line
+          transform rotate(45deg) translate3d(0, 10px, 0)
+          transform-origin bottom right
+          width 45px
+        .middle-line
+          transform translate3d(200%, 0, 0)
 </style>
