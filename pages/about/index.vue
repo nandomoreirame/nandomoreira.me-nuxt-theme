@@ -84,9 +84,9 @@ export default {
     display inline-block
 </style>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 main .container
-  max-width md
+  max-width lg
   // article()
 .about__skills
   text-align center

@@ -63,14 +63,14 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .article
   display block
   margin 0
   padding 0
   main .container
     article()
-    max-width md
+    max-width lg
     border none
     border-bottom borderBase
     +below(md)
@@ -80,8 +80,13 @@ export default {
       &:last-child
         padding-top spacingBase
         border-bottom none
+</style>
+
+<style lang="stylus">
+.article
   img
     width 100%
+    height auto
     display block
   pre
     background #232e23

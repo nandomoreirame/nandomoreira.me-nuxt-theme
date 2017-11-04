@@ -76,8 +76,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 main .container
-  max-width md
-  article()
+  max-width lg
+  // article()
 </style>
