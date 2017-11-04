@@ -65,7 +65,7 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .project
   min-height 450px
   margin-top spacingLarge

@@ -39,7 +39,7 @@ Para que tudo funcione corretamente precisamos incluir os arquivos no arquivo <c
 
 include 'contact-form/abstract-front-end-form.php';
 include 'contact-form/class-contact-form.php';
-?>
+
 ```
 
 Eu criei um terceiro arquivo chamado <code>contact-form.php</code> no mesmo diretório e será nesse que iremos criar a função para criar o formulário de contato.
@@ -61,7 +61,7 @@ function odin_contact_form() {
 }
 
 add_action( 'init', array( odin_contact_form(), 'init' ), 1 );
-?>
+
 ```
 
 Nessa função você pode observar que instanciamos a classe <code>Odin_Contact_Form()</code> com alguns atributos obrigatórios como o <strong>id do formulário</strong> e o <strong>e-mail do destinatário</strong>, você também pode incluir um array de e-mails extras para receberem uma cópia da mensagem.

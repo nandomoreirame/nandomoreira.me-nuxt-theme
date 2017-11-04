@@ -92,11 +92,38 @@ blockquote
   font-size fontSizeBig
   margin-top spacingBase
   margin-bottom spacingBase
-  line-height 1.4
+  padding 0 spacingLarge
+  text-align center
+  line-height 1.7
+  position relative
   p
     font-weight fontWeightLight
   & *:last-child
     margin 0
+  small
+    display block
+  &:before
+    content '“ '
+    left spacingBase
+    top 0
+    transform translate3d(0, -20%, 0)
+  &:after
+    content ' ”'
+    right spacingBase
+    bottom 0
+    transform translate3d(0, 10%, 0)
+  &:before,
+  &:after
+    position absolute
+    line-height 1
+    display block
+    width 40px
+    height 40px
+    font-size 4em
+    color rgba(feldgrauColor, .6)
+    z-index 1
+    font-family 'Droid Serif', georgia, serif
+    pointer-events none
 
 pre,
 code

@@ -1,7 +1,9 @@
 <template>
   <aside class="comments">
-    <h3>Comentários para: <span>"{{ disqusTitle }}"</span></h3>
-    <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
+    <div class="comments__inner">
+      <h3>Comentários para: <span>"{{ disqusTitle }}"</span></h3>
+      <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
+    </div>
   </aside>
 </template>
 
@@ -29,8 +31,19 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .comments
+  padding spacingBase 0
+  border-top borderBase
+  margin-top spacingBase
+  background-color #fff
+  @extend $clearfix
+  &__inner
+    max-width lg
+    margin-left auto
+    margin-right auto
+    padding-left spacingBase
+    padding-right spacingBase
   h3
     font-size 1.2rem
     margin-top 0

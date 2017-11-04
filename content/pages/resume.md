@@ -1,9 +1,13 @@
+<div class="avatar">
+  <img src="/images/avatar.png" alt="Foto de Fernando Moreira" width="230" height="261">
+</div>
+
 # **Fernando Moreira Costa**
 
-Brazilian, Married, 28 years old.
-Address: Pinheirinho, Curitiba/PR - Brazil
-Email: [nandomoreira.me@gmail.com](mailto:nandomoreira.me@gmail.com)
-Blog: [nandomoreira.me/blog](/blog)
+Brazilian, Married, 28 years old. <br>
+**Address**: Pinheirinho, Curitiba/PR - Brazil <br>
+**Email**: [nandomoreira.me@gmail.com](mailto:nandomoreira.me@gmail.com) <br>
+**Blog**: [nandomoreira.me/blog](/blog)
 
 > Front-end developer, enthusiastic for performance and usability, always looking for the best design and good coffee ⏤ [read more about me &raquo;](/about)
 
@@ -56,32 +60,17 @@ Blog: [nandomoreira.me/blog](/blog)
 * [IBPT - Instituto Brasileiro de Planejamento Tributário](http://www.ibpt.org.br/)
     * **Position:** *WordPress Developer*
     * **Activities:** *Developing proprietary tools using WordPress.*
-<!-- * [Agência SALSA](http://salsa.ag/)
-    * **Position:** *Web Developer*
-    * **Activities:** *Development and maintenance of Sites / Systems using PyroCMS, E-commerce with Magento and websites with WordPress.*
-* [Totalize Internet Studio](http://www.totalize.com.br/)
-    * **Position:** *Beginner Programmer*
-    * **Activities:** *Development of systems, websites and ecommerce, PHP Programing (company's own CMS), Data base MySQL and PostgreSQL.*
-* [CGDW / RCA Comunicação Visual](http://www.cgdw.com.br/)
-   * **Position:** *Desenvolvedor Web.*
-   * **Activities:** *Development of sites with administrative systems since the PSD (Photoshop) the publication.*
-      * Front-end (HTML, CSS, jQuery)
-      * Back-end (PHP e MySQL). -->
-
 ---
 
 ### Projects
 
 [nandomoreira.me/projects](/projects)
 
-<!-- * [Nandomoreira.me](/)
-* [Wilson Luiz Prosdocimo](http://wprosdocimo.com.br/)
-* [Abracce](http://www.abracce.org.br/)
-* [Desafio Abracce](http://desafio.abracce.org.br/)
-* [Remer terapias](http://remerterapias.com.br/)
-* [Tomasoni](http://tomasoni.ind.br/)
-* [Pizzaria Detroit](http://www.pizzariadetroit.com.br/)
-* [Conexão Plastilit](http://www.conexaoplastilit.com.br/) -->
+---
+
+### Projects Open Source
+
+[nandomoreira.me/projects/open-source](/projects/open-source)
 
 ---
 

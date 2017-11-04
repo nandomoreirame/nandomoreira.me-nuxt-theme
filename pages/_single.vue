@@ -2,12 +2,10 @@
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
     <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"></page-header>
     <main itemprop="articleBody" role="main">
-      <div class="container">
+      <div class="article__body">
         <nuxtent-body :body="post.body"></nuxtent-body>
       </div>
-      <aside class="container">
-        <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus>
-      </aside>
+      <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus>
     </main>
     <meta-tags :title="postTitle" :url="postUrl" ogType="article"></meta-tags>
   </article>
@@ -84,17 +82,30 @@ export default {
 
 <style lang="stylus">
 .article
+  &__body
+    p, h2, h3, h4, h5,
+    blockquote, pre code, ul, ol
+      max-width lg
+      margin-left auto
+      margin-right auto
+    p, h2, h3, h4, h5, pre code
+      padding-left spacingBase
+      padding-right spacingBase
+    ul, ol
+      padding-left spacingLarge
   img
     width 100%
     height auto
     display block
   pre
-    background #232e23
+    background feldgrauColor
     color honeydewColor
     overflow-x auto
     margin-bottom spacingBase
     code
-      background #232e23
+      background feldgrauColor
+      padding-top spacingSmall
+      padding-bottom spacingSmall
   .video
     position relative
     padding-bottom 56.25%

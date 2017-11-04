@@ -28,12 +28,12 @@ Nós sabemos que _atomic design_ é dividido em 5 itens, **_atoms_**, **_molecul
 ```text
 sass-e-atomic-design/
   └── sass/
-        ├── atoms/
-        │   └── # Arquivos sass para atoms
-        ├── molecules/
-        │   └── # Arquivos sass para molecules
-        └── organisms/
-            └── # Arquivos sass para organisms
+    ├── atoms/
+    │   └── # Arquivos sass para atoms
+    ├── molecules/
+    │   └── # Arquivos sass para molecules
+    └── organisms/
+        └── # Arquivos sass para organisms
 ```
 
 Ainda junto com esses 2 itens do _Atomic Design_ vamos adicionar mais 2 diretórios, `core/` e `vendor/`.
@@ -43,16 +43,16 @@ Fica mais ou menos assim:
 ```text
 sass-e-atomic-design/
   └── sass/
-        ├── atoms/
-        │   └── # Arquivos sass para atoms
-        ├── core/
-        │   └── # Arquivos sass para variaveis e mixins
-        ├── molecules/
-        │   └── # Arquivos sass para molecules
-        ├── organisms/
-        │   └── # Arquivos sass para organisms
-        └── vendor/
-            └── # Arquivos sass de terceiros
+    ├── atoms/
+    │   └── # Arquivos sass para atoms
+    ├── core/
+    │   └── # Arquivos sass para variaveis e mixins
+    ├── molecules/
+    │   └── # Arquivos sass para molecules
+    ├── organisms/
+    │   └── # Arquivos sass para organisms
+    └── vendor/
+        └── # Arquivos sass de terceiros
 ```
 
 ## O diretório core/
@@ -92,6 +92,7 @@ Crie um arquivo chamado `_buttons.scss` e coloque a seguinte estrutura.
     color: #fff;
   }
 }
+
 %button-ghost {
   background-color: transparent;
   border: 2px solid #fff;
