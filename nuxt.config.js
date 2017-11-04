@@ -83,7 +83,6 @@ module.exports = {
     { src: '~/plugins/browser.js', ssr: false },
     { src: '~/plugins/tooltip.js', ssr: false },
     { src: '~/plugins/scrollto.js', ssr: false },
-    { src: '~/plugins/instantsearch.js' },
     { src: '~/plugins/moment.js' }
   ],
   modules: [
@@ -101,8 +100,7 @@ module.exports = {
       'axios',
       'moment',
       'v-tooltip',
-      'vue-moment',
-      'vue-instantsearch'
+      'vue-moment'
     ],
     plugins: [
       new webpack.LoaderOptionsPlugin({
