@@ -10,14 +10,6 @@
     </label>
     <nav class="navbar" role="navigation" id="navigation">
       <ul class="navbar__nav" role="menu">
-        <li class="navbar__nav-item navbar__nav-item--search" role="menuitem">
-          <a href="#" @click="toggleSearch(true)" aria-label="Abrir campo de busca" role="link" class="navbar__nav-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#435466">
-              <title id="search-icon">Search icon</title>
-              <path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/>
-            </svg>
-          </a>
-        </li>
         <li v-for="(item, key) in navItems" :key="key" class="navbar__nav-item" role="menuitem">
           <nuxt-link :to="item.link" :title="item.title" role="link" class="navbar__nav-link">
             {{ item.title }}
@@ -34,13 +26,10 @@
         </li>
       </ul>
     </nav>
-    <site-search></site-search>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-
 export default {
   name: 'Navbar',
   data () {
@@ -73,14 +62,8 @@ export default {
       ]
     }
   },
-  methods: {
-    ...mapMutations({
-      toggleSearch: 'showSearch'
-    })
-  },
   components: {
-    LinkButton: () => import('~/components/LinkButton'),
-    SiteSearch: () => import('~/components/Search')
+    LinkButton: () => import('~/components/LinkButton')
   }
 }
 </script>
@@ -131,13 +114,6 @@ export default {
       content '•'
       color #435466
       margin-left 15px
-    &--search
-      display none
-      +above(lg)
-        display inline-block
-        svg
-          position relative
-          top 2px
   &__nav-link
     color #fff
     font-size 2rem
