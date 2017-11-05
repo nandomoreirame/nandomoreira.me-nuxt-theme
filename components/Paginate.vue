@@ -2,7 +2,7 @@
   <div class="paginate">
     <ul class="paginate__list">
       <li v-for="page in paginate" :key="page.id">
-        <nuxt-link :to="`/blog?=${page}`">{{ page }}</nuxt-link>
+        <nuxt-link :to="`/blog?page=${page}`">{{ page }}</nuxt-link>
       </li>
     </ul>
   </div>
