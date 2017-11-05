@@ -41,19 +41,19 @@ h1, h2, h3, h4, h5, h6
     border 0
 
 h1
-  font-size 2.2rem
+  font-size 2.4rem
   line-height 1.2
 
 h2
-  font-size 1.8rem
+  font-size 2rem
   line-height 1.25
 
 h3
-  font-size 1.6rem
+  font-size 1.4rem
   line-height 1.3
 
 h4
-  font-size 1.4rem
+  font-size 1.2rem
   line-height 1.35
 
 h5,
@@ -75,6 +75,8 @@ sup
 ul, ol
   padding-left spacingSmall
   margin-bottom spacingSmall
+  li
+    margin-bottom spacingMini
   p
     margin 0
   li > ul,
@@ -135,12 +137,14 @@ code
   color inherit
   margin 0 0.2rem
   padding 0.2rem 0.5rem
-  font-size fontSizeSmall
+  font-size inherit
+  font-weight inherit
   white-space nowrap
 
 pre
   background rgba(davysGreyColor, 0.05)
   padding 0 spacingMini / 2
+  font-size fontSizeSmall
   & > code
     font-size inherit
     background transparent
