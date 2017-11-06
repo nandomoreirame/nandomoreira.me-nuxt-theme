@@ -1,7 +1,7 @@
 <template>
   <main>
     <page-header title="Sobre" :breadcrumbs="breadcrumbs"></page-header>
-    <div class="container">
+    <div class="container--small">
       <div class="aboutme" v-html="aboutme" data-autotarget></div>
       <hr>
       <div class="about__skills">
@@ -53,13 +53,19 @@ export default {
 
 <style lang="stylus">
 .avatar
-  width 280px
-  float left
-  display inline-block
+  max-width 180px
   position relative
+  display block
   margin-top spacingSmall
-  margin-right spacingLarge
+  margin-bottom spacingLarge
   line-height 1
+  +above(sm)
+    display inline-block
+    margin-right spacingBase
+    float left
+  +above(md)
+    max-width 280px
+    margin-right spacingBase
   &:before
     content ''
     display block
@@ -85,9 +91,6 @@ export default {
 </style>
 
 <style lang="stylus" scoped>
-main .container
-  max-width lg
-  // article()
 .about__skills
   text-align center
 </style>

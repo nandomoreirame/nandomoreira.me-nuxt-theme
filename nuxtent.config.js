@@ -34,6 +34,15 @@ module.exports = {
         generate: ['getAll'],
         isPost: false
       }
+    ],
+    [
+      'mental-spark',
+      {
+        page: '/mental-spark/_single',
+        permalink: '/mental-spark/:slug',
+        generate: ['get', 'getAll'],
+        isPost: false
+      }
     ]
   ],
   parsers: {

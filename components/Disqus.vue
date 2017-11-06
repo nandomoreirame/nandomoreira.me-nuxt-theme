@@ -1,6 +1,6 @@
 <template>
   <aside class="comments">
-    <div class="comments__inner">
+    <div class="comments__inner container--small">
       <h3>Comentários para: <span>"{{ disqusTitle }}"</span></h3>
       <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
     </div>
@@ -38,12 +38,6 @@ export default {
   margin-top spacingBase
   background-color #fff
   @extend $clearfix
-  &__inner
-    max-width lg
-    margin-left auto
-    margin-right auto
-    padding-left spacingBase
-    padding-right spacingBase
   h3
     font-size 1.2rem
     margin-top 0

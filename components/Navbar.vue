@@ -40,10 +40,6 @@ export default {
           title: 'Sobre'
         },
         {
-          link: '/blog',
-          title: 'Blog'
-        },
-        {
           link: '/projects',
           title: 'Projetos'
         },
@@ -54,10 +50,14 @@ export default {
         {
           link: '/experiments',
           title: 'Experimentos'
-        // },
-        // {
-        //   link: '/styleguide',
-        //   title: 'Styleguide'
+        },
+        {
+          link: '/blog',
+          title: 'Blog'
+        },
+        {
+          link: '/mental-spark',
+          title: 'Faísca mental'
         }
       ]
     }

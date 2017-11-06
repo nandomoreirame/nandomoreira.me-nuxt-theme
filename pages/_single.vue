@@ -7,11 +7,12 @@
       </div>
       <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus>
     </main>
-    <meta-tags :title="postTitle" :url="postUrl" ogType="article"></meta-tags>
+    <meta-tags :title="postTitle" :url="postUrl" ogType="article" :description="postDesc"></meta-tags>
   </article>
 </template>
 
 <script>
+import('highlight.js/styles/tomorrow-night.css')
 const { siteUrl } = require('~/utilities/Helpers')
 
 export default {
@@ -67,8 +68,7 @@ export default {
   margin 0
   padding 0
   main .container
-    article()
-    max-width lg
+    @extend $article
     border none
     border-bottom borderBase
     +below(md)
@@ -85,7 +85,7 @@ export default {
   &__body
     p, h2, h3, h4, h5,
     blockquote, pre code, ul, ol
-      max-width lg
+      max-width containerWidthSmall
       margin-left auto
       margin-right auto
     p, h2, h3, h4, h5, pre code

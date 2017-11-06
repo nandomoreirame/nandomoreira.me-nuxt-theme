@@ -31,7 +31,7 @@ blockquote
   max-width md
   margin spacingBase auto
 .resume
-  article()
+  @extend $article
   h1
     font-size 3rem
     margin-top 0

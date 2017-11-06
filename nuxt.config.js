@@ -74,9 +74,8 @@ module.exports = {
     lang: 'pt_BR'
   },
   css: [
-    'highlight.js/styles/tomorrow-night.css',
-    { src: '~/node_modules/normalize.css/normalize.css', lang: 'css' },
-    { src: '~stylus/main.styl', lang: 'styl' }
+    { src: 'normalize.css/normalize.css', lang: 'css' },
+    { src: '~stylus/index.styl', lang: 'stylus' }
   ],
   loading: { color: '#4dba87' },
   plugins: [
@@ -109,10 +108,9 @@ module.exports = {
             use: [ require('rupture')() ],
             preferPathResolver: 'webpack',
             import: [
-              '~stylus/_vars.styl',
-              '~stylus/_mixins.styl',
-              '~stylus/_placeholders.styl',
-              '~stylus/_article.styl'
+              '~stylus/variables.styl',
+              '~stylus/mixins.styl',
+              '~stylus/placeholders.styl'
             ]
           },
           context: '/'

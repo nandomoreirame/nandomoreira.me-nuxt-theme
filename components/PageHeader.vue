@@ -109,6 +109,7 @@ export default {
     font-size 1.25rem
     line-height 1.4
     color #fff
+    margin 0
     +above(md)
       font-size 1rem
   &__meta

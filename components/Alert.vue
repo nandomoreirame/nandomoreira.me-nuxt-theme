@@ -21,6 +21,11 @@
   margin-bottom spacingBase
   background-color rgba(oceanBlueColor, .1)
   border-radius borderRadiusBase
-  box-shadow boxShadowBase
   text-align center
+  box-shadow boxShadowBase
+  transition box-shadow .2s timingFunction, transform .2s timingFunction
+  &:hover,
+  &:focus
+    box-shadow boxShadowHover
+    transform translate(0, -10px)
 </style>

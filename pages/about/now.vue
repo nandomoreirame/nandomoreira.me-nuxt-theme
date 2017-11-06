@@ -1,9 +1,9 @@
 <template>
   <main>
     <page-header title="O que estou fazendo agora" :breadcrumbs="breadcrumbs"></page-header>
-    <div class="container">
+    <div class="container--small">
       <h2>Que página é essa?</h2>
-      <p>Esta página agora é tirada da idéia de Derek Sivers em <a href="http://nownownow.com/about" target="_blank">Nownownow</a>, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.</p>
+      <p>Esta página agora é tirada da idéia de <strong><a href="https://sivers.org/" target="_blank">Derek Sivers</a></strong> em <a href="http://nownownow.com/about" target="_blank">Nownownow</a>, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.</p>
       <p>Então, aqui é meu <strong>Now</strong>:</p>
       <h2>Lendo os livros:</h2>
       <ul>
@@ -23,9 +23,11 @@
         <li>Exerícios físicos</li>
       </ul>
 
-      <h2>Projeto atual</h2>
+      <h2>Projeto(s) atual(is)</h2>
       <ul>
-        <li>GRGIT - Recursos Humanos</li>
+        <li>Esse site (eternamente em desenvolvimento)</li>
+        <li>Site GRGIT - Recursos Humanos</li>
+        <li>Front-end do site ProAdvance - Language Solutions</li>
       </ul>
 
       <h2>Metas e objetivos</h2>
@@ -77,7 +79,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-main .container
-  max-width lg
-  // article()
 </style>

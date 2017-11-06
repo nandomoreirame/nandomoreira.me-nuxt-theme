@@ -1,9 +1,9 @@
 .container
-  max-width: containerWidth
-  margin-left: auto
-  margin-right: auto
-  padding-right: spacingSmall
-  padding-left: spacingSmall
+  @extend $container
+
+.container--small
+  @extend $container
+  max-width: containerWidthSmall
 
 .grid
   display: flex
