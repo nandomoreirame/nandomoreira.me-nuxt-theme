@@ -18,10 +18,10 @@
             Essa semana terei algumas <em>Faíscas Mentais</em> e em breve a <strong>Faísca Mental #01</strong> sairá do forno. Aguarde.
           </p>
         </alert>
-        <!-- <article v-for="(spark, i) in mentalSpark" :key="+i">
-          <h2><nuxt-link :to="spark.permalink">{{ spark.title }}</nuxt-link></h2>
-        </article> -->
         <hr>
+        <article class="MentalSpark__item" v-for="(spark, i) in mentalSpark" :key="+i">
+          <h2><nuxt-link :to="spark.permalink">{{ spark.title }}</nuxt-link></h2>
+        </article>
       </div>
     </section>
     <nuxt-child />
@@ -55,7 +55,7 @@ export default {
   },
   async asyncData ({ app }) {
     return {
-      // mentalSpark: await app.$content('/mental-spark').getAll()
+      mentalSpark: await app.$content('/mental-spark').getAll()
     }
   },
   components: {
@@ -67,4 +67,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.MentalSpark
+  &__item
+    display none
+    visibility hidden
+    opacity 0
 </style>
