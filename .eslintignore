@@ -3,3 +3,4 @@ plugins
 dist/
 workbox-*
 sw.js
+static/

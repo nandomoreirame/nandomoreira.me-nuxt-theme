@@ -10,6 +10,7 @@
           <li>descarga elétrica invisível de muito curta duração entre dois ou mais neurônios.</li>
         </ol>
         <hr> -->
+        <h2>Que página é essa?</h2>
         <p>Aderindo a ideia sensacional do brother <a href="https://danielkossmann.com/category/faisca-mental/" target="_blank">Daniel Kossmann</a> de fazer uma lista semanal de <strong>7 (sete) itens que me geraram uma (ou mais) <nuxt-link to="/mental-spark">faísca mental</nuxt-link></strong>.</p>
         <hr>
         <alert>

@@ -133,3 +133,10 @@ if (isProduction) {
     // }(document, "script", "twitter-wjs"));
   }, 5)
 }
+
+// Skype.ui({
+//   'name': 'chat',
+//   'element': 'SkypeButton_Call_nandomoreirame_1',
+//   'participants': ['nandomoreira.me'],
+//   'imageSize': 24
+// })

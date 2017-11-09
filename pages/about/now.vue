@@ -7,7 +7,7 @@
       <p>Então, aqui é meu <strong>Now</strong>:</p>
       <h2>Lendo os livros:</h2>
       <ul>
-        <li><a href="https://pt.wikipedia.org/wiki/Rage_(livro)" target="_blank">Fúria (Rage)</a> - <small>Stephen King</small></li>
+        <li><a href="https://goo.gl/8wsLcN" target="_blank">23 Hábitos Anti-Procrastinação: Como Deixar de Ser Preguiçoso e Ter Resultados Em Sua Vida</a> - <small>eBook Kindle</small></li>
       </ul>
 
       <h2>Estudando:</h2>
@@ -18,16 +18,16 @@
 
       <h2>Adquirindo hábitos:</h2>
       <ul>
+        <li>Rotina, Rotina, Rotina..</li>
         <li>Leitura</li>
-        <li>Rotina diária</li>
         <li>Exerícios físicos</li>
       </ul>
 
       <h2>Projeto(s) atual(is)</h2>
       <ul>
-        <li>Esse site (eternamente em desenvolvimento)</li>
         <li>Site GRGIT - Recursos Humanos</li>
         <li>Front-end do site ProAdvance - Language Solutions</li>
+        <li>Esse site (eternamente em desenvolvimento)</li>
       </ul>
 
       <h2>Metas e objetivos</h2>
