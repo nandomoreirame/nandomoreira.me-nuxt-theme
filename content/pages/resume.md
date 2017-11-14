@@ -76,4 +76,4 @@ Brazilian, Married, 28 years old. <br>
 
 ### Experiments
 
-[nandomoreira.me/experiments](/experiments)
+[nandomoreira.me/projects/experiments](/projects/experiments)

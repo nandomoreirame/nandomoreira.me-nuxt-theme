@@ -14,6 +14,13 @@
           <nuxt-link :to="item.link" :title="item.title" role="link" class="navbar__nav-link">
             {{ item.title }}
           </nuxt-link>
+          <ul v-if="item.subitems" class="navbar__dropdown">
+            <li v-for="(subitem, i) in item.subitems" :key="i" class="navbar__dropdown-item">
+              <nuxt-link :to="subitem.link" :title="subitem.title" role="link" class="navbar__dropdown-link">
+                {{ subitem.title }}
+              </nuxt-link>
+            </li>
+          </ul>
         </li>
         <li class="navbar__nav-item">
           <link-button buttonType="ghost" buttonSize="small" buttonPermalink="https://api.whatsapp.com/send?1=pt_BR&amp;phone=5541984401163" :nuxtLink="false" linkTarget="_blank">
@@ -37,19 +44,31 @@ export default {
       navItems: [
         {
           link: '/about',
-          title: 'Sobre'
+          title: 'Sobre',
+          subitems: [
+            {
+              link: '/about/apps',
+              title: 'Apps que uso'
+            },
+            {
+              link: '/about/now',
+              title: 'O que estou fazendo agora'
+            }
+          ]
         },
         {
           link: '/projects',
-          title: 'Projetos'
-        },
-        {
-          link: '/projects/open-source',
-          title: 'Open Source'
-        },
-        {
-          link: '/experiments',
-          title: 'Experimentos'
+          title: 'Projetos',
+          subitems: [
+            {
+              link: '/projects/open-source',
+              title: 'Open Source'
+            },
+            {
+              link: '/projects/experiments',
+              title: 'Experimentos'
+            }
+          ]
         },
         {
           link: '/blog',
@@ -84,6 +103,7 @@ export default {
   +above(lg)
     display block
     position relative
+
   &__nav
     list-style none
     margin 0
@@ -97,11 +117,14 @@ export default {
     +above(lg)
       padding 0
       display inline-block
+
   &__nav-item
     font-weight fontWeightBold
     letter-spacing -.01em
     line-height 1
     text-align right
+    position relative
+    margin 0
     +above(lg)
       text-align left
       display inline-block
@@ -114,6 +137,23 @@ export default {
       content '•'
       color #435466
       margin-left 15px
+    &:not(:last-child) .navbar__nav-link
+      // background-color #222
+      padding 1.8rem 0
+    &:hover,
+    &:focus
+      .navbar__dropdown
+        display block
+    a.nuxt-link-active,
+    a.nuxt-link-exact-active,
+    &:hover .navbar__nav-link,
+    &:focus .navbar__nav-link
+        color mintColor
+        &:after
+          width 50%
+          left 0
+          background khakiColor
+
   &__nav-link
     color #fff
     font-size 2rem
@@ -135,18 +175,38 @@ export default {
         content ''
         display block
         position absolute
-        top calc(100% + 5px)
+        bottom 20px
         width 0
         height 3px
-    &.nuxt-link-exact-active,
-    &:hover
-      color mintColor
-      &:after
-        width 50%
-        left 0
-        background khakiColor
-    &.nuxt-link-exact-active
-      pointer-events none
+
+  .nuxt-link-active,
+  .nuxt-link-exact-active
+    pointer-events none
+
+  &__dropdown
+    display none
+    list-style none
+    position absolute
+    left 0
+    top 100%
+    padding .3125rem .3125rem .9375rem
+    width 180px
+    margin 0
+    background-color #fff
+    box-shadow boxShadowBase
+    &-item
+      display block
+      &:last-child
+        margin-bottom 0
+    &-link
+      text-transform uppercase
+      color feldgrauColor
+      text-decoration none
+      font-size 14px
+      display block
+      padding .3125rem .9375rem
+      &:hover
+        color mintColor
 
 .navbar-toggle
   position relative

@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       pageTitle: `Meus experimentos | Fernando Moreira`,
-      pageUrl: `${siteUrl}/experiments`,
+      pageUrl: `${siteUrl}/projects/experiments`,
       breadcrumbs: [
         {
           active: false,
@@ -36,7 +36,7 @@ export default {
         },
         {
           active: true,
-          url: '/experiments',
+          url: '/projects/experiments',
           title: 'Meus experimentos'
         }
       ]
