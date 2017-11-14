@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Blog" :breadcrumbs="breadcrumbs" :description="pageDescription" :author="true"></page-header>
+    <page-header title="Blog" :breadcrumbs="breadcrumbs" :description="pageDescription" :author="false"></page-header>
     <div class="container">
       <div class="article-list">
         <post-item v-for="(post, i) in paginatePosts(posts, page)" :key="+i" :count="+i" :post="post" :class="`p${i}`"></post-item>

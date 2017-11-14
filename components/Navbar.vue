@@ -56,7 +56,7 @@ export default {
           title: 'Blog'
         },
         {
-          link: '/mental-spark',
+          link: '/faisca-mental',
           title: 'Faísca mental'
         }
       ]

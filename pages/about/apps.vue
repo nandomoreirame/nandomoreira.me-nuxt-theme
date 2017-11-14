@@ -1,8 +1,8 @@
 <template>
   <main>
-    <page-header title="Sobre" :breadcrumbs="breadcrumbs"></page-header>
+    <page-header title="Apps que uso" :breadcrumbs="breadcrumbs" :description="pageDescription"></page-header>
     <div class="container--small">
-      <div class="aboutme" v-html="aboutme" data-autotarget></div>
+      <div class="apps" v-html="apps" data-autotarget></div>
       <hr>
       <div class="about__skills">
         <h3>Habilidades</h3>
@@ -14,16 +14,16 @@
 </template>
 
 <script>
-import aboutme from '~/content/pages/about.md'
+import apps from '~/content/pages/apps.md'
 import { siteUrl } from '~/utilities/Helpers'
 
 export default {
-  name: 'About',
+  name: 'Apps',
   data () {
     return {
-      pageTitle: `Sobre | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
-      pageUrl: `${siteUrl}/about`,
+      pageTitle: `Apps que uso | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+      pageDescription: `Segue uma lista de alguns apps que utilizo no meu dia a dia e considero como essenciais.`,
+      pageUrl: `${siteUrl}/about/apps`,
       breadcrumbs: [
         {
           active: false,
@@ -31,16 +31,21 @@ export default {
           title: 'Home'
         },
         {
-          active: true,
+          active: false,
           url: '/about',
           title: 'Sobre'
+        },
+        {
+          active: true,
+          url: '/about/apps',
+          title: 'Apps que uso'
         }
       ]
     }
   },
   computed: {
-    aboutme () {
-      return aboutme
+    apps () {
+      return apps
     }
   },
   components: {
@@ -93,5 +98,4 @@ export default {
 <style lang="stylus" scoped>
 .about__skills
   text-align center
-  padding 0 0 spacingLarge
 </style>

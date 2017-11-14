@@ -64,7 +64,7 @@
 .social
   list-style none
   padding 0
-  margin spacingSmall 0 0
+  margin spacingSmall 0 spacingMini
   &__item
     display inline-block
     vertical-align middle

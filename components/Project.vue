@@ -71,6 +71,7 @@
   margin-top spacingLarge
   padding-top spacingBig
   padding-bottom spacingBig
+  overflow hidden
   @extend $clearfix
   .grid
     align-items center

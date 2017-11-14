@@ -21,12 +21,13 @@ export default {
 
 <style lang="stylus">
 .breadcrumb
-  margin .2rem 0 1rem
+  margin 0 0 .5rem
   list-style none
   padding 0
   &__item
     display inline-block
-    font-size .85ren
+    font-size .85rem
+    margin 0
     &:first-child a
       padding-left 0
     &:last-child > span

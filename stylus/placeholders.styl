@@ -14,13 +14,18 @@ $container
 $article
   border-radius 3px
   background-color white
-  box-shadow 0 8px 20px 0 rgba(224, 224, 224, 0.5)
+  box-shadow boxShadowBase
+  transition box-shadow .2s timingFunction, transform .2s timingFunction
   padding spacingSmall spacingBase
   display block
   border 1px solid #eeeeee
   position relative
   min-height 360px
   @extend $clearfix
+  &:hover,
+  &:focus
+    box-shadow boxShadowHover
+    transform translate(0, -10px)
   &__description a
     color feldgrauColor
     text-decoration none

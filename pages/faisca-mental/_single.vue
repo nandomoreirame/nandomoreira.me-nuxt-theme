@@ -32,7 +32,7 @@ export default {
         },
         {
           active: false,
-          url: '/mental-spark',
+          url: '/faisca-mental',
           title: 'Faísca Mental'
         },
         {

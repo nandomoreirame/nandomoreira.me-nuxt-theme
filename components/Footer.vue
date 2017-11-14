@@ -1,5 +1,6 @@
 <template>
   <footer class="footer">
+    <cta-whatsapp></cta-whatsapp>
     <div class="footer__inner">
       <small>
         Made with
@@ -14,16 +15,17 @@
 
 <script>
 export default {
-  name: 'pageFooter'
+  name: 'pageFooter',
+  components: {
+    CtaWhatsapp: () => import('~/components/CtaWhatsApp')
+  }
 }
 </script>
 
 <style lang="stylus">
 .footer
   background-color feldgrauColor
-  margin-top spacingBase
-  margin-bottom spacingLarge
-  border-top borderBase
+  margin 0 0 spacingLarge
   @extend $clearfix
   +above(md)
     margin-bottom 0

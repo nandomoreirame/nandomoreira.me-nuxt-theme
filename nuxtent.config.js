@@ -39,7 +39,7 @@ module.exports = {
       'mental-spark',
       {
         page: '/mental-spark/_single',
-        permalink: '/mental-spark/:slug',
+        permalink: '/faisca-mental/:slug',
         generate: ['get', 'getAll'],
         isPost: false
       }
