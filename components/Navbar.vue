@@ -179,34 +179,62 @@ export default {
         width 0
         height 3px
 
-  .nuxt-link-active,
-  .nuxt-link-exact-active
-    pointer-events none
-
   &__dropdown
     display none
     list-style none
-    position absolute
-    left 0
-    top 100%
-    padding .3125rem .3125rem .9375rem
-    width 180px
+    padding .9375rem 0 0
     margin 0
-    background-color #fff
-    box-shadow boxShadowBase
+    width 100%
+    +above(lg)
+      width 180px
+      position absolute
+      left 0
+      top 100%
+      &:after, &:before
+        display block
+        top -2px
+        left 12%
+        border solid transparent
+        content ''
+        height 0
+        width 0
+        position absolute
+        pointer-events none
+      &:after
+        border-color rgba(#fff, 0)
+        border-bottom-color #fff
+        border-width 10px
+        margin-left -10px
+      &:before
+        border-color rgba(194, 225, 245, 0)
+        border-bottom-color rgba(#000, .1)
+        border-width 9px
+        margin-left -9px
     &-item
       display block
-      &:last-child
-        margin-bottom 0
+      padding .3125rem 0
+      margin 0
+      +above(lg)
+        background-color #fff
+        border-left 1px solid rgba(#000, .1)
+        border-right 1px solid rgba(#000, .1)
+        &:first-child
+          border-top 1px solid rgba(#000, .1)
+        &:last-child
+          margin-bottom 0
+          border-bottom 1px solid rgba(#000, .1)
     &-link
       text-transform uppercase
-      color feldgrauColor
       text-decoration none
-      font-size 14px
       display block
-      padding .3125rem .9375rem
+      padding .625rem 0
+      font-size 1.4rem
       &:hover
         color mintColor
+      +above(lg)
+        font-size 14px
+        padding .625rem .9375rem
+        color feldgrauColor
 
 .navbar-toggle
   position relative

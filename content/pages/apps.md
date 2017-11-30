@@ -20,7 +20,8 @@
 * **[Trello](https://trello.com/)**: Onde organizo meus projetos, planos e onde coloco muitas ideias malucas que geralmente me esquecerei mais tarde.
 * **[Bear](http://www.bear-writer.com/)**: Cara, que app foda, parece um editor de texto simples, mas é o melhor editor de textos simples.
 * **[Habitica](https://habitica.com/)**: Onde listo meus hábitos (ruins e bons) e atividades diárias que quero que se tornem hábitos.
-* **[Operand](http://operand.com.br/)**: Um WebApp de gestão de projetos, onde coloco meus clientes e gerencio o fluxo de caixa.
+* **[Organizze](http://organizze.com.br/)**: Um webapp para cotrole financeiro pessoal.
+* **[Controlle](http://controlle.com/)**: Um webapp para cotrole financeiro para empresas.
 * **[Raindrop](https://raindrop.io/)**: O Raindrop é um app para gerenciar os meus bookmarks, no celular e no computador eu posso gerenciar meus favs de forma bem fácil.
 
 ### Design e UX Design
