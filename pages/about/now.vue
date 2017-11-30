@@ -7,34 +7,33 @@
       <p>Então, aqui é meu <strong>Now</strong>:</p>
       <h2>Lendo os livros:</h2>
       <ul>
-        <li><a href="https://goo.gl/8wsLcN" target="_blank">23 Hábitos Anti-Procrastinação: Como Deixar de Ser Preguiçoso e Ter Resultados Em Sua Vida</a> - <small>eBook Kindle</small></li>
+        <li>no momento nenhum.</li>
       </ul>
 
       <h2>Estudando:</h2>
       <ul>
-        <li><a href="https://www.udemy.com/curso-reactjs-ninja" target="_blank">Curso React.js Ninja</a></li>
-        <li><a href="https://www.udemy.com/js-com-tdd-na-pratica" target="_blank">JS com TDD na Prática</a></li>
+        <li>Desenho a mão</li>
       </ul>
 
       <h2>Adquirindo hábitos:</h2>
       <ul>
         <li>Rotina, Rotina, Rotina..</li>
         <li>Leitura</li>
-        <li>Exerícios físicos</li>
+        <li><strike>Exerícios físicos</strike> <small> (tá foda, gordo num tem jeito mesmo)</small></li>
       </ul>
 
       <h2>Projeto(s) atual(is)</h2>
       <ul>
-        <li>Site GRGIT - Recursos Humanos</li>
-        <li>Front-end do site ProAdvance - Language Solutions</li>
-        <li>Esse site (eternamente em desenvolvimento)</li>
+        <li>ferramentas.digital - Ferramentas de growth hacking</li>
+        <li>Treckos - Loja virtual de coisas legais</li>
+        <li>Esse site <small>(eternamente em desenvolvimento)</small></li>
       </ul>
 
       <h2>Metas e objetivos</h2>
       <ul>
         <li>Lançar um negócio online</li>
         <li>Estudar Javascript todos os dias</li>
-        <li>Conseguir sair para correr todos os dias (pelo menos toda semana)</li>
+        <li><strike>Conseguir sair para correr todos os dias</strike> <small> (pelo menos toda semana)</small></li>
         <li>Escrever mais em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>
     </div>
