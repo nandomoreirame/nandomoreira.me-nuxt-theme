@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Meus experimentos" :breadcrumbs="breadcrumbs"></page-header>
+    <page-header title="Meus experimentos" :breadcrumbs="breadcrumbs" :description="pageDescription"></page-header>
     <div class="container">
       <div class="experiments-list">
         <a class="experiment" v-for="(experiment, key) in experiments" :key="key" :href="`https://codepen.io/nandomoreirame/details/${experiment.pen}`" target="_blank" :title="experiment.title">
@@ -27,6 +27,7 @@ export default {
   data () {
     return {
       pageTitle: `Meus experimentos | Fernando Moreira`,
+      pageDescription: `Alguns experimentos legais que fiz no Codepen.io`,
       pageUrl: `${siteUrl}/projects/experiments`,
       breadcrumbs: [
         {
