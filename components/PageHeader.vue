@@ -106,12 +106,12 @@ export default {
   &__description
     font-weight fontWeightLight
     font-style 400
-    font-size 1.25rem
+    font-size 20px
     line-height 1.4
     color #fff
     margin 0
     +above(md)
-      font-size 1rem
+      font-size 22px
   &__meta
     color #fff
     text-transform uppercase

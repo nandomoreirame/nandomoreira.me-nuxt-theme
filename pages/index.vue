@@ -14,7 +14,7 @@
         <a class="home__scrollto" href="#" v-scroll-to="{
             el: '#lastArticle',
             duration: 800,
-            offset: -80
+            offset: 0
         }">
           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
             <polyline points="6 9 12 15 18 9"/>
@@ -256,6 +256,15 @@ export default {
           font-size 1.4rem
   &__social-icons
     padding-top spacingSmall
+  &__dribbble,
+  &__work
+    .section__button
+      margin-bottom spacingBase
+      position relative
+      bottom auto
+    .section__inner
+      margin-bottom 0
+      padding-bottom 0
   &__work
     background-color mintColor
     .project
@@ -274,7 +283,7 @@ export default {
       background-color transparent
     .container
       padding-top spacingBase
-      padding-bottom spacingBase
+      padding-bottom 0
   &__skills
     .section__inner
       padding-bottom 0

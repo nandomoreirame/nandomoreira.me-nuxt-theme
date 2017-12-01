@@ -67,60 +67,63 @@ export default {
 .aboutme
   &__section
     @extend $clearfix
+    h2
+      margin-top 0
     p
       font-size 18px
-      +above(sm)
+      +above(md)
         font-size 22px
 
     &--title-before h2,
     &--title-after h2
       position relative
-      margin-top 0
       &:before,
       &:after
         background-color #4dba87
         display block
         width 100%
-        height 4px
+        height .25rem
         vertical-align middle
-        +above(sm)
+        +below(md)
+          margin .3125rem 0
+        +above(md)
           display inline-block
-          width 200px
+          width 12.5rem
     &--title-before h2:before
       content ''
-      +above(sm)
-        margin-right 30px
+      +above(md)
+        margin-right 1.875rem
     &--title-after h2:after
       content ''
-      +above(sm)
-        margin-left 30px
+      +above(md)
+        margin-left 1.875rem
 
   &__howiam
     .aboutme__thumb
-      +above(sm)
-        flex 0 0 400px
+      +above(md)
+        flex 0 0 25rem
 
   &__howiam,
   &__whatIdoToday
-    +above(sm)
+    +above(md)
       text-align right
 
   &__whatIdoToday
-    +above(sm)
+    +above(md)
       padding-left spacingBase
-    .aboutme__thumb
-      margin-right 0
-      margin-left (spacingLarge * 2)
+      .aboutme__thumb
+        margin-right 0
+        margin-left (spacingLarge * 2)
   &__thisProject
-    +above(sm)
+    +above(md)
       padding-right spacingBase
-    .aboutme__thumb
-      margin-left 0
-      margin-right (spacingLarge * 2)
+      .aboutme__thumb
+        margin-left 0
+        margin-right (spacingLarge * 2)
 
   &__thisProject,
   &__whatIdoToday
-    +above(sm)
+    +above(md)
       .aboutme__content
         flex 0 0 45%
       .aboutme__thumb
@@ -128,12 +131,12 @@ export default {
   &__whatIdoToday
     .aboutme__thumb:before
       transform translate3d(-(spacingSmall/2), (spacingSmall/2), 0)
-      +above(sm)
+      +above(md)
         transform translate3d(-(spacingSmall), spacingSmall, 0)
   &__thisProject
     .aboutme__thumb:before
       transform translate3d((spacingSmall/2), (spacingSmall/2), 0)
-      +above(sm)
+      +above(md)
         transform translate3d(spacingSmall, spacingSmall, 0)
 
   &__howiam,
@@ -145,7 +148,7 @@ export default {
       padding spacingLarge spacingBase
       margin 0 auto
       width 100%
-      +above(sm)
+      +above(md)
         padding (spacingLarge * 2) spacingBase
         display flex
         align-items center
@@ -164,7 +167,7 @@ export default {
   &__imDoingNow
     text-align center
     p
-      max-width 864px
+      max-width 54rem
       margin-right auto
       margin-left auto
 
@@ -192,7 +195,7 @@ export default {
       left 0
       background-color mintColor
       transform translate3d((spacingSmall/2), -(spacingSmall/2), 0)
-      +above(sm)
+      +above(md)
         transform translate3d(spacingSmall, -(spacingSmall), 0)
     img
       position relative
@@ -211,7 +214,7 @@ export default {
     text-align center
     padding spacingLarge spacingBase
     margin 0 auto
-    +above(sm)
+    +above(md)
       padding (spacingLarge * 2) spacingBase
   h2
     margin 0 0 spacingLarge
