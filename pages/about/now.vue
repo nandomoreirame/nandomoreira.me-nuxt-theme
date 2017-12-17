@@ -24,7 +24,6 @@
 
       <h2>Projeto(s) atual(is)</h2>
       <ul>
-        <li>ferramentas.digital - Ferramentas de growth hacking</li>
         <li>Treckos - Loja virtual de coisas legais</li>
         <li>Esse site <small>(eternamente em desenvolvimento)</small></li>
       </ul>
@@ -33,6 +32,7 @@
       <ul>
         <li>Lançar um negócio online</li>
         <li>Estudar Javascript todos os dias</li>
+        <li>Estudar Desenho todos os dias</li>
         <li><strike>Conseguir sair para correr todos os dias</strike> <small> (pelo menos toda semana)</small></li>
         <li>Escrever mais em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>

@@ -73,10 +73,6 @@ export default {
         {
           link: '/blog',
           title: 'Blog'
-        },
-        {
-          link: '/faisca-mental',
-          title: 'Faísca mental'
         }
       ]
     }

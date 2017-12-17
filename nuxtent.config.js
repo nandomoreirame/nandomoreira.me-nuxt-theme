@@ -34,15 +34,6 @@ module.exports = {
         generate: ['getAll'],
         isPost: false
       }
-    ],
-    [
-      'mental-spark',
-      {
-        page: '/mental-spark/_single',
-        permalink: '/faisca-mental/:slug',
-        generate: ['get', 'getAll'],
-        isPost: false
-      }
     ]
   ],
   parsers: {

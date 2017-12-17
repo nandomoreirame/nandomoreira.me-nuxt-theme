@@ -18,11 +18,10 @@
 * **[Spark mail app](https://sparkmailapp.com/)**: Sempre estive em busca de um gerenciador de emails que chutasse bundas, e sim ele é o cara! Eu uso no computador e no Celular.
 * **iCalendar/Google Calendar**: Para todas as minhas me lembrar de tarefas e reuniões no celular e computador.
 * **[Trello](https://trello.com/)**: Onde organizo meus projetos, planos e onde coloco muitas ideias malucas que geralmente me esquecerei mais tarde.
-* **[Bear](http://www.bear-writer.com/)**: Cara, que app foda, parece um editor de texto simples, mas é o melhor editor de textos simples.
+* **[Evernote](http://evernote.com/)**: Com certeza o melhor app para notas que existe, antes eu usava o [Bear](http://www.bear-writer.com/) mas acabei migrando para o **Evernote** mesmo.
 * **[Habitica](https://habitica.com/)**: Onde listo meus hábitos (ruins e bons) e atividades diárias que quero que se tornem hábitos.
 * **[Organizze](http://organizze.com.br/)**: Um webapp para cotrole financeiro pessoal.
 * **[Controlle](http://controlle.com/)**: Um webapp para cotrole financeiro para empresas.
-* **[Raindrop](https://raindrop.io/)**: O Raindrop é um app para gerenciar os meus bookmarks, no celular e no computador eu posso gerenciar meus favs de forma bem fácil.
 
 ### Design e UX Design
 
@@ -44,7 +43,7 @@
 
 ### Música
 
-* **[Spotify](https://www.spotify.com/br/)**: SEMPRE! No computador, celular e playstation.
+* **[Spotify](https://www.spotify.com/br/)**: SEMPRE! No computador, celular e PlayStation.
 
 ### Utilitários
 
