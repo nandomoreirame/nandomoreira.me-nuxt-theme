@@ -23,6 +23,4 @@ $ yarn generate # or npm run generate
 
 It is free under the [open-source MIT license](/LICENSE).
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/1QQGjzDQqsP1MDC8moUwzJjD/nandomoreirame/nandomoreira.me'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/1QQGjzDQqsP1MDC8moUwzJjD/nandomoreirame/nandomoreira.me.svg' />
-</a>
+
