@@ -12,6 +12,8 @@
 
       <h2>Estudando:</h2>
       <ul>
+        <li><a href="https://www.udemy.com/curso-javascript-ninja/" target="_blank">Javascript Ninja</a></li>
+        <li><a href="https://www.udemy.com/curso-reactjs-ninja/" target="_blank">React Ninja</a></li>
         <li>Desenho a mão</li>
       </ul>
 

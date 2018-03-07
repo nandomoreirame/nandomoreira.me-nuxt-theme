@@ -4,7 +4,7 @@
     <blockquote>
       “I have no special talent. I am only passionately curious.” ⏤ Albert Einstein
     </blockquote>
-    <meta-tags></meta-tags>
+    <meta-tags/>
   </main>
 </template>
 

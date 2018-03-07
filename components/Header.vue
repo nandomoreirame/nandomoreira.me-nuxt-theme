@@ -104,8 +104,8 @@ export default {
   min-height 80px
   padding 0 spacingSmall
   transition all .25s timingFunction
-  background-color #fff
-  box-shadow boxShadowBase
+  background-color mintColor
+  // box-shadow boxShadowBase
   &--fixed
     position fixed
     top 0
@@ -131,13 +131,15 @@ export default {
       opacity 0
       transform translate3d(-100%,0,0)
       pointer-events none
+    svg
+      stroke #fff
     svg, span
       line-height 1
       vertical-align middle
       display inline-block
     span
       opacity 0
-      color #435466
+      color #fff
       margin-left .8rem
       transform translate3d(-100%, 0, 0)
       transition .2s transform cubic-bezier(0.29, 0.18, 0.26, 0.83), .2s opacity cubic-bezier(0.29, 0.18, 0.26, 0.83)

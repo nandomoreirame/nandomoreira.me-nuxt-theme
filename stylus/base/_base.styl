@@ -24,6 +24,29 @@ body
   letter-spacing letterSpacingBase
   color feldgrauColor
   margin 0
+  padding 0
+  border 10px solid transparent
+  +above(sm)
+    border-width 20px
+  *
+    transition .4s cubic-bezier(0.18, 0.98, 0.45, 1)
+    transition-property color, stroke, fill, border-color, background-color
+  &:before
+    z-index 100
+    content ''
+    user-select none
+    pointer-events none
+    position fixed
+    left 0
+    right 0
+    bottom 0
+    top 0
+    border inherit
+    border-bottom-width 0
+    border-color mintColor
+    will-change border-color
+    transition border-width 0.4s cubic-bezier(0.18, 0.98, 0.45, 1),
+      border-color 1s cubic-bezier(0.18, 0.98, 0.45, 1)
 
 hr
   border none

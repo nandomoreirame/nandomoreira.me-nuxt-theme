@@ -1,13 +1,7 @@
 <template>
   <div>
-    <input type="checkbox" id="ToggleNavbar">
-    <label tabindex="1" class="navbar-toggle" aria-label="Abrir navegação principal" aria-controls="navigation" for="ToggleNavbar" role="button">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-        <path fill="none" stroke="currentColor" stroke-width="4" d="M10 20h47" class="top-line" stroke-linecap="round"/>
-        <path fill="none" stroke="currentColor" stroke-width="4" d="M30 30h27" class="middle-line" stroke-linecap="round"/>
-        <path fill="none" stroke="currentColor" stroke-width="4" d="M10 40h47" class="bottom-line" stroke-linecap="round"/>
-      </svg>
-    </label>
+    <input type="checkbox" id="ToggleNavbar"/>
+    <navbar-toggle/>
     <nav class="navbar" role="navigation" id="navigation">
       <ul class="navbar__nav" role="menu">
         <li v-for="(item, key) in navItems" :key="key" class="navbar__nav-item" role="menuitem">
@@ -78,7 +72,8 @@ export default {
     }
   },
   components: {
-    LinkButton: () => import('~/components/LinkButton')
+    LinkButton: () => import('~/components/LinkButton'),
+    NavbarToggle: () => import('~/components/NavbarToggle')
   }
 }
 </script>
@@ -100,6 +95,16 @@ export default {
     display block
     position relative
 
+  .link-button--ghost .link-button__link
+    border-color #fff
+    background-color #fff
+    color mintColor
+    &:hover,
+    &:focus
+      background-color feldgrauColor
+      border-color feldgrauColor
+      color #fff
+
   &__nav
     list-style none
     margin 0
@@ -115,7 +120,7 @@ export default {
       display inline-block
 
   &__nav-item
-    font-weight fontWeightBold
+    font-weight fontWeightRegular
     letter-spacing -.01em
     line-height 1
     text-align right
@@ -131,7 +136,8 @@ export default {
       margin-left 1rem
     &:not(:last-child):after
       content '•'
-      color #435466
+      color #fff
+      opacity 0.75
       margin-left 15px
     &:not(:last-child) .navbar__nav-link
       // background-color #222
@@ -140,15 +146,15 @@ export default {
     &:focus
       .navbar__dropdown
         display block
-    a.nuxt-link-active,
-    a.nuxt-link-exact-active,
+    // a.nuxt-link-active,
+    // a.nuxt-link-exact-active,
     &:hover .navbar__nav-link,
     &:focus .navbar__nav-link
-        color mintColor
-        &:after
-          width 50%
-          left 0
-          background khakiColor
+      color #fff
+      &:after
+        width 50%
+        left 0
+        background khakiColor
 
   &__nav-link
     color #fff
@@ -156,12 +162,16 @@ export default {
     text-decoration none
     letter-spacing .05rem
     position relative
-    text-transform uppercase
+    text-transform lowercase
     padding 5px 0
     display block
+    &:hover,
+    &:focus
+      opacity .75
+      color #fff
     +above(lg)
       font-size fontSizeSmall
-      color feldgrauColor
+      // color feldgrauColor
       display inline-block
       padding 0
       &:after
@@ -220,7 +230,7 @@ export default {
           margin-bottom 0
           border-bottom 1px solid rgba(#000, .1)
     &-link
-      text-transform uppercase
+      text-transform lowercase
       text-decoration none
       display block
       padding .625rem 0
@@ -231,19 +241,6 @@ export default {
         font-size 14px
         padding .625rem .9375rem
         color feldgrauColor
-
-.navbar-toggle
-  position relative
-  display block
-  z-index 10001
-  line-height 1
-  vertical-align middle
-  svg
-    width 46px
-    path
-      transition transform .2s timingFunction
-  +above(lg)
-    display none
 
 #ToggleNavbar
   position absolute
@@ -259,16 +256,29 @@ export default {
       ~ .navbar
         display table
       ~ .navbar-toggle
-        path
-          stroke #fff
-        .top-line
-          transform rotate(-45deg) translate3d(0, -10px, 0)
-          transform-origin bottom right
-          width 45px
-        .bottom-line
-          transform rotate(45deg) translate3d(0, 10px, 0)
-          transform-origin bottom right
-          width 45px
-        .middle-line
-          transform translate3d(200%, 0, 0)
+        span
+          &:nth-child(1),
+          &:nth-child(6)
+            transform rotate(45deg)
+          &:nth-child(2),
+          &:nth-child(5)
+            transform rotate(-45deg)
+          &:nth-child(1)
+            left 7px
+            top 7px
+          &:nth-child(2)
+            left calc(50% - 5px)
+            top 7px
+          &:nth-child(3)
+            left -50%
+            opacity 0
+          &:nth-child(4)
+            left 100%
+            opacity 0
+          &:nth-child(5)
+            left 7px
+            top 15px
+          &:nth-child(6)
+            left calc(50% - 5px)
+            top 15px
 </style>

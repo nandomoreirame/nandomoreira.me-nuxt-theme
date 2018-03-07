@@ -6,7 +6,7 @@
       <hr>
       <div class="about__skills">
         <h3>Habilidades</h3>
-        <skills></skills>
+        <skills/>
       </div>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>

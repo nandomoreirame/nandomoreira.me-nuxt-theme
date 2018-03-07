@@ -82,12 +82,12 @@ export default {
     background-position 50% 50%
     background-repeat no-repeat
     background-size cover
-    background-attachment fixed
+    // background-attachment fixed
     .container
       position relative
       z-index 2
   &__inner
-    background-color rgba(mintColor, .95)
+    background-color mintColor
     padding 8rem 0 5rem
     +above(md)
       padding-top 10rem

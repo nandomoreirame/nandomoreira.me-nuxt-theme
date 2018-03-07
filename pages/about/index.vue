@@ -10,7 +10,7 @@
       <div class="aboutme__section aboutme__skills aboutme__section--title-after aboutme__section--title-before">
         <section>
           <h2>Minhas Habilidades</h2>
-          <skills></skills>
+          <skills/>
         </section>
       </div>
     </div>
@@ -145,9 +145,11 @@ export default {
   &__thisProject,
   &__whatIdoToday
     section
-      padding spacingLarge spacingBase
       margin 0 auto
       width 100%
+      padding spacingBase spacingSmall
+      +above(sm)
+        padding spacingLarge spacingBase
       +above(md)
         padding (spacingLarge * 2) spacingBase
         display flex
