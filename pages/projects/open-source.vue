@@ -5,20 +5,18 @@
       <project v-for="(project, i) in projects" :key="i" :count="i" :project="project"></project>
     </div>
     <nuxt-child />
-    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
-import { siteUrl } from '~/utilities/Helpers'
-
 export default {
   name: 'OpenSource',
   data () {
     return {
       pageTitle: `I ❤️ Open Source - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageDescription: `Esses são alguns dos projetos open sources em que trabalhei.`,
-      pageUrl: `${siteUrl}/projects/open-source`,
+      pageUrl: `${process.env.baseUrl}/projects/open-source`,
       breadcrumbs: [
         {
           active: false,

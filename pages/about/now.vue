@@ -39,20 +39,18 @@
         <li>Escrever mais em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>
     </div>
-    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
-import { siteUrl } from '~/utilities/Helpers'
-
 export default {
   name: 'Now',
   data () {
     return {
       pageTitle: `O que estou fazendo agora | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageDescription: `Esta página agora é tirada da idéia de Derek Sivers em Nownownow, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.`,
-      pageUrl: `${siteUrl}/about/now`,
+      pageUrl: `${process.env.baseUrl}/about/now`,
       breadcrumbs: [
         {
           active: false,

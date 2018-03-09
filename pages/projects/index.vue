@@ -5,20 +5,18 @@
       <project v-for="(project, i) in projects" :key="i" :count="i" :project="project"></project>
     </div>
     <nuxt-child />
-    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
-import { siteUrl } from '~/utilities/Helpers'
-
 export default {
   name: 'Projects',
   data () {
     return {
       pageTitle: `Projetos - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageDescription: `Esses são alguns dos projetos que trabalhei, projetos pessoais e freelas para clientes.`,
-      pageUrl: `${siteUrl}/projects`,
+      pageUrl: `${process.env.baseUrl}/projects`,
       breadcrumbs: [
         {
           active: false,

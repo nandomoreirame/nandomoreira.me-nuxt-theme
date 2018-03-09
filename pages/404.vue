@@ -17,7 +17,7 @@
         <social-icons></social-icons>
       </div>
     </div>
-    <meta-tags :title="pageTitle" :description="pageDescription"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription"/>
   </div>
 </template>
 

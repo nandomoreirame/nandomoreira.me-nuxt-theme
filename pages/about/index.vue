@@ -14,13 +14,11 @@
         </section>
       </div>
     </div>
-    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
-import { siteUrl } from '~/utilities/Helpers'
-
 import howiam from '~/content/pages/about/howiam.md'
 import imDoingNow from '~/content/pages/about/im-doing-now.md'
 import professionalHistory from '~/content/pages/about/professional-history.md'
@@ -33,7 +31,7 @@ export default {
     return {
       pageTitle: `Sobre | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
-      pageUrl: `${siteUrl}/about`,
+      pageUrl: `${process.env.baseUrl}/about`,
       breadcrumbs: [
         {
           active: false,

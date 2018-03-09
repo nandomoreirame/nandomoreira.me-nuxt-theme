@@ -1,12 +1,14 @@
 <template>
-  <label tabindex="1" class="navbar-toggle" aria-label="Abrir navegação principal" aria-controls="navigation" for="ToggleNavbar" role="button">
+  <button role="button" tabindex="1" @click="$store.commit('toggleNavbar', !$store.state.showNavbar)"
+    class="NavbarToggle" :class="{ 'NavbarToggle--open': $store.state.showNavbar }"
+    aria-label="Abrir navegação principal" aria-controls="navigation">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-  </label>
+  </button>
 </template>
 
 <script>
@@ -16,7 +18,7 @@
 </script>
 
 <style lang="stylus">
-.navbar-toggle
+.NavbarToggle
   position relative
   display block
   z-index 10001
@@ -53,4 +55,30 @@
     &:nth-child(5),
     &:nth-child(6)
       top 20px
+
+  &--open span
+    &:nth-child(1),
+    &:nth-child(6)
+      transform rotate(45deg)
+    &:nth-child(2),
+    &:nth-child(5)
+      transform rotate(-45deg)
+    &:nth-child(1)
+      left 7px
+      top 7px
+    &:nth-child(2)
+      left calc(50% - 5px)
+      top 7px
+    &:nth-child(3)
+      left -50%
+      opacity 0
+    &:nth-child(4)
+      left 100%
+      opacity 0
+    &:nth-child(5)
+      left 7px
+      top 15px
+    &:nth-child(6)
+      left calc(50% - 5px)
+      top 15px
 </style>

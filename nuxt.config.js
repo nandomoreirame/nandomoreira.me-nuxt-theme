@@ -3,9 +3,14 @@ const { resolve } = require('path')
 const webpack = require('webpack')
 
 const isProduction = process.env.NODE_ENV === 'production'
+const baseUrl = isProduction ? `https://nandomoreira.me` : 'http://localhost:3000'
 
 module.exports = {
   dev: !isProduction,
+  env: {
+    isProduction,
+    baseUrl
+  },
   head: {
     title: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR',
     htmlAttrs: {
@@ -62,14 +67,12 @@ module.exports = {
       { rel: 'prerender', href: 'https://nandomoreira.me/' }
     ],
     script: [
-      // { src: '//fernandomoreira.disqus.com/count.js', id: 'dsq-count-scr' },
-      // { src: 'https://secure.skypeassets.com/i/scom/js/skype-uri.js' },
       { src: (isProduction ? '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' : ''), async: true }
     ]
   },
   manifest: {
     name: 'Fernando Moreira',
-    description: 'Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR',
+    description: 'Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR',
     theme_color: '#4dba87',
     background_color: '#4dba87',
     lang: 'pt_BR'
@@ -78,7 +81,7 @@ module.exports = {
     { src: 'normalize.css/normalize.css', lang: 'css' },
     { src: '~stylus/index.styl', lang: 'stylus' }
   ],
-  loading: { color: '#4dba87' },
+  loading: { color: '#435466' },
   plugins: [
     { src: '~/plugins/browser.js', ssr: false },
     { src: '~/plugins/tooltip.js', ssr: false },
@@ -120,7 +123,6 @@ module.exports = {
     ],
     extend (config, ctx) {
       config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
-      config.resolve.alias['~utilities'] = resolve(__dirname, 'utilities')
       config.resolve.alias['stylus'] = resolve(__dirname, 'stylus')
 
       if (ctx.dev && ctx.isClient) {

@@ -3,17 +3,16 @@
     <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"></page-header>
     <main itemprop="articleBody" role="main">
       <div class="article__body">
-        <nuxtent-body :body="post.body"></nuxtent-body>
+        <nuxtent-body :body="post.body"/>
       </div>
-      <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"></disqus>
+      <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"/>
     </main>
-    <meta-tags :title="postTitle" :url="postUrl" ogType="article" :description="postDesc"></meta-tags>
+    <meta-tags :title="postTitle" :url="postUrl" ogType="article" :description="postDesc"/>
   </article>
 </template>
 
 <script>
 import('highlight.js/styles/tomorrow-night.css')
-const { siteUrl } = require('~/utilities/Helpers')
 
 export default {
   name: 'SinglePost',
@@ -22,9 +21,9 @@ export default {
     return {
       post: data,
       postTitle: `${data.title} - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev Studio em Curitiba/PR`,
-      postImage: (data.image) ? `${siteUrl}${data.image}` : `${siteUrl}/images/social.jpg`,
-      postUrl: `${siteUrl}${data.permalink}`,
+      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR`,
+      postImage: (data.image) ? `${process.env.baseUrl}${data.image}` : `${process.env.baseUrl}/images/social.jpg`,
+      postUrl: `${process.env.baseUrl}${data.permalink}`,
       breadcrumbs: [
         {
           active: false,
@@ -57,7 +56,7 @@ export default {
   methods: {
     splitIdentifier: identifier =>
       identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
-    disqusUrl: permalink => `${siteUrl}${permalink}`
+    disqusUrl: permalink => `${process.env.baseUrl}${permalink}`
   }
 }
 </script>
@@ -94,9 +93,14 @@ export default {
     ul, ol
       padding-left spacingLarge
   img
-    width 100%
     height auto
     display block
+    width 100%
+    +above(lg)
+      left 50%
+      transform translate3d(-50%, 0, 0)
+      width 150%
+      position relative
   pre
     background feldgrauColor
     color honeydewColor

@@ -1,22 +1,21 @@
 <template>
   <div>
-    <input type="checkbox" id="ToggleNavbar"/>
     <navbar-toggle/>
-    <nav class="navbar" role="navigation" id="navigation">
-      <ul class="navbar__nav" role="menu">
-        <li v-for="(item, key) in navItems" :key="key" class="navbar__nav-item" role="menuitem">
-          <nuxt-link :to="item.link" :title="item.title" role="link" class="navbar__nav-link">
+    <nav class="Navbar" role="navigation" id="navigation" :class="{ 'Navbar--open': $store.state.showNavbar }">
+      <ul class="Navbar__nav" role="menu">
+        <li v-for="(item, key) in navItems" :key="key" class="Navbar__nav-item" role="menuitem" v-on:click="closeNavbar">
+          <nuxt-link :to="item.link" :title="item.title" role="link" class="Navbar__nav-link">
             {{ item.title }}
           </nuxt-link>
-          <ul v-if="item.subitems" class="navbar__dropdown">
-            <li v-for="(subitem, i) in item.subitems" :key="i" class="navbar__dropdown-item">
-              <nuxt-link :to="subitem.link" :title="subitem.title" role="link" class="navbar__dropdown-link">
+          <ul v-if="item.subitems" class="Navbar__dropdown">
+            <li v-for="(subitem, i) in item.subitems" :key="i" class="Navbar__dropdown-item" v-on:click="closeNavbar">
+              <nuxt-link :to="subitem.link" :title="subitem.title" role="link" class="Navbar__dropdown-link">
                 {{ subitem.title }}
               </nuxt-link>
             </li>
           </ul>
         </li>
-        <li class="navbar__nav-item">
+        <li class="Navbar__nav-item" v-on:click="closeNavbar">
           <link-button buttonType="ghost" buttonSize="small" buttonPermalink="https://api.whatsapp.com/send?1=pt_BR&amp;phone=5541984401163" :nuxtLink="false" linkTarget="_blank">
             <svg aria-labelledby="whatsapp-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
               <title id="whatsapp-icon">WhatsApp icon</title>
@@ -31,55 +30,63 @@
 </template>
 
 <script>
-export default {
-  name: 'Navbar',
-  data () {
-    return {
-      navItems: [
-        {
-          link: '/about',
-          title: 'Sobre',
-          subitems: [
-            {
-              link: '/about/apps',
-              title: 'Apps que uso'
-            },
-            {
-              link: '/about/now',
-              title: 'O que estou fazendo agora'
-            }
-          ]
-        },
-        {
-          link: '/projects',
-          title: 'Projetos',
-          subitems: [
-            {
-              link: '/projects/open-source',
-              title: 'Open Source'
-            },
-            {
-              link: '/projects/experiments',
-              title: 'Experimentos'
-            }
-          ]
-        },
-        {
-          link: '/blog',
-          title: 'Blog'
+  export default {
+    name: 'Navbar',
+    head () {
+      return {
+        bodyAttrs: {
+          class: this.$store.state.showNavbar ? 'noscroll' : ''
         }
-      ]
+      }
+    },
+    data () {
+      return {
+        navItems: [
+          {
+            link: '/about',
+            title: 'Sobre'
+          },
+          {
+            link: '/about/apps',
+            title: 'Apps'
+          },
+          {
+            link: '/about/now',
+            title: 'Now'
+          },
+          {
+            link: '/blog',
+            title: 'Blog'
+          },
+          {
+            link: '/projects',
+            title: 'Projetos'
+          },
+          {
+            link: '/projects/open-source',
+            title: 'Open Source'
+          },
+          {
+            link: '/projects/experiments',
+            title: 'Experimentos'
+          }
+        ]
+      }
+    },
+    methods: {
+      closeNavbar () {
+        this.$store.commit('toggleNavbar', false)
+      }
+    },
+    components: {
+      LinkButton: () => import('~/components/LinkButton'),
+      NavbarToggle: () => import('~/components/NavbarToggle')
     }
-  },
-  components: {
-    LinkButton: () => import('~/components/LinkButton'),
-    NavbarToggle: () => import('~/components/NavbarToggle')
   }
-}
 </script>
 
 <style lang="stylus">
-.navbar
+.Navbar
   +below(lg)
     position fixed
     z-index 1000
@@ -91,6 +98,8 @@ export default {
     bottom 0
     background-color rgba(feldgrauColor, .95)
     display none
+    &--open
+      display table
   +above(lg)
     display block
     position relative
@@ -123,7 +132,7 @@ export default {
     font-weight fontWeightRegular
     letter-spacing -.01em
     line-height 1
-    text-align right
+    text-align center
     position relative
     margin 0
     +above(lg)
@@ -134,22 +143,25 @@ export default {
       vertical-align middle
     &:not(:first-child)
       margin-left 1rem
-    &:not(:last-child):after
-      content '•'
-      color #fff
-      opacity 0.75
-      margin-left 15px
-    &:not(:last-child) .navbar__nav-link
-      // background-color #222
-      padding 1.8rem 0
+    +above(lg)
+      &:not(:last-child):after
+        content '•'
+        color #fff
+        opacity 0.75
+        margin-left 15px
+    &:not(:last-child) .Navbar__nav-link
+      padding 5% 0
+      +above(lg)
+        padding 1.8rem 0
     &:hover,
     &:focus
-      .navbar__dropdown
+      .Navbar__dropdown
         display block
     // a.nuxt-link-active,
     // a.nuxt-link-exact-active,
-    &:hover .navbar__nav-link,
-    &:focus .navbar__nav-link
+    &:hover .Navbar__nav-link,
+    &:focus .Navbar__nav-link,
+    .nuxt-link-exact-active
       color #fff
       &:after
         width 50%
@@ -158,13 +170,13 @@ export default {
 
   &__nav-link
     color #fff
-    font-size 2rem
+    font-size 1.625rem
     text-decoration none
     letter-spacing .05rem
     position relative
     text-transform lowercase
-    padding 5px 0
     display block
+    &.nuxt-link-exact-active,
     &:hover,
     &:focus
       opacity .75
@@ -241,44 +253,4 @@ export default {
         font-size 14px
         padding .625rem .9375rem
         color feldgrauColor
-
-#ToggleNavbar
-  position absolute
-  border 0
-  clip rect(0, 0, 0, 0)
-  width 1px
-  height 1px
-  margin -1px
-  padding 0
-  overflow hidden
-  +below(lg)
-    &:checked
-      ~ .navbar
-        display table
-      ~ .navbar-toggle
-        span
-          &:nth-child(1),
-          &:nth-child(6)
-            transform rotate(45deg)
-          &:nth-child(2),
-          &:nth-child(5)
-            transform rotate(-45deg)
-          &:nth-child(1)
-            left 7px
-            top 7px
-          &:nth-child(2)
-            left calc(50% - 5px)
-            top 7px
-          &:nth-child(3)
-            left -50%
-            opacity 0
-          &:nth-child(4)
-            left 100%
-            opacity 0
-          &:nth-child(5)
-            left 7px
-            top 15px
-          &:nth-child(6)
-            left calc(50% - 5px)
-            top 15px
 </style>

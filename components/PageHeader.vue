@@ -19,8 +19,6 @@
 </template>
 
 <script>
-const { siteUrl } = require('~/utilities/Helpers')
-
 export default {
   name: 'PageHeader',
   props: {
@@ -36,7 +34,7 @@ export default {
     },
     'shareImage': {
       type: String,
-      default: `${siteUrl}/images/social.jpg`
+      default: `${process.env.baseUrl}/images/social.jpg`
     },
     'author': {
       type: Boolean,

@@ -9,13 +9,12 @@
         <skills/>
       </div>
     </div>
-    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
 import apps from '~/content/pages/apps.md'
-import { siteUrl } from '~/utilities/Helpers'
 
 export default {
   name: 'Apps',
@@ -23,7 +22,7 @@ export default {
     return {
       pageTitle: `Apps que uso | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
       pageDescription: `Segue uma lista de alguns apps que utilizo no meu dia a dia e considero como essenciais.`,
-      pageUrl: `${siteUrl}/about/apps`,
+      pageUrl: `${process.env.baseUrl}/about/apps`,
       breadcrumbs: [
         {
           active: false,

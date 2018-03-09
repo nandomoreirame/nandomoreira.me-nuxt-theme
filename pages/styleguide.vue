@@ -44,19 +44,17 @@
         </div>
       </section>
     </div>
-    <meta-tags :title="pageTitle" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
-import { siteUrl } from '~/utilities/Helpers'
-
 export default {
   name: 'Styleguide',
   data () {
     return {
       pageTitle: `Styleguide - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageUrl: `${siteUrl}/styleguide`,
+      pageUrl: `${process.env.baseUrl}/styleguide`,
       colors: {
         primary: [
           'primary',

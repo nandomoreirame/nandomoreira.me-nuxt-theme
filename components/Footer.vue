@@ -26,11 +26,6 @@ export default {
 .footer
   background-color transparent
   margin 0 0 spacingLarge
-  position fixed
-  z-index 1
-  bottom 0
-  left 0
-  right 0
   @extend $clearfix
   +above(md)
     margin-bottom 0

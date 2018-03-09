@@ -26,6 +26,8 @@ body
   margin 0
   padding 0
   border 10px solid transparent
+  &.noscroll
+    overflow hidden
   +above(sm)
     border-width 20px
   *
@@ -88,7 +90,7 @@ figure
   pointer-events none
 
 .MainContent
-  margin-bottom 90px
+  padding-bottom spacingSmall
   background-color #f7f9fb
   position relative
   z-index 2

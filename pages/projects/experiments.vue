@@ -15,20 +15,18 @@
       </div>
       <nuxt-child />
     </div>
-    <meta-tags :title="pageTitle" :url="pageUrl"></meta-tags>
+    <meta-tags :title="pageTitle" :url="pageUrl"/>
   </main>
 </template>
 
 <script>
-import { siteUrl } from '~/utilities/Helpers'
-
 export default {
   name: 'Experiments',
   data () {
     return {
       pageTitle: `Meus experimentos | Fernando Moreira`,
       pageDescription: `Alguns experimentos legais que fiz no Codepen.io`,
-      pageUrl: `${siteUrl}/projects/experiments`,
+      pageUrl: `${process.env.baseUrl}/projects/experiments`,
       breadcrumbs: [
         {
           active: false,
