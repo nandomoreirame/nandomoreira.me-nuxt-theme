@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Styleguide" :breadcrumbs="breadcrumbs"></page-header>
+    <page-header title="Styleguide" :breadcrumbs="breadcrumbs"/>
     <div class="styleguide container">
       <section class="styleguide__section">
         <h2>Primary colors</h2>

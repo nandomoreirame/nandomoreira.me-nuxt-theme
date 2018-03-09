@@ -1,7 +1,7 @@
 <template>
   <aside class="comments">
     <div class="comments__inner container--small">
-      <h3>Comentários para: <span>"{{ disqusTitle }}"</span></h3>
+      <h3>Gostou? Então comenta ae!</h3>
       <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
     </div>
   </aside>
@@ -39,9 +39,6 @@ export default {
   background-color #fff
   @extend $clearfix
   h3
-    font-size 1.2rem
+    font-size 1.75rem
     margin-top 0
-    span
-      opacity .6
-      font-weight fontWeightRegular
 </style>

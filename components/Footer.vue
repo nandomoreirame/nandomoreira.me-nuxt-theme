@@ -36,12 +36,12 @@ export default {
     max-width lg
     margin-left auto
     margin-right auto
-  small
-    opacity .9
-  a
-    opacity .75
-  small, a
-    color honeydewColor
+    small
+      opacity .9
+    a
+      opacity .75
+    small, a
+      color honeydewColor
   svg
     display inline-block
     vertical-align middle

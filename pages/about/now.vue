@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="O que estou fazendo agora" :description="pageDescription" :breadcrumbs="breadcrumbs"></page-header>
+    <page-header title="O que estou fazendo agora" :description="pageDescription" :breadcrumbs="breadcrumbs"/>
     <div class="container--small">
       <h2>Que página é essa?</h2>
       <p>Esta página agora é tirada da idéia de <strong><a href="https://sivers.org/" target="_blank">Derek Sivers</a></strong> em <a href="http://nownownow.com/about" target="_blank">Nownownow</a>, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.</p>

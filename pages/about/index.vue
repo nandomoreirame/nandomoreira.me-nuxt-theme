@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Sobre" :breadcrumbs="breadcrumbs" :description="pageDescription"></page-header>
+    <page-header title="Sobre" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
     <div class="aboutme">
       <div class="aboutme__section aboutme__section--title-before aboutme__howiam" v-html="howiam"></div>
       <div class="aboutme__section aboutme__professionalHistory aboutme__section--title-after" v-html="professionalHistory"></div>

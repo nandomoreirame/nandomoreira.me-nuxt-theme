@@ -1,10 +1,11 @@
 <template>
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
-    <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"></page-header>
+    <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"/>
     <main itemprop="articleBody" role="main">
       <div class="article__body">
         <nuxtent-body :body="post.body"/>
       </div>
+      <user-info/>
       <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"/>
     </main>
     <meta-tags :title="postTitle" :url="postUrl" ogType="article" :description="postDesc"/>
@@ -51,6 +52,7 @@ export default {
   components: {
     MetaTags: () => import('~/components/MetaTags'),
     PageHeader: () => import('~/components/PageHeader'),
+    UserInfo: () => import('~/components/UserInfo'),
     Disqus: () => import('~/components/Disqus')
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Apps que uso" :breadcrumbs="breadcrumbs" :description="pageDescription"></page-header>
+    <page-header title="Apps que uso" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
     <div class="container--small">
       <div class="apps" v-html="apps" data-autotarget></div>
       <hr>

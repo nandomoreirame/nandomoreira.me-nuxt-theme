@@ -71,13 +71,9 @@ export default {
       box-shadow boxShadowHover
       transform translate(0, -10px)
   &__content
-    -ms-flex-positive 1
     flex-grow 1
-    display -ms-flexbox
     display flex
-    -ms-flex-direction column
     flex-direction column
-    -ms-flex-pack justify
     justify-content space-between
   &__header
     padding spacingSmall spacingSmall spacingMini

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="I ❤️ Open Source" :breadcrumbs="breadcrumbs" :description="pageDescription"></page-header>
+    <page-header title="I ❤️ Open Source" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
     <div class="project-list">
       <project v-for="(project, i) in projects" :key="i" :count="i" :project="project"></project>
     </div>

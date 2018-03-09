@@ -1,6 +1,6 @@
 <template>
   <main>
-    <page-header title="Meus experimentos" :breadcrumbs="breadcrumbs" :description="pageDescription"></page-header>
+    <page-header title="Meus experimentos" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
     <div class="container">
       <div class="experiments-list">
         <a class="experiment" v-for="(experiment, key) in experiments" :key="key" :href="`https://codepen.io/nandomoreirame/details/${experiment.pen}`" target="_blank" :title="experiment.title">
