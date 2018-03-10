@@ -1,11 +1,12 @@
 backend:
-  name: git-gateway
+  name: github
   repo: nandomoreirame/nandomoreira.me
-  # branch: master # Branch to update (optional; defaults to master)
-  # publish_mode: editorial_workflow
+  branch: master # Branch to update (master by default)
 
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "static" # The src attribute for uploaded media will begin with /images/uploads
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -15,10 +16,46 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     # slug: "{{slug}}"
     # format: 'json'
-    extension: 'md'
+    # extension: 'md'
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "string"}
+      - { label: "Tags", name: "tags", widget: "string"}
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Online", name: "online", widget: "boolean", default: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "string" }
+  - name: "open-source"
+    label: "Open-source"
+    folder: "content/open-source"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Online", name: "online", widget: "boolean", default: false }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "string" }
+  - name: "lab"
+    label: "Lab"
+    folder: "content/lab"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Pen ID", name: "pen", widget: "string" }
