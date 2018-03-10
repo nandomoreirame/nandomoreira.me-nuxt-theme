@@ -1,6 +1,5 @@
 backend:
-  name: github
-  # name: github
+  name: git-gateway
   repo: nandomoreirame/nandomoreira.me
   branch: master # Branch to update (master by default)
 
