@@ -6,22 +6,16 @@ tags: 'wordpress, function, php'
 description: >-
   A dica hoje será bem rápida, iremos testar erros na função wp_mail() no
   WordPress usando hooks.
-thumbnail: /static/wp_mail_faild-hook-function.png
+image: /images/uploads/wp_mail_faild-hook-function.png
 ---
 Sabemos que da pra fazer bastante coisa no WordPress usando os famosos hooks e sabemos também que é impossível saber o retorno de um erro ao tentar enviar um email usando a função wp_mail(), pois ela só retorna valores booleanos (true ou false).
 
-Sabendo disso o **WordPress** já nos deu uma saída dessa cilada bino!
-
-<figure>
-<img src="/images/uploads/its-a-trap-bino.jpg" alt="It's a trap bino!"/>
-<figcaption>It's a trap bino!</figcaption>
-</figure>
+Sabendo disso o **WordPress** já nos deu uma [saída dessa cilada bino!](/images/uploads/its-a-trap-bino.jpg)
 
 [Usando o hook `wp_mail_failed`](https://developer.wordpress.org/reference/hooks/wp_mail_failed/) podemos criar uma função para captar os erros gerados pela `wp_mail()`.
 
 ```php
 <?php
-// show wp_mail() errors
 add_action( 'wp_mail_failed', 'onMailError', 10, 1 );
 function onMailError( $wp_error ) {
     echo '<pre>' . print_r($wp_error , true ) . '</pre>';

@@ -5,7 +5,6 @@
       <div class="article-list">
         <post-item v-for="(post, i) in posts" :key="+i" :count="+i" :post="post" :class="`p${i}`"></post-item>
       </div>
-      <paginate />
       <nuxt-child />
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
@@ -51,7 +50,6 @@
       MetaTags: () => import('~/components/MetaTags'),
       PageHeader: () => import('~/components/PageHeader'),
       PostItem: () => import('~/components/PostItem'),
-      Paginate: () => import('~/components/Paginate'),
       LinkButton: () => import('~/components/LinkButton')
     }
   }
