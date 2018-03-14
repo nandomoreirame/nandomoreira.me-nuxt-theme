@@ -75,7 +75,7 @@
     },
     methods: {
       closeNavbar () {
-        this.$store.commit('toggleNavbar', false)
+        this.$store.commit('TOGGLE_NAVBAR', false)
       }
     },
     components: {

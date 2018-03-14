@@ -13,54 +13,59 @@
 </template>
 
 <script>
-import('highlight.js/styles/tomorrow-night.css')
+  import { mapState } from 'vuex'
+  import('highlight.js/styles/tomorrow-night.css')
 
-export default {
-  name: 'SinglePost',
-  async asyncData ({ app, route }) {
-    const data = await app.$content('/posts').get(route.path)
-    return {
-      post: data,
-      postTitle: `${data.title} - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      postDesc: data.description ? `${data.description}` : `${data.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR`,
-      postImage: (data.image) ? `${process.env.baseUrl}${data.image}` : `${process.env.baseUrl}/images/social.jpg`,
-      postUrl: `${process.env.baseUrl}${data.permalink}`,
-      breadcrumbs: [
-        {
-          active: false,
-          url: '/',
-          title: 'Home'
-        },
-        {
-          active: false,
-          url: '/blog',
-          title: 'Blog'
-        },
-        {
-          active: true,
-          url: `${data.permalink}`,
-          title: `${data.title}`
-        }
-      ]
+  export default {
+    name: 'SinglePost',
+    async asyncData ({ app, store, route }) {
+      const data = await app.$content('/posts').get(route.path)
+      store.commit('SET_ARTICLE', data)
+    },
+    computed: {
+      ...mapState({
+        post: state => state.article,
+        postImage: state => (state.article.image) ? `${process.env.baseUrl}${state.article.image}` : `${process.env.baseUrl}/images/social.jpg`,
+        postTitle: state => state.article.title,
+        postDesc: state => state.description ? `${state.article.description}` : `${state.article.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR`,
+        postSlug: state => state.article.permalink,
+        postUrl: state => `${process.env.baseUrl}${state.article.permalink}`,
+        breadcrumbs: state => [
+          {
+            active: false,
+            url: '/',
+            title: 'Home'
+          },
+          {
+            active: false,
+            url: '/blog',
+            title: 'Blog'
+          },
+          {
+            active: true,
+            url: `${state.article.permalink}`,
+            title: `${state.article.title}`
+          }
+        ]
+      })
+    },
+    head () {
+      return {
+        title: `${this.postTitle}`
+      }
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      PageHeader: () => import('~/components/PageHeader'),
+      UserInfo: () => import('~/components/UserInfo'),
+      Disqus: () => import('~/components/Disqus')
+    },
+    methods: {
+      splitIdentifier: identifier =>
+        identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
+      disqusUrl: permalink => `${process.env.baseUrl}${permalink}`
     }
-  },
-  head () {
-    return {
-      title: `${this.postTitle}`
-    }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    PageHeader: () => import('~/components/PageHeader'),
-    UserInfo: () => import('~/components/UserInfo'),
-    Disqus: () => import('~/components/Disqus')
-  },
-  methods: {
-    splitIdentifier: identifier =>
-      identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
-    disqusUrl: permalink => `${process.env.baseUrl}${permalink}`
   }
-}
 </script>
 
 <style lang="stylus" scoped>

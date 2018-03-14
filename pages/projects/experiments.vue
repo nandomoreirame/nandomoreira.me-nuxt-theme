@@ -20,38 +20,45 @@
 </template>
 
 <script>
-export default {
-  name: 'Experiments',
-  data () {
-    return {
-      pageTitle: `Meus experimentos | Fernando Moreira`,
-      pageDescription: `Alguns experimentos legais que fiz no Codepen.io`,
-      pageUrl: `${process.env.baseUrl}/projects/experiments`,
-      breadcrumbs: [
-        {
-          active: false,
-          url: '/',
-          title: 'Home'
-        },
-        {
-          active: true,
-          url: '/projects/experiments',
-          title: 'Meus experimentos'
-        }
-      ]
+  import { mapState } from 'vuex'
+  export default {
+    name: 'Experiments',
+    data () {
+      return {
+        pageTitle: `Meus experimentos | Fernando Moreira`,
+        pageDescription: `Alguns experimentos legais que fiz no Codepen.io`,
+        pageUrl: `${process.env.baseUrl}/projects/experiments`,
+        breadcrumbs: [
+          {
+            active: false,
+            url: '/',
+            title: 'Home'
+          },
+          {
+            active: true,
+            url: '/projects/experiments',
+            title: 'Meus experimentos'
+          }
+        ]
+      }
+    },
+    async asyncData ({ app, store }) {
+      if (!store.state.experiments.length) {
+        const experiments = await app.$content('/lab').getAll()
+        store.commit('SET_EXPERIMENTS', experiments)
+      }
+    },
+    computed: {
+      ...mapState({
+        experiments: state => state.experiments
+      })
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      PageHeader: () => import('~/components/PageHeader'),
+      LinkButton: () => import('~/components/LinkButton')
     }
-  },
-  async asyncData ({ app }) {
-    return {
-      experiments: await app.$content('/lab').getAll()
-    }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    PageHeader: () => import('~/components/PageHeader'),
-    LinkButton: () => import('~/components/LinkButton')
   }
-}
 </script>
 
 <style lang="stylus">
