@@ -13,17 +13,27 @@ Sabemos que da pra fazer bastante coisa no WordPress usando os famosos hooks e s
 Sabendo disso o **WordPress** já nos deu uma saída dessa cilada bino!
 
 <figure>
-<img src="https://images.8tracks.com/cover/i/008/922/101/binogrande-4107.jpg?rect=142,0,451,451&q=98&fm=jpg&fit=max"/>
+<img src="/images/uploads/its-a-trap-bino.jpg" alt="It's a trap bino!"/>
 <figcaption>It's a trap bino!</figcaption>
 </figure>
 
 [Usando o hook `wp_mail_failed`](https://developer.wordpress.org/reference/hooks/wp_mail_failed/) podemos criar uma função para captar os erros gerados pela `wp_mail()`.
 
-<script src="https://gist.github.com/nandomoreirame/599efb41d7dda5a6d9cbb84b96345800.js"></script>
+```php
+<?php
+// show wp_mail() errors
+add_action( 'wp_mail_failed', 'onMailError', 10, 1 );
+function onMailError( $wp_error ) {
+    echo '<pre>' . print_r($wp_error , true ) . '</pre>';
+}
+```
 
 E usando o [Postman](https://www.getpostman.com/) eu simulei uma requisição para minha aplicação e BAZINGA!
 
-![hook wp_mail_failed no postman app](/images/uploads/wp_mail-error-postman.png)
+<figure>
+<img src="/images/uploads/wp_mail-error-postman.png" alt="hook wp_mail_failed no postman app"/>
+<figcaption>hook wp_mail_failed no postman app</figcaption>
+</figure>
 
 É isso ai pessoal, se curtiu comenta ai.
 

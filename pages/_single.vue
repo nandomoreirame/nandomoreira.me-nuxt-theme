@@ -2,9 +2,7 @@
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
     <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"/>
     <main itemprop="articleBody" role="main">
-      <div class="article__body">
-        <nuxtent-body :body="post.body"/>
-      </div>
+      <div class="article__body" v-html="post.body"/>
       <user-info/>
       <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"/>
     </main>
@@ -68,7 +66,7 @@
   }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .article
   display block
   margin 0
@@ -89,8 +87,9 @@
 <style lang="stylus">
 .article
   &__body
-    p, h2, h3, h4, h5,
+    p, h2, h3, h4, h5, figure,
     blockquote, pre code, ul, ol
+      display block
       max-width containerWidthSmall
       margin-left auto
       margin-right auto
@@ -99,15 +98,23 @@
       padding-right spacingBase
     ul, ol
       padding-left spacingLarge
-  img
-    height auto
-    display block
-    width 100%
-    +above(lg)
-      left 50%
-      transform translate3d(-50%, 0, 0)
-      width 150%
-      position relative
+    img
+      display block
+      margin 0 auto spacingMini
+
+  figure
+    margin-bottom spacingSmall
+
+  figure, p
+    img
+      height auto
+      width 100%
+    +above(md)
+      img
+        left 50%
+        transform translate3d(-50%, 0, 0)
+        width 150%
+        position relative
   pre
     background feldgrauColor
     color honeydewColor
@@ -115,8 +122,8 @@
     margin-bottom spacingBase
     code
       background feldgrauColor
-      padding-top spacingSmall
-      padding-bottom spacingSmall
+      padding-top spacingMini
+      padding-bottom spacingMini
   .video
     position relative
     padding-bottom 56.25%
