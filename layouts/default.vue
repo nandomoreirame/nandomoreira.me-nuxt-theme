@@ -29,12 +29,14 @@
 .page-enter-active,
 .page-leave-active
   .container,
-  .container--small
+  .container--small,
+  .aboutme__section
     transition: opacity .5s, transform .5s
 .page-enter,
 .page-leave-active
   .container,
-  .container--small
+  .container--small,
+  .aboutme__section
     opacity: 0
     transform translate3d(-10px, 0, 0)
 </style>

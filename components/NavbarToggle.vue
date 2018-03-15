@@ -29,6 +29,9 @@
   margin 0 auto
   transform rotate(0deg)
   cursor pointer
+  background none transparent
+  border none
+  outline none
   +above(lg)
     display none
   span

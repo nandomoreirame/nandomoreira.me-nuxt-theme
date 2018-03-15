@@ -1,80 +1,10 @@
 <template>
   <div class="home">
-
-    <page-header :isHero="true">
-      <div slot="inner" class="container" itemscope itemtype="http://schema.org/Person">
-        <h1>Oi, eu sou o <span><nuxt-link title="Meu nome é Fernando Moreira Costa (muito prazer)" to="/about" itemprop="name">Fernando</nuxt-link></span>!</h1>
-        <h2 role="presentation">
-          Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> na <strong><a href="https://onedev.studio" target="_blank">Onedev.studio</a></strong> em <strong>Curitiba/PR</strong>.
-          <small>Se você está em busca de um programador freelancer front-end, WordPress, PHP ou JavaScript entre em contato: <a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me[arroba]gmail.com</a> ou através das redes sociais abaixo.</small>
-        </h2>
-        <div class="pageHeader__social-icons">
-          <social-icons iconColor="#435466"/>
-        </div>
-      </div>
-    </page-header>
-
-    <section id="lastArticle" class="home__article section">
-      <div class="section__inner">
-        <header class="section__header">
-          <h2>Últimos Artigos</h2>
-        </header>
-        <div class="container">
-          <div class="last-articles">
-            <post-item v-for="(post, i) in featuredPosts" :key="i" :count="i" :post="post"/>
-          </div>
-          <div class="section__button">
-            <link-button buttonType="ghost" buttonPermalink="/blog">mais artigos →</link-button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home__work section">
-      <div class="section__inner">
-        <header class="section__header">
-          <h2>Último Projeto</h2>
-        </header>
-        <div class="container">
-          <project :project="lastProject"/>
-          <div class="section__button">
-            <link-button buttonType="ghost-white" buttonPermalink="/projects">mais projetos →</link-button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home__dribbble section">
-      <div class="section__inner">
-        <header class="section__header">
-          <h2>Últimos Shots</h2>
-        </header>
-        <div class="container">
-          <dribbble token="8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e"/>
-          <div class="section__button">
-            <link-button buttonType="ghost" buttonPermalink="https://dribbble.com/umdevux" :nuxtLink="false" linkTarget="_blank">
-              <svg aria-labelledby="dribbble-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
-                <title id="dribbble-icon">Dribbble icon</title>
-                <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/>
-              </svg>
-              Mais shots no Dribbble →
-            </link-button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home__skills section">
-      <div class="section__inner">
-        <header class="section__header">
-          <h2>Minhas habilidades</h2>
-        </header>
-        <div class="container">
-          <skills/>
-        </div>
-      </div>
-    </section>
-
+    <home-hero/>
+    <featured-posts :posts="featuredPosts"/>
+    <last-project :project="lastProject"/>
+    <last-shots/>
+    <home-skills/>
     <meta-tags/>
   </div>
 </template>
@@ -103,19 +33,17 @@
     },
     components: {
       MetaTags: () => import('~/components/MetaTags'),
-      PageHeader: () => import('~/components/PageHeader'),
-      SocialIcons: () => import('~/components/SocialIcons'),
-      LinkButton: () => import('~/components/LinkButton'),
-      Project: () => import('~/components/Project'),
-      PostItem: () => import('~/components/PostItem'),
-      Skills: () => import('~/components/Skills'),
-      Dribbble: () => import('~/components/Dribbble')
+      HomeHero: () => import('~/components/Home/Hero'),
+      FeaturedPosts: () => import('~/components/Home/FeaturedPosts'),
+      LastProject: () => import('~/components/Home/LastProject'),
+      LastShots: () => import('~/components/Home/LastShots'),
+      HomeSkills: () => import('~/components/Home/HomeSkills')
     }
   }
 </script>
 
 <style lang="stylus">
-.section
+.HomeSection
   width 100%
   position relative
   overflow hidden
@@ -161,122 +89,4 @@
       border-bottom 20px solid transparent
       border-left 20px solid transparent
       margin-left -20px
-
-.home
-  &__dribbble,
-  &__work
-    .section__button
-      margin-bottom spacingBase
-      position relative
-      bottom auto
-    .section__inner
-      margin-bottom 0
-      padding-bottom 0
-  &__work
-    background-color mintColor
-    .project
-      figure
-        margin-bottom spacingSmall
-        +above(md)
-          margin-bottom 0
-    .project,
-    .project a
-      color #fff
-    .project.project--invert
-      padding-top spacingSmall
-      padding-bottom spacingSmall
-      margin-top 0
-      margin-bottom 0
-      background-color transparent
-    .container
-      padding-top spacingBase
-      padding-bottom 0
-  &__skills
-    .section__inner
-      padding-bottom 0
-      .skills__item:not(:last-child)
-        flex: 1 0 percentage(1/9)
-
-.last-articles
-  display flex
-  position relative
-  flex-flow row
-  flex-wrap wrap
-  margin-left -(spacingSmall)
-  margin-right -(spacingSmall)
-  padding 40px 0 0
-
-.pageHeader
-  &.pageHeader--hero
-    text-align center
-    background-color #f7f9fb
-    width 100%
-    clip-path initial
-    margin 0
-    background-image url("/images/uploads/hero-cover.jpg")
-    background-repeat no-repeat
-    background-size cover
-    .pageHeader__inner
-      padding-top 3.75rem
-      background none transparent
-    +above(md)
-      display flex
-      align-items center
-      justify-content center
-      min-height 70vh
-      .pageHeader__inner
-        padding-top 7.5rem
-    h1,
-    h2
-      display block
-      max-width 64rem
-      padding-left spacingSmall
-      padding-right spacingSmall
-      margin spacingSmall auto
-    h1
-      font-size 3.2rem
-      +above(sm)
-        font-size 4.6rem
-      +above(md)
-        font-size 5.6rem
-      span
-        color mintColor
-      &::after
-        content ''
-        overflow hidden
-        background-color mintColor
-        height 20px
-        width 100%
-        clip-path polygon(0 0, 100% 0, 100% 100%, 0 5%)
-        display block
-    h2
-      font-family fontFamilyBase
-      font-weight fontWeightLight
-      color davysGreyColor
-      font-size 1rem
-      +above(sm)
-        font-size 1.6rem
-      +above(md)
-        font-size 2rem
-      a
-        color linkColor
-        text-decoration underline
-      small
-        display block
-        font-size .9rem
-        margin-top  spacingMini
-        +above(sm)
-          font-size 1.2rem
-        +above(md)
-          font-size 1.4rem
-  &__social-icons
-    padding-top spacingSmall
-
-@keyframes scrollDown
-  0%
-    transform translate3d(0, -20px, 0)
-    opacity .2
-  100%
-    transform translate3d(0, 0, 0)
-    opacity 1
 </style>

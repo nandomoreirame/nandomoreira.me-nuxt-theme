@@ -82,12 +82,14 @@
       disqusUrl: permalink => `${process.env.baseUrl}${permalink}`
     },
     mounted () {
-      const openVideo = document.querySelector('[data-video]')
-      openVideo.addEventListener('click', e => {
-        e.preventDefault()
-        const videoID = e.currentTarget.getAttribute('data-video-id')
-        this.$store.commit('SET_VIDEO', videoID)
-      })
+      const video = document.querySelector('[data-video]')
+      if (null !== video) {
+        video.addEventListener('click', e => {
+          e.preventDefault()
+          const videoID = e.currentTarget.getAttribute('data-video-id')
+          this.$store.commit('SET_VIDEO', videoID)
+        })
+      }
     }
   }
 </script>
