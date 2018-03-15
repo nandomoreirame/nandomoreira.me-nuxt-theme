@@ -1,6 +1,14 @@
 <template>
   <main>
-    <page-header title="Meus experimentos" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
+    <page-header>
+      <div slot="inner">
+        <div class="container">
+          <h1 class="pageHeader__title" itemprop="headline">Meus experimentos</h1>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="pageDescription" itemprop="description" class="pageHeader__description" v-html="pageDescription"/>
+        </div>
+      </div>
+    </page-header>
     <div class="container">
       <div class="experiments-list">
         <a class="experiment" v-for="(experiment, key) in experiments" :key="key" :href="`https://codepen.io/nandomoreirame/details/${experiment.pen}`" target="_blank" :title="experiment.title">
@@ -56,7 +64,8 @@
     components: {
       MetaTags: () => import('~/components/MetaTags'),
       PageHeader: () => import('~/components/PageHeader'),
-      LinkButton: () => import('~/components/LinkButton')
+      LinkButton: () => import('~/components/LinkButton'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     }
   }
 </script>

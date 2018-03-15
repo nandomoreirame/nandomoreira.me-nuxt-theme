@@ -1,9 +1,17 @@
 <template>
   <main>
-    <page-header title="Blog" :breadcrumbs="breadcrumbs" :description="pageDescription" :author="false"/>
+    <page-header>
+      <div slot="inner">
+        <div class="container">
+          <h1 class="pageHeader__title" itemprop="headline">Blog</h1>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="pageDescription" itemprop="description" class="pageHeader__description" v-html="pageDescription"/>
+        </div>
+      </div>
+    </page-header>
     <div class="container">
       <div class="article-list">
-        <post-item v-for="(post, i) in posts" :key="+i" :count="+i" :post="post" :class="`p${i}`"></post-item>
+        <post-item v-for="(post, i) in posts" :key="+i" :count="+i" :post="post" :class="`p${i}`"/>
       </div>
       <nuxt-child />
     </div>
@@ -35,7 +43,7 @@
         ]
       }
     },
-    async asyncData ({ app, store, route }) {
+    async asyncData ({ app, store }) {
       if (!store.state.posts.length) {
         const posts = await app.$content('/posts').getAll()
         store.commit('SET_POSTS', posts)
@@ -50,7 +58,8 @@
       MetaTags: () => import('~/components/MetaTags'),
       PageHeader: () => import('~/components/PageHeader'),
       PostItem: () => import('~/components/PostItem'),
-      LinkButton: () => import('~/components/LinkButton')
+      LinkButton: () => import('~/components/LinkButton'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     }
   }
 </script>

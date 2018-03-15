@@ -1,6 +1,9 @@
 <template>
   <ul class="shots">
-    <li v-for="(shot, i) in shots" :key="i" class="shot">
+    <li v-if="isLoading" class="loading">
+      <spinner/>
+    </li>
+    <li v-if="shots.lenght > 0" v-for="(shot, i) in shots" :key="i" class="shot">
       <a :href="shot.html_url" :title="`link para o shot ${shot.title} - Irá abrir em uma nova aba`" target="_blank">
         <figure class="shot__figure">
           <img :alt="`Imagem do shot ${shot.title}`" :src="shot.images.hidpi">
@@ -24,14 +27,14 @@
             </svg>
             <span>{{ shot.views_count }}</span>
           </div>
-          <div class="shot__comments">
+          <!-- <div class="shot__comments">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" id="entypo-message" width="18" height="18" fill="#ababab">
               <g>
                 <path d="M18 6v7c0 1.1-.9 2-2 2h-4v3l-4-3H4c-1.101 0-2-.9-2-2V6c0-1.1.899-2 2-2h12c1.1 0 2 .9 2 2z"/>
               </g>
             </svg>
             <span>{{ shot.comments_count }}</span>
-          </div>
+          </div> -->
           <!-- <div class="shot__tags">
             <span v-for="(tag, i) in shot.tags" :key="i" class="tag">{{ tag }} </span>
           </div> -->
@@ -42,40 +45,44 @@
 </template>
 
 <script>
-const axios = require('axios')
-export default {
-  name: 'Dribbble',
-  mounted () {
-    this.get()
-  },
-  data () {
-    return {
-      shots: [],
-      url: ''
-    }
-  },
-  props: {
-    'token': {
-      required: true
+  import axios from 'axios'
+  import { mapState } from 'vuex'
+
+  export default {
+    name: 'Dribbble',
+    data () {
+      return {
+        isLoading: true
+      }
     },
-    'user': {
-      required: true
-    }
-  },
-  methods: {
-    get () {
-      const url = `https://api.dribbble.com/v1/users/${this.user}/shots/?access_token=${this.token}`
-      axios.get(url).then(response => {
-        const { data } = response
-        this.shots = data.filter((e, i, arr) => {
-          if (i <= 5) {
-            return arr
-          }
-        })
+    props: {
+      'token': {
+        required: true
+      }
+    },
+    methods: {
+      getShots () {
+        if (!this.$store.state.shots) {
+          const url = `https://api.dribbble.com/v1/users/umdevux/shots/?access_token=${this.token}`
+          const shots = axios.get(url).then(response =>
+            response.data.filter((e, i, arr) => i <= 5))
+          this.$store.commit('SET_SHOTS', shots)
+        }
+        this.isLoading = false
+      }
+    },
+    mounted () {
+      this.getShots()
+    },
+    computed: {
+      ...mapState({
+        shots: state => state.shots
       })
+    },
+    components: {
+      Spinner: () => import('~/components/Spinner')
     }
   }
-}
 </script>
 
 <style lang="stylus">

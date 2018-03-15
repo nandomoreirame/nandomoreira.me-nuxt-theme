@@ -14,7 +14,7 @@
         <span>Voltar para home</span>
       </link-button>
       <div class="error404__social-icons">
-        <social-icons></social-icons>
+        <social-icons/>
       </div>
     </div>
     <meta-tags :title="pageTitle" :description="pageDescription"/>
@@ -22,21 +22,21 @@
 </template>
 
 <script>
-export default {
-  name: 'Error404',
-  layout: 'blank',
-  data () {
-    return {
-      pageTitle: `Erro 404 | Fernando Moreira`,
-      pageDescription: `Infelizmente a página que você está tentando acessar não foi localizada.`
+  export default {
+    name: 'Error404',
+    layout: 'blank',
+    data () {
+      return {
+        pageTitle: `Erro 404 | Fernando Moreira`,
+        pageDescription: `Infelizmente a página que você está tentando acessar não foi localizada.`
+      }
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      LinkButton: () => import('~/components/LinkButton'),
+      SocialIcons: () => import('~/components/SocialIcons')
     }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    LinkButton: () => import('~/components/LinkButton'),
-    SocialIcons: () => import('~/components/SocialIcons')
   }
-}
 </script>
 
 <style lang="stylus">

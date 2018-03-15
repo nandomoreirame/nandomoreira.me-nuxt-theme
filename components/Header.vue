@@ -12,7 +12,7 @@
       </svg>
       <span>Ir para Home</span>
     </nuxt-link>
-    <navbar></navbar>
+    <navbar/>
   </header>
 </template>
 

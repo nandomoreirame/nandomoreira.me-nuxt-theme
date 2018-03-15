@@ -1,36 +1,13 @@
 import Vuex from 'vuex'
+import * as actions from './actions'
+import state from './state'
+import mutations from './mutations'
 
-const createStore = () => {
-  return new Vuex.Store({
-    state: {
-      showNavbar: false,
-      article: null,
-      posts: [],
-      projects: [],
-      experiments: [],
-      openSources: []
-    },
-    mutations: {
-      TOGGLE_NAVBAR (state, data) {
-        state.showNavbar = data
-      },
-      SET_ARTICLE (state, payload) {
-        state.article = payload
-      },
-      SET_POSTS (state, payload) {
-        state.posts = payload
-      },
-      SET_PROJECTS (state, payload) {
-        state.projects = payload
-      },
-      SET_EXPERIMENTS (state, payload) {
-        state.experiments = payload
-      },
-      SET_OPENSOURCES (state, payload) {
-        state.openSources = payload
-      }
-    }
+const Store = () =>
+  new Vuex.Store({
+    actions,
+    state,
+    mutations
   })
-}
 
-export default createStore
+export default Store

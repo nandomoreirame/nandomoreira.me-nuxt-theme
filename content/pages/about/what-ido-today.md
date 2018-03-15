@@ -1,5 +1,4 @@
----
----
+
 
 <div class="aboutme__content">
 

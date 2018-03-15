@@ -2,12 +2,12 @@
   <button role="button" tabindex="1" @click="$store.commit('TOGGLE_NAVBAR', !$store.state.showNavbar)"
     class="NavbarToggle" :class="{ 'NavbarToggle--open': $store.state.showNavbar }"
     aria-label="Abrir navegação principal" aria-controls="navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span/>
+    <span/>
+    <span/>
+    <span/>
+    <span/>
+    <span/>
   </button>
 </template>
 

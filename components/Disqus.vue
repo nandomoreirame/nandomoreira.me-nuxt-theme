@@ -1,8 +1,8 @@
 <template>
   <aside class="comments">
     <div class="comments__inner container--small">
-      <h3>Gostou? Então comenta ae!</h3>
-      <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"></vue-disqus>
+      <h3>Gostou? Comenta ae!</h3>
+      <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"/>
     </div>
   </aside>
 </template>

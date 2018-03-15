@@ -1,6 +1,23 @@
 <template>
   <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
-    <page-header :title="post.title" :description="post.description" :date="post.date" :image="post.image" :shareImage="postImage" :breadcrumbs="breadcrumbs" :author="true"/>
+    <page-header :image="post.image">
+      <div slot="inner">
+        <figure v-if="post.image" class="pageHeader__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="url" :content="post.image">
+          <img v-if="post.image" :src="post.image" :alt="`Imagem de: ${post.title}`">
+        </figure>
+        <div v-if="post.title" class="container">
+          <h1 class="pageHeader__title" itemprop="headline" v-html="post.title"/>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="post.description" itemprop="description" class="pageHeader__description" v-html="post.description"/>
+          <div class="pageHeader__meta">
+            <span v-if="post.date" itemprop="datePublished" :content="post.date">Publicado em {{ post.date | moment("MMMM") }} de {{ post.date | moment("YYYY") }} </span>
+            <span v-if="post.author">por <span itemprop="author">Fernando Moreira</span></span>
+          </div>
+        </div>
+      </div>
+    </page-header>
+
     <main itemprop="articleBody" role="main">
       <div class="article__body" v-html="post.body"/>
       <user-info/>
@@ -23,7 +40,7 @@
     computed: {
       ...mapState({
         post: state => state.article,
-        postImage: state => (state.article.image) ? `${process.env.baseUrl}${state.article.image}` : `${process.env.baseUrl}/images/social.jpg`,
+        postImage: state => (state.article.image) ? `${process.env.baseUrl}${state.article.image}` : state.imageDefault,
         postTitle: state => state.article.title,
         postDesc: state => state.description ? `${state.article.description}` : `${state.article.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR`,
         postSlug: state => state.article.permalink,
@@ -56,12 +73,21 @@
       MetaTags: () => import('~/components/MetaTags'),
       PageHeader: () => import('~/components/PageHeader'),
       UserInfo: () => import('~/components/UserInfo'),
-      Disqus: () => import('~/components/Disqus')
+      Disqus: () => import('~/components/Disqus'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     },
     methods: {
       splitIdentifier: identifier =>
         identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
       disqusUrl: permalink => `${process.env.baseUrl}${permalink}`
+    },
+    mounted () {
+      const openVideo = document.querySelector('[data-video]')
+      openVideo.addEventListener('click', e => {
+        e.preventDefault()
+        const videoID = e.currentTarget.getAttribute('data-video-id')
+        this.$store.commit('SET_VIDEO', videoID)
+      })
     }
   }
 </script>
@@ -124,18 +150,4 @@
       background feldgrauColor
       padding-top spacingMini
       padding-bottom spacingMini
-  .video
-    position relative
-    padding-bottom 56.25%
-    padding-top 25px
-    height 0
-    margin-bottom spacingBase
-    iframe,
-    object,
-    embed
-      position absolute
-      top 0
-      left 0
-      width 100%
-      height 100%
 </style>

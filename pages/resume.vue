@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import resume from '~/content/pages/resume.md'
+  import resume from '~/content/pages/resume.md'
 
-export default {
-  name: 'Resume',
-  layout: 'blank',
-  computed: {
-    resume () {
-      return resume
+  export default {
+    name: 'Resume',
+    layout: 'blank',
+    computed: {
+      resume () {
+        return resume
+      }
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags')
     }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags')
   }
-}
 </script>
 
 <style lang="stylus">

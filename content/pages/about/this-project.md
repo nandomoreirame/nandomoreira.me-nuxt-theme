@@ -1,5 +1,4 @@
----
----
+
 
 <div class="aboutme__thumb">
   <img src="/images/about/this-project-thumb.jpg" srcset="/images/about/this-project-thumb@2x.jpg 2x" width="611px" height="837px" alt="Imagem da sessão: Sobre esse site?">

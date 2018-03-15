@@ -1,12 +1,20 @@
 <template>
   <main>
-    <page-header title="Sobre" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
+    <page-header>
+      <div slot="inner">
+        <div class="container">
+          <h1 class="pageHeader__title" itemprop="headline">Sobre</h1>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="pageDescription" itemprop="description" class="pageHeader__description" v-html="pageDescription"/>
+        </div>
+      </div>
+    </page-header>
     <div class="aboutme">
-      <div class="aboutme__section aboutme__section--title-before aboutme__howiam" v-html="howiam"></div>
-      <div class="aboutme__section aboutme__professionalHistory aboutme__section--title-after" v-html="professionalHistory"></div>
-      <div class="aboutme__section aboutme__whatIdoToday aboutme__section--title-before" v-html="whatIdoToday"></div>
-      <div class="aboutme__section aboutme__section--title-after aboutme__section--title-before aboutme__imDoingNow" v-html="imDoingNow"></div>
-      <div class="aboutme__section aboutme__thisProject aboutme__section--title-after" v-html="thisProject"></div>
+      <div class="aboutme__section aboutme__section--title-before aboutme__howiam" v-html="howiam"/>
+      <div class="aboutme__section aboutme__professionalHistory aboutme__section--title-after" v-html="professionalHistory"/>
+      <div class="aboutme__section aboutme__whatIdoToday aboutme__section--title-before" v-html="whatIdoToday"/>
+      <div class="aboutme__section aboutme__section--title-after aboutme__section--title-before aboutme__imDoingNow" v-html="imDoingNow"/>
+      <div class="aboutme__section aboutme__thisProject aboutme__section--title-after" v-html="thisProject"/>
       <div class="aboutme__section aboutme__skills aboutme__section--title-after aboutme__section--title-before">
         <section>
           <h2>Minhas Habilidades</h2>
@@ -19,46 +27,47 @@
 </template>
 
 <script>
-import howiam from '~/content/pages/about/howiam.md'
-import imDoingNow from '~/content/pages/about/im-doing-now.md'
-import professionalHistory from '~/content/pages/about/professional-history.md'
-import thisProject from '~/content/pages/about/this-project.md'
-import whatIdoToday from '~/content/pages/about/what-ido-today.md'
+  import howiam from '~/content/pages/about/howiam.md'
+  import imDoingNow from '~/content/pages/about/im-doing-now.md'
+  import professionalHistory from '~/content/pages/about/professional-history.md'
+  import thisProject from '~/content/pages/about/this-project.md'
+  import whatIdoToday from '~/content/pages/about/what-ido-today.md'
 
-export default {
-  name: 'About',
-  data () {
-    return {
-      pageTitle: `Sobre | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
-      pageUrl: `${process.env.baseUrl}/about`,
-      breadcrumbs: [
-        {
-          active: false,
-          url: '/',
-          title: 'Home'
-        },
-        {
-          active: true,
-          url: '/about',
-          title: 'Sobre'
-        }
-      ]
+  export default {
+    name: 'About',
+    data () {
+      return {
+        pageTitle: `Sobre | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+        pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
+        pageUrl: `${process.env.baseUrl}/about`,
+        breadcrumbs: [
+          {
+            active: false,
+            url: '/',
+            title: 'Home'
+          },
+          {
+            active: true,
+            url: '/about',
+            title: 'Sobre'
+          }
+        ]
+      }
+    },
+    computed: {
+      howiam: () => howiam,
+      imDoingNow: () => imDoingNow,
+      professionalHistory: () => professionalHistory,
+      thisProject: () => thisProject,
+      whatIdoToday: () => whatIdoToday
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      Skills: () => import('~/components/Skills'),
+      PageHeader: () => import('~/components/PageHeader'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     }
-  },
-  computed: {
-    howiam: () => howiam,
-    imDoingNow: () => imDoingNow,
-    professionalHistory: () => professionalHistory,
-    thisProject: () => thisProject,
-    whatIdoToday: () => whatIdoToday
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    Skills: () => import('~/components/Skills'),
-    PageHeader: () => import('~/components/PageHeader')
   }
-}
 </script>
 
 <style lang="stylus">

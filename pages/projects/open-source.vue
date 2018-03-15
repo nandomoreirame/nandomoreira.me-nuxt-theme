@@ -1,6 +1,14 @@
 <template>
   <main>
-    <page-header title="I ❤️ Open Source" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
+    <page-header>
+      <div slot="inner">
+        <div class="container">
+          <h1 class="pageHeader__title" itemprop="headline">I ❤️ Open Source</h1>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="pageDescription" itemprop="description" class="pageHeader__description" v-html="pageDescription"/>
+        </div>
+      </div>
+    </page-header>
     <div class="project-list">
       <project v-for="(project, i) in openSources" :key="i" :count="i" :project="project"></project>
     </div>
@@ -51,7 +59,8 @@
     components: {
       Project: () => import('~/components/Project'),
       MetaTags: () => import('~/components/MetaTags'),
-      PageHeader: () => import('~/components/PageHeader')
+      PageHeader: () => import('~/components/PageHeader'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     }
   }
 </script>

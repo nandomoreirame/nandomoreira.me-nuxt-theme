@@ -1,5 +1,3 @@
----
----
 
 <div class="avatar">
   <img src="/images/about/avatar.jpg" alt="Foto de Fernando Moreira" width="230" height="261">

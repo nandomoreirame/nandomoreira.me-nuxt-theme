@@ -52,32 +52,11 @@ body
 
 hr
   border none
+  border-bottom 1px solid rgba(#000, .2)
   max-width 80px
   height 10px
   margin spacingLarge auto
   position relative
-  &:before,
-  &:after
-    content ''
-    display block
-    width 75%
-    height 4px
-    position absolute
-    transform rotate(-5deg)
-    transition .12s transform timingFunction
-  &:before
-    background-color mintColor
-    top 0
-    left 0
-  &:after
-    background-color feldgrauColor
-    bottom 0
-    right 0
-  &:hover,
-  &:focus
-    &:before,
-    &:after
-      transform rotate(-365deg)
 
 figure
   margin 0

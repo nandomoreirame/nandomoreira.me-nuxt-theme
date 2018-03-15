@@ -1,27 +1,18 @@
 <template>
   <div class="home">
 
-    <section class="home__hero section">
-      <div class="section__inner" itemscope itemtype="http://schema.org/Person">
+    <page-header :isHero="true">
+      <div slot="inner" class="container" itemscope itemtype="http://schema.org/Person">
         <h1>Oi, eu sou o <span><nuxt-link title="Meu nome é Fernando Moreira Costa (muito prazer)" to="/about" itemprop="name">Fernando</nuxt-link></span>!</h1>
         <h2 role="presentation">
-          Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> na <strong><a href="https://onedevstudio.github.io/" target="_blank">Onedev.studio</a></strong> em <strong>Curitiba/PR</strong>.
+          Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> na <strong><a href="https://onedev.studio" target="_blank">Onedev.studio</a></strong> em <strong>Curitiba/PR</strong>.
           <small>Se você está em busca de um programador freelancer front-end, WordPress, PHP ou JavaScript entre em contato: <a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me[arroba]gmail.com</a> ou através das redes sociais abaixo.</small>
         </h2>
-        <div class="home__social-icons">
-          <social-icons iconColor="#435466"></social-icons>
+        <div class="pageHeader__social-icons">
+          <social-icons iconColor="#435466"/>
         </div>
-        <a class="home__scrollto" href="#" v-scroll-to="{
-            el: '#lastArticle',
-            duration: 800,
-            offset: -20
-        }">
-          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
-        </a>
       </div>
-    </section>
+    </page-header>
 
     <section id="lastArticle" class="home__article section">
       <div class="section__inner">
@@ -30,7 +21,7 @@
         </header>
         <div class="container">
           <div class="last-articles">
-            <post-item v-for="(post, i) in lastArticles" :key="i" :count="i" :post="post"></post-item>
+            <post-item v-for="(post, i) in featuredPosts" :key="i" :count="i" :post="post"/>
           </div>
           <div class="section__button">
             <link-button buttonType="ghost" buttonPermalink="/blog">mais artigos →</link-button>
@@ -45,7 +36,7 @@
           <h2>Último Projeto</h2>
         </header>
         <div class="container">
-          <project :project="lastProject" />
+          <project :project="lastProject"/>
           <div class="section__button">
             <link-button buttonType="ghost-white" buttonPermalink="/projects">mais projetos →</link-button>
           </div>
@@ -59,7 +50,7 @@
           <h2>Últimos Shots</h2>
         </header>
         <div class="container">
-          <dribbble token="8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e" user="umdevux"></dribbble>
+          <dribbble token="8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e"/>
           <div class="section__button">
             <link-button buttonType="ghost" buttonPermalink="https://dribbble.com/umdevux" :nuxtLink="false" linkTarget="_blank">
               <svg aria-labelledby="dribbble-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
@@ -89,31 +80,38 @@
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  async asyncData ({ app, route }) {
-    const projects = await app.$content('/projects').getAll()
-    const posts = await app.$content('/posts').getAll()
+  import { mapState } from 'vuex'
 
-    return {
-      lastProject: projects[0],
-      lastArticles: [
-        posts[0],
-        posts[1],
-        posts[2]
-      ]
+  export default {
+    name: 'Home',
+    async asyncData ({ app, store }) {
+      if (!store.state.featuredPosts.length) {
+        const posts = await app.$content('/posts').getAll()
+        store.commit('SET_FEATURED_POSTS', posts.filter((post, i) => i < 3))
+      }
+
+      if (!store.state.lastProject) {
+        const projects = await app.$content('/projects').getAll()
+        store.commit('SET_LAST_PROJECT', projects[0])
+      }
+    },
+    computed: {
+      ...mapState({
+        featuredPosts: state => state.featuredPosts,
+        lastProject: state => state.lastProject
+      })
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      PageHeader: () => import('~/components/PageHeader'),
+      SocialIcons: () => import('~/components/SocialIcons'),
+      LinkButton: () => import('~/components/LinkButton'),
+      Project: () => import('~/components/Project'),
+      PostItem: () => import('~/components/PostItem'),
+      Skills: () => import('~/components/Skills'),
+      Dribbble: () => import('~/components/Dribbble')
     }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    SocialIcons: () => import('~/components/SocialIcons'),
-    LinkButton: () => import('~/components/LinkButton'),
-    Project: () => import('~/components/Project'),
-    PostItem: () => import('~/components/PostItem'),
-    Skills: () => import('~/components/Skills'),
-    Dribbble: () => import('~/components/Dribbble')
   }
-}
 </script>
 
 <style lang="stylus">
@@ -165,52 +163,69 @@ export default {
       margin-left -20px
 
 .home
-  &__scrollto
-    display none
-    +above(md)
-      display block
-      position absolute
-      bottom spacingSmall
-      left 50%
-      margin-left -30px
-      animation scrollDown .8s timingFunction infinite both
-      &:hover,
-      &:active,
-      &:focus
-        animation-play-state paused
-        transform translate3d(0, 0, 0)
-        opacity 1
-      svg
-        line-height 1
-        display block
-        margin 0
-  &__hero
-    text-align center
-    padding-top spacingBig
-    &:before
-      transform translate3d(0, 0, 0)
-      content ''
-      position absolute
-      top 0
-      left 0
-      right 0
-      bottom 0
-      opacity .3
-      background-image url("/images/hero-cover.jpg")
-      background-repeat no-repeat
-      background-size cover
-      background-attachment fixed
-      z-index 1
-      transform scale(1.15)
-    +above(md)
-      height 100vh
-      display table
-      .section__inner
-        display table-cell
-        vertical-align middle
-    .section__inner
+  &__dribbble,
+  &__work
+    .section__button
+      margin-bottom spacingBase
       position relative
-      z-index 2
+      bottom auto
+    .section__inner
+      margin-bottom 0
+      padding-bottom 0
+  &__work
+    background-color mintColor
+    .project
+      figure
+        margin-bottom spacingSmall
+        +above(md)
+          margin-bottom 0
+    .project,
+    .project a
+      color #fff
+    .project.project--invert
+      padding-top spacingSmall
+      padding-bottom spacingSmall
+      margin-top 0
+      margin-bottom 0
+      background-color transparent
+    .container
+      padding-top spacingBase
+      padding-bottom 0
+  &__skills
+    .section__inner
+      padding-bottom 0
+      .skills__item:not(:last-child)
+        flex: 1 0 percentage(1/9)
+
+.last-articles
+  display flex
+  position relative
+  flex-flow row
+  flex-wrap wrap
+  margin-left -(spacingSmall)
+  margin-right -(spacingSmall)
+  padding 40px 0 0
+
+.pageHeader
+  &.pageHeader--hero
+    text-align center
+    background-color #f7f9fb
+    width 100%
+    clip-path initial
+    margin 0
+    background-image url("/images/uploads/hero-cover.jpg")
+    background-repeat no-repeat
+    background-size cover
+    .pageHeader__inner
+      padding-top 3.75rem
+      background none transparent
+    +above(md)
+      display flex
+      align-items center
+      justify-content center
+      min-height 70vh
+      .pageHeader__inner
+        padding-top 7.5rem
     h1,
     h2
       display block
@@ -256,47 +271,6 @@ export default {
           font-size 1.4rem
   &__social-icons
     padding-top spacingSmall
-  &__dribbble,
-  &__work
-    .section__button
-      margin-bottom spacingBase
-      position relative
-      bottom auto
-    .section__inner
-      margin-bottom 0
-      padding-bottom 0
-  &__work
-    background-color mintColor
-    .project
-      figure
-        margin-bottom spacingSmall
-        +above(md)
-          margin-bottom 0
-    .project,
-    .project a
-      color #fff
-    .project.project--invert
-      padding-top spacingSmall
-      padding-bottom spacingSmall
-      margin-top 0
-      margin-bottom 0
-      background-color transparent
-    .container
-      padding-top spacingBase
-      padding-bottom 0
-  &__skills
-    .section__inner
-      padding-bottom 0
-      .skills__item:not(:last-child)
-        flex: 1 0 percentage(1/9)
-.last-articles
-  display flex
-  position relative
-  flex-flow row
-  flex-wrap wrap
-  margin-left -(spacingSmall)
-  margin-right -(spacingSmall)
-  padding 40px 0 0
 
 @keyframes scrollDown
   0%

@@ -8,23 +8,23 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR'
+      default: process.env.baseTitle
     },
     description: {
       type: String,
-      default: 'Desenvolvedor front-end e entusiasta da experiência do usuário | Desenvolvedor Front-end em Curitiba | Desenvolvedor WordPress em Curitiba | UX Designer em Curitiba'
+      default: process.env.baseDescription
     },
     keywords: {
       type: String,
-      default: 'front-end,front,wordpress,javascript,html,css,desenvolvedor,curitiba,paraná'
+      default: process.env.baseKeywords
     },
     url: {
       type: String,
-      default: 'https://nandomoreira.me'
+      default: process.env.baseUrl
     },
     image: {
       type: String,
-      default: 'https://nandomoreira.me/images/social.jpg'
+      default: process.env.imageDefault
     },
     ogType: {
       type: String,
@@ -39,10 +39,10 @@ export default {
         { hid: 'og:title', property: 'og:title', content: this.title },
         { hid: 'og:url', property: 'og:url', content: this.url },
         { hid: 'og:image', property: 'og:image', content: this.image },
-        { hid: 'description', name: 'description', content: `${this.description}` },
+        { hid: 'description', name: 'description', content: this.description },
         { hid: 'keyword', name: 'keyword', content: this.keywords },
         { hid: 'twitter:title', name: 'twitter:title', content: this.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: `${this.description}` },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.description },
         { hid: 'twitter:image', name: 'twitter:image', content: this.image },
         { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: this.title },
         { hid: 'canonical', rel: 'canonical', href: this.url }

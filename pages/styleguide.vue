@@ -1,6 +1,5 @@
 <template>
   <main>
-    <page-header title="Styleguide" :breadcrumbs="breadcrumbs"/>
     <div class="styleguide container">
       <section class="styleguide__section">
         <h2>Primary colors</h2>
@@ -49,50 +48,51 @@
 </template>
 
 <script>
-export default {
-  name: 'Styleguide',
-  data () {
-    return {
-      pageTitle: `Styleguide - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageUrl: `${process.env.baseUrl}/styleguide`,
-      colors: {
-        primary: [
-          'primary',
-          'secondary',
-          'tertiary'
-        ],
-        grays: [
-          'gray',
-          'base',
-          'border',
-          'silver',
-          'background'
-        ]
-      },
-      breadcrumbs: [
-        {
-          active: false,
-          url: '/',
-          title: 'Home'
+  export default {
+    name: 'Styleguide',
+    data () {
+      return {
+        pageTitle: `Styleguide - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+        pageUrl: `${process.env.baseUrl}/styleguide`,
+        colors: {
+          primary: [
+            'primary',
+            'secondary',
+            'tertiary'
+          ],
+          grays: [
+            'gray',
+            'base',
+            'border',
+            'silver',
+            'background'
+          ]
         },
-        {
-          active: true,
-          url: '/styleguide',
-          title: 'Styleguide'
-        }
-      ]
+        breadcrumbs: [
+          {
+            active: false,
+            url: '/',
+            title: 'Home'
+          },
+          {
+            active: true,
+            url: '/styleguide',
+            title: 'Styleguide'
+          }
+        ]
+      }
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      LinkButton: () => import('~/components/LinkButton'),
+      PageHeader: () => import('~/components/PageHeader')
     }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    LinkButton: () => import('~/components/LinkButton'),
-    PageHeader: () => import('~/components/PageHeader')
   }
-}
 </script>
 
 <style lang="stylus">
 .styleguide
+  padding-top 6.25rem
   &__section
     padding-bottom spacingLarge
     margin-bottom spacingLarge

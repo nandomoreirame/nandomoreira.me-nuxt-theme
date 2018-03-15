@@ -1,6 +1,14 @@
 <template>
   <main>
-    <page-header title="O que estou fazendo agora" :description="pageDescription" :breadcrumbs="breadcrumbs"/>
+    <page-header>
+      <div slot="inner">
+        <div class="container">
+          <h1 class="pageHeader__title" itemprop="headline">O que estou fazendo agora</h1>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="pageDescription" itemprop="description" class="pageHeader__description" v-html="pageDescription"/>
+        </div>
+      </div>
+    </page-header>
     <div class="container--small">
       <h2>Que página é essa?</h2>
       <p>Esta página agora é tirada da idéia de <strong><a href="https://sivers.org/" target="_blank">Derek Sivers</a></strong> em <a href="http://nownownow.com/about" target="_blank">Nownownow</a>, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.</p>
@@ -44,37 +52,38 @@
 </template>
 
 <script>
-export default {
-  name: 'Now',
-  data () {
-    return {
-      pageTitle: `O que estou fazendo agora | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageDescription: `Esta página agora é tirada da idéia de Derek Sivers em Nownownow, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.`,
-      pageUrl: `${process.env.baseUrl}/about/now`,
-      breadcrumbs: [
-        {
-          active: false,
-          url: '/',
-          title: 'Home'
-        },
-        {
-          active: false,
-          url: '/about',
-          title: 'Sobre'
-        },
-        {
-          active: true,
-          url: '/about/now',
-          title: 'O que estou fazendo agora'
-        }
-      ]
+  export default {
+    name: 'Now',
+    data () {
+      return {
+        pageTitle: `O que estou fazendo agora | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+        pageDescription: `Esta página agora é tirada da idéia de Derek Sivers em Nownownow, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.`,
+        pageUrl: `${process.env.baseUrl}/about/now`,
+        breadcrumbs: [
+          {
+            active: false,
+            url: '/',
+            title: 'Home'
+          },
+          {
+            active: false,
+            url: '/about',
+            title: 'Sobre'
+          },
+          {
+            active: true,
+            url: '/about/now',
+            title: 'O que estou fazendo agora'
+          }
+        ]
+      }
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      PageHeader: () => import('~/components/PageHeader'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    PageHeader: () => import('~/components/PageHeader')
   }
-}
 </script>
 
 <style lang="stylus" scoped>

@@ -1,6 +1,14 @@
 <template>
   <main>
-    <page-header title="Apps que uso" :breadcrumbs="breadcrumbs" :description="pageDescription"/>
+    <page-header>
+      <div slot="inner">
+        <div class="container">
+          <h1 class="pageHeader__title" itemprop="headline">Apps que uso</h1>
+          <breadcrumb :breadcrumbs="breadcrumbs"/>
+          <p v-if="pageDescription" itemprop="description" class="pageHeader__description" v-html="pageDescription"/>
+        </div>
+      </div>
+    </page-header>
     <div class="container--small">
       <div class="apps" v-html="apps" data-autotarget></div>
       <hr>
@@ -14,45 +22,46 @@
 </template>
 
 <script>
-import apps from '~/content/pages/apps.md'
+  import apps from '~/content/pages/apps.md'
 
-export default {
-  name: 'Apps',
-  data () {
-    return {
-      pageTitle: `Apps que uso | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-      pageDescription: `Segue uma lista de alguns apps que utilizo no meu dia a dia e considero como essenciais.`,
-      pageUrl: `${process.env.baseUrl}/about/apps`,
-      breadcrumbs: [
-        {
-          active: false,
-          url: '/',
-          title: 'Home'
-        },
-        {
-          active: false,
-          url: '/about',
-          title: 'Sobre'
-        },
-        {
-          active: true,
-          url: '/about/apps',
-          title: 'Apps que uso'
-        }
-      ]
+  export default {
+    name: 'Apps',
+    data () {
+      return {
+        pageTitle: `Apps que uso | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
+        pageDescription: `Segue uma lista de alguns apps que utilizo no meu dia a dia e considero como essenciais.`,
+        pageUrl: `${process.env.baseUrl}/about/apps`,
+        breadcrumbs: [
+          {
+            active: false,
+            url: '/',
+            title: 'Home'
+          },
+          {
+            active: false,
+            url: '/about',
+            title: 'Sobre'
+          },
+          {
+            active: true,
+            url: '/about/apps',
+            title: 'Apps que uso'
+          }
+        ]
+      }
+    },
+    computed: {
+      apps () {
+        return apps
+      }
+    },
+    components: {
+      MetaTags: () => import('~/components/MetaTags'),
+      Skills: () => import('~/components/Skills'),
+      PageHeader: () => import('~/components/PageHeader'),
+      Breadcrumb: () => import('~/components/Breadcrumb')
     }
-  },
-  computed: {
-    apps () {
-      return apps
-    }
-  },
-  components: {
-    MetaTags: () => import('~/components/MetaTags'),
-    Skills: () => import('~/components/Skills'),
-    PageHeader: () => import('~/components/PageHeader')
   }
-}
 </script>
 
 <style lang="stylus">
