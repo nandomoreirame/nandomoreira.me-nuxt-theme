@@ -1,10 +1,5 @@
 <template>
-  <header class="header header--fixed">
-    <a tabindex="1" class="skippy sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Ir para o conteúdo principal</span>
-      </div>
-    </a>
+  <header class="header header--fixed" :class="{ 'header--up': $store.state.headerUp }">
     <nuxt-link tabindex="-1" role="button" to="/" class="header__back">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#435466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
         <line x1="20" y1="12" x2="4" y2="12"/>
@@ -19,9 +14,6 @@
 <script>
 export default {
   name: 'pageHeader',
-  components: {
-    Navbar: () => import('~/components/Navbar.vue')
-  },
   data () {
     return {
       classFixedScrolling: 'header--scrolling',
@@ -36,6 +28,12 @@ export default {
       scrollingUp: null,
       scrollingDown: null
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     setDynamicVariables () {
@@ -77,23 +75,13 @@ export default {
       }
     }
   },
-  mounted () {
-    window.addEventListener('scroll', this.onScroll)
-  },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.onScroll)
+  components: {
+    Navbar: () => import('~/components/Navbar.vue')
   }
 }
 </script>
 
 <style lang="stylus">
-.skippy
-  display block
-  padding 1em
-  color #fff
-  position absolute
-  background-color feldgrauColor
-  outline 0
 .header
   display flex
   flex-direction row
@@ -105,16 +93,12 @@ export default {
   padding 0 spacingSmall
   transition all .25s timingFunction
   background-color mintColor
-  // box-shadow boxShadowBase
   &--fixed
     position fixed
     top 0
     right 0
     left 0
     z-index 10
-  // &--scrolling
-  //   background-color #fff
-  //   box-shadow boxShadowBase
   &--down
     transform translate3d(0, -150%, 0)
   &--up

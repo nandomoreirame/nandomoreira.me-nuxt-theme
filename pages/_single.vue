@@ -1,5 +1,5 @@
 <template>
-  <article class="article" itemscope itemtype="http://schema.org/NewsArticle">
+  <article class="Single" itemscope itemtype="http://schema.org/NewsArticle">
     <page-header :image="post.image">
       <div slot="inner">
         <figure v-if="post.image" class="pageHeader__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
@@ -19,7 +19,7 @@
     </page-header>
 
     <main itemprop="articleBody" role="main">
-      <div class="article__body" v-html="post.body"/>
+      <div class="Single__body" v-html="post.body"/>
       <user-info/>
       <disqus :disqusTitle="post.title" :disqusIdentifier="splitIdentifier(post.permalink)" :disqusUrl="disqusUrl(post.permalink)"/>
     </main>
@@ -95,44 +95,40 @@
 </script>
 
 <style lang="stylus">
-.article
+.Single
   display block
   margin 0
   padding 0
-  main .container
-    @extend $article
-    border none
-    border-bottom borderBase
-    +below(md)
-      padding 0 spacingSmall spacingBase
-      background transparent none
-      box-shadow none
-      &:last-child
-        padding-top spacingBase
-        border-bottom none
-</style>
+  main
+    .container
+      @extend $article
+      border none
+      border-bottom borderBase
+      +below(md)
+        padding 0 spacingSmall spacingBase
+        background transparent none
+        box-shadow none
+        &:last-child
+          padding-top spacingBase
+          border-bottom none
 
-<style lang="stylus">
-.article
-  &__body
-    p, h2, h3, h4, h5, figure,
-    blockquote, pre code, ul, ol
-      display block
-      max-width containerWidthSmall
-      margin-left auto
-      margin-right auto
-    p, h2, h3, h4, h5, pre code
-      padding-left spacingBase
-      padding-right spacingBase
-    ul, ol
-      padding-left spacingLarge
-    img
-      display block
-      margin 0 auto spacingMini
-
+.Single__body
+  p, h2, h3, h4, h5, figure,
+  blockquote, pre code, ul, ol
+    display block
+    max-width containerWidthSmall
+    margin-left auto
+    margin-right auto
+  p, h2, h3, h4, h5, pre code
+    padding-left spacingBase
+    padding-right spacingBase
+  ul, ol
+    padding-left spacingLarge
+  img
+    display block
+    margin 0 auto spacingMini
   figure
     margin-bottom spacingSmall
-
   figure, p
     img
       height auto

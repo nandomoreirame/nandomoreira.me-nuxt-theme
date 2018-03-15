@@ -191,7 +191,6 @@
       display inline-block
       margin-right spacingBase
     +above(md)
-      // max-width 20rem
       margin-right spacingBase
     &:before
       content ''

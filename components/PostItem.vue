@@ -52,12 +52,10 @@ export default {
 .postItem
   display flex
   flex 1 1 300px
-  // overflow hidden
   margin 0 spacingSmall spacingBase
   &__link
     color feldgrauColor
     text-decoration none
-    // display block
     flex-direction column
     min-height 220px
     background #fff

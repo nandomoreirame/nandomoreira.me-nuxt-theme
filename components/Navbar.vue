@@ -157,8 +157,6 @@
     &:focus
       .Navbar__dropdown
         display block
-    // a.nuxt-link-active,
-    // a.nuxt-link-exact-active,
     &:hover .Navbar__nav-link,
     &:focus .Navbar__nav-link,
     .nuxt-link-exact-active
@@ -183,7 +181,6 @@
       color #fff
     +above(lg)
       font-size fontSizeSmall
-      // color feldgrauColor
       display inline-block
       padding 0
       &:after

@@ -7,18 +7,29 @@
 </template>
 
 <script>
-export default {
-  name: 'PageHeader',
-  props: {
-    'image': {
-      type: String
+  export default {
+    name: 'PageHeader',
+    props: {
+      'image': {
+        type: String
+      },
+      'isHero': {
+        type: Boolean,
+        default: false
+      }
     },
-    'isHero': {
-      type: Boolean,
-      default: false
+    methods: {
+      fixHeader (header) {
+        if (!header.classList.contains('header--up')) {
+          this.$store.commit('SET_HEADER_UP', true)
+        }
+      }
+    },
+    mounted () {
+      this.$store.commit('SET_HEADER_UP', false)
+      this.fixHeader(document.querySelector('.header'));
     }
   }
-}
 </script>
 
 <style lang="stylus">

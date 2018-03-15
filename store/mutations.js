@@ -2,6 +2,9 @@ export default {
   TOGGLE_NAVBAR (state, data) {
     state.showNavbar = data
   },
+  SET_HEADER_UP (state, data) {
+    state.headerUp = data
+  },
   SET_ARTICLE (state, payload) {
     state.article = payload
   },

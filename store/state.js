@@ -4,6 +4,7 @@ export default {
   baseKeywords: process.env.baseKeywords,
   imageDefault: process.env.imageDefault,
   showNavbar: false,
+  headerUp: false,
   article: null,
   featuredPosts: [],
   posts: [],

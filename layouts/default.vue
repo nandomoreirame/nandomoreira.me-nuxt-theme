@@ -1,7 +1,8 @@
 <template>
   <div>
+    <skip-to-content/>
     <site-header/>
-    <div id="content" class="MainContent">
+    <div id="MainContent" class="MainContent">
       <nuxt/>
     </div>
     <site-footer/>
@@ -15,8 +16,9 @@
 
 <script>
   export default {
-    name: 'layoutDefault',
+    name: 'LayoutDefault',
     components: {
+      SkipToContent: () => import('~/components/SkipToContent'),
       SiteHeader: () => import('~/components/Header'),
       SiteFooter: () => import('~/components/Footer'),
       YoutubeVideo: () => import('~/components/YoutubeVideo'),
