@@ -65,7 +65,7 @@
       text-transform uppercase
   &__header
     text-align center
-    background-color feldgrauColor
+    background-color baseColor
     padding spacingSmall
     margin-bottom spacingBase
     position relative
@@ -84,7 +84,7 @@
       left 50%
       width 0
       height 0
-      border-top 20px feldgrauColor solid
+      border-top 20px baseColor solid
       border-right 20px solid transparent
       border-bottom 20px solid transparent
       border-left 20px solid transparent

@@ -22,7 +22,7 @@
     line-height 80px
     font-size 1.125rem
     text-align center
-    background-color feldgrauColor
+    background-color baseColor
     color #fff
     width auto
     height auto

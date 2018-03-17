@@ -28,7 +28,7 @@
     height 60px
     animation SpinnerRotate 2s linear infinite
   &__path
-    stroke rgba(mintColor, .8)
+    stroke rgba(primaryColor, .8)
     animation SpinnerDash 1.5s ease-in-out infinite
   &--small
     .Spinner__container

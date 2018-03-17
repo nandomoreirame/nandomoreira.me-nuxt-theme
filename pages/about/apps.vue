@@ -90,11 +90,11 @@
     height 100%
     top 0
     left 0
-    border 4px solid mintColor
+    border 4px solid primaryColor
     transform translate3d(-5%, -5%, 0)
     transition border-color .2s timingFunction, transform .2s timingFunction
   &:hover:before
-    border-color feldgrauColor
+    border-color baseColor
     transform translate3d(5%, 5%, 0)
   img
     position relative

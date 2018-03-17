@@ -201,7 +201,7 @@
       height 100%
       top 0
       left 0
-      background-color mintColor
+      background-color primaryColor
       transform translate3d((spacingSmall/2), -(spacingSmall/2), 0)
       +above(md)
         transform translate3d(spacingSmall, -(spacingSmall), 0)

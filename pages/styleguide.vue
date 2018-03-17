@@ -3,9 +3,9 @@
     <div class="styleguide container">
       <section class="styleguide__section">
         <h2>Primary colors</h2>
-        <span class="styleguide__color" v-for="color in colors.primary" :key="color" v-bind:class="`bgcolor--${color} styleguide__color--${color}`"></span>
+        <span class="styleguide__color" v-for="color in colors.primary" :key="color" v-bind:class="`bgcolor--${color} styleguide__color--${color}`"/>
         <h2>Gray colors</h2>
-        <span class="styleguide__color" v-for="color in colors.grays" :key="color" v-bind:class="`bgcolor--${color} styleguide__color--${color}`"></span>
+        <span class="styleguide__color" v-for="color in colors.grays" :key="color" v-bind:class="`bgcolor--${color} styleguide__color--${color}`"/>
       </section>
       <section class="styleguide__section">
         <h2>Typography</h2>
@@ -29,6 +29,51 @@
               <span class="b">Bold</span>
             </span>
           </div>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <p>Paragraph</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam accusantium quis eos asperiores, voluptas provident reiciendis veritatis neque velit est, maxime similique autem repellat rerum ad sunt perspiciatis ipsum omnis?</p>
+          <p>Ea cillum qui consectetur aliquip sunt id reprehenderit. Ipsum exercitation nostrud aute cupidatat est adipisicing aute enim sint anim. Pariatur voluptate aute laboris esse proident. Labore do dolor Lorem reprehenderit. Aute est anim occaecat aliquip est eu velit consequat. </p>
+          <ul>
+            <li>Ex commodo id minim occaecat</li>
+            <li>Minim laboris aliqua elit commodo
+              <ul>
+                <li>reprehenderit</li>
+                <li>labore</li>
+                <li>nostrud
+                  <ul>
+                    <li>reprehenderit</li>
+                    <li>labore</li>
+                    <li>nostrud</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>ullamco culpa Lorem ullamco</li>
+            <li>Lorem Lorem aliqua pariatur anim non</li>
+          </ul>
+          <ol>
+            <li>In ad Lorem non anim nostrud</li>
+            <li>labore irure Lorem occaecat
+              <ol>
+                <li>reprehenderit</li>
+                <li>labore</li>
+                <li>nostrud
+                  <ol>
+                    <li>reprehenderit</li>
+                    <li>labore</li>
+                    <li>nostrud</li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li>eiusmod pariatur irure laboris</li>
+            <li>Labore dolore anim nisi velit ad</li>
+          </ol>
         </div>
       </section>
       <section class="styleguide__section">
@@ -126,39 +171,39 @@
       text-align left
       color #4c484c
     &--primary:after
-      content '#{mintColor} - mintColor'
+      content ''+primaryColor+' - primaryColor'
     &--secondary:after
-      content '#{oceanBlueColor} - oceanBlueColor'
+      content ''+secondaryColor+' - secondaryColor'
     &--tertiary:after
-      content '#{khakiColor} - khakiColor'
+      content ''+tertiaryColor+' - tertiaryColor'
     &--silver:after
-      content '#{honeydewColor} - honeydewColor'
+      content ''+silverColor+' - silverColor'
     &--gray:after
-      content '#{davysGreyColor} - davysGreyColor'
+      content ''+grayColor+' - grayColor'
     &--border:after
-      content '#{borderColor} - borderColor'
+      content ''+borderColor+' - borderColor'
     &--base:after
-      content '#{feldgrauColor} - feldgrauColor'
+      content ''+baseColor+' - baseColor'
     &--background:after
-      content '#{snowColor} - snowColor'
+      content ''+backgroundColor+' - backgroundColor'
 
   .bgcolor
     &--primary
-      background-color mintColor
+      background-color primaryColor
     &--secondary
-      background-color oceanBlueColor
+      background-color secondaryColor
     &--tertiary
-      background-color khakiColor
+      background-color tertiaryColor
     &--silver
-      background-color honeydewColor
+      background-color silverColor
     &--gray
-      background-color davysGreyColor
+      background-color grayColor
     &--border
       background-color borderColor
     &--base
-      background-color feldgrauColor
+      background-color baseColor
     &--background
-      background-color snowColor
+      background-color backgroundColor
 
 .buttons__ghost-white
   padding spacingBase
@@ -183,7 +228,7 @@
     h2
       font-size 90px
       line-height 0.78
-      color feldgrauColor
+      color baseColor
       margin 0 0 15px
     span
       span

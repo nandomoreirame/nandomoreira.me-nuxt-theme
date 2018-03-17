@@ -111,7 +111,7 @@
       top 0
       right 0
   &__description a
-    color feldgrauColor
+    color baseColor
     text-decoration none
   &__header
     padding spacingSmall spacingBase

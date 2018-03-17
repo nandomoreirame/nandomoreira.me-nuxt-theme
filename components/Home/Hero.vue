@@ -58,11 +58,11 @@
       +above(md)
         font-size 5.6rem
       span
-        color mintColor
+        color primaryColor
       &::after
         content ''
         overflow hidden
-        background-color mintColor
+        background-color primaryColor
         height 20px
         width 100%
         clip-path polygon(0 0, 100% 0, 100% 100%, 0 5%)
@@ -70,7 +70,7 @@
     h2
       font-family fontFamilyBase
       font-weight fontWeightLight
-      color davysGreyColor
+      color grayColor
       font-size 1.8rem
       +above(md)
         font-size 2.4rem

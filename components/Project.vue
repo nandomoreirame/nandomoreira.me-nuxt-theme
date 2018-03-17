@@ -115,7 +115,7 @@
           position absolute
           left 25%
           opacity .8
-          color feldgrauColor
+          color baseColor
           display inline-block
           vertical-align top
           line-height 25px

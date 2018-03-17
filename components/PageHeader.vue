@@ -56,12 +56,12 @@
         right 0
         bottom 0
         left 0
-        background-color rgba(mintColor, .8)
+        background-color rgba(primaryColor, .8)
     .container
       position relative
       z-index 2
   &__inner
-    background-color mintColor
+    background-color primaryColor
     padding 8rem 0 5rem
     position relative
     z-index 5

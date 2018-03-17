@@ -19,7 +19,7 @@
 .alert
   padding spacingSmall
   margin-bottom spacingBase
-  background-color rgba(oceanBlueColor, .1)
+  background-color rgba(secondaryColor, .1)
   border-radius borderRadiusBase
   text-align center
   box-shadow boxShadowBase

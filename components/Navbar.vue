@@ -96,7 +96,7 @@
     left 0
     right 0
     bottom 0
-    background-color rgba(feldgrauColor, .95)
+    background-color rgba(baseColor, .95)
     display none
     &--open
       display table
@@ -109,11 +109,11 @@
     border-color #fff
     color #fff
     // background-color #fff
-    // color mintColor
+    // color primaryColor
     // &:hover,
     // &:focus
-    //   background-color feldgrauColor
-    //   border-color feldgrauColor
+    //   background-color baseColor
+    //   border-color baseColor
     //   color #fff
 
   &__nav
@@ -166,7 +166,7 @@
       &:after
         width 50%
         left 0
-        background khakiColor
+        background tertiaryColor
 
   &__nav-link
     color #fff
@@ -247,9 +247,9 @@
       padding .625rem 0
       font-size 1.4rem
       &:hover
-        color mintColor
+        color primaryColor
       +above(lg)
         font-size 14px
         padding .625rem .9375rem
-        color feldgrauColor
+        color baseColor
 </style>

@@ -140,12 +140,12 @@
         width 150%
         position relative
   pre
-    background feldgrauColor
-    color honeydewColor
+    background baseColor
+    color silverColor
     overflow-x auto
     margin-bottom spacingBase
     code
-      background feldgrauColor
+      background baseColor
       padding-top spacingMini
       padding-bottom spacingMini
 </style>

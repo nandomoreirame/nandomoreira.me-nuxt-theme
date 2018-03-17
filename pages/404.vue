@@ -48,7 +48,7 @@
   display table
   width 100%
   height 100%
-  background-color mintColor
+  background-color primaryColor
   &__inner
     display table-cell
     vertical-align middle
@@ -81,7 +81,7 @@
     span
       display block
     strong
-      color khakiColor
+      color tertiaryColor
       text-decoration underline
     +above(sm)
       font-size 5vw

@@ -54,7 +54,7 @@ export default {
   flex 1 1 300px
   margin 0 spacingSmall spacingBase
   &__link
-    color feldgrauColor
+    color baseColor
     text-decoration none
     flex-direction column
     min-height 220px

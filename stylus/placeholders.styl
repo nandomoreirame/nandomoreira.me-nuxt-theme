@@ -27,7 +27,7 @@ $article
     box-shadow boxShadowHover
     transform translate(0, -10px)
   &__description a
-    color feldgrauColor
+    color baseColor
     text-decoration none
     overflow hidden
     text-overflow ellipsis
@@ -71,23 +71,23 @@ $button
 
 $buttonDefault
   @extend $button
-  border-color mintColor
-  background-color mintColor
+  border-color primaryColor
+  background-color primaryColor
   color #fff
   &:hover,
   &:focus
-    background-color lighten(mintColor, 10%)
-    border-color lighten(mintColor, 10%)
+    background-color lighten(primaryColor, 10%)
+    border-color lighten(primaryColor, 10%)
     color #fff
 
 $buttonGhost
   @extend $button
-  border-color mintColor
+  border-color primaryColor
   background-color transparent
-  color mintColor
+  color primaryColor
   &:hover,
   &:focus
-    background-color mintColor
+    background-color primaryColor
     color #fff
 
 $buttonGhostWhite

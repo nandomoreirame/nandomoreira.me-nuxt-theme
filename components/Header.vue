@@ -92,7 +92,7 @@ export default {
   min-height 80px
   padding 0 spacingSmall
   transition all .25s timingFunction
-  background-color mintColor
+  background-color primaryColor
   &--fixed
     position fixed
     top 0

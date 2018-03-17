@@ -11,7 +11,7 @@ a
   &:focus
     text-decoration none
   &:focus
-    outline 3px solid rgba(mintColor, 0.7)
+    outline 3px solid rgba(primaryColor, 0.7)
     outline-offset 2px
 
 em
@@ -33,7 +33,7 @@ p, dl, table, blockquote, figcaption
     margin-bottom 0
 
 h1, h2, h3, h4, h5, h6
-  color feldgrauColor
+  color baseColor
   letter-spacing -1*0.01rem
   font-weight fontWeightNormal
   font-family fontFamilyHeading
@@ -93,7 +93,7 @@ figcaption
   font-size fontSizeSmall
 
 blockquote
-  color davysGreyColor
+  color grayColor
   font-size fontSizeBig
   margin-top spacingBase
   margin-bottom spacingBase
@@ -125,7 +125,7 @@ blockquote
     width 40px
     height 40px
     font-size 4em
-    color rgba(feldgrauColor, .6)
+    color rgba(baseColor, .6)
     z-index 1
     font-family 'Droid Serif', georgia, serif
     pointer-events none
@@ -135,7 +135,7 @@ code
   font-family fontFamilyMonospace
 
 code
-  background rgba(davysGreyColor, 0.05)
+  background rgba(grayColor, 0.05)
   border-radius borderRadiusBase
   color inherit
   margin 0 0.2rem
@@ -145,7 +145,7 @@ code
   white-space nowrap
 
 pre
-  background rgba(davysGreyColor, 0.05)
+  background rgba(grayColor, 0.05)
   padding 0 spacingMini / 2
   font-size fontSizeSmall
   & > code

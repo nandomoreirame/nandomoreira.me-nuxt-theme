@@ -31,7 +31,7 @@
 
 <style lang="stylus">
 .LastProject
-  background-color mintColor
+  background-color primaryColor
   .HomeSection__button
     margin-bottom spacingBase
     position relative

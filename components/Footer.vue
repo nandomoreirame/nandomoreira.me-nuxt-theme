@@ -41,7 +41,7 @@ export default {
     a
       opacity .75
     small, a
-      color honeydewColor
+      color silverColor
   svg
     display inline-block
     vertical-align middle
