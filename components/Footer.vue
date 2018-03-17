@@ -18,7 +18,7 @@
 export default {
   name: 'pageFooter',
   components: {
-    quote: () => import('~/components/quote'),
+    Quote: () => import('~/components/Quote'),
     CtaWhatsapp: () => import('~/components/CtaWhatsApp')
   }
 }
