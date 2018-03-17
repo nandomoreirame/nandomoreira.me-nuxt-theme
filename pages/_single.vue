@@ -97,6 +97,7 @@
           e.preventDefault()
           const videoID = e.currentTarget.getAttribute('data-video-id')
           this.$store.commit('SET_VIDEO', videoID)
+          this.$store.commit('TOGGLE_MODAL', true)
         })
       }
     }

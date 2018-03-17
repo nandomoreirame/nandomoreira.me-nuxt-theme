@@ -6,17 +6,25 @@
       <nuxt/>
     </div>
     <site-footer/>
-    <modal v-if="$store.state.video">
+    <modal v-if="showModal && video">
       <div slot="body">
-        <youtube-video :videoID="`${$store.state.video}`" controls="0" showinfo="0" autoplay="1"/>
+        <youtube-video v-if="video" :videoID="`${video}`" controls="0" showinfo="0" autoplay="1"/>
       </div>
     </modal>
   </div>
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     name: 'LayoutDefault',
+    computed: {
+      ...mapState({
+        video: state => state.video,
+        showModal: state => state.showModal
+      })
+    },
     components: {
       SkipToContent: () => import('~/components/SkipToContent'),
       SiteHeader: () => import('~/components/Header'),

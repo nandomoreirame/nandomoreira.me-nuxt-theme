@@ -6,6 +6,7 @@ export default {
   showNavbar: false,
   headerUp: false,
   dribbleReady: false,
+  showModal: false,
   article: null,
   featuredPosts: [],
   posts: [],
