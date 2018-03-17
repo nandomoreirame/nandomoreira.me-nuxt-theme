@@ -1,5 +1,5 @@
 <template>
-  <header class="pageHeader" :class="{ 'pageHeader--background': image, 'pageHeader--hero': isHero }" :style="(image ? `background-image: url(${image})` : '')">
+  <header class="pageHeader" :class="{ 'pageHeader--background': image, 'pageHeader--hero': isHero }" v-lazy:background-image="(image ? `${image}` : '')">
     <div class="pageHeader__inner">
       <slot name="inner"/>
     </div>

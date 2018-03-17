@@ -2,7 +2,7 @@
   <div class="skills">
     <ul class="skills__list">
       <li class="skills__item" v-for="(skill, id) in skills" :key="skill.id">
-        <span :style="`background-image: url(/images/skills/${id}.svg)`">{{ skill }}</span>
+        <span v-lazy:background-image="`/images/skills/${id}.svg`">{{ skill }}</span>
         <small>{{ skill }}</small>
       </li>
     </ul>

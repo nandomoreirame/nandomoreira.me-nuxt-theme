@@ -13,7 +13,7 @@
       <div class="experiments-list">
         <a class="experiment" v-for="(experiment, key) in experiments" :key="key" :href="`https://codepen.io/nandomoreirame/details/${experiment.pen}`" target="_blank" :title="experiment.title">
           <figure class="experiment__image">
-            <img :src="`https://codepen.io/oknoblich/pen/${experiment.pen}/image/small.png`" :alt="`Imagem do pen: ${experiment.pen}`">
+            <img v-lazy="`https://codepen.io/oknoblich/pen/${experiment.pen}/image/small.png`" :alt="`Imagem do pen: ${experiment.pen}`">
           </figure>
           <header class="experiment__header">
             <h2 class="experiment__title">{{ experiment.title }}</h2>

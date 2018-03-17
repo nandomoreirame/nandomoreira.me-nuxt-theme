@@ -35,7 +35,7 @@
         <figure class="project__thumbnail grid__column">
           <a class="project__thumbnail-browser" :href="project.url" :target="`${project.online ? '_blank' : '_self'}`">
             <span class="project__thumbnail-browser-bar"><small>{{ project.url }}</small></span>
-            <img :src="project.thumbnail" :alt="`Thumbnail do projeto: ${project.name}`">
+            <img v-lazy="project.thumbnail" :alt="`Thumbnail do projeto: ${project.name}`">
           </a>
         </figure>
       </div>

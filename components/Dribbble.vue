@@ -4,7 +4,7 @@
       <li v-for="(shot, i) in shots" :key="i" class="shot">
         <a :href="shot.html_url" :title="`link para o shot ${shot.title} - Irá abrir em uma nova aba`" target="_blank">
           <figure class="shot__figure">
-            <img :alt="`Imagem do shot ${shot.title}`" :src="shot.images.hidpi">
+            <img :alt="`Imagem do shot ${shot.title}`" v-lazy="shot.images.hidpi">
           </figure>
           <h2 class="shot__title">{{ shot.title }}</h2>
           <!-- <div class="shot__description" v-html="shot.description"></div> -->

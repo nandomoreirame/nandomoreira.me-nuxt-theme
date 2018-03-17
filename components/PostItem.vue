@@ -2,7 +2,7 @@
   <article class="postItem" :class="`${(count%6) === 0 ? 'postItem--featured' : ''}${!meta ? ' postItem--no-footer' : ''}`">
     <nuxt-link class="postItem__link" :to="post.permalink" :title="post.title">
       <div class="postItem__image-figure" v-if="post.image">
-        <div class="postItem__image" :style="`background-image: url(${post.image})`"/>
+        <div class="postItem__image" v-lazy:background-image="`${post.image}`"/>
         <img :src="post.image" :alt="`imagem de ${post.title}`">
       </div>
       <div class="postItem__content">

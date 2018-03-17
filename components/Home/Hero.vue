@@ -1,5 +1,5 @@
 <template>
-  <page-header :isHero="true">
+  <page-header :isHero="true" :image="`/images/uploads/hero-cover.jpg`">
     <div slot="inner" class="container" itemscope itemtype="http://schema.org/Person">
       <h1>Oi, eu sou o <span><nuxt-link title="Meu nome é Fernando Moreira Costa (muito prazer)" to="/about" itemprop="name">Fernando</nuxt-link></span>!</h1>
       <h2 role="presentation">
@@ -31,12 +31,13 @@
     width 100%
     clip-path initial
     margin 0
-    background-image url("/images/uploads/hero-cover.jpg")
     background-repeat no-repeat
     background-size cover
     .pageHeader__inner
       padding-top 3.75rem
       background none transparent
+      &:before
+        display none
     +above(md)
       display flex
       align-items center
