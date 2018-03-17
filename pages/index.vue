@@ -65,17 +65,18 @@
       text-transform uppercase
   &__header
     text-align center
-    background-color baseColor
     padding spacingSmall
-    margin-bottom spacingBase
+    margin 0 auto spacingBase
     position relative
+    max-width containerWidthSmall
+    border-bottom 8px solid baseColor
     +above(md)
       position absolute
       top 0
       left 0
       right 0
     h2
-      color #fff
+      color baseColor
       margin 0
     &:before
       position absolute

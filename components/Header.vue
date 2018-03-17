@@ -100,7 +100,7 @@ export default {
     left 0
     z-index 10
   &--down
-    transform translate3d(0, -150%, 0)
+    transform translate3d(0, -100%, 0)
   &--up
     transform translate3d(0, 0, 0)
   &__back

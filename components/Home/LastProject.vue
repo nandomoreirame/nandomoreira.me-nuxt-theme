@@ -36,6 +36,12 @@
     margin-bottom spacingBase
     position relative
     bottom auto
+  .HomeSection__header
+    border-color #fff
+    &:before
+      border-top-color #fff
+    h2
+      color #fff
   .HomeSection__inner
     margin-bottom 0
     padding-bottom 0
