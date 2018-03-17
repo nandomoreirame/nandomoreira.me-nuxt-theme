@@ -47,6 +47,7 @@
         <li>Escrever mais em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>
     </div>
+    <disqus :disqusTitle="pageTitle" :disqusIdentifier="pageUrl" :disqusUrl="pageUrl"/>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
@@ -81,7 +82,8 @@
     components: {
       MetaTags: () => import('~/components/MetaTags'),
       PageHeader: () => import('~/components/PageHeader'),
-      Breadcrumb: () => import('~/components/Breadcrumb')
+      Breadcrumb: () => import('~/components/Breadcrumb'),
+      Disqus: () => import('~/components/Disqus')
     }
   }
 </script>

@@ -17,6 +17,7 @@
         <skills/>
       </div>
     </div>
+    <disqus :disqusTitle="pageTitle" :disqusIdentifier="pageUrl" :disqusUrl="pageUrl"/>
     <meta-tags :title="pageTitle" :description="pageDescription" :url="pageUrl"/>
   </main>
 </template>
@@ -59,7 +60,8 @@
       MetaTags: () => import('~/components/MetaTags'),
       Skills: () => import('~/components/Skills'),
       PageHeader: () => import('~/components/PageHeader'),
-      Breadcrumb: () => import('~/components/Breadcrumb')
+      Breadcrumb: () => import('~/components/Breadcrumb'),
+      Disqus: () => import('~/components/Disqus')
     }
   }
 </script>

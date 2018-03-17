@@ -6,10 +6,12 @@
       </header>
       <div class="container">
 
-        <div class="dribbble__loading" v-if="!dribbleReady">
-          <spinner/>
-          <span>Carregando shots...</span>
-        </div>
+        <transition name="loading">
+          <div class="dribbble__loading" v-if="!dribbleReady">
+            <spinner/>
+            <span>Carregando shots...</span>
+          </div>
+        </transition>
 
         <div class="dribbble" v-if="dribbleReady" :class="{ 'dribbble--ready': dribbleReady }">
           <no-ssr>
@@ -40,6 +42,7 @@
     name: 'LastShots',
     mounted () {
       if (!this.$store.state.shots.length) {
+        this.$store.commit('SET_DRIBBLE_READY', false)
         const token = '8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e'
         const url = `https://api.dribbble.com/v1/users/umdevux/shots/?access_token=${token}`
         this.$axios.get(url)
@@ -51,7 +54,9 @@
           })
           .catch(e => console.error(e))
         }
-        this.$store.commit('SET_DRIBBLE_READY', true)
+        setTimeout(() => {
+          this.$store.commit('SET_DRIBBLE_READY', true)
+        }, 1500);
     },
     computed: {
       ...mapState({
@@ -76,8 +81,17 @@
   .HomeSection__inner
     margin-bottom 0
     padding-bottom 0
-.dribble__loading
+.dribbble__loading
   display block
   text-align center
   padding spacingBase 0
+
+.loading
+  &-enter-active,
+  &-leave-active
+    transition: opacity .5s, transform .5s
+  &-enter,
+  &-leave-active
+    opacity: 0
+    transform translate3d(0, 10px, 0) scale(1.1)
 </style>

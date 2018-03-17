@@ -2,11 +2,11 @@
   <aside class="comments">
     <div class="comments__inner container--small">
       <h3>Gostou? Comenta ae!</h3>
-      <div class="comments__loading" v-if="!disqusReady">
-        <spinner/>
-        <span>Carregando comentários</span>
-      </div>
-      <div class="disqus" :class="{ 'disqus--ready': disqusReady }">
+      <div class="comments__disqus">
+        <div class="comments__loading" v-if="!disqusReady">
+          <spinner/>
+          <span>Carregando comentários</span>
+        </div>
         <no-ssr>
           <lazy-component>
             <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl" @ready="disqusReady = true"/>
@@ -57,8 +57,19 @@ export default {
   h3
     font-size 1.75rem
     margin-top 0
+  &__disqus
+    position relative
+    min-height 10rem
+    @extend $clearfix
   &__loading
     display block
     text-align center
+    background-color #fff
     padding spacingBase 0
+    position absolute
+    z-index 10
+    top 0
+    right 0
+    bottom 0
+    left 0
 </style>

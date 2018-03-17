@@ -44,17 +44,17 @@
       min-height 70vh
       .pageHeader__inner
         padding-top 7.5rem
-    h1,
-    h2
+    h1, h2
       display block
       max-width 64rem
       padding-left spacingSmall
       padding-right spacingSmall
       margin spacingSmall auto
+      line-height 1.35
     h1
-      font-size 3.2rem
+      font-size 2.6rem
       +above(sm)
-        font-size 4.6rem
+        font-size 3.8rem
       +above(md)
         font-size 5.6rem
       span
@@ -71,22 +71,18 @@
       font-family fontFamilyBase
       font-weight fontWeightLight
       color davysGreyColor
-      font-size 1rem
-      +above(sm)
-        font-size 1.6rem
+      font-size 1.8rem
       +above(md)
-        font-size 2rem
+        font-size 2.4rem
       a
         color linkColor
         text-decoration underline
       small
         display block
-        font-size .9rem
+        font-size 1.4rem
         margin-top  spacingMini
-        +above(sm)
-          font-size 1.2rem
         +above(md)
-          font-size 1.4rem
+          font-size 1.8rem
   &__social-icons
     padding-top spacingSmall
 </style>
