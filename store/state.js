@@ -5,6 +5,7 @@ export default {
   imageDefault: process.env.imageDefault,
   showNavbar: false,
   headerUp: false,
+  dribbleReady: false,
   article: null,
   featuredPosts: [],
   posts: [],

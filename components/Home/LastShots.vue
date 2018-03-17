@@ -5,7 +5,20 @@
         <h2>Últimos Shots</h2>
       </header>
       <div class="container">
-        <dribbble token="8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e"/>
+
+        <div class="dribbble__loading" v-if="!dribbleReady">
+          <spinner/>
+          <span>Carregando shots...</span>
+        </div>
+
+        <div class="dribbble" v-if="dribbleReady" :class="{ 'dribbble--ready': dribbleReady }">
+          <no-ssr>
+            <lazy-component>
+              <dribbble :shots="shots"/>
+            </lazy-component>
+          </no-ssr>
+        </div>
+
         <div class="HomeSection__button">
           <link-button buttonType="ghost" buttonPermalink="https://dribbble.com/umdevux" :nuxtLink="false" linkTarget="_blank">
             <svg aria-labelledby="dribbble-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
@@ -21,9 +34,33 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     name: 'LastShots',
+    mounted () {
+      if (!this.$store.state.shots.length) {
+        const token = '8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e'
+        const url = `https://api.dribbble.com/v1/users/umdevux/shots/?access_token=${token}`
+        this.$axios.get(url)
+          .then(response => {
+            const { data } = response
+            const shots = data.filter((e, i, arr) => (i <= 5))
+            console.log(shots)
+            this.$store.commit('SET_SHOTS', shots)
+          })
+          .catch(e => console.error(e))
+        }
+        this.$store.commit('SET_DRIBBLE_READY', true)
+    },
+    computed: {
+      ...mapState({
+        shots: state => state.shots,
+        dribbleReady: state => state.dribbleReady
+      })
+    },
     components: {
+      Spinner: () => import('~/components/Spinner'),
       Dribbble: () => import('~/components/Dribbble'),
       LinkButton: () => import('~/components/LinkButton'),
     }
@@ -39,4 +76,8 @@
   .HomeSection__inner
     margin-bottom 0
     padding-bottom 0
+.dribble__loading
+  display block
+  text-align center
+  padding spacingBase 0
 </style>

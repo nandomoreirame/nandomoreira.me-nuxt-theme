@@ -105,14 +105,16 @@
     position relative
 
   .link-button--ghost .link-button__link
+    border-radius 50px
     border-color #fff
-    background-color #fff
-    color mintColor
-    &:hover,
-    &:focus
-      background-color feldgrauColor
-      border-color feldgrauColor
-      color #fff
+    color #fff
+    // background-color #fff
+    // color mintColor
+    // &:hover,
+    // &:focus
+    //   background-color feldgrauColor
+    //   border-color feldgrauColor
+    //   color #fff
 
   &__nav
     list-style none

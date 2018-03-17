@@ -33,11 +33,14 @@
       </section>
       <section class="styleguide__section">
         <h2>Buttons</h2>
+        <link-button buttonSize="small" buttonPermalink="#">default small</link-button>
         <link-button buttonPermalink="#">default</link-button>
         <link-button buttonSize="large" buttonPermalink="#">default large</link-button>
+        <link-button buttonType="ghost" buttonSize="small" buttonPermalink="#">ghost small</link-button>
         <link-button buttonType="ghost" buttonPermalink="#">ghost</link-button>
         <link-button buttonType="ghost" buttonSize="large" buttonPermalink="#">ghost large</link-button>
         <div class="buttons__ghost-white bgcolor--primary">
+          <link-button buttonType="ghost-white" buttonSize="small" buttonPermalink="#">ghost white small</link-button>
           <link-button buttonType="ghost-white" buttonPermalink="#">ghost white</link-button>
           <link-button buttonType="ghost-white" buttonSize="large" buttonPermalink="#">ghost white large</link-button>
         </div>

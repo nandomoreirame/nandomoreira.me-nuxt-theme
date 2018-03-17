@@ -1,18 +1,13 @@
+.page-enter-active,
 .page-leave-active
-  transition opacity 0.2s cubic-bezier(1, 0.5, 0.8, 1)
-
+  .container,
+  .container--small,
+  .aboutme__section
+    transition: opacity .5s, transform .5s
 .page-enter,
-.page-leave-to
-  opacity 0
-
-@keyframes fadeIn
-  from
-    opacity 0
-  to
-    opacity 1
-
-@keyframes fadeOut
-  from
-    opacity 1
-  to
-    opacity 0
+.page-leave-active
+  .container,
+  .container--small,
+  .aboutme__section
+    opacity: 0
+    transform translate3d(-10px, 0, 0)

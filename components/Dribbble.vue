@@ -1,9 +1,6 @@
 <template>
   <ul class="shots">
-    <li v-if="isLoading" class="loading">
-      <spinner/>
-    </li>
-    <li v-if="shots.lenght > 0" v-for="(shot, i) in shots" :key="i" class="shot">
+    <li v-for="(shot, i) in shots" :key="i" class="shot">
       <a :href="shot.html_url" :title="`link para o shot ${shot.title} - Irá abrir em uma nova aba`" target="_blank">
         <figure class="shot__figure">
           <img :alt="`Imagem do shot ${shot.title}`" :src="shot.images.hidpi">
@@ -45,42 +42,12 @@
 </template>
 
 <script>
-  import axios from 'axios'
-  import { mapState } from 'vuex'
-
   export default {
     name: 'Dribbble',
-    data () {
-      return {
-        isLoading: true
-      }
-    },
     props: {
-      'token': {
+      'shots': {
         required: true
       }
-    },
-    methods: {
-      getShots () {
-        if (!this.$store.state.shots) {
-          const url = `https://api.dribbble.com/v1/users/umdevux/shots/?access_token=${this.token}`
-          const shots = axios.get(url).then(response =>
-            response.data.filter((e, i, arr) => i <= 5))
-          this.$store.commit('SET_SHOTS', shots)
-        }
-        this.isLoading = false
-      }
-    },
-    mounted () {
-      this.getShots()
-    },
-    computed: {
-      ...mapState({
-        shots: state => state.shots
-      })
-    },
-    components: {
-      Spinner: () => import('~/components/Spinner')
     }
   }
 </script>

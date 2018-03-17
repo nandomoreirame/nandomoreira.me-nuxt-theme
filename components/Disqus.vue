@@ -2,7 +2,17 @@
   <aside class="comments">
     <div class="comments__inner container--small">
       <h3>Gostou? Comenta ae!</h3>
-      <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl"/>
+      <div class="comments__loading" v-if="!disqusReady">
+        <spinner/>
+        <span>Carregando comentários</span>
+      </div>
+      <div class="disqus" :class="{ 'disqus--ready': disqusReady }">
+        <no-ssr>
+          <lazy-component>
+            <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl" @ready="disqusReady = true"/>
+          </lazy-component>
+        </no-ssr>
+      </div>
     </div>
   </aside>
 </template>
@@ -10,6 +20,11 @@
 <script>
 export default {
   name: 'Disqus',
+  data () {
+    return {
+      disqusReady: false,
+    }
+  },
   props: {
     'disqusShortname': {
       type: String,
@@ -26,6 +41,7 @@ export default {
     }
   },
   components: {
+    Spinner: () => import('~/components/Spinner'),
     VueDisqus: () => import('vue-disqus/VueDisqus.vue')
   }
 }
@@ -41,4 +57,8 @@ export default {
   h3
     font-size 1.75rem
     margin-top 0
+  &__loading
+    display block
+    text-align center
+    padding spacingBase 0
 </style>

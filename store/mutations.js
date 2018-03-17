@@ -1,9 +1,12 @@
 export default {
-  TOGGLE_NAVBAR (state, data) {
-    state.showNavbar = data
+  TOGGLE_NAVBAR (state, payload) {
+    state.showNavbar = payload
   },
-  SET_HEADER_UP (state, data) {
-    state.headerUp = data
+  SET_HEADER_UP (state, payload) {
+    state.headerUp = payload
+  },
+  SET_DRIBBLE_READY (state, payload) {
+    state.dribbleReady = payload
   },
   SET_ARTICLE (state, payload) {
     state.article = payload
