@@ -11,9 +11,18 @@
           <breadcrumb :breadcrumbs="breadcrumbs"/>
           <p v-if="post.description" itemprop="description" class="pageHeader__description" v-html="post.description"/>
           <div class="pageHeader__meta">
-            <span v-if="post.date" itemprop="datePublished" :content="post.date">Publicado em {{ post.date | moment("MMMM") }} de {{ post.date | moment("YYYY") }} </span>
-            <span>por <span itemprop="author">Fernando Moreira</span></span>
-            <span class="disqus-comment-count" :data-disqus-identifier="splitIdentifier(post.permalink)">Nenhum comentário</span>
+            <span v-if="post.date" itemprop="datePublished" :content="post.date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <strong>Publicado em {{ post.date | moment("MMMM") }} de {{ post.date | moment("YYYY") }}</strong>
+            </span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <strong>por <span itemprop="author">Fernando Moreira</span></strong>
+            </span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <strong class="disqus-comment-count" :data-disqus-identifier="splitIdentifier(post.permalink)">Carregando comentários...</strong>
+            </span>
           </div>
         </div>
       </div>

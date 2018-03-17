@@ -70,9 +70,13 @@ export default ({ app }) => {
 }
 
 (function () {
-  const s = document.createElement('script'); s.async = true;
-  s.type = 'text/javascript';
-  s.id = 'dsq-count-scr';
-  s.src = '//fernandomoreira.disqus.com/count.js';
-  document.getElementsByTagName('BODY')[0].appendChild(s);
+  const disqusReset = document.createElement('script')
+
+  disqusReset.async = true
+  disqusReset.id = 'dsq-count-scr-reset'
+  disqusReset.innerHTML = `DISQUSWIDGETS.getCount({ reset: true });`
+
+  setTimeout(() => {
+    document.getElementsByTagName('BODY')[0].appendChild(disqusReset)
+  }, 1000);
 }());

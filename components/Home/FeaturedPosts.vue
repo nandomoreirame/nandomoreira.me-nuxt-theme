@@ -27,7 +27,7 @@
     },
     components: {
       PostItem: () => import('~/components/PostItem'),
-      LinkButton: () => import('~/components/LinkButton'),
+      LinkButton: () => import('~/components/LinkButton')
     }
   }
 </script>

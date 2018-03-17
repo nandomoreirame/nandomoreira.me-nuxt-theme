@@ -56,7 +56,7 @@
         right 0
         bottom 0
         left 0
-        background-color rgba(primaryColor, .8)
+        background-color rgba(grayColor, .9)
     .container
       position relative
       z-index 2
@@ -91,12 +91,28 @@
   &__meta
     color #fff
     text-transform uppercase
-    opacity .65
-    letter-spacing .1em
+    opacity .8
+    letter-spacing .06rem
     font-size .8rem
     padding-top 1rem
     padding-bottom 1rem
-    span
+    strong
+      font-weight 500
+    span,
+    svg
       display inline-block
-      margin-right 0.5rem
+      margin-right .3125rem
+    svg
+      position relative
+      top .125rem
+    span
+      &:not(:last-child):after
+        content ''
+        width 1px
+        height 15px
+        border-left 1px solid #fff
+        display inline-block
+        margin 0 .625rem
+        position relative
+        top .125rem
 </style>

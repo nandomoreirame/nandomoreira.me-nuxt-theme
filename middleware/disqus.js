@@ -1,17 +1,18 @@
 export default function (context) {
   if (context.isClient) {
     (function () {
-      const s = document.createElement('script'); s.async = true
-      const el = document.getElementById('dsq-count-scr')
-      el.parentNode.removeChild(el)
+      const sreset = document.createElement('script')
+      const elreset = document.getElementById('dsq-count-scr-reset')
 
-      s.type = 'text/javascript'
-      s.id = 'dsq-count-scr'
-      s.src = '//fernandomoreira.disqus.com/count.js'
+      elreset.parentNode.removeChild(elreset)
+
+      sreset.async = true
+      sreset.id = 'dsq-count-scr-reset'
+      sreset.innerHTML = `(function () { DISQUSWIDGETS.getCount({ reset: true }); }())`
 
       setTimeout(() => {
-        document.getElementsByTagName('BODY')[0].appendChild(s)
-      }, 2000)
+        document.getElementsByTagName('BODY')[0].appendChild(sreset)
+      }, 1000)
     }())
   }
 }
