@@ -4,7 +4,7 @@
       <div class="grid grid--1of2">
         <div class="project__content grid__column">
           <h2 class="project__title">
-            <a :href="project.url" :target="`${project.online ? '_blank' : '_self'}`">{{ project.name }}</a>
+            <a :href="project.online ? project.url : '#'" :target="`${project.online ? '_blank' : '_self'}`">{{ project.name }}</a>
           </h2>
           <p class="project__description">{{ project.description }}</p>
           <div class="project__meta">
@@ -17,7 +17,7 @@
               <strong>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </strong>
-              <a :href="project.url" v-if="project.online" :target="`${project.online ? '_blank' : '_self'}`">{{ humanizeUrl(project.url) }}</a>
+              <a :href="project.online ? project.url : '#'" v-if="project.online" :target="`${project.online ? '_blank' : '_self'}`">{{ humanizeUrl(project.url) }}</a>
               <span v-if="!project.online" class="project__url-off">(Projeto em construção ou fora do ar)</span>
             </span><br>
             <span class="project__tags">
@@ -33,7 +33,7 @@
           </div>
         </div>
         <figure class="project__thumbnail grid__column">
-          <a class="project__thumbnail-browser" :href="project.url" :target="`${project.online ? '_blank' : '_self'}`">
+          <a class="project__thumbnail-browser" :href="project.online ? project.url : '#'" :target="`${project.online ? '_blank' : '_self'}`">
             <span class="project__thumbnail-browser-bar"><small>{{ project.url }}</small></span>
             <img v-lazy="project.thumbnail" :alt="`Thumbnail do projeto: ${project.name}`">
           </a>
