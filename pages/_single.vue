@@ -12,7 +12,8 @@
           <p v-if="post.description" itemprop="description" class="pageHeader__description" v-html="post.description"/>
           <div class="pageHeader__meta">
             <span v-if="post.date" itemprop="datePublished" :content="post.date">Publicado em {{ post.date | moment("MMMM") }} de {{ post.date | moment("YYYY") }} </span>
-            <span v-if="post.author">por <span itemprop="author">Fernando Moreira</span></span>
+            <span>por <span itemprop="author">Fernando Moreira</span></span>
+            <span class="disqus-comment-count" :data-disqus-identifier="splitIdentifier(post.permalink)">Nenhum comentário</span>
           </div>
         </div>
       </div>
@@ -77,9 +78,8 @@
       Breadcrumb: () => import('~/components/Breadcrumb')
     },
     methods: {
-      splitIdentifier: identifier =>
-        identifier.slice(-1) !== '/' ? `${identifier}/` : `${identifier}`,
-      disqusUrl: permalink => `${process.env.baseUrl}${permalink}`
+      splitIdentifier: i => i.slice(-1) !== '/' ? `${i}/` : `${i}`,
+      disqusUrl: link => `${process.env.baseUrl}${link}`
     },
     mounted () {
       const video = document.querySelector('[data-video]')

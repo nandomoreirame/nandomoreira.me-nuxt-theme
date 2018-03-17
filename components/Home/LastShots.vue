@@ -49,7 +49,6 @@
           .then(response => {
             const { data } = response
             const shots = data.filter((e, i, arr) => (i <= 5))
-            console.log(shots)
             this.$store.commit('SET_SHOTS', shots)
           })
           .catch(e => console.error(e))

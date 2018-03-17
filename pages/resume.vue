@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="resume" v-html="resume"></div>
+    <div class="resume" v-html="resume"/>
     <blockquote>
       “I have no special talent. I am only passionately curious.” ⏤ Albert Einstein
     </blockquote>
@@ -26,6 +26,9 @@
 </script>
 
 <style lang="stylus">
+body
+  background-color #f1f8f9
+  border none
 .resume,
 blockquote
   max-width md

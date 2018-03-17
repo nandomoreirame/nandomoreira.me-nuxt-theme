@@ -1,6 +1,7 @@
 <template>
   <footer class="footer">
-    <cta-whatsapp></cta-whatsapp>
+    <cta-whatsapp/>
+    <quote/>
     <div class="footer__inner">
       <small>
         Made with
@@ -17,6 +18,7 @@
 export default {
   name: 'pageFooter',
   components: {
+    quote: () => import('~/components/quote'),
     CtaWhatsapp: () => import('~/components/CtaWhatsApp')
   }
 }

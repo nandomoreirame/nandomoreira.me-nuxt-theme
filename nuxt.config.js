@@ -78,6 +78,9 @@ module.exports = {
       { src: (isProduction ? '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' : ''), async: true }
     ]
   },
+  router: {
+    middleware: ['disqus']
+  },
   manifest: {
     name: 'Fernando Moreira',
     description: baseDescription,

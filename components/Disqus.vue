@@ -1,20 +1,22 @@
 <template>
-  <aside class="comments">
-    <div class="comments__inner container--small">
-      <h3>Gostou? Comenta ae!</h3>
-      <div class="comments__disqus">
-        <div class="comments__loading" v-if="!disqusReady">
-          <spinner/>
-          <span>Carregando comentários</span>
+  <transition name="comments">
+    <aside class="comments">
+      <div class="comments__inner container--small">
+        <h3>Gostou? Comenta ae!</h3>
+        <div class="comments__disqus">
+          <div class="comments__loading" v-if="!disqusReady">
+            <spinner/>
+            <span>Carregando comentários</span>
+          </div>
+          <no-ssr>
+            <lazy-component>
+              <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl" @ready="disqusReady = true"/>
+            </lazy-component>
+          </no-ssr>
         </div>
-        <no-ssr>
-          <lazy-component>
-            <vue-disqus :shortname="disqusShortname" :title="disqusTitle" :identifier="disqusIdentifier" :url="disqusUrl" @ready="disqusReady = true"/>
-          </lazy-component>
-        </no-ssr>
       </div>
-    </div>
-  </aside>
+    </aside>
+  </transition>
 </template>
 
 <script>
@@ -72,4 +74,11 @@ export default {
     right 0
     bottom 0
     left 0
+  &-enter-active,
+  &-leave-active
+    transition: opacity .5s, transform .5s
+  &-enter,
+  &-leave-active
+    opacity: 0
+    transform translate3d(0, 10px, 0) scale(1.1)
 </style>
