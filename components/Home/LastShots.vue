@@ -48,7 +48,7 @@
         this.$axios.get(url)
           .then(response => {
             const { data } = response
-            const shots = data.filter((e, i, arr) => (i <= 5))
+            const shots = data.filter((e, i, arr) => (i <= 6))
             this.$store.commit('SET_SHOTS', shots)
           })
           .catch(e => console.error(e))

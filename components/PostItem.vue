@@ -53,8 +53,8 @@ export default {
 
 <style lang="stylus">
 .postItem
-  display flex
-  flex 1 1 percentage(1/4)
+  display block
+  width 100%
   margin 0 spacingSmall spacingBase
   &__link
     color baseColor
@@ -121,7 +121,11 @@ export default {
     height 250px
     background #c5d2d9 no-repeat 50%
     background-size cover
+  +above(md)
+    display flex
+    flex 1 1 percentage(1/3)
   +above(lg)
+    flex 1 1 percentage(1/4)
     &--featured
       flex 1 1 100%
       .postItem__link

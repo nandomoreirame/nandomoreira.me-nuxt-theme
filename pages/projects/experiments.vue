@@ -84,7 +84,7 @@
   transition box-shadow .2s timingFunction, transform .2s timingFunction
   padding 0
   margin 2rem 0
-  flex 1 0 1
+  flex 1 1 percentage(1/4)
   width 100%
   margin 0 spacingSmall spacingBase
   display inline-block
@@ -123,7 +123,7 @@
     padding-top spacingSmall
     padding-bottom spacingSmall
   &__title
-    font-size 1.8rem
+    font-size 1.375rem
     margin-top .2em
     margin-bottom .2em
 </style>

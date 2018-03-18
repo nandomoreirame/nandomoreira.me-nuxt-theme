@@ -99,7 +99,13 @@
     background-color rgba(baseColor, .95)
     display none
     &--open
-      display table
+      display flex
+      align-items center
+      justify-content center
+      overflow-y auto
+      ul
+        padding-top 1.25rem
+        padding-bottom 1.25rem
   +above(lg)
     display block
     position relative
@@ -108,13 +114,13 @@
     border-radius 50px
     border-color #fff
     color #fff
-    // background-color #fff
-    // color primaryColor
-    // &:hover,
-    // &:focus
-    //   background-color baseColor
-    //   border-color baseColor
-    //   color #fff
+    line-height 50px
+    padding-right spacingSmall
+    padding-left spacingSmall
+    margin-top spacingSmall
+    +above(lg)
+      margin 0
+      line-height 35px
 
   &__nav
     list-style none
@@ -154,7 +160,9 @@
     &:not(:last-child) .Navbar__nav-link
       padding 5% 0
       +above(lg)
-        padding 1.8rem 0
+        padding 1.6rem 0
+        &:focus
+          outline-color rgba(#fff, .5)
     &:hover,
     &:focus
       .Navbar__dropdown
@@ -192,7 +200,7 @@
         content ''
         display block
         position absolute
-        bottom 20px
+        bottom 15px
         width 0
         height 3px
 

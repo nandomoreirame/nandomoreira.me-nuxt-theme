@@ -133,7 +133,9 @@
       margin 0
       .project__content
         order 2
+        flex: 0 0 50%
       .project__thumbnail
+        flex: 0 0 45%
         order 1
 a[href="#"]
   pointer-events none

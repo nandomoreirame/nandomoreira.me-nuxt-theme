@@ -124,7 +124,7 @@
 
 .Single__body
   p, h2, h3, h4, h5, figure,
-  blockquote, pre code, ul, ol
+  blockquote, pre, ul, ol
     display block
     max-width containerWidthSmall
     margin-left auto
