@@ -45,16 +45,16 @@
     name: 'SinglePost',
     async asyncData ({ app, store, route }) {
       const data = await app.$content('/posts').get(route.path)
-      store.commit('SET_ARTICLE', data)
+      store.commit('SET_POST', data)
     },
     computed: {
       ...mapState({
-        post: state => state.article,
-        postImage: state => (state.article.image) ? `${process.env.baseUrl}${state.article.image}` : state.imageDefault,
-        postTitle: state => state.article.title,
-        postDesc: state => state.description ? `${state.article.description}` : `${state.article.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR`,
-        postSlug: state => state.article.permalink,
-        postUrl: state => `${process.env.baseUrl}${state.article.permalink}`,
+        post: state => state.post,
+        postImage: state => (state.post.image) ? `${process.env.baseUrl}${state.post.image}` : state.imageDefault,
+        postTitle: state => state.post.title,
+        postDesc: state => state.description ? `${state.post.description}` : `${state.post.title} Fernando Moreira | Desenvolvedor front-end e WordPress na Onedev.studio em Curitiba/PR`,
+        postSlug: state => state.post.permalink,
+        postUrl: state => `${process.env.baseUrl}${state.post.permalink}`,
         breadcrumbs: state => [
           {
             active: false,
@@ -68,8 +68,8 @@
           },
           {
             active: true,
-            url: `${state.article.permalink}`,
-            title: `${state.article.title}`
+            url: `${state.post.permalink}`,
+            title: `${state.post.title}`
           }
         ]
       })

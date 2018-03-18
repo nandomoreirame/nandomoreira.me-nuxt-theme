@@ -8,8 +8,8 @@ export default {
   SET_DRIBBLE_READY (state, payload) {
     state.dribbleReady = payload
   },
-  SET_ARTICLE (state, payload) {
-    state.article = payload
+  SET_POST (state, payload) {
+    state.post = payload
   },
   SET_POSTS (state, payload) {
     state.posts = payload

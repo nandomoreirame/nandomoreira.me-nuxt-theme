@@ -162,7 +162,7 @@
       +above(lg)
         padding 1.6rem 0
         &:focus
-          outline-color rgba(#fff, .5)
+          outline none
     &:hover,
     &:focus
       .Navbar__dropdown

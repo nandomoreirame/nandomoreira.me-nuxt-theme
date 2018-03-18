@@ -100,8 +100,9 @@ module.exports = {
     { src: '~/plugins/moment.js' }
   ],
   modules: [
+    ['@nuxtjs/google-analytics'],
     ['@nuxtjs/browserconfig', { TileColor: '#4dba87' }],
-    '@nuxtjs/markdownit',
+    ['@nuxtjs/markdownit', { html: true, linkify: true, breaks: true }],
     '@nuxtjs/sitemap',
     '@nuxtjs/manifest',
     '@nuxtjs/pwa',
@@ -133,8 +134,8 @@ module.exports = {
     extend (config, { isDev, isClient }) {
       config.devtool = 'source-map'
 
-      config.resolve.alias['~modules'] = resolve(__dirname, 'node_modules')
       config.resolve.alias['stylus'] = resolve(__dirname, 'stylus')
+      config.resolve.alias['content'] = resolve(__dirname, 'content')
 
       if (isDev && isClient) {
         config.module.rules.push({
@@ -146,13 +147,21 @@ module.exports = {
       }
     }
   },
+  'google-analytics': {
+    id: 'UA-52446115-1',
+    debug: {
+      enabled: !isProduction,
+      track: !isProduction,
+      sendHitTask: isProduction
+    }
+  },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://nandomoreira.me',
+    hostname: `${baseUrl}`,
     cacheTime: 1000 * 60 * 150,
     generate: true,
     routes () {
-      return axios.get('https://nandomoreira.me/_nuxt/content/posts/_all.json').then(res => {
+      return axios.get(`${baseUrl}/_nuxt/content/posts/_all.json`).then(res => {
         return res.data.map(post => post.permalink)
       })
     }
