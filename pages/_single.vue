@@ -92,7 +92,7 @@
     },
     mounted () {
       const video = document.querySelector('[data-video]')
-      if (null !== video) {
+      if (video !== null) {
         video.addEventListener('click', e => {
           e.preventDefault()
           const videoID = e.currentTarget.getAttribute('data-video-id')

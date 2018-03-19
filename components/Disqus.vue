@@ -24,7 +24,7 @@ export default {
   name: 'Disqus',
   data () {
     return {
-      disqusReady: false,
+      disqusReady: false
     }
   },
   props: {

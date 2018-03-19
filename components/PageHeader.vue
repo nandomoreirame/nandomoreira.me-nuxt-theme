@@ -27,7 +27,7 @@
     },
     mounted () {
       this.$store.commit('SET_HEADER_UP', false)
-      this.fixHeader(document.querySelector('.header'));
+      this.fixHeader(document.querySelector('.header'))
     }
   }
 </script>

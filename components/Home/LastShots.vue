@@ -52,10 +52,10 @@
             this.$store.commit('SET_SHOTS', shots)
           })
           .catch(e => console.error(e))
-        }
-        setTimeout(() => {
-          this.$store.commit('SET_DRIBBLE_READY', true)
-        }, 1500);
+      }
+      setTimeout(() => {
+        this.$store.commit('SET_DRIBBLE_READY', true)
+      }, 1500)
     },
     computed: {
       ...mapState({
@@ -66,7 +66,7 @@
     components: {
       Spinner: () => import('~/components/Spinner'),
       Dribbble: () => import('~/components/Dribbble'),
-      LinkButton: () => import('~/components/LinkButton'),
+      LinkButton: () => import('~/components/LinkButton')
     }
   }
 </script>

@@ -19,7 +19,7 @@
     "prestart": "npm run build",
     "start": "nuxt start",
     "generate": "npm run clean && NODE_ENV=production nuxt generate",
-    "lint": "eslint --ext .js,.vue .",
+    "lint": "eslint --ext .js,.vue . --fix",
     "test": "echo \"no has test\""
   },
   "dependencies": {
@@ -34,7 +34,7 @@
     "moment": "^2.18.1",
     "normalize.css": "^7.0.0",
     "nuxt": "1.0.0-rc11",
-    "nuxtent": "latest",
+    "nuxtent": "^1.2.1",
     "v-tooltip": "^2.0.0-rc.5",
     "vue-disqus": "^2.0.3",
     "vue-lazyload": "^1.2.2",
@@ -53,6 +53,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "postcss-loader": "2.1.1",
     "rimraf": "^2.6.2",
     "rupture": "^0.6.2",
     "stylus": "^0.54.5",

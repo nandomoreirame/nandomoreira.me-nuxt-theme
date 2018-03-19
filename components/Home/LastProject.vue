@@ -24,7 +24,7 @@
     },
     components: {
       Project: () => import('~/components/Project'),
-      LinkButton: () => import('~/components/LinkButton'),
+      LinkButton: () => import('~/components/LinkButton')
     }
   }
 </script>

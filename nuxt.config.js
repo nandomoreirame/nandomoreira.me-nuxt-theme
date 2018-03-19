@@ -80,7 +80,7 @@ module.exports = {
     ]
   },
   router: {
-    middleware: ['disqus']
+    middleware: ['github-projects-redirects', 'disqus']
   },
   manifest: {
     name: 'Fernando Moreira',
@@ -104,8 +104,8 @@ module.exports = {
     ['@nuxtjs/browserconfig', { TileColor: '#4dba87' }],
     ['@nuxtjs/markdownit', { html: true, linkify: true, breaks: true }],
     '@nuxtjs/sitemap',
-    '@nuxtjs/manifest',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/manifest',
+    // '@nuxtjs/pwa',
     'nuxtent'
   ],
   build: {
