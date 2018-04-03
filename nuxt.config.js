@@ -101,11 +101,21 @@ module.exports = {
   ],
   modules: [
     ['@nuxtjs/google-analytics'],
-    ['@nuxtjs/browserconfig', { TileColor: '#4dba87' }],
-    ['@nuxtjs/markdownit', { html: true, linkify: true, breaks: true }],
+    ['@nuxtjs/browserconfig', {
+      TileColor: '#4dba87'
+    }],
+    ['@nuxtjs/markdownit', {
+      html: true,
+      linkify: true,
+      breaks: true
+    }],
+    ['@nuxtjs/component-cache', {
+      max: 10000,
+      maxAge: 1000 * 60 * 60
+    }],
     '@nuxtjs/sitemap',
-    // '@nuxtjs/manifest',
-    // '@nuxtjs/pwa',
+    '@nuxtjs/manifest',
+    '@nuxtjs/pwa',
     'nuxtent'
   ],
   build: {

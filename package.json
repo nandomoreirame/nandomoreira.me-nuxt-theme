@@ -25,7 +25,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^4.5.2",
     "@nuxtjs/browserconfig": "^0.0.7",
+    "@nuxtjs/component-cache": "^1.1.1",
     "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/manifest": "^2.1.0",
     "@nuxtjs/markdownit": "^1.2.0",
     "@nuxtjs/pwa": "^2.0.8",
     "@nuxtjs/sitemap": "^0.0.3",
