@@ -18,7 +18,6 @@
   import { mapState } from 'vuex'
 
   export default {
-    name: 'LayoutDefault',
     computed: {
       ...mapState({
         video: state => state.video,

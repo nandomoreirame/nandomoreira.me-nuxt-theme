@@ -39,7 +39,7 @@ module.exports = {
       { name: 'revisit-after', content: '7 days' },
       { name: 'mobile-web-app-capable', content: 'yes' },
       { name: 'application-name', content: baseTitle },
-      { name: 'generator', content: 'Visual Studio Code v1.17' },
+      { name: 'generator', content: 'Visual Studio Code - Insiders' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'ICBM', content: '-25.4284,-49.2733' },
       { name: 'geo.position', content: 'latitude;longitude' },
@@ -91,7 +91,7 @@ module.exports = {
   },
   css: [
     { src: 'normalize.css/normalize.css', lang: 'css' },
-    { src: '~stylus/index.styl', lang: 'stylus' }
+    { src: '~assets/stylus/index.styl', lang: 'stylus' }
   ],
   loading: { color: '#435466' },
   plugins: [
@@ -119,6 +119,7 @@ module.exports = {
     'nuxtent'
   ],
   build: {
+    publicPath: '/app/',
     vendor: [
       'axios',
       'moment',
@@ -132,9 +133,9 @@ module.exports = {
             use: [ require('rupture')() ],
             preferPathResolver: 'webpack',
             import: [
-              '~stylus/variables.styl',
-              '~stylus/mixins.styl',
-              '~stylus/placeholders.styl'
+              '~assets/stylus/variables.styl',
+              '~assets/stylus/mixins.styl',
+              '~assets/stylus/placeholders.styl'
             ]
           },
           context: '/'
