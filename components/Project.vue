@@ -82,6 +82,8 @@
   &__content
     padding 0 spacingBase
     order 1
+    +above(md)
+      flex 0 0 50%
   &__meta
     strong
       margin-right 5px
@@ -94,6 +96,8 @@
   &__thumbnail
     margin 0
     order 2
+    +above(md)
+      flex 0 0 45%
     &-browser
       display inline-block
       background-color #fff
@@ -133,9 +137,7 @@
       margin 0
       .project__content
         order 2
-        flex: 0 0 50%
       .project__thumbnail
-        flex: 0 0 45%
         order 1
 a[href="#"]
   pointer-events none
