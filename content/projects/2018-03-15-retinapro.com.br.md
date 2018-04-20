@@ -1,7 +1,7 @@
 ---
 name: Site Institucional PWA RetinaPro
 date: 2018-03-15T00:00:00.000Z
-online: false
+online: true
 thumbnail: /images/uploads/retinapro.com.br.png
 url: 'https://www.retinapro.com.br/'
 description: >-
