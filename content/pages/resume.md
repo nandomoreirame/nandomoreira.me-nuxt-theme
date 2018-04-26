@@ -1,3 +1,7 @@
+---
+name: Resume
+date: 2018-01-01
+---
 
 <div class="avatar">
   <img src="/images/about/avatar.jpg" alt="Foto de Fernando Moreira" width="230" height="261">

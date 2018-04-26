@@ -1,4 +1,7 @@
-
+---
+name: About > This project
+date: 2018-01-01
+---
 
 <div class="aboutme__thumb">
   <img src="/images/about/this-project-thumb.jpg" srcset="/images/about/this-project-thumb@2x.jpg 2x" width="611px" height="837px" alt="Imagem da sessão: Sobre esse site?">

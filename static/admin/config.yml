@@ -45,18 +45,18 @@ collections:
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "string" }
-  - name: "snippets"
-    label: "Snippets"
-    folder: "content/snippets"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  # - name: "snippets"
+  #   label: "Snippets"
+  #   folder: "content/snippets"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Publish Date", name: "date", widget: "datetime" }
+  #     - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+  #     - { label: "Description", name: "description", widget: "text" }
+  #     - { label: "Tags", name: "tags", widget: "string" }
+  #     - { label: "Body", name: "body", widget: "markdown" }
   - name: "lab"
     label: "Lab"
     folder: "content/lab"
@@ -72,34 +72,48 @@ collections:
         label: "How I am?"
         name: "howiam"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "content/pages/about/im-doing-now.md"
         label: "About > I'm doing now"
         name: "im-doing-now"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "content/pages/about/professional-history.md"
         label: "About > Professional history"
         name: "professional-history"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "content/pages/about/this-project.md"
         label: "About > This project"
         name: "this-project"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "content/pages/about/what-ido-today.md"
         label: "About > What I do today"
         name: "what-ido-today"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "content/pages/apps.md"
         label: "Apps"
         name: "apps"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "content/pages/resume.md"
         label: "Resume"
         name: "resume"
         fields:
+          - { label: "Page Name", name: "name", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
