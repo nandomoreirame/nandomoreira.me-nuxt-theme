@@ -1,8 +1,3 @@
----
-name: About > I'm doing now
-date: 2018-01-01
----
-
 
 <div class="aboutme__content">
 

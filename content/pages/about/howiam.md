@@ -1,7 +1,4 @@
----
-name: About > How I am
-date: 2018-01-01T00:00:00.000Z
----
+
 <div class="aboutme__content">
 
 ## Quem sou eu?
