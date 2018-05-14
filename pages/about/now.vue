@@ -15,34 +15,31 @@
       <p>Então, aqui é meu <strong>Now</strong>:</p>
       <h2>Lendo os livros:</h2>
       <ul>
-        <li>no momento nenhum.</li>
+        <li><a href="https://www.amazon.com.br/poder-h%C3%A1bito-fazemos-vida-neg%C3%B3cios-ebook/dp/B00A3D10JE" target="_blank">O poder do hábito: Por que fazemos o que fazemos na vida e nos negócios</a> -  <small>por Charles Duhigg</small></li>
       </ul>
 
       <h2>Estudando:</h2>
       <ul>
-        <li><a href="https://www.udemy.com/curso-javascript-ninja/" target="_blank">Javascript Ninja</a></li>
-        <li><a href="https://www.udemy.com/curso-reactjs-ninja/" target="_blank">React Ninja</a></li>
-        <li>Desenho a mão</li>
+        <li>Maketing digital</li>
       </ul>
 
       <h2>Adquirindo hábitos:</h2>
       <ul>
+        <li>Acordar todos os dias 5:30 am</li>
         <li>Rotina, Rotina, Rotina..</li>
-        <li>Leitura</li>
-        <li><strike>Exerícios físicos</strike> <small> (tá foda, gordo num tem jeito mesmo)</small></li>
+        <li>Leitura, Leitura, Leitura..</li>
+        <li>Exerícios físicos <small>(Smart fit <3)</small></li>
       </ul>
 
       <h2>Projeto(s) atual(is)</h2>
       <ul>
-        <li>Treckos - Loja virtual de coisas legais</li>
+        <li>Lançamento do projeto <a href="https://onedev.studio" target="_blank">Onedev.studio</a></li>
         <li>Esse site <small>(eternamente em desenvolvimento)</small></li>
       </ul>
 
       <h2>Metas e objetivos</h2>
       <ul>
         <li>Lançar um negócio online</li>
-        <li>Estudar Javascript todos os dias</li>
-        <li>Estudar Desenho todos os dias</li>
         <li><strike>Conseguir sair para correr todos os dias</strike> <small> (pelo menos toda semana)</small></li>
         <li>Escrever mais em meu <nuxt-link to="/blog">blog</nuxt-link></li>
       </ul>
