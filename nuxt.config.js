@@ -75,12 +75,8 @@ module.exports = {
       { rel: 'prerender', href: `${baseUrl}/` }
     ],
     script: [
-      { src: (isProduction ? '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' : ''), async: true },
-      { src: '//fernandomoreira.disqus.com/count.js', id: 'dsq-count-scr', async: true }
+      { src: (isProduction ? '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5869919cdfa51391' : ''), async: true }
     ]
-  },
-  router: {
-    middleware: ['github-projects-redirects', 'disqus']
   },
   manifest: {
     name: 'Fernando Moreira',
@@ -90,7 +86,7 @@ module.exports = {
     lang: 'pt_BR'
   },
   css: [
-    { src: 'normalize.css/normalize.css', lang: 'css' },
+    // { src: 'normalize.css/normalize.css', lang: 'css' },
     { src: '~assets/stylus/index.styl', lang: 'stylus' }
   ],
   loading: { color: '#435466' },
