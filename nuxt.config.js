@@ -8,6 +8,7 @@ const baseTitle = 'Fernando Moreira | Desenvolvedor front-end e WordPress em Cur
 const baseDescription = 'Desenvolvedor front-end e entusiasta da experiência do usuário | Desenvolvedor Front-end em Curitiba | Desenvolvedor WordPress em Curitiba | UX Designer em Curitiba'
 const baseKeywords = 'front-end, front, wordpress, javascript, html, css, desenvolvedor, curitiba, ux, uxdesigner, designer'
 const imageDefault = `${baseUrl}/images/uploads/social.jpg`
+const themeColor = '#4dba87'
 
 module.exports = {
   dev: !isProduction,
@@ -32,7 +33,7 @@ module.exports = {
       { name: 'og:locale', content: 'pt_BR' },
       { name: 'googlebot', content: 'index,follow' },
       { name: 'robots', content: 'index,follow,noodp' },
-      { name: 'theme-color', content: '#4dba87' },
+      { name: 'theme-color', content: themeColor },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@oseunando' },
       { name: 'country', content: 'Brazil' },
@@ -81,8 +82,8 @@ module.exports = {
   manifest: {
     name: 'Fernando Moreira',
     description: baseDescription,
-    theme_color: '#4dba87',
-    background_color: '#4dba87',
+    theme_color: themeColor,
+    background_color: themeColor,
     lang: 'pt_BR'
   },
   css: [
@@ -98,7 +99,7 @@ module.exports = {
   modules: [
     ['@nuxtjs/google-analytics'],
     ['@nuxtjs/browserconfig', {
-      TileColor: '#4dba87'
+      TileColor: themeColor
     }],
     ['@nuxtjs/markdownit', {
       html: true,
