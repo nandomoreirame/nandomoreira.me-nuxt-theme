@@ -116,7 +116,6 @@ module.exports = {
     'nuxtent'
   ],
   build: {
-    publicPath: '/app/',
     vendor: [
       'axios',
       'moment',
