@@ -36,6 +36,8 @@
 /lora/*                       https://nandomoreirame.github.io/lora/:splat                    301
 /zetsu                        https://nandomoreirame.github.io/zetsu/                         301
 /zetsu/*                      https://nandomoreirame.github.io/zetsu/:splat                   301
+/mug                          https://nandomoreirame.github.io/mug/                           301
+/mug/*                        https://nandomoreirame.github.io/mug/:splat                     301
 /simplest                     https://nandomoreirame.github.io/simplest/                      301
 /simplest/*                   https://nandomoreirame.github.io/simplest/:splat                301
 /nandomoreira-jekyll-theme    https://nandomoreirame.github.io/nandomoreira-jekyll-theme/     301
