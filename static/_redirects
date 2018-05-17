@@ -8,7 +8,9 @@
 /2013/*                       /                                                               301
 /2012                         /                                                               301
 /2012/*                       /                                                               301
+/wp/v2/*                      /                                                               301
 /retinapro-com-br             /projects                                                       301
+/grgit                        /projects                                                       301
 /ferramentas-digital          /projects                                                       301
 /projects/*                   /projects                                                       301
 /project/*                    /projects                                                       301
@@ -17,8 +19,12 @@
 /portfolio                    /projects                                                       301
 /sobre                        /about                                                          301
 /br/sobre                     /about                                                          301
+/pt_br/sobre                  /about                                                          301
+/cv                           /about                                                          301
 /experiments                  /projects/experiments                                           301
 /experiment/*                 /projects/experiments                                           301
+/lab                          /projects/experiments                                           301
+/lab/*                        /projects/experiments                                           301
 /blog/page/*                  /blog                                                           301
 /tags/*                       /blog                                                           301
 /tag/*                        /blog                                                           301
