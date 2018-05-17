@@ -1,0 +1,19 @@
+# Redirects from what the browser requests to what we serve
+#/404                         /                                                               200
+/retinapro-com-br             /projects                                                       301
+/ferramentas-digital          /projects                                                       301
+/br/sobre/                    /about                                                          301
+/experiments                  /projects/experiments                                           301
+/lora                         https://nandomoreirame.github.io/lora/                          301
+/lora/*                       https://nandomoreirame.github.io/lora/:splat                    301
+/simplest                     https://nandomoreirame.github.io/simplest/                      301
+/simplest/*                   https://nandomoreirame.github.io/simplest/:splat                301
+/nandomoreira-jekyll-theme    https://nandomoreirame.github.io/nandomoreira-jekyll-theme/     301
+/nandomoreira-jekyll-theme/*  https://nandomoreirame.github.io/nandomoreira-jekyll-theme/     301
+/end2end                      https://nandomoreirame.github.io/end2end                        301
+/end2end/*                    https://nandomoreirame.github.io/end2end/:splat                 301
+/dotX                         https://nandomoreirame.github.io/dotX                           301
+/dotX/*                       https://nandomoreirame.github.io/dotX/:splat                    301
+/lorem-gemidao-do-zap-ipsum   https://nandomoreirame.github.io/lorem-gemidao-do-zap-ipsum     301
+/open-source-guide            https://nandomoreirame.github.io/open-source-guide              301
+/open-source-guide/*          https://nandomoreirame.github.io/open-source-guide/:splat       301
