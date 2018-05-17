@@ -1,9 +1,21 @@
 # Redirects from what the browser requests to what we serve
 #/404                         /                                                               200
+/2015                         /                                                               301
 /retinapro-com-br             /projects                                                       301
 /ferramentas-digital          /projects                                                       301
-/br/sobre/                    /about                                                          301
+/projects/*                   /projects                                                       301
+/project/*                    /projects                                                       301
+/icthus-odonto                /projects                                                       301
+/onedev-studio                /projects                                                       301
+/sobre                        /about                                                          301
+/br/sobre                     /about                                                          301
 /experiments                  /projects/experiments                                           301
+/experiment/*                 /projects/experiments                                           301
+/blog/page/*                  /blog                                                           301
+/tags/*                       /blog                                                           301
+/the-quick-brown-fox-jumps-over-a-lazy-dog /blog                                              301
+/comece-com-gulpjs            /comece-com-gulp                                                301
+/sass-atomic-design           /sass-e-atomic-design                                           301
 /lora                         https://nandomoreirame.github.io/lora/                          301
 /lora/*                       https://nandomoreirame.github.io/lora/:splat                    301
 /simplest                     https://nandomoreirame.github.io/simplest/                      301
