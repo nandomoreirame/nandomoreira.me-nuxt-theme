@@ -1,4 +1,4 @@
-# [nandomoreira.me](http://nandomoreira.me/)
+# [nuxt-theme-nandomoreira.me](https://nuxt-theme-nandomoreirame.netlify.com/)
 
 > 🏃 My superfast personal SPA blog/site using Vuejs and Nuxt :D
 
