@@ -7,7 +7,7 @@ const baseUrl = isProduction ? `https://nandomoreira.me` : 'http://localhost:300
 const baseTitle = 'Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR'
 const baseDescription = 'Desenvolvedor front-end e entusiasta da experiência do usuário | Desenvolvedor Front-end em Curitiba | Desenvolvedor WordPress em Curitiba | UX Designer em Curitiba'
 const baseKeywords = 'front-end, front, wordpress, javascript, html, css, desenvolvedor, curitiba, ux, uxdesigner, designer'
-const imageDefault = `${baseUrl}/images/uploads/social.jpg`
+const imageDefault = `${baseUrl}/images/share.jpg`
 const themeColor = '#4dba87'
 
 module.exports = {

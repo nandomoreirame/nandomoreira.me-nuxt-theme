@@ -1,7 +1,7 @@
 <template>
   <div class="UserInfo container--small" itemscope itemtype="http://schema.org/Person">
     <figure class="UserInfo__figure">
-      <img v-lazy="`/images/about/avatar.jpg`" alt="Imagem de perfil do autor"/>
+      <img v-lazy="`/images/avatar.jpg`" alt="Imagem de perfil do autor"/>
     </figure>
     <div class="UserInfo__bio">
       <h4>O autor</h4>

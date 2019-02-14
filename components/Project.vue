@@ -111,7 +111,7 @@
         display block
         width 100%
         height 26px
-        background url("/images/uploads/browser.svg") no-repeat 50%
+        background url("/images/browser.svg") no-repeat 50%
         background-size 100% 28px
         position relative
         overflow hidden
