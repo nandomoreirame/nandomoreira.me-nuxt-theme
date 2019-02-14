@@ -2,7 +2,7 @@
   <section class="HomeSkills HomeSection">
     <div class="HomeSection__inner">
       <header class="HomeSection__header">
-        <h2>Minhas habilidades</h2>
+        <h2>My Skills</h2>
       </header>
       <div class="container">
         <skills/>

@@ -1,14 +1,14 @@
 
 <div class="aboutme__content">
 
-## Quem sou eu?
+## How I am?
 
-Meu nome é **Fernando Moreira Costa** (muito prazer). Tenho 29 anos, nasci e cresci em uma cidadezinha do interior de **Rondônia** chamada **Ariquemes**, sai de lá com 18 anos para me aventurar em **Curitiba/PR** onde moro atualmente.
+Quae atque consequatur commodi a iusto accusantium. Fuga iste sequi ut error vel tempore laudantium. Architecto omnis non numquam earum veniam. Quia dolorum tenetur optio exercitationem asperiores minima perferendis tenetur. Corrupti sint eum. Saepe perferendis earum at et possimus eius ex.
 
-Sou casado, tenho dois cachorros, um vira-lata chamado **Soneca** e um beagle chamado **Bolo**, por enquanto não tenho filhos.
+Consequatur voluptas ut enim mollitia molestiae eum nisi voluptate. Inventore voluptatem enim consequuntur beatae labore.
 
 </div>
 
 <div class="aboutme__thumb">
-  <img src="/images/about/avatar.jpg" srcset="/images/about/avatar@2x.jpg 2x" alt="Foto de Fernando Moreira" width="400" height="450">
+  <img src="https://source.unsplash.com/1200x900?man" alt="" width="400" height="450">
 </div>

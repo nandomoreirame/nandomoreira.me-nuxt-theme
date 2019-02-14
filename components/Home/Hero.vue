@@ -1,9 +1,9 @@
 <template>
-  <page-header :isHero="true" :image="`/images/uploads/hero-cover.jpg`">
+  <page-header :isHero="true" :image="`https://images.unsplash.com/photo-1446160657592-4782fb76fb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200&h=900&fit=crop&ixid=eyJhcHBfaWQiOjF9`">
     <div slot="inner" class="container" itemscope itemtype="http://schema.org/Person">
       <h1>Oi, eu sou o <span><nuxt-link title="Meu nome é Fernando Moreira Costa (muito prazer)" to="/about" itemprop="name">Fernando</nuxt-link></span>!</h1>
       <h2 role="presentation">
-        Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> na <strong><a href="https://onedev.studio" target="_blank">Onedev.studio</a></strong> em <strong>Curitiba/PR</strong>.
+        Sou <strong itemprop="jobTitle">desenvolvedor front-end</strong> na localizado em <strong>Curitiba/PR</strong>.
         <small>Se você está em busca de um programador freelancer front-end, WordPress, PHP ou JavaScript entre em contato: <a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me[arroba]gmail.com</a> ou através das redes sociais abaixo.</small>
       </h2>
       <div class="pageHeader__social-icons">
@@ -33,6 +33,15 @@
     margin 0
     background-repeat no-repeat
     background-size cover
+    &:before
+      content ''
+      display block
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background-color rgba(#fff, .5)
     .pageHeader__inner
       padding-top 3.75rem
       background none transparent

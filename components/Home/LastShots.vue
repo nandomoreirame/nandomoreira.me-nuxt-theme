@@ -36,39 +36,39 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 
-  export default {
-    name: 'LastShots',
-    mounted () {
-      if (!this.$store.state.shots.length) {
-        this.$store.commit('SET_DRIBBLE_READY', false)
-        const token = '8661a00cbdef6d7bcb5b4d5dd9cb9afa12551ed044ad0c3340da70e46057cf4e'
-        const url = `https://api.dribbble.com/v1/users/umdevux/shots/?access_token=${token}`
-        this.$axios.get(url)
-          .then(response => {
-            const { data } = response
-            const shots = data.filter((e, i, arr) => (i <= 6))
-            this.$store.commit('SET_SHOTS', shots)
-          })
-          .catch(e => console.error(e))
-      }
-      setTimeout(() => {
-        this.$store.commit('SET_DRIBBLE_READY', true)
-      }, 1500)
-    },
-    computed: {
-      ...mapState({
-        shots: state => state.shots,
-        dribbleReady: state => state.dribbleReady
-      })
-    },
-    components: {
-      Spinner: () => import('~/components/Spinner'),
-      Dribbble: () => import('~/components/Dribbble'),
-      LinkButton: () => import('~/components/LinkButton')
+export default {
+  name: 'LastShots',
+  mounted () {
+    if (!this.$store.state.shots.length) {
+      this.$store.commit('SET_DRIBBLE_READY', false)
+      const token = '32c9c0d804aa06782b617df84c566bd1b60a842505ff7a0885f378daee85f245'
+      const url = `https://api.dribbble.com/v2/user/shots?access_token=${token}`
+      this.$axios.get(url)
+        .then(response => {
+          const { data } = response
+          const shots = data.filter((e, i, arr) => (i <= 6))
+          this.$store.commit('SET_SHOTS', shots)
+        })
+        .catch(e => console.error(e))
     }
+    setTimeout(() => {
+      this.$store.commit('SET_DRIBBLE_READY', true)
+    }, 1500)
+  },
+  computed: {
+    ...mapState({
+      shots: state => state.shots,
+      dribbleReady: state => state.dribbleReady
+    })
+  },
+  components: {
+    Spinner: () => import('~/components/Spinner'),
+    Dribbble: () => import('~/components/Dribbble'),
+    LinkButton: () => import('~/components/LinkButton')
   }
+}
 </script>
 
 <style lang="stylus">

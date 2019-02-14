@@ -1,16 +1,16 @@
 
 <div class="aboutme__thumb">
-  <img src="/images/about/this-project-thumb.jpg" srcset="/images/about/this-project-thumb@2x.jpg 2x" width="611px" height="837px" alt="Imagem da sessão: Sobre esse site?">
+  <img src="https://source.unsplash.com/1200x900?project" width="611px" height="837px" alt="">
 </div>
 
 <div class="aboutme__content">
 
-## Sobre esse site
+## About this site
 
-Esse projeto já foi reescrito várias vezes (como foi citado no blog do [Willian Justem](https://willianjusten.com.br/como-se-manter-atualizado-no-frontend/#em-português), eu sou o cara que mais muda de layout para blog na face da Terra!), eu o uso para fazer meus experimentos malucos, geralmente quando estou a estudar uma tecnologia nova.
+Et cumque consequatur ea. Minus occaecati eos qui. Et quia eum laudantium pariatur deserunt animi. Perferendis atque placeat laboriosam dolorem quo ut sequi eius qui. Magni deleniti temporibus architecto omnis nisi non unde enim quisquam. Debitis voluptas molestias saepe id occaecati tempora molestiae ex.
 
-Nele eu já utilizei o **[WordPress](https://br.wordpress.org/)** (em PHP), **[Jekyll](https://jekyllrb.com/)** (em Ruby), **[Middleman](https://middlemanapp.com/)** (em Ruby), e atualmente está escrito em **[VueJS](https://vuejs.org/)** (em JavaScript) utilizando **[NuxtJS](https://nuxtjs.org/)** para gerar os arquivos estáticos e hospeda-los no [netlify.com](https://www.netlify.com/).
+Autem debitis fugit ea ex dolorum asperiores. Iusto provident nostrum. Ut ut hic et. Quibusdam et nesciunt dignissimos repellat voluptatem sunt. Fugiat placeat enim et sed sit accusantium aliquid suscipit.
 
-O código é totalmente Open Source sob licença [MIT](https://github.com/nandomoreirame/nandomoreira.me/blob/source/LICENSE) e você pode _"forcar"_ ele [aqui](https://github.com/nandomoreirame/nandomoreira.me), fique à vontade para contribuir também :).
+Molestiae ut autem. Nisi est est laboriosam ducimus nemo temporibus suscipit temporibus. Veritatis voluptates id distinctio. Nihil odit et labore eum non nam. Voluptas expedita facere. Odit exercitationem autem est sunt eius.
 
 </div>

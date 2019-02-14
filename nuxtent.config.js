@@ -18,22 +18,6 @@ module.exports = {
         generate: ['getAll'],
         isPost: true
       }
-    ],
-    [
-      'open-source',
-      {
-        page: '/open-source/_slug',
-        generate: ['getAll'],
-        isPost: true
-      }
-    ],
-    [
-      'lab',
-      {
-        page: '/lab/_slug',
-        generate: ['getAll'],
-        isPost: false
-      }
     ]
   ],
   parsers: {

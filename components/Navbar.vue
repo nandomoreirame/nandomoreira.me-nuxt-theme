@@ -47,28 +47,12 @@
             title: 'Sobre'
           },
           {
-            link: '/about/apps',
-            title: 'Apps'
-          },
-          {
-            link: '/about/now',
-            title: 'Now'
-          },
-          {
             link: '/blog',
             title: 'Blog'
           },
           {
             link: '/projects',
             title: 'Projetos'
-          },
-          {
-            link: '/projects/open-source',
-            title: 'Open Source'
-          },
-          {
-            link: '/projects/experiments',
-            title: 'Experimentos'
           }
         ]
       }

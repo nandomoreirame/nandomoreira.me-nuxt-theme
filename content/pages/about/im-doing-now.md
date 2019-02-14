@@ -1,10 +1,10 @@
 
 <div class="aboutme__content">
 
-## O que estou fazendo agora?
+## I'm doing now
 
-Uma página tirada da idéia de **Derek Sivers** em _Nownownow_, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.
+Architecto officia perspiciatis voluptatem dolore in reprehenderit laborum est rerum. Dolorem voluptas corrupti atque. Ut asperiores beatae perspiciatis et dignissimos.
 
-Então, aqui é meu _Now_: **[O que estou fazendo agora](/about/now)**
+Ab necessitatibus labore mollitia ut officiis eos et dolore omnis. Quia consectetur in id sunt repellat. Vel placeat in occaecati.
 
 </div>

@@ -17,7 +17,7 @@
       <div class="aboutme__section aboutme__thisProject aboutme__section--title-after" v-html="thisProject"/>
       <div class="aboutme__section aboutme__skills aboutme__section--title-after aboutme__section--title-before">
         <section>
-          <h2>Minhas Habilidades</h2>
+          <h2>My Skills</h2>
           <skills/>
         </section>
       </div>
@@ -38,7 +38,7 @@
     data () {
       return {
         pageTitle: `Sobre | Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-        pageDescription: `Hoje sou especializado em desenvolvimento web usando WordPress com foco em front-end eu sempre cuido da usabilidade e performance de um site.`,
+        pageDescription: `Vitae veniam incidunt molestiae pariatur. Eos quibusdam maiores qui consequatur ad dolor aliquam porro. Quidem beatae eos.`,
         pageUrl: `${process.env.baseUrl}/about`,
         breadcrumbs: [
           {

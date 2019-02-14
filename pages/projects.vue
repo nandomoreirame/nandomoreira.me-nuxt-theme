@@ -24,7 +24,7 @@
     data () {
       return {
         pageTitle: `Projetos - Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR`,
-        pageDescription: `Esses são alguns dos projetos que trabalhei, projetos pessoais e freelas para clientes.`,
+        pageDescription: `Doloribus et doloribus eligendi consequuntur. Id maiores aut voluptas et error perspiciatis illum. Odit omnis voluptatum labore unde voluptas. Ea et cupiditate labore nisi ea ut voluptatum ut vel.`,
         pageUrl: `${process.env.baseUrl}/projects`,
         breadcrumbs: [
           {

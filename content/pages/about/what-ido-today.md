@@ -1,14 +1,16 @@
 
 <div class="aboutme__content">
 
-## E o que faço hoje?
+## What I do today
 
-Hoje sou especializado em desenvolvimento web usando **_[WordPress](https://br.wordpress.org/)_** com foco em **_[front-end](https://pt.wikipedia.org/wiki/Front-end_e_back-end)_** eu sempre cuido da usabilidade e performance de um site.
+Distinctio ea qui. Aut libero illo esse dolorem ut quia. Sed dolor sunt voluptatem. Dolorem facilis quos est necessitatibus. Pariatur deleniti sit aliquam quidem voluptatem.
 
-Atualmente trabalho como desenvolvedor **_Front-end_** utilizando tecnologias sempre atualizadas como, HTML5/5.1, CSS3/4, SASS, ECMAScript 6/7/8, GulpJS e VueJS, nos tempos livres escrevo no meu <nuxt-link to="/blog">Blog</nuxt-link> e contribuo com alguns códigos no [Github](https://github.com/nandomoreirame).
+Eum adipisci asperiores architecto tempora eum. Placeat expedita quae culpa omnis tempora et recusandae. Voluptates fugit recusandae velit quas expedita et quisquam rerum. Distinctio maxime iste adipisci quo omnis qui deleniti perferendis.
+
+Minus nihil nihil. Saepe nemo et. Eveniet et ipsam consequatur illum in nihil.
 
 </div>
 
 <div class="aboutme__thumb">
-  <img src="/images/about/im-doing-now-thumb.jpg" srcset="/images/about/im-doing-now-thumb@2x.jpg 2x" width="611px" height="580px" alt="Imagem da sessão: E o que faço hoje?">
+  <img src="https://source.unsplash.com/1200x900?code" width="611px" height="580px" alt="">
 </div>
