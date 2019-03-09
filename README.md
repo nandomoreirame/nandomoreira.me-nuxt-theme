@@ -19,6 +19,25 @@ $ yarn start # or npm start
 $ yarn generate # or npm run generate
 ```
 
+## Author
+
+| [![twitter/oseunando](https://avatars6.githubusercontent.com/u/1318271?v=4&s=120)](http://twitter.com/oseunando "Follow @oseunando on Twitter") |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Fernando Moreira](http://twitter.com/oseunando)                                                                                                |
+
 ## License
 
-It is free under the [open-source MIT license](/LICENSE).
+```
+WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o|    MIT     \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__|
+```
+
+Code is under [MIT License](/LICENSE) - © Fernando Moreira
