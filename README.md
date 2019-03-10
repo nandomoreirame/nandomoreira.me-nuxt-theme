@@ -41,3 +41,11 @@ WWWWWW||WWWWWW
 ```
 
 Code is under [MIT License](/LICENSE) - © Fernando Moreira
+
+## Buy me a coffee?
+
+It will encourage me to keep it going, fix whatever bugs you find and spend time making it better :D
+
+<a href="https://www.paypal.me/nandomoreira/5">
+  <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee%3F-US%24%205-blue.svg" alt="Buy me a coffee? - https://www.paypal.me/nandomoreira/5">
+</a>
